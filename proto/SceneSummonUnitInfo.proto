@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message SceneSummonUnitInfo {
+  optional uint64 create_time_ms = 3;
+  optional uint32 caster_entity_id = 6;
+  optional uint32 attach_entity_id = 5;
+  optional uint32 summon_unit_id = 13;
+  optional sint32 life_time_ms = 9;
+  repeated string trigger_name_list = 8;
+}

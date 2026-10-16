@@ -13,32 +13,20 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class PlayBackGroundMusicCsReqOuterClass {
   /**
-   * <pre>
-   *  KHABGPOLCAP
-   * </pre>
-   *
    * Protobuf type {@code PlayBackGroundMusicCsReq}
    */
   public static final class PlayBackGroundMusicCsReq extends ProtoMessage<PlayBackGroundMusicCsReq> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  PFLDAPJLJCD
-     * </pre>
-     *
-     * <code>optional uint32 play_music_id = 10;</code>
+     * <code>optional .MusicPlayState play_state = 13;</code>
      */
-    private int playMusicId;
+    private final MusicPlayStateOuterClass.MusicPlayState playState = MusicPlayStateOuterClass.MusicPlayState.newInstance();
 
     private PlayBackGroundMusicCsReq() {
     }
 
     /**
-     * <pre>
-     *  KHABGPOLCAP
-     * </pre>
-     *
      * @return a new empty instance of {@code PlayBackGroundMusicCsReq}
      */
     public static PlayBackGroundMusicCsReq newInstance() {
@@ -46,55 +34,60 @@ public final class PlayBackGroundMusicCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  PFLDAPJLJCD
-     * </pre>
-     *
-     * <code>optional uint32 play_music_id = 10;</code>
-     * @return whether the playMusicId field is set
+     * <code>optional .MusicPlayState play_state = 13;</code>
+     * @return whether the playState field is set
      */
-    public boolean hasPlayMusicId() {
+    public boolean hasPlayState() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <pre>
-     *  PFLDAPJLJCD
-     * </pre>
-     *
-     * <code>optional uint32 play_music_id = 10;</code>
+     * <code>optional .MusicPlayState play_state = 13;</code>
      * @return this
      */
-    public PlayBackGroundMusicCsReq clearPlayMusicId() {
+    public PlayBackGroundMusicCsReq clearPlayState() {
       bitField0_ &= ~0x00000001;
-      playMusicId = 0;
+      playState.clear();
       return this;
     }
 
     /**
-     * <pre>
-     *  PFLDAPJLJCD
-     * </pre>
+     * <code>optional .MusicPlayState play_state = 13;</code>
      *
-     * <code>optional uint32 play_music_id = 10;</code>
-     * @return the playMusicId
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutablePlayState()} if you want to modify it.
+     *
+     * @return internal storage object for reading
      */
-    public int getPlayMusicId() {
-      return playMusicId;
+    public MusicPlayStateOuterClass.MusicPlayState getPlayState() {
+      return playState;
     }
 
     /**
-     * <pre>
-     *  PFLDAPJLJCD
-     * </pre>
+     * <code>optional .MusicPlayState play_state = 13;</code>
      *
-     * <code>optional uint32 play_music_id = 10;</code>
-     * @param value the playMusicId to set
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public MusicPlayStateOuterClass.MusicPlayState getMutablePlayState() {
+      bitField0_ |= 0x00000001;
+      return playState;
+    }
+
+    /**
+     * <code>optional .MusicPlayState play_state = 13;</code>
+     * @param value the playState to set
      * @return this
      */
-    public PlayBackGroundMusicCsReq setPlayMusicId(final int value) {
+    public PlayBackGroundMusicCsReq setPlayState(
+        final MusicPlayStateOuterClass.MusicPlayState value) {
       bitField0_ |= 0x00000001;
-      playMusicId = value;
+      playState.copyFrom(value);
       return this;
     }
 
@@ -103,7 +96,7 @@ public final class PlayBackGroundMusicCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        playMusicId = other.playMusicId;
+        playState.copyFrom(other.playState);
       }
       return this;
     }
@@ -114,8 +107,8 @@ public final class PlayBackGroundMusicCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasPlayMusicId()) {
-        setPlayMusicId(other.playMusicId);
+      if (other.hasPlayState()) {
+        getMutablePlayState().mergeFrom(other.playState);
       }
       return this;
     }
@@ -127,7 +120,7 @@ public final class PlayBackGroundMusicCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      playMusicId = 0;
+      playState.clear();
       return this;
     }
 
@@ -138,6 +131,7 @@ public final class PlayBackGroundMusicCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      playState.clearQuick();
       return this;
     }
 
@@ -151,14 +145,14 @@ public final class PlayBackGroundMusicCsReqOuterClass {
       }
       PlayBackGroundMusicCsReq other = (PlayBackGroundMusicCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasPlayMusicId() || playMusicId == other.playMusicId);
+        && (!hasPlayState() || playState.equals(other.playState));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeUInt32NoTag(playMusicId);
+        output.writeRawByte((byte) 106);
+        output.writeMessageNoTag(playState);
       }
     }
 
@@ -166,7 +160,7 @@ public final class PlayBackGroundMusicCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(playMusicId);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(playState);
       }
       return size;
     }
@@ -178,9 +172,9 @@ public final class PlayBackGroundMusicCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
-            // playMusicId
-            playMusicId = input.readUInt32();
+          case 106: {
+            // playState
+            input.readMessage(playState);
             bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 0) {
@@ -205,7 +199,7 @@ public final class PlayBackGroundMusicCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.playMusicId, playMusicId);
+        output.writeMessage(FieldNames.playState, playState);
       }
       output.endObject();
     }
@@ -217,11 +211,11 @@ public final class PlayBackGroundMusicCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 835898444:
-          case -1319856608: {
-            if (input.isAtField(FieldNames.playMusicId)) {
+          case -1888605763:
+          case 1925938118: {
+            if (input.isAtField(FieldNames.playState)) {
               if (!input.trySkipNullValue()) {
-                playMusicId = input.readUInt32();
+                input.readMessage(playState);
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -282,7 +276,7 @@ public final class PlayBackGroundMusicCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName playMusicId = FieldName.forField("playMusicId", "play_music_id");
+      static final FieldName playState = FieldName.forField("playState", "play_state");
     }
   }
 }

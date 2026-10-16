@@ -20,7 +20,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 2;</code>
+     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 8;</code>
      */
     private final RepeatedMessage<SceneIdentifierInfoOuterClass.SceneIdentifierInfo> sceneIdentifierList = RepeatedMessage.newEmptyInstance(SceneIdentifierInfoOuterClass.SceneIdentifierInfo.getFactory());
 
@@ -35,7 +35,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 2;</code>
+     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 8;</code>
      * @return whether the sceneIdentifierList field is set
      */
     public boolean hasSceneIdentifierList() {
@@ -43,7 +43,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 2;</code>
+     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 8;</code>
      * @return this
      */
     public GetSceneMapInfoCsReq clearSceneIdentifierList() {
@@ -53,7 +53,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 2;</code>
+     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -68,7 +68,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 2;</code>
+     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -83,7 +83,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 2;</code>
+     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 8;</code>
      * @param value the sceneIdentifierList to add
      * @return this
      */
@@ -95,7 +95,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 2;</code>
+     * <code>repeated .SceneIdentifierInfo scene_identifier_list = 8;</code>
      * @param values the sceneIdentifierList to add
      * @return this
      */
@@ -167,7 +167,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < sceneIdentifierList.length(); i++) {
-          output.writeRawByte((byte) 18);
+          output.writeRawByte((byte) 66);
           output.writeMessageNoTag(sceneIdentifierList.get(i));
         }
       }
@@ -189,7 +189,7 @@ public final class GetSceneMapInfoCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 18: {
+          case 66: {
             // sceneIdentifierList
             tag = input.readRepeatedMessage(sceneIdentifierList, tag);
             bitField0_ |= 0x00000001;

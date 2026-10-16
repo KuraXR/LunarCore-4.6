@@ -55,10 +55,6 @@ public final class DispatchTokenOuterClass {
     private final Utf8String unkString2 = Utf8String.newEmptyInstance();
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      */
     private final Utf8String region = Utf8String.newEmptyInstance();
@@ -394,10 +390,6 @@ public final class DispatchTokenOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      * @return whether the region field is set
      */
@@ -406,10 +398,6 @@ public final class DispatchTokenOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      * @return this
      */
@@ -420,10 +408,6 @@ public final class DispatchTokenOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      * @return the region
      */
@@ -432,10 +416,6 @@ public final class DispatchTokenOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      * @return internal {@code Utf8String} representation of region for reading
      */
@@ -444,10 +424,6 @@ public final class DispatchTokenOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      * @return internal {@code Utf8String} representation of region for modifications
      */
@@ -457,10 +433,6 @@ public final class DispatchTokenOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      * @param value the region to set
      * @return this
@@ -472,10 +444,6 @@ public final class DispatchTokenOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional string region = 8;</code>
      * @param value the region to set
      * @return this

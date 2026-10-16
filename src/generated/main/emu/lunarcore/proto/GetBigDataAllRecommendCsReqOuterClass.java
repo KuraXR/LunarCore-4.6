@@ -19,7 +19,7 @@ public final class GetBigDataAllRecommendCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 1;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 9;</code>
      */
     private int recommendType;
 
@@ -34,7 +34,7 @@ public final class GetBigDataAllRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 1;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 9;</code>
      * @return whether the recommendType field is set
      */
     public boolean hasRecommendType() {
@@ -42,7 +42,7 @@ public final class GetBigDataAllRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 1;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 9;</code>
      * @return this
      */
     public GetBigDataAllRecommendCsReq clearRecommendType() {
@@ -52,7 +52,7 @@ public final class GetBigDataAllRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 1;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 9;</code>
      * @return the recommendType
      */
     public BigDataRecommendTypeOuterClass.BigDataRecommendType getRecommendType() {
@@ -85,7 +85,7 @@ public final class GetBigDataAllRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 1;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 9;</code>
      * @param value the recommendType to set
      * @return this
      */
@@ -155,7 +155,7 @@ public final class GetBigDataAllRecommendCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 72);
         output.writeEnumNoTag(recommendType);
       }
     }
@@ -176,7 +176,7 @@ public final class GetBigDataAllRecommendCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 72: {
             // recommendType
             final int value = input.readInt32();
             if (BigDataRecommendTypeOuterClass.BigDataRecommendType.forNumber(value) != null) {

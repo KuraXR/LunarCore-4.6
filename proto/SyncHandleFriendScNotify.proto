@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "FriendListInfo.proto";
+
+message SyncHandleFriendScNotify {
+  optional uint32 uid = 6;
+  optional bool handle_result = 3;
+  optional FriendListInfo handle_friend_info = 2;
+}

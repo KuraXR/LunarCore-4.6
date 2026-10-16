@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MotionInfo.proto";
+
+message RefreshTriggerByClientCsReq {
+  optional uint32 trigger_entity_id = 12;
+  optional MotionInfo trigger_motion = 4;
+  optional string trigger_name = 1;
+  repeated uint32 trigger_target_id_list = 14;
+}

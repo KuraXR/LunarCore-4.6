@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "SpBarInfo.proto";
+
+message BattleEventInitedData {
+  optional SpBarInfo sp_bar = 2;
+}

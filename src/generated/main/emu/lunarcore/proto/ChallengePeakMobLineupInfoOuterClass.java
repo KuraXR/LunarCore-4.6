@@ -20,12 +20,12 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 12;</code>
      */
     private int challengePeakId;
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 3;</code>
      */
     private final RepeatedInt challengeAvatarIdList = RepeatedInt.newEmptyInstance();
 
@@ -40,7 +40,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 12;</code>
      * @return whether the challengePeakId field is set
      */
     public boolean hasChallengePeakId() {
@@ -48,7 +48,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 12;</code>
      * @return this
      */
     public ChallengePeakMobLineupInfo clearChallengePeakId() {
@@ -58,7 +58,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 12;</code>
      * @return the challengePeakId
      */
     public int getChallengePeakId() {
@@ -66,7 +66,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 12;</code>
      * @param value the challengePeakId to set
      * @return this
      */
@@ -77,7 +77,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 3;</code>
      * @return whether the challengeAvatarIdList field is set
      */
     public boolean hasChallengeAvatarIdList() {
@@ -85,7 +85,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 3;</code>
      * @return this
      */
     public ChallengePeakMobLineupInfo clearChallengeAvatarIdList() {
@@ -95,7 +95,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -109,7 +109,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -123,7 +123,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 3;</code>
      * @param value the challengeAvatarIdList to add
      * @return this
      */
@@ -134,7 +134,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 3;</code>
      * @param values the challengeAvatarIdList to add
      * @return this
      */
@@ -210,12 +210,12 @@ public final class ChallengePeakMobLineupInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < challengeAvatarIdList.length(); i++) {
-          output.writeRawByte((byte) 96);
+          output.writeRawByte((byte) 24);
           output.writeUInt32NoTag(challengeAvatarIdList.array()[i]);
         }
       }
@@ -240,16 +240,16 @@ public final class ChallengePeakMobLineupInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 96: {
             // challengePeakId
             challengePeakId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 26) {
               break;
             }
           }
-          case 98: {
+          case 26: {
             // challengeAvatarIdList [packed=true]
             input.readPackedUInt32(challengeAvatarIdList, tag);
             bitField0_ |= 0x00000002;
@@ -268,7 +268,7 @@ public final class ChallengePeakMobLineupInfoOuterClass {
             tag = input.readTag();
             break;
           }
-          case 96: {
+          case 24: {
             // challengeAvatarIdList [packed=false]
             tag = input.readRepeatedUInt32(challengeAvatarIdList, tag);
             bitField0_ |= 0x00000002;

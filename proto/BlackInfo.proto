@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message BlackInfo {
+  optional int64 begin_time = 1;
+  optional int64 end_time = 2;
+  optional uint32 limit_level = 3;
+  optional uint32 ban_type = 4;
+}

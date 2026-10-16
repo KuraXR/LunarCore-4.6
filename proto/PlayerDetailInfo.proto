@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "DisplayAvatarDetailInfo.proto";
+import "HeadIconFrameInfo.proto";
+import "PlatformType.proto";
+import "PlayerDisplaySettings.proto";
+import "PlayerOutfitInfo.proto";
+import "PlayerRecordInfo.proto";
+
+message PlayerDetailInfo {
+  optional uint32 head_icon = 15;
+  optional uint32 level = 10;
+  optional uint32 uid = 2;
+  optional uint32 world_level = 13;
+  optional PlatformType platform_type = 3;
+  optional bool is_banned = 5;
+  optional bool show_display_avatars = 6;
+  optional PlayerRecordInfo record_info = 7;
+  optional PlayerOutfitInfo player_outfit_data = 871;
+  optional HeadIconFrameInfo head_icon_frame_info = 336;
+  optional PlayerDisplaySettings display_settings = 428;
+  optional string nickname = 14;
+  optional string signature = 12;
+  repeated DisplayAvatarDetailInfo display_avatar_list = 11;
+  repeated DisplayAvatarDetailInfo assist_avatar_list = 390;
+}

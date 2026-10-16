@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemCost.proto";
+
+message UnlockSkilltreeCsReq {
+  optional uint32 point_id = 11;
+  optional uint32 level = 5;
+  repeated ItemCost item_list = 2;
+}

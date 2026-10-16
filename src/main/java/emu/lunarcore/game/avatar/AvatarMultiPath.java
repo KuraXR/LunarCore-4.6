@@ -7,6 +7,7 @@ import dev.morphia.annotations.Id;
 import dev.morphia.annotations.Indexed;
 
 import emu.lunarcore.LunarCore;
+import emu.lunarcore.data.GameData;
 import emu.lunarcore.data.excel.AvatarExcel;
 import emu.lunarcore.game.enums.ItemMainType;
 import emu.lunarcore.game.player.Player;
@@ -74,17 +75,42 @@ public class AvatarMultiPath extends BaseAvatar {
     // Player sync
     
     public void onSync(PlayerSyncScNotify proto) {
-        // TODO
+        // Sync the changed path together with its avatar
+        proto.getMutableAvatarSync().addAvatarPathInfoList(this.toPathInfoProto());
+
+        GameAvatar baseAvatar = this.getBaseAvatar();
+        if (baseAvatar != null) {
+            proto.getMutableAvatarSync().addAvatarList(baseAvatar.toProto());
+        }
     }
-    
+
+    // Only the selected path is linked to its avatar, so look the avatar up for the others
+    private GameAvatar getBaseAvatar() {
+        if (this.getAvatar() != null) {
+            return this.getAvatar();
+        }
+
+        var pathExcel = GameData.getMultiplePathAvatarExcelMap().get(this.getExcelId());
+        if (this.getOwner() == null || pathExcel == null) {
+            return null;
+        }
+
+        return this.getOwner().getAvatars().getAvatarById(pathExcel.getBaseAvatarID());
+    }
+
     // Proto
-    
+
     public AvatarPathInfo toPathInfoProto() {
         var proto = AvatarPathInfo.newInstance()
                 .setAvatarId(this.getExcelId())
                 .setRank(this.getRank())
                 .setAvatarSkin(this.getData().getSkinId())
                 .setEnhanceId(this.getEnhanceId());
+
+        GameAvatar baseAvatar = this.getBaseAvatar();
+        if (baseAvatar != null) {
+            proto.setFirstMetTimestamp(baseAvatar.getTimestamp());
+        }
 
         for (var equip : this.getEquips().values()) {
             if (equip.getItemMainType() == ItemMainType.Relic) {

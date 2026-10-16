@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "SceneIdentifierInfo.proto";
+
+message GetSceneMapInfoCsReq {
+  repeated SceneIdentifierInfo scene_identifier_list = 8;
+}

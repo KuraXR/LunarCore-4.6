@@ -20,26 +20,22 @@ public final class UnlockAvatarPathScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 12;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .MultiPathAvatarType avatar_id = 2;</code>
+     * <code>optional .MultiPathAvatarType avatar_id = 5;</code>
      */
     private int avatarId;
 
     /**
-     * <code>optional .ItemList reward_list = 9;</code>
+     * <code>optional .ItemList reward_list = 2;</code>
      */
     private final ItemListOuterClass.ItemList rewardList = ItemListOuterClass.ItemList.newInstance();
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 8;</code>
+     * <code>repeated uint32 basic_type_id_list = 3;</code>
      */
     private final RepeatedInt basicTypeIdList = RepeatedInt.newEmptyInstance();
 
@@ -54,10 +50,6 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 12;</code>
      * @return whether the retcode field is set
      */
@@ -66,10 +58,6 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 12;</code>
      * @return this
      */
@@ -80,10 +68,6 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 12;</code>
      * @return the retcode
      */
@@ -92,10 +76,6 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 12;</code>
      * @param value the retcode to set
      * @return this
@@ -107,7 +87,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .MultiPathAvatarType avatar_id = 2;</code>
+     * <code>optional .MultiPathAvatarType avatar_id = 5;</code>
      * @return whether the avatarId field is set
      */
     public boolean hasAvatarId() {
@@ -115,7 +95,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .MultiPathAvatarType avatar_id = 2;</code>
+     * <code>optional .MultiPathAvatarType avatar_id = 5;</code>
      * @return this
      */
     public UnlockAvatarPathScRsp clearAvatarId() {
@@ -125,7 +105,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .MultiPathAvatarType avatar_id = 2;</code>
+     * <code>optional .MultiPathAvatarType avatar_id = 5;</code>
      * @return the avatarId
      */
     public MultiPathAvatarTypeOuterClass.MultiPathAvatarType getAvatarId() {
@@ -158,7 +138,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .MultiPathAvatarType avatar_id = 2;</code>
+     * <code>optional .MultiPathAvatarType avatar_id = 5;</code>
      * @param value the avatarId to set
      * @return this
      */
@@ -170,7 +150,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward_list = 9;</code>
+     * <code>optional .ItemList reward_list = 2;</code>
      * @return whether the rewardList field is set
      */
     public boolean hasRewardList() {
@@ -178,7 +158,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward_list = 9;</code>
+     * <code>optional .ItemList reward_list = 2;</code>
      * @return this
      */
     public UnlockAvatarPathScRsp clearRewardList() {
@@ -188,7 +168,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward_list = 9;</code>
+     * <code>optional .ItemList reward_list = 2;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -202,7 +182,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward_list = 9;</code>
+     * <code>optional .ItemList reward_list = 2;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -216,7 +196,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward_list = 9;</code>
+     * <code>optional .ItemList reward_list = 2;</code>
      * @param value the rewardList to set
      * @return this
      */
@@ -227,7 +207,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 8;</code>
+     * <code>repeated uint32 basic_type_id_list = 3;</code>
      * @return whether the basicTypeIdList field is set
      */
     public boolean hasBasicTypeIdList() {
@@ -235,7 +215,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 8;</code>
+     * <code>repeated uint32 basic_type_id_list = 3;</code>
      * @return this
      */
     public UnlockAvatarPathScRsp clearBasicTypeIdList() {
@@ -245,7 +225,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 8;</code>
+     * <code>repeated uint32 basic_type_id_list = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -259,7 +239,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 8;</code>
+     * <code>repeated uint32 basic_type_id_list = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -273,7 +253,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 8;</code>
+     * <code>repeated uint32 basic_type_id_list = 3;</code>
      * @param value the basicTypeIdList to add
      * @return this
      */
@@ -284,7 +264,7 @@ public final class UnlockAvatarPathScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 8;</code>
+     * <code>repeated uint32 basic_type_id_list = 3;</code>
      * @param values the basicTypeIdList to add
      * @return this
      */
@@ -377,16 +357,16 @@ public final class UnlockAvatarPathScRspOuterClass {
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 40);
         output.writeEnumNoTag(avatarId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 74);
+        output.writeRawByte((byte) 18);
         output.writeMessageNoTag(rewardList);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < basicTypeIdList.length(); i++) {
-          output.writeRawByte((byte) 64);
+          output.writeRawByte((byte) 24);
           output.writeUInt32NoTag(basicTypeIdList.array()[i]);
         }
       }
@@ -422,11 +402,11 @@ public final class UnlockAvatarPathScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 16) {
+            if (tag != 40) {
               break;
             }
           }
-          case 16: {
+          case 40: {
             // avatarId
             final int value = input.readInt32();
             if (MultiPathAvatarTypeOuterClass.MultiPathAvatarType.forNumber(value) != null) {
@@ -434,20 +414,20 @@ public final class UnlockAvatarPathScRspOuterClass {
               bitField0_ |= 0x00000002;
             }
             tag = input.readTag();
-            if (tag != 74) {
+            if (tag != 18) {
               break;
             }
           }
-          case 74: {
+          case 18: {
             // rewardList
             input.readMessage(rewardList);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 26) {
               break;
             }
           }
-          case 66: {
+          case 26: {
             // basicTypeIdList [packed=true]
             input.readPackedUInt32(basicTypeIdList, tag);
             bitField0_ |= 0x00000008;
@@ -466,7 +446,7 @@ public final class UnlockAvatarPathScRspOuterClass {
             tag = input.readTag();
             break;
           }
-          case 64: {
+          case 24: {
             // basicTypeIdList [packed=false]
             tag = input.readRepeatedUInt32(basicTypeIdList, tag);
             bitField0_ |= 0x00000008;

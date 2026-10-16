@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "Avatar.proto";
+import "AvatarPathInfo.proto";
+
+message AvatarSync {
+  repeated Avatar avatar_list = 4;
+  repeated AvatarPathInfo avatar_path_info_list = 6;
+}

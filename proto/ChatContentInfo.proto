@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChatMsgInfo.proto";
+import "MsgType.proto";
+
+message ChatContentInfo {
+  optional MsgType msg_type = 1;
+  optional ChatMsgInfo chat_msg = 2;
+}

@@ -19,12 +19,12 @@ public final class GetBigDataRecommendCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 9;</code>
+     * <code>optional uint32 trailblazer_path_id = 10;</code>
      */
     private int trailblazerPathId;
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      */
     private int recommendType;
 
@@ -39,7 +39,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 9;</code>
+     * <code>optional uint32 trailblazer_path_id = 10;</code>
      * @return whether the trailblazerPathId field is set
      */
     public boolean hasTrailblazerPathId() {
@@ -47,7 +47,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 9;</code>
+     * <code>optional uint32 trailblazer_path_id = 10;</code>
      * @return this
      */
     public GetBigDataRecommendCsReq clearTrailblazerPathId() {
@@ -57,7 +57,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 9;</code>
+     * <code>optional uint32 trailblazer_path_id = 10;</code>
      * @return the trailblazerPathId
      */
     public int getTrailblazerPathId() {
@@ -65,7 +65,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 9;</code>
+     * <code>optional uint32 trailblazer_path_id = 10;</code>
      * @param value the trailblazerPathId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @return whether the recommendType field is set
      */
     public boolean hasRecommendType() {
@@ -84,7 +84,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @return this
      */
     public GetBigDataRecommendCsReq clearRecommendType() {
@@ -94,7 +94,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @return the recommendType
      */
     public BigDataRecommendTypeOuterClass.BigDataRecommendType getRecommendType() {
@@ -127,7 +127,7 @@ public final class GetBigDataRecommendCsReqOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @param value the recommendType to set
      * @return this
      */
@@ -203,11 +203,11 @@ public final class GetBigDataRecommendCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(trailblazerPathId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 96);
         output.writeEnumNoTag(recommendType);
       }
     }
@@ -231,16 +231,16 @@ public final class GetBigDataRecommendCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 80: {
             // trailblazerPathId
             trailblazerPathId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 16) {
+            if (tag != 96) {
               break;
             }
           }
-          case 16: {
+          case 96: {
             // recommendType
             final int value = input.readInt32();
             if (BigDataRecommendTypeOuterClass.BigDataRecommendType.forNumber(value) != null) {

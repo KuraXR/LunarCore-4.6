@@ -20,6 +20,7 @@ import emu.lunarcore.proto.TakenChallengeRewardInfoOuterClass.TakenChallengeRewa
 import emu.lunarcore.server.packet.Retcode;
 import emu.lunarcore.server.packet.send.PacketChallengePeakGroupDataUpdateScNotify;
 import emu.lunarcore.server.packet.send.PacketStartChallengeScRsp;
+import emu.lunarcore.server.packet.send.PacketStartPartialChallengeScRsp;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
@@ -47,10 +48,19 @@ public class ChallengeManager extends BasePlayerManager {
     }
 
     public void startChallenge(int challengeId, RepeatedInt lineup1, RepeatedInt lineup2, int firstHalfBuff, int secondHalfBuff) {
+        this.startChallenge(challengeId, lineup1, lineup2, firstHalfBuff, secondHalfBuff, false);
+    }
+
+    /**
+     * Starts a challenge
+     * @param partial Started with StartPartialChallengeCsReq, which the client expects
+     * StartPartialChallengeScRsp for instead of StartChallengeScRsp
+     */
+    public void startChallenge(int challengeId, RepeatedInt lineup1, RepeatedInt lineup2, int firstHalfBuff, int secondHalfBuff, boolean partial) {
         // Get challenge excel
         ChallengeExcel excel = GameData.getChallengeExcelMap().get(challengeId);
         if (excel == null) {
-            getPlayer().sendPacket(new PacketStartChallengeScRsp(Retcode.CHALLENGE_NOT_EXIST));
+            this.sendStartError(Retcode.CHALLENGE_NOT_EXIST, partial);
             return;
         }
         
@@ -62,7 +72,7 @@ public class ChallengeManager extends BasePlayerManager {
             lineup.replace(Arrays.stream(lineup1.array()).boxed().toList());
             // Make sure this lineup has avatars set
             if (lineup.getAvatars().size() == 0) {
-                getPlayer().sendPacket(new PacketStartChallengeScRsp(Retcode.CHALLENGE_LINEUP_EMPTY));
+                this.sendStartError(Retcode.CHALLENGE_LINEUP_EMPTY, partial);
                 return;
             }
             // Reset hp/sp
@@ -81,7 +91,7 @@ public class ChallengeManager extends BasePlayerManager {
             lineup.replace(Arrays.stream(lineup2.array()).boxed().toList());
             // Make sure this lineup has avatars set
             if (lineup.getAvatars().size() == 0) {
-                getPlayer().sendPacket(new PacketStartChallengeScRsp(Retcode.CHALLENGE_LINEUP_EMPTY));
+                this.sendStartError(Retcode.CHALLENGE_LINEUP_EMPTY, partial);
                 return;
             }
             // Reset hp/sp
@@ -107,7 +117,7 @@ public class ChallengeManager extends BasePlayerManager {
             getPlayer().getLineupManager().setCurrentExtraLineup(0, false);
             getPlayer().setInstance(null);
             // Send error packet
-            getPlayer().sendPacket(new PacketStartChallengeScRsp(Retcode.CHALLENGE_NOT_EXIST));
+            this.sendStartError(Retcode.CHALLENGE_NOT_EXIST, partial);
             return;
         }
         
@@ -132,7 +142,19 @@ public class ChallengeManager extends BasePlayerManager {
         }
 
         // Send packet
-        getPlayer().sendPacket(new PacketStartChallengeScRsp(getPlayer(), challengeId, lineup1, lineup2));
+        if (partial) {
+            getPlayer().sendPacket(new PacketStartPartialChallengeScRsp(getPlayer()));
+        } else {
+            getPlayer().sendPacket(new PacketStartChallengeScRsp(getPlayer(), challengeId, lineup1, lineup2));
+        }
+    }
+
+    private void sendStartError(Retcode retcode, boolean partial) {
+        if (partial) {
+            getPlayer().sendPacket(new PacketStartPartialChallengeScRsp(retcode));
+        } else {
+            getPlayer().sendPacket(new PacketStartChallengeScRsp(retcode));
+        }
     }
     
     public void setChallengePeakMobLineupAvatars(int groupId, Iterable<ChallengePeakMobLineupInfo> infos) {

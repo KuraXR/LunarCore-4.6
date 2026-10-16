@@ -2,7 +2,6 @@
 package emu.lunarcore.proto;
 
 import java.io.IOException;
-import us.hebi.quickbuf.FieldName;
 import us.hebi.quickbuf.InvalidProtocolBufferException;
 import us.hebi.quickbuf.JsonSink;
 import us.hebi.quickbuf.JsonSource;
@@ -10,7 +9,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 
 public final class PlayerOutfitInfoOuterClass {
   /**
@@ -18,11 +16,6 @@ public final class PlayerOutfitInfoOuterClass {
    */
   public static final class PlayerOutfitInfo extends ProtoMessage<PlayerOutfitInfo> implements Cloneable {
     private static final long serialVersionUID = 0L;
-
-    /**
-     * <code>repeated uint32 outfit_id_list = 1;</code>
-     */
-    private final RepeatedInt outfitIdList = RepeatedInt.newEmptyInstance();
 
     private PlayerOutfitInfo() {
     }
@@ -34,81 +27,9 @@ public final class PlayerOutfitInfoOuterClass {
       return new PlayerOutfitInfo();
     }
 
-    /**
-     * <code>repeated uint32 outfit_id_list = 1;</code>
-     * @return whether the outfitIdList field is set
-     */
-    public boolean hasOutfitIdList() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 outfit_id_list = 1;</code>
-     * @return this
-     */
-    public PlayerOutfitInfo clearOutfitIdList() {
-      bitField0_ &= ~0x00000001;
-      outfitIdList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 outfit_id_list = 1;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableOutfitIdList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getOutfitIdList() {
-      return outfitIdList;
-    }
-
-    /**
-     * <code>repeated uint32 outfit_id_list = 1;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableOutfitIdList() {
-      bitField0_ |= 0x00000001;
-      return outfitIdList;
-    }
-
-    /**
-     * <code>repeated uint32 outfit_id_list = 1;</code>
-     * @param value the outfitIdList to add
-     * @return this
-     */
-    public PlayerOutfitInfo addOutfitIdList(final int value) {
-      bitField0_ |= 0x00000001;
-      outfitIdList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 outfit_id_list = 1;</code>
-     * @param values the outfitIdList to add
-     * @return this
-     */
-    public PlayerOutfitInfo addAllOutfitIdList(final int... values) {
-      bitField0_ |= 0x00000001;
-      outfitIdList.addAll(values);
-      return this;
-    }
-
     @Override
     public PlayerOutfitInfo copyFrom(final PlayerOutfitInfo other) {
       cachedSize = other.cachedSize;
-      if ((bitField0_ | other.bitField0_) != 0) {
-        bitField0_ = other.bitField0_;
-        outfitIdList.copyFrom(other.outfitIdList);
-      }
       return this;
     }
 
@@ -118,9 +39,6 @@ public final class PlayerOutfitInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasOutfitIdList()) {
-        getMutableOutfitIdList().addAll(other.outfitIdList);
-      }
       return this;
     }
 
@@ -130,8 +48,6 @@ public final class PlayerOutfitInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      bitField0_ = 0;
-      outfitIdList.clear();
       return this;
     }
 
@@ -141,8 +57,6 @@ public final class PlayerOutfitInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      bitField0_ = 0;
-      outfitIdList.clear();
       return this;
     }
 
@@ -155,26 +69,16 @@ public final class PlayerOutfitInfoOuterClass {
         return false;
       }
       PlayerOutfitInfo other = (PlayerOutfitInfo) o;
-      return bitField0_ == other.bitField0_
-        && (!hasOutfitIdList() || outfitIdList.equals(other.outfitIdList));
+      return true;
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
-      if ((bitField0_ & 0x00000001) != 0) {
-        for (int i = 0; i < outfitIdList.length(); i++) {
-          output.writeRawByte((byte) 8);
-          output.writeUInt32NoTag(outfitIdList.array()[i]);
-        }
-      }
     }
 
     @Override
     protected int computeSerializedSize() {
       int size = 0;
-      if ((bitField0_ & 0x00000001) != 0) {
-        size += (1 * outfitIdList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(outfitIdList);
-      }
       return size;
     }
 
@@ -185,15 +89,6 @@ public final class PlayerOutfitInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 10: {
-            // outfitIdList [packed=true]
-            input.readPackedUInt32(outfitIdList, tag);
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 0) {
-              break;
-            }
-          }
           case 0: {
             return this;
           }
@@ -204,12 +99,6 @@ public final class PlayerOutfitInfoOuterClass {
             tag = input.readTag();
             break;
           }
-          case 8: {
-            // outfitIdList [packed=false]
-            tag = input.readRepeatedUInt32(outfitIdList, tag);
-            bitField0_ |= 0x00000001;
-            break;
-          }
         }
       }
     }
@@ -217,9 +106,6 @@ public final class PlayerOutfitInfoOuterClass {
     @Override
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
-      if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRepeatedUInt32(FieldNames.outfitIdList, outfitIdList);
-      }
       output.endObject();
     }
 
@@ -230,18 +116,6 @@ public final class PlayerOutfitInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1023228988:
-          case 282868486: {
-            if (input.isAtField(FieldNames.outfitIdList)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(outfitIdList);
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           default: {
             input.skipUnknownField();
             break;
@@ -295,7 +169,6 @@ public final class PlayerOutfitInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName outfitIdList = FieldName.forField("outfitIdList", "outfit_id_list");
     }
   }
 }

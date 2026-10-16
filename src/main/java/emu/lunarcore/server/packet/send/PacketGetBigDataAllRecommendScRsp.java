@@ -13,11 +13,7 @@ public class PacketGetBigDataAllRecommendScRsp extends BasePacket {
         var data = GetBigDataAllRecommendScRsp.newInstance()
                 .setRecommendType(type);
         
-        if (type == BigDataRecommendType.BIG_DATA_RECOMMEND_TYPE_AVATAR_RELIC) {
-            data.getMutableRelicReccomendData();
-        } else {
-            data.getMutableAvatarReccomendData();
-        }
+        // 4.6 has no recommend-data sub messages in this reply
         
         this.setData(data);
     }

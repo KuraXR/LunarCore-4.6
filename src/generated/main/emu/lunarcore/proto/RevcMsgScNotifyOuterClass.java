@@ -19,17 +19,17 @@ public final class RevcMsgScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 to_uid = 9;</code>
+     * <code>optional uint32 to_uid = 15;</code>
      */
     private int toUid;
 
     /**
-     * <code>optional .ChatType chat_type = 5;</code>
+     * <code>optional .ChatType chat_type = 9;</code>
      */
     private int chatType;
 
     /**
-     * <code>optional .ChatInfo msg = 15;</code>
+     * <code>optional .ChatInfo msg = 8;</code>
      */
     private final ChatInfoOuterClass.ChatInfo msg = ChatInfoOuterClass.ChatInfo.newInstance();
 
@@ -44,7 +44,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 to_uid = 9;</code>
+     * <code>optional uint32 to_uid = 15;</code>
      * @return whether the toUid field is set
      */
     public boolean hasToUid() {
@@ -52,7 +52,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 to_uid = 9;</code>
+     * <code>optional uint32 to_uid = 15;</code>
      * @return this
      */
     public RevcMsgScNotify clearToUid() {
@@ -62,7 +62,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 to_uid = 9;</code>
+     * <code>optional uint32 to_uid = 15;</code>
      * @return the toUid
      */
     public int getToUid() {
@@ -70,7 +70,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 to_uid = 9;</code>
+     * <code>optional uint32 to_uid = 15;</code>
      * @param value the toUid to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatType chat_type = 5;</code>
+     * <code>optional .ChatType chat_type = 9;</code>
      * @return whether the chatType field is set
      */
     public boolean hasChatType() {
@@ -89,7 +89,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatType chat_type = 5;</code>
+     * <code>optional .ChatType chat_type = 9;</code>
      * @return this
      */
     public RevcMsgScNotify clearChatType() {
@@ -99,7 +99,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatType chat_type = 5;</code>
+     * <code>optional .ChatType chat_type = 9;</code>
      * @return the chatType
      */
     public ChatTypeOuterClass.ChatType getChatType() {
@@ -132,7 +132,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatType chat_type = 5;</code>
+     * <code>optional .ChatType chat_type = 9;</code>
      * @param value the chatType to set
      * @return this
      */
@@ -143,7 +143,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatInfo msg = 15;</code>
+     * <code>optional .ChatInfo msg = 8;</code>
      * @return whether the msg field is set
      */
     public boolean hasMsg() {
@@ -151,7 +151,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatInfo msg = 15;</code>
+     * <code>optional .ChatInfo msg = 8;</code>
      * @return this
      */
     public RevcMsgScNotify clearMsg() {
@@ -161,7 +161,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatInfo msg = 15;</code>
+     * <code>optional .ChatInfo msg = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -175,7 +175,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatInfo msg = 15;</code>
+     * <code>optional .ChatInfo msg = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -189,7 +189,7 @@ public final class RevcMsgScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChatInfo msg = 15;</code>
+     * <code>optional .ChatInfo msg = 8;</code>
      * @param value the msg to set
      * @return this
      */
@@ -271,15 +271,15 @@ public final class RevcMsgScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(toUid);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 72);
         output.writeEnumNoTag(chatType);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 122);
+        output.writeRawByte((byte) 66);
         output.writeMessageNoTag(msg);
       }
     }
@@ -306,16 +306,16 @@ public final class RevcMsgScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 120: {
             // toUid
             toUid = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 40) {
+            if (tag != 72) {
               break;
             }
           }
-          case 40: {
+          case 72: {
             // chatType
             final int value = input.readInt32();
             if (ChatTypeOuterClass.ChatType.forNumber(value) != null) {
@@ -323,11 +323,11 @@ public final class RevcMsgScNotifyOuterClass {
               bitField0_ |= 0x00000002;
             }
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 66) {
               break;
             }
           }
-          case 122: {
+          case 66: {
             // msg
             input.readMessage(msg);
             bitField0_ |= 0x00000004;

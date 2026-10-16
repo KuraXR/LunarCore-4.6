@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 import us.hebi.quickbuf.RepeatedMessage;
 
 public final class UnlockBackGroundMusicScRspOuterClass {
@@ -21,17 +20,12 @@ public final class UnlockBackGroundMusicScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 4;</code>
+     * <code>optional uint32 retcode = 11;</code>
      */
     private int retcode;
 
     /**
-     * <code>repeated uint32 unlocked_ids = 5;</code>
-     */
-    private final RepeatedInt unlockedIds = RepeatedInt.newEmptyInstance();
-
-    /**
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 1;</code>
      */
     private final RepeatedMessage<UnlockedMusicOuterClass.UnlockedMusic> musicList = RepeatedMessage.newEmptyInstance(UnlockedMusicOuterClass.UnlockedMusic.getFactory());
 
@@ -46,7 +40,7 @@ public final class UnlockBackGroundMusicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 4;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -54,7 +48,7 @@ public final class UnlockBackGroundMusicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 4;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return this
      */
     public UnlockBackGroundMusicScRsp clearRetcode() {
@@ -64,7 +58,7 @@ public final class UnlockBackGroundMusicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 4;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -72,7 +66,7 @@ public final class UnlockBackGroundMusicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 4;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -83,93 +77,25 @@ public final class UnlockBackGroundMusicScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_ids = 5;</code>
-     * @return whether the unlockedIds field is set
+     * <code>repeated .UnlockedMusic music_list = 1;</code>
+     * @return whether the musicList field is set
      */
-    public boolean hasUnlockedIds() {
+    public boolean hasMusicList() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>repeated uint32 unlocked_ids = 5;</code>
-     * @return this
-     */
-    public UnlockBackGroundMusicScRsp clearUnlockedIds() {
-      bitField0_ &= ~0x00000002;
-      unlockedIds.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 unlocked_ids = 5;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableUnlockedIds()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getUnlockedIds() {
-      return unlockedIds;
-    }
-
-    /**
-     * <code>repeated uint32 unlocked_ids = 5;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableUnlockedIds() {
-      bitField0_ |= 0x00000002;
-      return unlockedIds;
-    }
-
-    /**
-     * <code>repeated uint32 unlocked_ids = 5;</code>
-     * @param value the unlockedIds to add
-     * @return this
-     */
-    public UnlockBackGroundMusicScRsp addUnlockedIds(final int value) {
-      bitField0_ |= 0x00000002;
-      unlockedIds.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 unlocked_ids = 5;</code>
-     * @param values the unlockedIds to add
-     * @return this
-     */
-    public UnlockBackGroundMusicScRsp addAllUnlockedIds(final int... values) {
-      bitField0_ |= 0x00000002;
-      unlockedIds.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
-     * @return whether the musicList field is set
-     */
-    public boolean hasMusicList() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 1;</code>
      * @return this
      */
     public UnlockBackGroundMusicScRsp clearMusicList() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       musicList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -183,7 +109,7 @@ public final class UnlockBackGroundMusicScRspOuterClass {
     }
 
     /**
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -192,30 +118,30 @@ public final class UnlockBackGroundMusicScRspOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<UnlockedMusicOuterClass.UnlockedMusic> getMutableMusicList() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       return musicList;
     }
 
     /**
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 1;</code>
      * @param value the musicList to add
      * @return this
      */
     public UnlockBackGroundMusicScRsp addMusicList(
         final UnlockedMusicOuterClass.UnlockedMusic value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       musicList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 1;</code>
      * @param values the musicList to add
      * @return this
      */
     public UnlockBackGroundMusicScRsp addAllMusicList(
         final UnlockedMusicOuterClass.UnlockedMusic... values) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       musicList.addAll(values);
       return this;
     }
@@ -226,7 +152,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        unlockedIds.copyFrom(other.unlockedIds);
         musicList.copyFrom(other.musicList);
       }
       return this;
@@ -240,9 +165,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
       cachedSize = -1;
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
-      }
-      if (other.hasUnlockedIds()) {
-        getMutableUnlockedIds().addAll(other.unlockedIds);
       }
       if (other.hasMusicList()) {
         getMutableMusicList().addAll(other.musicList);
@@ -258,7 +180,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      unlockedIds.clear();
       musicList.clear();
       return this;
     }
@@ -270,7 +191,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      unlockedIds.clear();
       musicList.clearQuick();
       return this;
     }
@@ -286,25 +206,18 @@ public final class UnlockBackGroundMusicScRspOuterClass {
       UnlockBackGroundMusicScRsp other = (UnlockBackGroundMusicScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasUnlockedIds() || unlockedIds.equals(other.unlockedIds))
         && (!hasMusicList() || musicList.equals(other.musicList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        for (int i = 0; i < unlockedIds.length(); i++) {
-          output.writeRawByte((byte) 40);
-          output.writeUInt32NoTag(unlockedIds.array()[i]);
-        }
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < musicList.length(); i++) {
-          output.writeRawByte((byte) 66);
+          output.writeRawByte((byte) 10);
           output.writeMessageNoTag(musicList.get(i));
         }
       }
@@ -317,9 +230,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += (1 * unlockedIds.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(unlockedIds);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
         size += (1 * musicList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(musicList);
       }
       return size;
@@ -332,28 +242,19 @@ public final class UnlockBackGroundMusicScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 88: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 10) {
               break;
             }
           }
-          case 42: {
-            // unlockedIds [packed=true]
-            input.readPackedUInt32(unlockedIds, tag);
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 66) {
-              break;
-            }
-          }
-          case 66: {
+          case 10: {
             // musicList
             tag = input.readRepeatedMessage(musicList, tag);
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000002;
             if (tag != 0) {
               break;
             }
@@ -368,12 +269,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
             tag = input.readTag();
             break;
           }
-          case 40: {
-            // unlockedIds [packed=false]
-            tag = input.readRepeatedUInt32(unlockedIds, tag);
-            bitField0_ |= 0x00000002;
-            break;
-          }
         }
       }
     }
@@ -385,9 +280,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRepeatedUInt32(FieldNames.unlockedIds, unlockedIds);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
         output.writeRepeatedMessage(FieldNames.musicList, musicList);
       }
       output.endObject();
@@ -411,24 +303,12 @@ public final class UnlockBackGroundMusicScRspOuterClass {
             }
             break;
           }
-          case -856496939:
-          case -780941476: {
-            if (input.isAtField(FieldNames.unlockedIds)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(unlockedIds);
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 389904483:
           case -780236168: {
             if (input.isAtField(FieldNames.musicList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(musicList);
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -489,8 +369,6 @@ public final class UnlockBackGroundMusicScRspOuterClass {
      */
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
-
-      static final FieldName unlockedIds = FieldName.forField("unlockedIds", "unlocked_ids");
 
       static final FieldName musicList = FieldName.forField("musicList", "music_list");
     }

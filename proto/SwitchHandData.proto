@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MotionInfo.proto";
+
+message SwitchHandData {
+  optional uint32 MPOHFMFDLAB = 4;
+  optional uint32 promotion = 11;
+  optional uint32 JEAHPAAOAOM = 12;
+  optional MotionInfo JNAMJNFMNAM = 2;
+  optional bytes JOEKOGCLFAA = 14;
+}

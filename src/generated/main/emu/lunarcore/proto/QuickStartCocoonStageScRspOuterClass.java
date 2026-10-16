@@ -19,27 +19,22 @@ public final class QuickStartCocoonStageScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 cocoon_id = 3;</code>
-     */
-    private int cocoonId;
-
-    /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      */
     private int wave;
 
     /**
-     * <code>optional uint32 wave_count = 7;</code>
+     * <code>optional uint32 cocoon_id = 4;</code>
      */
-    private int waveCount;
+    private int cocoonId;
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 13;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 5;</code>
+     * <code>optional .SceneBattleInfo battle_info = 11;</code>
      */
     private final SceneBattleInfoOuterClass.SceneBattleInfo battleInfo = SceneBattleInfoOuterClass.SceneBattleInfo.newInstance();
 
@@ -54,62 +49,25 @@ public final class QuickStartCocoonStageScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 3;</code>
-     * @return whether the cocoonId field is set
+     * <code>optional uint32 wave = 3;</code>
+     * @return whether the wave field is set
      */
-    public boolean hasCocoonId() {
+    public boolean hasWave() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 3;</code>
-     * @return this
-     */
-    public QuickStartCocoonStageScRsp clearCocoonId() {
-      bitField0_ &= ~0x00000001;
-      cocoonId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 cocoon_id = 3;</code>
-     * @return the cocoonId
-     */
-    public int getCocoonId() {
-      return cocoonId;
-    }
-
-    /**
-     * <code>optional uint32 cocoon_id = 3;</code>
-     * @param value the cocoonId to set
-     * @return this
-     */
-    public QuickStartCocoonStageScRsp setCocoonId(final int value) {
-      bitField0_ |= 0x00000001;
-      cocoonId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 wave = 4;</code>
-     * @return whether the wave field is set
-     */
-    public boolean hasWave() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      * @return this
      */
     public QuickStartCocoonStageScRsp clearWave() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       wave = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      * @return the wave
      */
     public int getWave() {
@@ -117,73 +75,73 @@ public final class QuickStartCocoonStageScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      * @param value the wave to set
      * @return this
      */
     public QuickStartCocoonStageScRsp setWave(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       wave = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 wave_count = 7;</code>
-     * @return whether the waveCount field is set
+     * <code>optional uint32 cocoon_id = 4;</code>
+     * @return whether the cocoonId field is set
      */
-    public boolean hasWaveCount() {
+    public boolean hasCocoonId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 cocoon_id = 4;</code>
+     * @return this
+     */
+    public QuickStartCocoonStageScRsp clearCocoonId() {
+      bitField0_ &= ~0x00000002;
+      cocoonId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 cocoon_id = 4;</code>
+     * @return the cocoonId
+     */
+    public int getCocoonId() {
+      return cocoonId;
+    }
+
+    /**
+     * <code>optional uint32 cocoon_id = 4;</code>
+     * @param value the cocoonId to set
+     * @return this
+     */
+    public QuickStartCocoonStageScRsp setCocoonId(final int value) {
+      bitField0_ |= 0x00000002;
+      cocoonId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 13;</code>
+     * @return whether the retcode field is set
+     */
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 wave_count = 7;</code>
-     * @return this
-     */
-    public QuickStartCocoonStageScRsp clearWaveCount() {
-      bitField0_ &= ~0x00000004;
-      waveCount = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 wave_count = 7;</code>
-     * @return the waveCount
-     */
-    public int getWaveCount() {
-      return waveCount;
-    }
-
-    /**
-     * <code>optional uint32 wave_count = 7;</code>
-     * @param value the waveCount to set
-     * @return this
-     */
-    public QuickStartCocoonStageScRsp setWaveCount(final int value) {
-      bitField0_ |= 0x00000004;
-      waveCount = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 14;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 13;</code>
      * @return this
      */
     public QuickStartCocoonStageScRsp clearRetcode() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000004;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 13;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -191,36 +149,36 @@ public final class QuickStartCocoonStageScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 13;</code>
      * @param value the retcode to set
      * @return this
      */
     public QuickStartCocoonStageScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       retcode = value;
       return this;
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 5;</code>
+     * <code>optional .SceneBattleInfo battle_info = 11;</code>
      * @return whether the battleInfo field is set
      */
     public boolean hasBattleInfo() {
-      return (bitField0_ & 0x00000010) != 0;
+      return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 5;</code>
+     * <code>optional .SceneBattleInfo battle_info = 11;</code>
      * @return this
      */
     public QuickStartCocoonStageScRsp clearBattleInfo() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000008;
       battleInfo.clear();
       return this;
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 5;</code>
+     * <code>optional .SceneBattleInfo battle_info = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -234,7 +192,7 @@ public final class QuickStartCocoonStageScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 5;</code>
+     * <code>optional .SceneBattleInfo battle_info = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -243,18 +201,18 @@ public final class QuickStartCocoonStageScRspOuterClass {
      * @return internal storage object for modifications
      */
     public SceneBattleInfoOuterClass.SceneBattleInfo getMutableBattleInfo() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       return battleInfo;
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 5;</code>
+     * <code>optional .SceneBattleInfo battle_info = 11;</code>
      * @param value the battleInfo to set
      * @return this
      */
     public QuickStartCocoonStageScRsp setBattleInfo(
         final SceneBattleInfoOuterClass.SceneBattleInfo value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       battleInfo.copyFrom(value);
       return this;
     }
@@ -264,9 +222,8 @@ public final class QuickStartCocoonStageScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        cocoonId = other.cocoonId;
         wave = other.wave;
-        waveCount = other.waveCount;
+        cocoonId = other.cocoonId;
         retcode = other.retcode;
         battleInfo.copyFrom(other.battleInfo);
       }
@@ -279,14 +236,11 @@ public final class QuickStartCocoonStageScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasCocoonId()) {
-        setCocoonId(other.cocoonId);
-      }
       if (other.hasWave()) {
         setWave(other.wave);
       }
-      if (other.hasWaveCount()) {
-        setWaveCount(other.waveCount);
+      if (other.hasCocoonId()) {
+        setCocoonId(other.cocoonId);
       }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
@@ -304,9 +258,8 @@ public final class QuickStartCocoonStageScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      cocoonId = 0;
       wave = 0;
-      waveCount = 0;
+      cocoonId = 0;
       retcode = 0;
       battleInfo.clear();
       return this;
@@ -333,9 +286,8 @@ public final class QuickStartCocoonStageScRspOuterClass {
       }
       QuickStartCocoonStageScRsp other = (QuickStartCocoonStageScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasCocoonId() || cocoonId == other.cocoonId)
         && (!hasWave() || wave == other.wave)
-        && (!hasWaveCount() || waveCount == other.waveCount)
+        && (!hasCocoonId() || cocoonId == other.cocoonId)
         && (!hasRetcode() || retcode == other.retcode)
         && (!hasBattleInfo() || battleInfo.equals(other.battleInfo));
     }
@@ -344,22 +296,18 @@ public final class QuickStartCocoonStageScRspOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(cocoonId);
+        output.writeUInt32NoTag(wave);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(wave);
+        output.writeUInt32NoTag(cocoonId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(waveCount);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(retcode);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 42);
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRawByte((byte) 90);
         output.writeMessageNoTag(battleInfo);
       }
     }
@@ -368,18 +316,15 @@ public final class QuickStartCocoonStageScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(cocoonId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(wave);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(waveCount);
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(cocoonId);
       }
-      if ((bitField0_ & 0x00000008) != 0) {
+      if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(battleInfo);
       }
       return size;
@@ -393,8 +338,8 @@ public final class QuickStartCocoonStageScRspOuterClass {
       while (true) {
         switch (tag) {
           case 24: {
-            // cocoonId
-            cocoonId = input.readUInt32();
+            // wave
+            wave = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 32) {
@@ -402,36 +347,27 @@ public final class QuickStartCocoonStageScRspOuterClass {
             }
           }
           case 32: {
-            // wave
-            wave = input.readUInt32();
+            // cocoonId
+            cocoonId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 104) {
               break;
             }
           }
-          case 56: {
-            // waveCount
-            waveCount = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
+          case 104: {
             // retcode
             retcode = input.readUInt32();
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 90) {
               break;
             }
           }
-          case 42: {
+          case 90: {
             // battleInfo
             input.readMessage(battleInfo);
-            bitField0_ |= 0x00000010;
+            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -455,18 +391,15 @@ public final class QuickStartCocoonStageScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.cocoonId, cocoonId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.wave, wave);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.waveCount, waveCount);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.cocoonId, cocoonId);
       }
-      if ((bitField0_ & 0x00000008) != 0) {
+      if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000008) != 0) {
         output.writeMessage(FieldNames.battleInfo, battleInfo);
       }
       output.endObject();
@@ -479,11 +412,10 @@ public final class QuickStartCocoonStageScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -886563534:
-          case -1713644381: {
-            if (input.isAtField(FieldNames.cocoonId)) {
+          case 3642105: {
+            if (input.isAtField(FieldNames.wave)) {
               if (!input.trySkipNullValue()) {
-                cocoonId = input.readUInt32();
+                wave = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -491,23 +423,12 @@ public final class QuickStartCocoonStageScRspOuterClass {
             }
             break;
           }
-          case 3642105: {
-            if (input.isAtField(FieldNames.wave)) {
+          case -886563534:
+          case -1713644381: {
+            if (input.isAtField(FieldNames.cocoonId)) {
               if (!input.trySkipNullValue()) {
-                wave = input.readUInt32();
+                cocoonId = input.readUInt32();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1518256534:
-          case 611674185: {
-            if (input.isAtField(FieldNames.waveCount)) {
-              if (!input.trySkipNullValue()) {
-                waveCount = input.readUInt32();
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -518,7 +439,7 @@ public final class QuickStartCocoonStageScRspOuterClass {
             if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
                 retcode = input.readUInt32();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -530,7 +451,7 @@ public final class QuickStartCocoonStageScRspOuterClass {
             if (input.isAtField(FieldNames.battleInfo)) {
               if (!input.trySkipNullValue()) {
                 input.readMessage(battleInfo);
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -590,11 +511,9 @@ public final class QuickStartCocoonStageScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName cocoonId = FieldName.forField("cocoonId", "cocoon_id");
-
       static final FieldName wave = FieldName.forField("wave");
 
-      static final FieldName waveCount = FieldName.forField("waveCount", "wave_count");
+      static final FieldName cocoonId = FieldName.forField("cocoonId", "cocoon_id");
 
       static final FieldName retcode = FieldName.forField("retcode");
 

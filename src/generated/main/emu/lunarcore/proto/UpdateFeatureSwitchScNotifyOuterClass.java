@@ -20,7 +20,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated .FeatureSwitchInfo switch_info_list = 5;</code>
+     * <code>repeated .FeatureSwitchInfo switch_info_list = 9;</code>
      */
     private final RepeatedMessage<FeatureSwitchInfoOuterClass.FeatureSwitchInfo> switchInfoList = RepeatedMessage.newEmptyInstance(FeatureSwitchInfoOuterClass.FeatureSwitchInfo.getFactory());
 
@@ -35,7 +35,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .FeatureSwitchInfo switch_info_list = 5;</code>
+     * <code>repeated .FeatureSwitchInfo switch_info_list = 9;</code>
      * @return whether the switchInfoList field is set
      */
     public boolean hasSwitchInfoList() {
@@ -43,7 +43,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .FeatureSwitchInfo switch_info_list = 5;</code>
+     * <code>repeated .FeatureSwitchInfo switch_info_list = 9;</code>
      * @return this
      */
     public UpdateFeatureSwitchScNotify clearSwitchInfoList() {
@@ -53,7 +53,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .FeatureSwitchInfo switch_info_list = 5;</code>
+     * <code>repeated .FeatureSwitchInfo switch_info_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -67,7 +67,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .FeatureSwitchInfo switch_info_list = 5;</code>
+     * <code>repeated .FeatureSwitchInfo switch_info_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -82,7 +82,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .FeatureSwitchInfo switch_info_list = 5;</code>
+     * <code>repeated .FeatureSwitchInfo switch_info_list = 9;</code>
      * @param value the switchInfoList to add
      * @return this
      */
@@ -94,7 +94,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .FeatureSwitchInfo switch_info_list = 5;</code>
+     * <code>repeated .FeatureSwitchInfo switch_info_list = 9;</code>
      * @param values the switchInfoList to add
      * @return this
      */
@@ -166,7 +166,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < switchInfoList.length(); i++) {
-          output.writeRawByte((byte) 42);
+          output.writeRawByte((byte) 74);
           output.writeMessageNoTag(switchInfoList.get(i));
         }
       }
@@ -188,7 +188,7 @@ public final class UpdateFeatureSwitchScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 42: {
+          case 74: {
             // switchInfoList
             tag = input.readRepeatedMessage(switchInfoList, tag);
             bitField0_ |= 0x00000001;

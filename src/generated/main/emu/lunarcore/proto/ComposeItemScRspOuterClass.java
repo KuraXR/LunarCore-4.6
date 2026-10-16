@@ -19,22 +19,22 @@ public final class ComposeItemScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 count = 1;</code>
-     */
-    private int count;
-
-    /**
      * <code>optional uint32 retcode = 4;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 compose_id = 13;</code>
+     * <code>optional uint32 compose_id = 5;</code>
      */
     private int composeId;
 
     /**
-     * <code>optional .ItemList return_item_list = 5;</code>
+     * <code>optional uint32 count = 7;</code>
+     */
+    private int count;
+
+    /**
+     * <code>optional .ItemList return_item_list = 8;</code>
      */
     private final ItemListOuterClass.ItemList returnItemList = ItemListOuterClass.ItemList.newInstance();
 
@@ -49,48 +49,11 @@ public final class ComposeItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 1;</code>
-     * @return whether the count field is set
-     */
-    public boolean hasCount() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <code>optional uint32 count = 1;</code>
-     * @return this
-     */
-    public ComposeItemScRsp clearCount() {
-      bitField0_ &= ~0x00000001;
-      count = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 count = 1;</code>
-     * @return the count
-     */
-    public int getCount() {
-      return count;
-    }
-
-    /**
-     * <code>optional uint32 count = 1;</code>
-     * @param value the count to set
-     * @return this
-     */
-    public ComposeItemScRsp setCount(final int value) {
-      bitField0_ |= 0x00000001;
-      count = value;
-      return this;
-    }
-
-    /**
      * <code>optional uint32 retcode = 4;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
+      return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
@@ -98,7 +61,7 @@ public final class ComposeItemScRspOuterClass {
      * @return this
      */
     public ComposeItemScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
@@ -117,31 +80,31 @@ public final class ComposeItemScRspOuterClass {
      * @return this
      */
     public ComposeItemScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 compose_id = 13;</code>
+     * <code>optional uint32 compose_id = 5;</code>
      * @return whether the composeId field is set
      */
     public boolean hasComposeId() {
-      return (bitField0_ & 0x00000004) != 0;
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 compose_id = 13;</code>
+     * <code>optional uint32 compose_id = 5;</code>
      * @return this
      */
     public ComposeItemScRsp clearComposeId() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       composeId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 compose_id = 13;</code>
+     * <code>optional uint32 compose_id = 5;</code>
      * @return the composeId
      */
     public int getComposeId() {
@@ -149,18 +112,55 @@ public final class ComposeItemScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 13;</code>
+     * <code>optional uint32 compose_id = 5;</code>
      * @param value the composeId to set
      * @return this
      */
     public ComposeItemScRsp setComposeId(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       composeId = value;
       return this;
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 5;</code>
+     * <code>optional uint32 count = 7;</code>
+     * @return whether the count field is set
+     */
+    public boolean hasCount() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 count = 7;</code>
+     * @return this
+     */
+    public ComposeItemScRsp clearCount() {
+      bitField0_ &= ~0x00000004;
+      count = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 count = 7;</code>
+     * @return the count
+     */
+    public int getCount() {
+      return count;
+    }
+
+    /**
+     * <code>optional uint32 count = 7;</code>
+     * @param value the count to set
+     * @return this
+     */
+    public ComposeItemScRsp setCount(final int value) {
+      bitField0_ |= 0x00000004;
+      count = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .ItemList return_item_list = 8;</code>
      * @return whether the returnItemList field is set
      */
     public boolean hasReturnItemList() {
@@ -168,7 +168,7 @@ public final class ComposeItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 5;</code>
+     * <code>optional .ItemList return_item_list = 8;</code>
      * @return this
      */
     public ComposeItemScRsp clearReturnItemList() {
@@ -178,7 +178,7 @@ public final class ComposeItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 5;</code>
+     * <code>optional .ItemList return_item_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -192,7 +192,7 @@ public final class ComposeItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 5;</code>
+     * <code>optional .ItemList return_item_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -206,7 +206,7 @@ public final class ComposeItemScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList return_item_list = 5;</code>
+     * <code>optional .ItemList return_item_list = 8;</code>
      * @param value the returnItemList to set
      * @return this
      */
@@ -221,9 +221,9 @@ public final class ComposeItemScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        count = other.count;
         retcode = other.retcode;
         composeId = other.composeId;
+        count = other.count;
         returnItemList.copyFrom(other.returnItemList);
       }
       return this;
@@ -235,14 +235,14 @@ public final class ComposeItemScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasCount()) {
-        setCount(other.count);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
       if (other.hasComposeId()) {
         setComposeId(other.composeId);
+      }
+      if (other.hasCount()) {
+        setCount(other.count);
       }
       if (other.hasReturnItemList()) {
         getMutableReturnItemList().mergeFrom(other.returnItemList);
@@ -257,9 +257,9 @@ public final class ComposeItemScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      count = 0;
       retcode = 0;
       composeId = 0;
+      count = 0;
       returnItemList.clear();
       return this;
     }
@@ -285,28 +285,28 @@ public final class ComposeItemScRspOuterClass {
       }
       ComposeItemScRsp other = (ComposeItemScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasCount() || count == other.count)
         && (!hasRetcode() || retcode == other.retcode)
         && (!hasComposeId() || composeId == other.composeId)
+        && (!hasCount() || count == other.count)
         && (!hasReturnItemList() || returnItemList.equals(other.returnItemList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
-        output.writeUInt32NoTag(count);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(retcode);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 104);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(composeId);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 56);
+        output.writeUInt32NoTag(count);
+      }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 42);
+        output.writeRawByte((byte) 66);
         output.writeMessageNoTag(returnItemList);
       }
     }
@@ -315,13 +315,13 @@ public final class ComposeItemScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(count);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(composeId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(count);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(returnItemList);
@@ -336,34 +336,34 @@ public final class ComposeItemScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
-            // count
-            count = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 32) {
-              break;
-            }
-          }
           case 32: {
             // retcode
             retcode = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 40) {
               break;
             }
           }
-          case 104: {
+          case 40: {
             // composeId
             composeId = input.readUInt32();
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 56) {
               break;
             }
           }
-          case 42: {
+          case 56: {
+            // count
+            count = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 66) {
+              break;
+            }
+          }
+          case 66: {
             // returnItemList
             input.readMessage(returnItemList);
             bitField0_ |= 0x00000008;
@@ -390,13 +390,13 @@ public final class ComposeItemScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.count, count);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.composeId, composeId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeUInt32(FieldNames.count, count);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeMessage(FieldNames.returnItemList, returnItemList);
@@ -411,22 +411,11 @@ public final class ComposeItemScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 94851343: {
-            if (input.isAtField(FieldNames.count)) {
-              if (!input.trySkipNullValue()) {
-                count = input.readUInt32();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 1097936398: {
             if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
                 retcode = input.readUInt32();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -438,6 +427,17 @@ public final class ComposeItemScRspOuterClass {
             if (input.isAtField(FieldNames.composeId)) {
               if (!input.trySkipNullValue()) {
                 composeId = input.readUInt32();
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 94851343: {
+            if (input.isAtField(FieldNames.count)) {
+              if (!input.trySkipNullValue()) {
+                count = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -510,11 +510,11 @@ public final class ComposeItemScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName count = FieldName.forField("count");
-
       static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName composeId = FieldName.forField("composeId", "compose_id");
+
+      static final FieldName count = FieldName.forField("count");
 
       static final FieldName returnItemList = FieldName.forField("returnItemList", "return_item_list");
     }

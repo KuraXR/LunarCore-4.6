@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedMessage;
 
 public final class GetChallengePeakDataScRspOuterClass {
   /**
@@ -20,19 +19,14 @@ public final class GetChallengePeakDataScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 cur_challenge_peak_group_id = 4;</code>
-     */
-    private int curChallengePeakGroupId;
-
-    /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 2;</code>
      */
     private int retcode;
 
     /**
-     * <code>repeated .ChallengePeakGroupInfo challenge_peak_list = 11;</code>
+     * <code>optional uint32 cur_challenge_peak_group_id = 14;</code>
      */
-    private final RepeatedMessage<ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo> challengePeakList = RepeatedMessage.newEmptyInstance(ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo.getFactory());
+    private int curChallengePeakGroupId;
 
     private GetChallengePeakDataScRsp() {
     }
@@ -45,62 +39,25 @@ public final class GetChallengePeakDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 cur_challenge_peak_group_id = 4;</code>
-     * @return whether the curChallengePeakGroupId field is set
+     * <code>optional uint32 retcode = 2;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasCurChallengePeakGroupId() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 cur_challenge_peak_group_id = 4;</code>
-     * @return this
-     */
-    public GetChallengePeakDataScRsp clearCurChallengePeakGroupId() {
-      bitField0_ &= ~0x00000001;
-      curChallengePeakGroupId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 cur_challenge_peak_group_id = 4;</code>
-     * @return the curChallengePeakGroupId
-     */
-    public int getCurChallengePeakGroupId() {
-      return curChallengePeakGroupId;
-    }
-
-    /**
-     * <code>optional uint32 cur_challenge_peak_group_id = 4;</code>
-     * @param value the curChallengePeakGroupId to set
-     * @return this
-     */
-    public GetChallengePeakDataScRsp setCurChallengePeakGroupId(final int value) {
-      bitField0_ |= 0x00000001;
-      curChallengePeakGroupId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 12;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return this
      */
     public GetChallengePeakDataScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -108,85 +65,50 @@ public final class GetChallengePeakDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @param value the retcode to set
      * @return this
      */
     public GetChallengePeakDataScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
       return this;
     }
 
     /**
-     * <code>repeated .ChallengePeakGroupInfo challenge_peak_list = 11;</code>
-     * @return whether the challengePeakList field is set
+     * <code>optional uint32 cur_challenge_peak_group_id = 14;</code>
+     * @return whether the curChallengePeakGroupId field is set
      */
-    public boolean hasChallengePeakList() {
-      return (bitField0_ & 0x00000004) != 0;
+    public boolean hasCurChallengePeakGroupId() {
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>repeated .ChallengePeakGroupInfo challenge_peak_list = 11;</code>
+     * <code>optional uint32 cur_challenge_peak_group_id = 14;</code>
      * @return this
      */
-    public GetChallengePeakDataScRsp clearChallengePeakList() {
-      bitField0_ &= ~0x00000004;
-      challengePeakList.clear();
+    public GetChallengePeakDataScRsp clearCurChallengePeakGroupId() {
+      bitField0_ &= ~0x00000002;
+      curChallengePeakGroupId = 0;
       return this;
     }
 
     /**
-     * <code>repeated .ChallengePeakGroupInfo challenge_peak_list = 11;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableChallengePeakList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
+     * <code>optional uint32 cur_challenge_peak_group_id = 14;</code>
+     * @return the curChallengePeakGroupId
      */
-    public RepeatedMessage<ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo> getChallengePeakList(
-        ) {
-      return challengePeakList;
+    public int getCurChallengePeakGroupId() {
+      return curChallengePeakGroupId;
     }
 
     /**
-     * <code>repeated .ChallengePeakGroupInfo challenge_peak_list = 11;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo> getMutableChallengePeakList(
-        ) {
-      bitField0_ |= 0x00000004;
-      return challengePeakList;
-    }
-
-    /**
-     * <code>repeated .ChallengePeakGroupInfo challenge_peak_list = 11;</code>
-     * @param value the challengePeakList to add
+     * <code>optional uint32 cur_challenge_peak_group_id = 14;</code>
+     * @param value the curChallengePeakGroupId to set
      * @return this
      */
-    public GetChallengePeakDataScRsp addChallengePeakList(
-        final ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo value) {
-      bitField0_ |= 0x00000004;
-      challengePeakList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .ChallengePeakGroupInfo challenge_peak_list = 11;</code>
-     * @param values the challengePeakList to add
-     * @return this
-     */
-    public GetChallengePeakDataScRsp addAllChallengePeakList(
-        final ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo... values) {
-      bitField0_ |= 0x00000004;
-      challengePeakList.addAll(values);
+    public GetChallengePeakDataScRsp setCurChallengePeakGroupId(final int value) {
+      bitField0_ |= 0x00000002;
+      curChallengePeakGroupId = value;
       return this;
     }
 
@@ -195,9 +117,8 @@ public final class GetChallengePeakDataScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        curChallengePeakGroupId = other.curChallengePeakGroupId;
         retcode = other.retcode;
-        challengePeakList.copyFrom(other.challengePeakList);
+        curChallengePeakGroupId = other.curChallengePeakGroupId;
       }
       return this;
     }
@@ -208,14 +129,11 @@ public final class GetChallengePeakDataScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasCurChallengePeakGroupId()) {
-        setCurChallengePeakGroupId(other.curChallengePeakGroupId);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasChallengePeakList()) {
-        getMutableChallengePeakList().addAll(other.challengePeakList);
+      if (other.hasCurChallengePeakGroupId()) {
+        setCurChallengePeakGroupId(other.curChallengePeakGroupId);
       }
       return this;
     }
@@ -227,9 +145,8 @@ public final class GetChallengePeakDataScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      curChallengePeakGroupId = 0;
       retcode = 0;
-      challengePeakList.clear();
+      curChallengePeakGroupId = 0;
       return this;
     }
 
@@ -240,7 +157,6 @@ public final class GetChallengePeakDataScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      challengePeakList.clearQuick();
       return this;
     }
 
@@ -254,26 +170,19 @@ public final class GetChallengePeakDataScRspOuterClass {
       }
       GetChallengePeakDataScRsp other = (GetChallengePeakDataScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasCurChallengePeakGroupId() || curChallengePeakGroupId == other.curChallengePeakGroupId)
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasChallengePeakList() || challengePeakList.equals(other.challengePeakList));
+        && (!hasCurChallengePeakGroupId() || curChallengePeakGroupId == other.curChallengePeakGroupId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(curChallengePeakGroupId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(retcode);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < challengePeakList.length(); i++) {
-          output.writeRawByte((byte) 90);
-          output.writeMessageNoTag(challengePeakList.get(i));
-        }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(curChallengePeakGroupId);
       }
     }
 
@@ -281,13 +190,10 @@ public final class GetChallengePeakDataScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(curChallengePeakGroupId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * challengePeakList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(challengePeakList);
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(curChallengePeakGroupId);
       }
       return size;
     }
@@ -299,28 +205,20 @@ public final class GetChallengePeakDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
-            // curChallengePeakGroupId
-            curChallengePeakGroupId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 96) {
-              break;
-            }
-          }
-          case 96: {
+          case 16: {
             // retcode
             retcode = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 90) {
+            if (tag != 112) {
               break;
             }
           }
-          case 90: {
-            // challengePeakList
-            tag = input.readRepeatedMessage(challengePeakList, tag);
-            bitField0_ |= 0x00000004;
+          case 112: {
+            // curChallengePeakGroupId
+            curChallengePeakGroupId = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
             if (tag != 0) {
               break;
             }
@@ -343,13 +241,10 @@ public final class GetChallengePeakDataScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.curChallengePeakGroupId, curChallengePeakGroupId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedMessage(FieldNames.challengePeakList, challengePeakList);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.curChallengePeakGroupId, curChallengePeakGroupId);
       }
       output.endObject();
     }
@@ -361,11 +256,10 @@ public final class GetChallengePeakDataScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 408244248:
-          case 1188228704: {
-            if (input.isAtField(FieldNames.curChallengePeakGroupId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                curChallengePeakGroupId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -373,23 +267,12 @@ public final class GetChallengePeakDataScRspOuterClass {
             }
             break;
           }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case 408244248:
+          case 1188228704: {
+            if (input.isAtField(FieldNames.curChallengePeakGroupId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                curChallengePeakGroupId = input.readUInt32();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1768498272:
-          case -1100397790: {
-            if (input.isAtField(FieldNames.challengePeakList)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(challengePeakList);
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -449,11 +332,9 @@ public final class GetChallengePeakDataScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName curChallengePeakGroupId = FieldName.forField("curChallengePeakGroupId", "cur_challenge_peak_group_id");
-
       static final FieldName retcode = FieldName.forField("retcode");
 
-      static final FieldName challengePeakList = FieldName.forField("challengePeakList", "challenge_peak_list");
+      static final FieldName curChallengePeakGroupId = FieldName.forField("curChallengePeakGroupId", "cur_challenge_peak_group_id");
     }
   }
 }

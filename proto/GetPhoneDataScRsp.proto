@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message GetPhoneDataScRsp {
+  optional uint32 retcode = 15;
+  optional uint32 cur_phone_case = 12;
+  optional uint32 cur_phone_theme = 10;
+  optional uint32 cur_chat_bubble = 5;
+  repeated uint32 owned_chat_bubbles = 11;
+  repeated uint32 owned_phone_cases = 6;
+  repeated uint32 owned_phone_themes = 14;
+}

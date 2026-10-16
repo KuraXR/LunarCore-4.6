@@ -19,12 +19,12 @@ public final class GachaCeilingAvatarOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 repeated_cnt = 5;</code>
+     * <code>optional uint32 repeated_cnt = 9;</code>
      */
     private int repeatedCnt;
 
     /**
-     * <code>optional uint32 avatar_id = 14;</code>
+     * <code>optional uint32 avatar_id = 10;</code>
      */
     private int avatarId;
 
@@ -39,7 +39,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 repeated_cnt = 5;</code>
+     * <code>optional uint32 repeated_cnt = 9;</code>
      * @return whether the repeatedCnt field is set
      */
     public boolean hasRepeatedCnt() {
@@ -47,7 +47,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 repeated_cnt = 5;</code>
+     * <code>optional uint32 repeated_cnt = 9;</code>
      * @return this
      */
     public GachaCeilingAvatar clearRepeatedCnt() {
@@ -57,7 +57,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 repeated_cnt = 5;</code>
+     * <code>optional uint32 repeated_cnt = 9;</code>
      * @return the repeatedCnt
      */
     public int getRepeatedCnt() {
@@ -65,7 +65,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 repeated_cnt = 5;</code>
+     * <code>optional uint32 repeated_cnt = 9;</code>
      * @param value the repeatedCnt to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 14;</code>
+     * <code>optional uint32 avatar_id = 10;</code>
      * @return whether the avatarId field is set
      */
     public boolean hasAvatarId() {
@@ -84,7 +84,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 14;</code>
+     * <code>optional uint32 avatar_id = 10;</code>
      * @return this
      */
     public GachaCeilingAvatar clearAvatarId() {
@@ -94,7 +94,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 14;</code>
+     * <code>optional uint32 avatar_id = 10;</code>
      * @return the avatarId
      */
     public int getAvatarId() {
@@ -102,7 +102,7 @@ public final class GachaCeilingAvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 14;</code>
+     * <code>optional uint32 avatar_id = 10;</code>
      * @param value the avatarId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class GachaCeilingAvatarOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(repeatedCnt);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(avatarId);
       }
     }
@@ -205,16 +205,16 @@ public final class GachaCeilingAvatarOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 72: {
             // repeatedCnt
             repeatedCnt = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 80) {
               break;
             }
           }
-          case 112: {
+          case 80: {
             // avatarId
             avatarId = input.readUInt32();
             bitField0_ |= 0x00000002;

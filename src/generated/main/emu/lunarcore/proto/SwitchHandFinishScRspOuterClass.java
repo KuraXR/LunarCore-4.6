@@ -19,14 +19,9 @@ public final class SwitchHandFinishScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 14;</code>
      */
     private int retcode;
-
-    /**
-     * <code>optional .SwitchHandData cur_hand_data = 9;</code>
-     */
-    private final SwitchHandDataOuterClass.SwitchHandData curHandData = SwitchHandDataOuterClass.SwitchHandData.newInstance();
 
     private SwitchHandFinishScRsp() {
     }
@@ -39,7 +34,7 @@ public final class SwitchHandFinishScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -47,7 +42,7 @@ public final class SwitchHandFinishScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @return this
      */
     public SwitchHandFinishScRsp clearRetcode() {
@@ -57,7 +52,7 @@ public final class SwitchHandFinishScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -65,7 +60,7 @@ public final class SwitchHandFinishScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -75,71 +70,12 @@ public final class SwitchHandFinishScRspOuterClass {
       return this;
     }
 
-    /**
-     * <code>optional .SwitchHandData cur_hand_data = 9;</code>
-     * @return whether the curHandData field is set
-     */
-    public boolean hasCurHandData() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional .SwitchHandData cur_hand_data = 9;</code>
-     * @return this
-     */
-    public SwitchHandFinishScRsp clearCurHandData() {
-      bitField0_ &= ~0x00000002;
-      curHandData.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .SwitchHandData cur_hand_data = 9;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableCurHandData()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public SwitchHandDataOuterClass.SwitchHandData getCurHandData() {
-      return curHandData;
-    }
-
-    /**
-     * <code>optional .SwitchHandData cur_hand_data = 9;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public SwitchHandDataOuterClass.SwitchHandData getMutableCurHandData() {
-      bitField0_ |= 0x00000002;
-      return curHandData;
-    }
-
-    /**
-     * <code>optional .SwitchHandData cur_hand_data = 9;</code>
-     * @param value the curHandData to set
-     * @return this
-     */
-    public SwitchHandFinishScRsp setCurHandData(
-        final SwitchHandDataOuterClass.SwitchHandData value) {
-      bitField0_ |= 0x00000002;
-      curHandData.copyFrom(value);
-      return this;
-    }
-
     @Override
     public SwitchHandFinishScRsp copyFrom(final SwitchHandFinishScRsp other) {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        curHandData.copyFrom(other.curHandData);
       }
       return this;
     }
@@ -153,9 +89,6 @@ public final class SwitchHandFinishScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasCurHandData()) {
-        getMutableCurHandData().mergeFrom(other.curHandData);
-      }
       return this;
     }
 
@@ -167,7 +100,6 @@ public final class SwitchHandFinishScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      curHandData.clear();
       return this;
     }
 
@@ -178,7 +110,6 @@ public final class SwitchHandFinishScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      curHandData.clearQuick();
       return this;
     }
 
@@ -192,19 +123,14 @@ public final class SwitchHandFinishScRspOuterClass {
       }
       SwitchHandFinishScRsp other = (SwitchHandFinishScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasRetcode() || retcode == other.retcode)
-        && (!hasCurHandData() || curHandData.equals(other.curHandData));
+        && (!hasRetcode() || retcode == other.retcode);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 74);
-        output.writeMessageNoTag(curHandData);
       }
     }
 
@@ -213,9 +139,6 @@ public final class SwitchHandFinishScRspOuterClass {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(curHandData);
       }
       return size;
     }
@@ -227,19 +150,10 @@ public final class SwitchHandFinishScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 112: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 74) {
-              break;
-            }
-          }
-          case 74: {
-            // curHandData
-            input.readMessage(curHandData);
-            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -265,9 +179,6 @@ public final class SwitchHandFinishScRspOuterClass {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeMessage(FieldNames.curHandData, curHandData);
-      }
       output.endObject();
     }
 
@@ -283,18 +194,6 @@ public final class SwitchHandFinishScRspOuterClass {
               if (!input.trySkipNullValue()) {
                 retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1147337497:
-          case -1190165957: {
-            if (input.isAtField(FieldNames.curHandData)) {
-              if (!input.trySkipNullValue()) {
-                input.readMessage(curHandData);
-                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -355,8 +254,6 @@ public final class SwitchHandFinishScRspOuterClass {
      */
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
-
-      static final FieldName curHandData = FieldName.forField("curHandData", "cur_hand_data");
     }
   }
 }

@@ -5,10 +5,11 @@ import emu.lunarcore.data.resource.ResourceType;
 import lombok.Getter;
 
 @Getter
-@ResourceType(name = {"ChallengeGroupConfig.json", "ChallengeStoryGroupConfig.json"})
+@ResourceType(name = {"ChallengeGroupConfig.json", "ChallengeStoryGroupConfig.json", "ChallengeBossGroupConfig.json"})
 public class ChallengeGroupExcel extends GameResource {
     private int GroupID;
     private int RewardLineGroupID;
+    private String ChallengeGroupType; // Memory, Story or Boss
 
     @Override
     public int getId() {

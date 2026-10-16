@@ -24,12 +24,12 @@ public final class MazeChestOuterClass {
     private int totalAmountList;
 
     /**
-     * <code>optional uint32 unlocked_amount_list = 14;</code>
+     * <code>optional uint32 unlocked_amount_list = 15;</code>
      */
     private int unlockedAmountList;
 
     /**
-     * <code>optional .MapInfoChestType map_info_chest_type = 10;</code>
+     * <code>optional .MapInfoChestType map_info_chest_type = 1;</code>
      */
     private int mapInfoChestType;
 
@@ -81,7 +81,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional uint32 unlocked_amount_list = 14;</code>
+     * <code>optional uint32 unlocked_amount_list = 15;</code>
      * @return whether the unlockedAmountList field is set
      */
     public boolean hasUnlockedAmountList() {
@@ -89,7 +89,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional uint32 unlocked_amount_list = 14;</code>
+     * <code>optional uint32 unlocked_amount_list = 15;</code>
      * @return this
      */
     public MazeChest clearUnlockedAmountList() {
@@ -99,7 +99,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional uint32 unlocked_amount_list = 14;</code>
+     * <code>optional uint32 unlocked_amount_list = 15;</code>
      * @return the unlockedAmountList
      */
     public int getUnlockedAmountList() {
@@ -107,7 +107,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional uint32 unlocked_amount_list = 14;</code>
+     * <code>optional uint32 unlocked_amount_list = 15;</code>
      * @param value the unlockedAmountList to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional .MapInfoChestType map_info_chest_type = 10;</code>
+     * <code>optional .MapInfoChestType map_info_chest_type = 1;</code>
      * @return whether the mapInfoChestType field is set
      */
     public boolean hasMapInfoChestType() {
@@ -126,7 +126,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional .MapInfoChestType map_info_chest_type = 10;</code>
+     * <code>optional .MapInfoChestType map_info_chest_type = 1;</code>
      * @return this
      */
     public MazeChest clearMapInfoChestType() {
@@ -136,7 +136,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional .MapInfoChestType map_info_chest_type = 10;</code>
+     * <code>optional .MapInfoChestType map_info_chest_type = 1;</code>
      * @return the mapInfoChestType
      */
     public MapInfoChestTypeOuterClass.MapInfoChestType getMapInfoChestType() {
@@ -169,7 +169,7 @@ public final class MazeChestOuterClass {
     }
 
     /**
-     * <code>optional .MapInfoChestType map_info_chest_type = 10;</code>
+     * <code>optional .MapInfoChestType map_info_chest_type = 1;</code>
      * @param value the mapInfoChestType to set
      * @return this
      */
@@ -254,11 +254,11 @@ public final class MazeChestOuterClass {
         output.writeUInt32NoTag(totalAmountList);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(unlockedAmountList);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 8);
         output.writeEnumNoTag(mapInfoChestType);
       }
     }
@@ -290,20 +290,20 @@ public final class MazeChestOuterClass {
             totalAmountList = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 120) {
               break;
             }
           }
-          case 112: {
+          case 120: {
             // unlockedAmountList
             unlockedAmountList = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 8) {
               break;
             }
           }
-          case 80: {
+          case 8: {
             // mapInfoChestType
             final int value = input.readInt32();
             if (MapInfoChestTypeOuterClass.MapInfoChestType.forNumber(value) != null) {

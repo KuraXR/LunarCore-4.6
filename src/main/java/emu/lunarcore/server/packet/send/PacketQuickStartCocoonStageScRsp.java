@@ -15,8 +15,7 @@ public class PacketQuickStartCocoonStageScRsp extends BasePacket {
         if (battle != null) {
             data.setBattleInfo(battle.toProto())
             .setCocoonId(battle.getMappingInfoId())
-            .setWave(battle.getCocoonWave())
-            .setWaveCount(battle.getCocoonWave());
+            .setWave(battle.getCocoonWave()); // 4.6 removed wave_count from this reply
         } else {
             data.setRetcode(1);
         }

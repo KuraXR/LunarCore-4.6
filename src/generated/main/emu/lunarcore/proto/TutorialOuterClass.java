@@ -19,7 +19,7 @@ public final class TutorialOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 id = 3;</code>
+     * <code>optional uint32 id = 1;</code>
      */
     private int id;
 
@@ -39,7 +39,7 @@ public final class TutorialOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 3;</code>
+     * <code>optional uint32 id = 1;</code>
      * @return whether the id field is set
      */
     public boolean hasId() {
@@ -47,7 +47,7 @@ public final class TutorialOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 3;</code>
+     * <code>optional uint32 id = 1;</code>
      * @return this
      */
     public Tutorial clearId() {
@@ -57,7 +57,7 @@ public final class TutorialOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 3;</code>
+     * <code>optional uint32 id = 1;</code>
      * @return the id
      */
     public int getId() {
@@ -65,7 +65,7 @@ public final class TutorialOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 3;</code>
+     * <code>optional uint32 id = 1;</code>
      * @param value the id to set
      * @return this
      */
@@ -202,7 +202,7 @@ public final class TutorialOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(id);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -230,7 +230,7 @@ public final class TutorialOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 8: {
             // id
             id = input.readUInt32();
             bitField0_ |= 0x00000001;

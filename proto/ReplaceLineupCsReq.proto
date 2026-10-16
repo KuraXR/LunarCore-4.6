@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ExtraLineupType.proto";
+import "LineupSlotData.proto";
+
+message ReplaceLineupCsReq {
+  optional uint32 leader_slot = 9;
+  optional uint32 index = 1;
+  optional uint32 plane_id = 11;
+  optional ExtraLineupType extra_lineup_type = 4;
+  repeated LineupSlotData slots = 7;
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PlayerOutfitInfo.proto";
+
+message SetPlayerOutfitCsReq {
+  optional PlayerOutfitInfo player_outfit_data = 1;
+}

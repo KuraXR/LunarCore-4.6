@@ -19,7 +19,7 @@ public final class UnlockPhoneCaseScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 phone_case_id = 9;</code>
+     * <code>optional uint32 phone_case_id = 14;</code>
      */
     private int phoneCaseId;
 
@@ -34,7 +34,7 @@ public final class UnlockPhoneCaseScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 phone_case_id = 9;</code>
+     * <code>optional uint32 phone_case_id = 14;</code>
      * @return whether the phoneCaseId field is set
      */
     public boolean hasPhoneCaseId() {
@@ -42,7 +42,7 @@ public final class UnlockPhoneCaseScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 phone_case_id = 9;</code>
+     * <code>optional uint32 phone_case_id = 14;</code>
      * @return this
      */
     public UnlockPhoneCaseScNotify clearPhoneCaseId() {
@@ -52,7 +52,7 @@ public final class UnlockPhoneCaseScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 phone_case_id = 9;</code>
+     * <code>optional uint32 phone_case_id = 14;</code>
      * @return the phoneCaseId
      */
     public int getPhoneCaseId() {
@@ -60,7 +60,7 @@ public final class UnlockPhoneCaseScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 phone_case_id = 9;</code>
+     * <code>optional uint32 phone_case_id = 14;</code>
      * @param value the phoneCaseId to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class UnlockPhoneCaseScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(phoneCaseId);
       }
     }
@@ -150,7 +150,7 @@ public final class UnlockPhoneCaseScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 112: {
             // phoneCaseId
             phoneCaseId = input.readUInt32();
             bitField0_ |= 0x00000001;

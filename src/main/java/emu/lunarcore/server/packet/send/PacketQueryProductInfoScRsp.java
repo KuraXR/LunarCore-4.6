@@ -10,8 +10,6 @@ public class PacketQueryProductInfoScRsp extends BasePacket {
         super(CmdId.QueryProductInfoScRsp);
 
         QueryProductInfoScRsp data = QueryProductInfoScRsp.newInstance()
-                .setGiftCoinCurVersion(1)
-                .setGiftCoinBoughtHistoryVersion(1)
                 .setMonthCardOutdateTime(1999999999);
 
         this.setData(data);

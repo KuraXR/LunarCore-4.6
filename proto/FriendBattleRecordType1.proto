@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BattleRecord1.proto";
+
+message FriendBattleRecordType1 {
+  optional uint32 star_cnt = 6;
+  optional uint32 group_id = 11;
+  oneof battle_record {
+    BattleRecord1 record1 = 2026;
+  }
+}

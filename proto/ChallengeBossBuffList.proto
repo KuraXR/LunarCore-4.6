@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ChallengeBossBuffList {
+  repeated uint32 buff_list = 8;
+  optional uint32 challenge_boss_const = 15;
+}

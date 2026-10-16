@@ -19,22 +19,22 @@ public final class QuickStartFarmElementScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
+     * <code>optional uint32 retcode = 5;</code>
+     */
+    private int retcode;
+
+    /**
      * <code>optional uint32 world_level = 6;</code>
      */
     private int worldLevel;
 
     /**
-     * <code>optional uint32 farm_element_id = 7;</code>
+     * <code>optional uint32 farm_element_id = 12;</code>
      */
     private int farmElementId;
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
-     */
-    private int retcode;
-
-    /**
-     * <code>optional .SceneBattleInfo battle_info = 9;</code>
+     * <code>optional .SceneBattleInfo battle_info = 3;</code>
      */
     private final SceneBattleInfoOuterClass.SceneBattleInfo battleInfo = SceneBattleInfoOuterClass.SceneBattleInfo.newInstance();
 
@@ -49,11 +49,48 @@ public final class QuickStartFarmElementScRspOuterClass {
     }
 
     /**
+     * <code>optional uint32 retcode = 5;</code>
+     * @return whether the retcode field is set
+     */
+    public boolean hasRetcode() {
+      return (bitField0_ & 0x00000001) != 0;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 5;</code>
+     * @return this
+     */
+    public QuickStartFarmElementScRsp clearRetcode() {
+      bitField0_ &= ~0x00000001;
+      retcode = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 5;</code>
+     * @return the retcode
+     */
+    public int getRetcode() {
+      return retcode;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 5;</code>
+     * @param value the retcode to set
+     * @return this
+     */
+    public QuickStartFarmElementScRsp setRetcode(final int value) {
+      bitField0_ |= 0x00000001;
+      retcode = value;
+      return this;
+    }
+
+    /**
      * <code>optional uint32 world_level = 6;</code>
      * @return whether the worldLevel field is set
      */
     public boolean hasWorldLevel() {
-      return (bitField0_ & 0x00000001) != 0;
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
@@ -61,7 +98,7 @@ public final class QuickStartFarmElementScRspOuterClass {
      * @return this
      */
     public QuickStartFarmElementScRsp clearWorldLevel() {
-      bitField0_ &= ~0x00000001;
+      bitField0_ &= ~0x00000002;
       worldLevel = 0;
       return this;
     }
@@ -80,31 +117,31 @@ public final class QuickStartFarmElementScRspOuterClass {
      * @return this
      */
     public QuickStartFarmElementScRsp setWorldLevel(final int value) {
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       worldLevel = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 7;</code>
+     * <code>optional uint32 farm_element_id = 12;</code>
      * @return whether the farmElementId field is set
      */
     public boolean hasFarmElementId() {
-      return (bitField0_ & 0x00000002) != 0;
+      return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 7;</code>
+     * <code>optional uint32 farm_element_id = 12;</code>
      * @return this
      */
     public QuickStartFarmElementScRsp clearFarmElementId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000004;
       farmElementId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 7;</code>
+     * <code>optional uint32 farm_element_id = 12;</code>
      * @return the farmElementId
      */
     public int getFarmElementId() {
@@ -112,55 +149,18 @@ public final class QuickStartFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 7;</code>
+     * <code>optional uint32 farm_element_id = 12;</code>
      * @param value the farmElementId to set
      * @return this
      */
     public QuickStartFarmElementScRsp setFarmElementId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000004;
       farmElementId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 14;</code>
-     * @return this
-     */
-    public QuickStartFarmElementScRsp clearRetcode() {
-      bitField0_ &= ~0x00000004;
-      retcode = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 14;</code>
-     * @return the retcode
-     */
-    public int getRetcode() {
-      return retcode;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 14;</code>
-     * @param value the retcode to set
-     * @return this
-     */
-    public QuickStartFarmElementScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000004;
-      retcode = value;
-      return this;
-    }
-
-    /**
-     * <code>optional .SceneBattleInfo battle_info = 9;</code>
+     * <code>optional .SceneBattleInfo battle_info = 3;</code>
      * @return whether the battleInfo field is set
      */
     public boolean hasBattleInfo() {
@@ -168,7 +168,7 @@ public final class QuickStartFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 9;</code>
+     * <code>optional .SceneBattleInfo battle_info = 3;</code>
      * @return this
      */
     public QuickStartFarmElementScRsp clearBattleInfo() {
@@ -178,7 +178,7 @@ public final class QuickStartFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 9;</code>
+     * <code>optional .SceneBattleInfo battle_info = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -192,7 +192,7 @@ public final class QuickStartFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 9;</code>
+     * <code>optional .SceneBattleInfo battle_info = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -206,7 +206,7 @@ public final class QuickStartFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional .SceneBattleInfo battle_info = 9;</code>
+     * <code>optional .SceneBattleInfo battle_info = 3;</code>
      * @param value the battleInfo to set
      * @return this
      */
@@ -222,9 +222,9 @@ public final class QuickStartFarmElementScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
+        retcode = other.retcode;
         worldLevel = other.worldLevel;
         farmElementId = other.farmElementId;
-        retcode = other.retcode;
         battleInfo.copyFrom(other.battleInfo);
       }
       return this;
@@ -236,14 +236,14 @@ public final class QuickStartFarmElementScRspOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasRetcode()) {
+        setRetcode(other.retcode);
+      }
       if (other.hasWorldLevel()) {
         setWorldLevel(other.worldLevel);
       }
       if (other.hasFarmElementId()) {
         setFarmElementId(other.farmElementId);
-      }
-      if (other.hasRetcode()) {
-        setRetcode(other.retcode);
       }
       if (other.hasBattleInfo()) {
         getMutableBattleInfo().mergeFrom(other.battleInfo);
@@ -258,9 +258,9 @@ public final class QuickStartFarmElementScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      retcode = 0;
       worldLevel = 0;
       farmElementId = 0;
-      retcode = 0;
       battleInfo.clear();
       return this;
     }
@@ -286,28 +286,28 @@ public final class QuickStartFarmElementScRspOuterClass {
       }
       QuickStartFarmElementScRsp other = (QuickStartFarmElementScRsp) o;
       return bitField0_ == other.bitField0_
+        && (!hasRetcode() || retcode == other.retcode)
         && (!hasWorldLevel() || worldLevel == other.worldLevel)
         && (!hasFarmElementId() || farmElementId == other.farmElementId)
-        && (!hasRetcode() || retcode == other.retcode)
         && (!hasBattleInfo() || battleInfo.equals(other.battleInfo));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
+        output.writeRawByte((byte) 40);
+        output.writeUInt32NoTag(retcode);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(worldLevel);
       }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(farmElementId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(retcode);
-      }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 74);
+        output.writeRawByte((byte) 26);
         output.writeMessageNoTag(battleInfo);
       }
     }
@@ -316,13 +316,13 @@ public final class QuickStartFarmElementScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(worldLevel);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(farmElementId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(farmElementId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(battleInfo);
@@ -337,34 +337,34 @@ public final class QuickStartFarmElementScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
+          case 40: {
+            // retcode
+            retcode = input.readUInt32();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 48) {
+              break;
+            }
+          }
           case 48: {
             // worldLevel
             worldLevel = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 56) {
-              break;
-            }
-          }
-          case 56: {
-            // farmElementId
-            farmElementId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 96) {
               break;
             }
           }
-          case 112: {
-            // retcode
-            retcode = input.readUInt32();
+          case 96: {
+            // farmElementId
+            farmElementId = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 74) {
+            if (tag != 26) {
               break;
             }
           }
-          case 74: {
+          case 26: {
             // battleInfo
             input.readMessage(battleInfo);
             bitField0_ |= 0x00000008;
@@ -391,13 +391,13 @@ public final class QuickStartFarmElementScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.worldLevel, worldLevel);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.farmElementId, farmElementId);
+        output.writeUInt32(FieldNames.worldLevel, worldLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.farmElementId, farmElementId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeMessage(FieldNames.battleInfo, battleInfo);
@@ -412,12 +412,23 @@ public final class QuickStartFarmElementScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
+              if (!input.trySkipNullValue()) {
+                retcode = input.readUInt32();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case 440007442:
           case 1305257111: {
             if (input.isAtField(FieldNames.worldLevel)) {
               if (!input.trySkipNullValue()) {
                 worldLevel = input.readUInt32();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -429,17 +440,6 @@ public final class QuickStartFarmElementScRspOuterClass {
             if (input.isAtField(FieldNames.farmElementId)) {
               if (!input.trySkipNullValue()) {
                 farmElementId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
-              if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -512,11 +512,11 @@ public final class QuickStartFarmElementScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName retcode = FieldName.forField("retcode");
+
       static final FieldName worldLevel = FieldName.forField("worldLevel", "world_level");
 
       static final FieldName farmElementId = FieldName.forField("farmElementId", "farm_element_id");
-
-      static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName battleInfo = FieldName.forField("battleInfo", "battle_info");
     }

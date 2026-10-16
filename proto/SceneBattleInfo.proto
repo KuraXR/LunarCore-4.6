@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BattleAvatar.proto";
+import "BattleBuff.proto";
+import "BattleEventBattleInfo.proto";
+import "BattleTargetList.proto";
+import "SceneMonsterWave.proto";
+
+message SceneBattleInfo {
+  optional uint32 battle_id = 13;
+  optional uint32 stage_id = 12;
+  optional uint32 world_level = 15;
+  optional uint32 logic_random_seed = 4;
+  optional uint32 rounds_limit = 14;
+  repeated SceneMonsterWave monster_wave_list = 10;
+  repeated BattleAvatar battle_avatar_list = 5;
+  repeated BattleBuff buff_list = 6;
+  repeated BattleEventBattleInfo event_battle_info_list = 1663;
+  map<uint32, BattleTargetList> battle_target_info = 2004;
+}

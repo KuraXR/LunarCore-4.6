@@ -15,12 +15,11 @@ public class PacketSummonPetScRsp extends BasePacket {
         this.setData(data);
     }
 
-    public PacketSummonPetScRsp(int petId) {
+    public PacketSummonPetScRsp(int mode) {
         super(CmdId.SummonPetScRsp);
 
-        var data = SummonPetScRsp.newInstance()
-                .setCurPetId(petId)
-                .setNewPetId(petId);
+        var data = SummonPetScRsp.newInstance();
+        data.getMutableState().setMode(mode);
 
         this.setData(data);
     }

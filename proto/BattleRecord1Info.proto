@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BattleRecordAvatars.proto";
+
+message BattleRecord1Info {
+  optional uint32 battle_record_stars = 6;
+  optional uint32 round_count = 8;
+  optional uint32 level = 12;
+  repeated BattleRecordAvatars battle_record_avatars = 11;
+}

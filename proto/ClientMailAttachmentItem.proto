@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ClientMailAttachmentItem {
+  optional uint32 mail_id = 6;
+  optional uint32 item_id = 8;
+}

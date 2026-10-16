@@ -21,72 +21,67 @@ public final class PlayerSimpleInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional int64 logout_time = 9;</code>
+     * <code>optional int64 logout_time = 8;</code>
      */
     private long logoutTime;
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 1;</code>
      */
     private int uid;
 
     /**
-     * <code>optional uint32 personal_card = 8;</code>
-     */
-    private int personalCard;
-
-    /**
-     * <code>optional uint32 chat_bubble = 11;</code>
-     */
-    private int chatBubble;
-
-    /**
-     * <code>optional uint32 head_icon = 12;</code>
-     */
-    private int headIcon;
-
-    /**
-     * <code>optional uint32 level = 14;</code>
+     * <code>optional uint32 level = 3;</code>
      */
     private int level;
 
     /**
-     * <code>optional .PlatformType platform = 7;</code>
+     * <code>optional uint32 head_icon = 4;</code>
      */
-    private int platform;
+    private int headIcon;
 
     /**
-     * <code>optional .FriendOnlineStatus online_status = 10;</code>
+     * <code>optional uint32 chat_bubble = 12;</code>
+     */
+    private int chatBubble;
+
+    /**
+     * <code>optional .FriendOnlineStatus online_status = 7;</code>
      */
     private int onlineStatus;
 
     /**
-     * <code>optional bool is_banned = 13;</code>
+     * <code>optional .PlatformType platform = 9;</code>
+     */
+    private int platform;
+
+    /**
+     * <code>optional bool is_banned = 6;</code>
      */
     private boolean isBanned;
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      */
     private final Utf8String nickname = Utf8String.newEmptyInstance();
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      */
     private final Utf8String signature = Utf8String.newEmptyInstance();
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      */
     private final Utf8String platformUuid = Utf8String.newEmptyInstance();
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      */
     private final Utf8String platformNick = Utf8String.newEmptyInstance();
 
     /**
-     * <code>repeated .AssistSimpleInfo assist_info_list = 15;</code>
+     * <code>repeated .AssistSimpleInfo assist_info_list = 13;</code>
      */
     private final RepeatedMessage<AssistSimpleInfoOuterClass.AssistSimpleInfo> assistInfoList = RepeatedMessage.newEmptyInstance(AssistSimpleInfoOuterClass.AssistSimpleInfo.getFactory());
 
@@ -101,7 +96,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional int64 logout_time = 9;</code>
+     * <code>optional int64 logout_time = 8;</code>
      * @return whether the logoutTime field is set
      */
     public boolean hasLogoutTime() {
@@ -109,7 +104,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional int64 logout_time = 9;</code>
+     * <code>optional int64 logout_time = 8;</code>
      * @return this
      */
     public PlayerSimpleInfo clearLogoutTime() {
@@ -119,7 +114,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional int64 logout_time = 9;</code>
+     * <code>optional int64 logout_time = 8;</code>
      * @return the logoutTime
      */
     public long getLogoutTime() {
@@ -127,7 +122,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional int64 logout_time = 9;</code>
+     * <code>optional int64 logout_time = 8;</code>
      * @param value the logoutTime to set
      * @return this
      */
@@ -138,7 +133,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 1;</code>
      * @return whether the uid field is set
      */
     public boolean hasUid() {
@@ -146,7 +141,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 1;</code>
      * @return this
      */
     public PlayerSimpleInfo clearUid() {
@@ -156,7 +151,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 1;</code>
      * @return the uid
      */
     public int getUid() {
@@ -164,7 +159,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 5;</code>
+     * <code>optional uint32 uid = 1;</code>
      * @param value the uid to set
      * @return this
      */
@@ -175,136 +170,25 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 personal_card = 8;</code>
-     * @return whether the personalCard field is set
+     * <code>optional uint32 level = 3;</code>
+     * @return whether the level field is set
      */
-    public boolean hasPersonalCard() {
+    public boolean hasLevel() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 personal_card = 8;</code>
-     * @return this
-     */
-    public PlayerSimpleInfo clearPersonalCard() {
-      bitField0_ &= ~0x00000004;
-      personalCard = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 personal_card = 8;</code>
-     * @return the personalCard
-     */
-    public int getPersonalCard() {
-      return personalCard;
-    }
-
-    /**
-     * <code>optional uint32 personal_card = 8;</code>
-     * @param value the personalCard to set
-     * @return this
-     */
-    public PlayerSimpleInfo setPersonalCard(final int value) {
-      bitField0_ |= 0x00000004;
-      personalCard = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 chat_bubble = 11;</code>
-     * @return whether the chatBubble field is set
-     */
-    public boolean hasChatBubble() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 chat_bubble = 11;</code>
-     * @return this
-     */
-    public PlayerSimpleInfo clearChatBubble() {
-      bitField0_ &= ~0x00000008;
-      chatBubble = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 chat_bubble = 11;</code>
-     * @return the chatBubble
-     */
-    public int getChatBubble() {
-      return chatBubble;
-    }
-
-    /**
-     * <code>optional uint32 chat_bubble = 11;</code>
-     * @param value the chatBubble to set
-     * @return this
-     */
-    public PlayerSimpleInfo setChatBubble(final int value) {
-      bitField0_ |= 0x00000008;
-      chatBubble = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 head_icon = 12;</code>
-     * @return whether the headIcon field is set
-     */
-    public boolean hasHeadIcon() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional uint32 head_icon = 12;</code>
-     * @return this
-     */
-    public PlayerSimpleInfo clearHeadIcon() {
-      bitField0_ &= ~0x00000010;
-      headIcon = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 head_icon = 12;</code>
-     * @return the headIcon
-     */
-    public int getHeadIcon() {
-      return headIcon;
-    }
-
-    /**
-     * <code>optional uint32 head_icon = 12;</code>
-     * @param value the headIcon to set
-     * @return this
-     */
-    public PlayerSimpleInfo setHeadIcon(final int value) {
-      bitField0_ |= 0x00000010;
-      headIcon = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 level = 14;</code>
-     * @return whether the level field is set
-     */
-    public boolean hasLevel() {
-      return (bitField0_ & 0x00000020) != 0;
-    }
-
-    /**
-     * <code>optional uint32 level = 14;</code>
+     * <code>optional uint32 level = 3;</code>
      * @return this
      */
     public PlayerSimpleInfo clearLevel() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000004;
       level = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 level = 14;</code>
+     * <code>optional uint32 level = 3;</code>
      * @return the level
      */
     public int getLevel() {
@@ -312,18 +196,155 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 14;</code>
+     * <code>optional uint32 level = 3;</code>
      * @param value the level to set
      * @return this
      */
     public PlayerSimpleInfo setLevel(final int value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000004;
       level = value;
       return this;
     }
 
     /**
-     * <code>optional .PlatformType platform = 7;</code>
+     * <code>optional uint32 head_icon = 4;</code>
+     * @return whether the headIcon field is set
+     */
+    public boolean hasHeadIcon() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional uint32 head_icon = 4;</code>
+     * @return this
+     */
+    public PlayerSimpleInfo clearHeadIcon() {
+      bitField0_ &= ~0x00000008;
+      headIcon = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 head_icon = 4;</code>
+     * @return the headIcon
+     */
+    public int getHeadIcon() {
+      return headIcon;
+    }
+
+    /**
+     * <code>optional uint32 head_icon = 4;</code>
+     * @param value the headIcon to set
+     * @return this
+     */
+    public PlayerSimpleInfo setHeadIcon(final int value) {
+      bitField0_ |= 0x00000008;
+      headIcon = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 chat_bubble = 12;</code>
+     * @return whether the chatBubble field is set
+     */
+    public boolean hasChatBubble() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional uint32 chat_bubble = 12;</code>
+     * @return this
+     */
+    public PlayerSimpleInfo clearChatBubble() {
+      bitField0_ &= ~0x00000010;
+      chatBubble = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 chat_bubble = 12;</code>
+     * @return the chatBubble
+     */
+    public int getChatBubble() {
+      return chatBubble;
+    }
+
+    /**
+     * <code>optional uint32 chat_bubble = 12;</code>
+     * @param value the chatBubble to set
+     * @return this
+     */
+    public PlayerSimpleInfo setChatBubble(final int value) {
+      bitField0_ |= 0x00000010;
+      chatBubble = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .FriendOnlineStatus online_status = 7;</code>
+     * @return whether the onlineStatus field is set
+     */
+    public boolean hasOnlineStatus() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>optional .FriendOnlineStatus online_status = 7;</code>
+     * @return this
+     */
+    public PlayerSimpleInfo clearOnlineStatus() {
+      bitField0_ &= ~0x00000020;
+      onlineStatus = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional .FriendOnlineStatus online_status = 7;</code>
+     * @return the onlineStatus
+     */
+    public FriendOnlineStatusOuterClass.FriendOnlineStatus getOnlineStatus() {
+      return FriendOnlineStatusOuterClass.FriendOnlineStatus.forNumber(onlineStatus);
+    }
+
+    /**
+     * Gets the value of the internal enum store. The result is
+     * equivalent to {@link PlayerSimpleInfo#getOnlineStatus()}.getNumber().
+     *
+     * @return numeric wire representation
+     */
+    public int getOnlineStatusValue() {
+      return onlineStatus;
+    }
+
+    /**
+     * Sets the value of the internal enum store. This does not
+     * do any validity checks, so be sure to use appropriate value
+     * constants from {@link FriendOnlineStatusOuterClass.FriendOnlineStatus}. Setting an invalid value
+     * can cause {@link PlayerSimpleInfo#getOnlineStatus()} to return null
+     *
+     * @param value the numeric wire value to set
+     * @return this
+     */
+    public PlayerSimpleInfo setOnlineStatusValue(final int value) {
+      bitField0_ |= 0x00000020;
+      onlineStatus = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .FriendOnlineStatus online_status = 7;</code>
+     * @param value the onlineStatus to set
+     * @return this
+     */
+    public PlayerSimpleInfo setOnlineStatus(
+        final FriendOnlineStatusOuterClass.FriendOnlineStatus value) {
+      bitField0_ |= 0x00000020;
+      onlineStatus = value.getNumber();
+      return this;
+    }
+
+    /**
+     * <code>optional .PlatformType platform = 9;</code>
      * @return whether the platform field is set
      */
     public boolean hasPlatform() {
@@ -331,7 +352,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional .PlatformType platform = 7;</code>
+     * <code>optional .PlatformType platform = 9;</code>
      * @return this
      */
     public PlayerSimpleInfo clearPlatform() {
@@ -341,7 +362,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional .PlatformType platform = 7;</code>
+     * <code>optional .PlatformType platform = 9;</code>
      * @return the platform
      */
     public PlatformTypeOuterClass.PlatformType getPlatform() {
@@ -374,7 +395,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional .PlatformType platform = 7;</code>
+     * <code>optional .PlatformType platform = 9;</code>
      * @param value the platform to set
      * @return this
      */
@@ -385,88 +406,25 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional .FriendOnlineStatus online_status = 10;</code>
-     * @return whether the onlineStatus field is set
+     * <code>optional bool is_banned = 6;</code>
+     * @return whether the isBanned field is set
      */
-    public boolean hasOnlineStatus() {
+    public boolean hasIsBanned() {
       return (bitField0_ & 0x00000080) != 0;
     }
 
     /**
-     * <code>optional .FriendOnlineStatus online_status = 10;</code>
-     * @return this
-     */
-    public PlayerSimpleInfo clearOnlineStatus() {
-      bitField0_ &= ~0x00000080;
-      onlineStatus = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional .FriendOnlineStatus online_status = 10;</code>
-     * @return the onlineStatus
-     */
-    public FriendOnlineStatusOuterClass.FriendOnlineStatus getOnlineStatus() {
-      return FriendOnlineStatusOuterClass.FriendOnlineStatus.forNumber(onlineStatus);
-    }
-
-    /**
-     * Gets the value of the internal enum store. The result is
-     * equivalent to {@link PlayerSimpleInfo#getOnlineStatus()}.getNumber().
-     *
-     * @return numeric wire representation
-     */
-    public int getOnlineStatusValue() {
-      return onlineStatus;
-    }
-
-    /**
-     * Sets the value of the internal enum store. This does not
-     * do any validity checks, so be sure to use appropriate value
-     * constants from {@link FriendOnlineStatusOuterClass.FriendOnlineStatus}. Setting an invalid value
-     * can cause {@link PlayerSimpleInfo#getOnlineStatus()} to return null
-     *
-     * @param value the numeric wire value to set
-     * @return this
-     */
-    public PlayerSimpleInfo setOnlineStatusValue(final int value) {
-      bitField0_ |= 0x00000080;
-      onlineStatus = value;
-      return this;
-    }
-
-    /**
-     * <code>optional .FriendOnlineStatus online_status = 10;</code>
-     * @param value the onlineStatus to set
-     * @return this
-     */
-    public PlayerSimpleInfo setOnlineStatus(
-        final FriendOnlineStatusOuterClass.FriendOnlineStatus value) {
-      bitField0_ |= 0x00000080;
-      onlineStatus = value.getNumber();
-      return this;
-    }
-
-    /**
-     * <code>optional bool is_banned = 13;</code>
-     * @return whether the isBanned field is set
-     */
-    public boolean hasIsBanned() {
-      return (bitField0_ & 0x00000100) != 0;
-    }
-
-    /**
-     * <code>optional bool is_banned = 13;</code>
+     * <code>optional bool is_banned = 6;</code>
      * @return this
      */
     public PlayerSimpleInfo clearIsBanned() {
-      bitField0_ &= ~0x00000100;
+      bitField0_ &= ~0x00000080;
       isBanned = false;
       return this;
     }
 
     /**
-     * <code>optional bool is_banned = 13;</code>
+     * <code>optional bool is_banned = 6;</code>
      * @return the isBanned
      */
     public boolean getIsBanned() {
@@ -474,36 +432,36 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional bool is_banned = 13;</code>
+     * <code>optional bool is_banned = 6;</code>
      * @param value the isBanned to set
      * @return this
      */
     public PlayerSimpleInfo setIsBanned(final boolean value) {
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000080;
       isBanned = value;
       return this;
     }
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      * @return whether the nickname field is set
      */
     public boolean hasNickname() {
-      return (bitField0_ & 0x00000200) != 0;
+      return (bitField0_ & 0x00000100) != 0;
     }
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      * @return this
      */
     public PlayerSimpleInfo clearNickname() {
-      bitField0_ &= ~0x00000200;
+      bitField0_ &= ~0x00000100;
       nickname.clear();
       return this;
     }
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      * @return the nickname
      */
     public String getNickname() {
@@ -511,7 +469,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      * @return internal {@code Utf8String} representation of nickname for reading
      */
     public Utf8String getNicknameBytes() {
@@ -519,56 +477,56 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      * @return internal {@code Utf8String} representation of nickname for modifications
      */
     public Utf8String getMutableNicknameBytes() {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       return this.nickname;
     }
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      * @param value the nickname to set
      * @return this
      */
     public PlayerSimpleInfo setNickname(final CharSequence value) {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       nickname.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string nickname = 1;</code>
+     * <code>optional string nickname = 2;</code>
      * @param value the nickname to set
      * @return this
      */
     public PlayerSimpleInfo setNickname(final Utf8String value) {
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000100;
       nickname.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      * @return whether the signature field is set
      */
     public boolean hasSignature() {
-      return (bitField0_ & 0x00000400) != 0;
+      return (bitField0_ & 0x00000200) != 0;
     }
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      * @return this
      */
     public PlayerSimpleInfo clearSignature() {
-      bitField0_ &= ~0x00000400;
+      bitField0_ &= ~0x00000200;
       signature.clear();
       return this;
     }
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      * @return the signature
      */
     public String getSignature() {
@@ -576,7 +534,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      * @return internal {@code Utf8String} representation of signature for reading
      */
     public Utf8String getSignatureBytes() {
@@ -584,56 +542,56 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      * @return internal {@code Utf8String} representation of signature for modifications
      */
     public Utf8String getMutableSignatureBytes() {
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       return this.signature;
     }
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      * @param value the signature to set
      * @return this
      */
     public PlayerSimpleInfo setSignature(final CharSequence value) {
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       signature.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string signature = 2;</code>
+     * <code>optional string signature = 5;</code>
      * @param value the signature to set
      * @return this
      */
     public PlayerSimpleInfo setSignature(final Utf8String value) {
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000200;
       signature.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      * @return whether the platformUuid field is set
      */
     public boolean hasPlatformUuid() {
-      return (bitField0_ & 0x00000800) != 0;
+      return (bitField0_ & 0x00000400) != 0;
     }
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      * @return this
      */
     public PlayerSimpleInfo clearPlatformUuid() {
-      bitField0_ &= ~0x00000800;
+      bitField0_ &= ~0x00000400;
       platformUuid.clear();
       return this;
     }
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      * @return the platformUuid
      */
     public String getPlatformUuid() {
@@ -641,7 +599,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      * @return internal {@code Utf8String} representation of platformUuid for reading
      */
     public Utf8String getPlatformUuidBytes() {
@@ -649,56 +607,56 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      * @return internal {@code Utf8String} representation of platformUuid for modifications
      */
     public Utf8String getMutablePlatformUuidBytes() {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       return this.platformUuid;
     }
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      * @param value the platformUuid to set
      * @return this
      */
     public PlayerSimpleInfo setPlatformUuid(final CharSequence value) {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       platformUuid.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string platform_uuid = 3;</code>
+     * <code>optional string platform_uuid = 10;</code>
      * @param value the platformUuid to set
      * @return this
      */
     public PlayerSimpleInfo setPlatformUuid(final Utf8String value) {
-      bitField0_ |= 0x00000800;
+      bitField0_ |= 0x00000400;
       platformUuid.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      * @return whether the platformNick field is set
      */
     public boolean hasPlatformNick() {
-      return (bitField0_ & 0x00001000) != 0;
+      return (bitField0_ & 0x00000800) != 0;
     }
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      * @return this
      */
     public PlayerSimpleInfo clearPlatformNick() {
-      bitField0_ &= ~0x00001000;
+      bitField0_ &= ~0x00000800;
       platformNick.clear();
       return this;
     }
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      * @return the platformNick
      */
     public String getPlatformNick() {
@@ -706,7 +664,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      * @return internal {@code Utf8String} representation of platformNick for reading
      */
     public Utf8String getPlatformNickBytes() {
@@ -714,56 +672,56 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      * @return internal {@code Utf8String} representation of platformNick for modifications
      */
     public Utf8String getMutablePlatformNickBytes() {
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       return this.platformNick;
     }
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      * @param value the platformNick to set
      * @return this
      */
     public PlayerSimpleInfo setPlatformNick(final CharSequence value) {
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       platformNick.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string platform_nick = 6;</code>
+     * <code>optional string platform_nick = 11;</code>
      * @param value the platformNick to set
      * @return this
      */
     public PlayerSimpleInfo setPlatformNick(final Utf8String value) {
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00000800;
       platformNick.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>repeated .AssistSimpleInfo assist_info_list = 15;</code>
+     * <code>repeated .AssistSimpleInfo assist_info_list = 13;</code>
      * @return whether the assistInfoList field is set
      */
     public boolean hasAssistInfoList() {
-      return (bitField0_ & 0x00002000) != 0;
+      return (bitField0_ & 0x00001000) != 0;
     }
 
     /**
-     * <code>repeated .AssistSimpleInfo assist_info_list = 15;</code>
+     * <code>repeated .AssistSimpleInfo assist_info_list = 13;</code>
      * @return this
      */
     public PlayerSimpleInfo clearAssistInfoList() {
-      bitField0_ &= ~0x00002000;
+      bitField0_ &= ~0x00001000;
       assistInfoList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .AssistSimpleInfo assist_info_list = 15;</code>
+     * <code>repeated .AssistSimpleInfo assist_info_list = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -777,7 +735,7 @@ public final class PlayerSimpleInfoOuterClass {
     }
 
     /**
-     * <code>repeated .AssistSimpleInfo assist_info_list = 15;</code>
+     * <code>repeated .AssistSimpleInfo assist_info_list = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -786,30 +744,30 @@ public final class PlayerSimpleInfoOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<AssistSimpleInfoOuterClass.AssistSimpleInfo> getMutableAssistInfoList() {
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       return assistInfoList;
     }
 
     /**
-     * <code>repeated .AssistSimpleInfo assist_info_list = 15;</code>
+     * <code>repeated .AssistSimpleInfo assist_info_list = 13;</code>
      * @param value the assistInfoList to add
      * @return this
      */
     public PlayerSimpleInfo addAssistInfoList(
         final AssistSimpleInfoOuterClass.AssistSimpleInfo value) {
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       assistInfoList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .AssistSimpleInfo assist_info_list = 15;</code>
+     * <code>repeated .AssistSimpleInfo assist_info_list = 13;</code>
      * @param values the assistInfoList to add
      * @return this
      */
     public PlayerSimpleInfo addAllAssistInfoList(
         final AssistSimpleInfoOuterClass.AssistSimpleInfo... values) {
-      bitField0_ |= 0x00002000;
+      bitField0_ |= 0x00001000;
       assistInfoList.addAll(values);
       return this;
     }
@@ -821,12 +779,11 @@ public final class PlayerSimpleInfoOuterClass {
         bitField0_ = other.bitField0_;
         logoutTime = other.logoutTime;
         uid = other.uid;
-        personalCard = other.personalCard;
-        chatBubble = other.chatBubble;
-        headIcon = other.headIcon;
         level = other.level;
-        platform = other.platform;
+        headIcon = other.headIcon;
+        chatBubble = other.chatBubble;
         onlineStatus = other.onlineStatus;
+        platform = other.platform;
         isBanned = other.isBanned;
         nickname.copyFrom(other.nickname);
         signature.copyFrom(other.signature);
@@ -849,23 +806,20 @@ public final class PlayerSimpleInfoOuterClass {
       if (other.hasUid()) {
         setUid(other.uid);
       }
-      if (other.hasPersonalCard()) {
-        setPersonalCard(other.personalCard);
-      }
-      if (other.hasChatBubble()) {
-        setChatBubble(other.chatBubble);
+      if (other.hasLevel()) {
+        setLevel(other.level);
       }
       if (other.hasHeadIcon()) {
         setHeadIcon(other.headIcon);
       }
-      if (other.hasLevel()) {
-        setLevel(other.level);
-      }
-      if (other.hasPlatform()) {
-        setPlatformValue(other.platform);
+      if (other.hasChatBubble()) {
+        setChatBubble(other.chatBubble);
       }
       if (other.hasOnlineStatus()) {
         setOnlineStatusValue(other.onlineStatus);
+      }
+      if (other.hasPlatform()) {
+        setPlatformValue(other.platform);
       }
       if (other.hasIsBanned()) {
         setIsBanned(other.isBanned);
@@ -897,12 +851,11 @@ public final class PlayerSimpleInfoOuterClass {
       bitField0_ = 0;
       logoutTime = 0L;
       uid = 0;
-      personalCard = 0;
-      chatBubble = 0;
-      headIcon = 0;
       level = 0;
-      platform = 0;
+      headIcon = 0;
+      chatBubble = 0;
       onlineStatus = 0;
+      platform = 0;
       isBanned = false;
       nickname.clear();
       signature.clear();
@@ -939,12 +892,11 @@ public final class PlayerSimpleInfoOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasLogoutTime() || logoutTime == other.logoutTime)
         && (!hasUid() || uid == other.uid)
-        && (!hasPersonalCard() || personalCard == other.personalCard)
-        && (!hasChatBubble() || chatBubble == other.chatBubble)
-        && (!hasHeadIcon() || headIcon == other.headIcon)
         && (!hasLevel() || level == other.level)
-        && (!hasPlatform() || platform == other.platform)
+        && (!hasHeadIcon() || headIcon == other.headIcon)
+        && (!hasChatBubble() || chatBubble == other.chatBubble)
         && (!hasOnlineStatus() || onlineStatus == other.onlineStatus)
+        && (!hasPlatform() || platform == other.platform)
         && (!hasIsBanned() || isBanned == other.isBanned)
         && (!hasNickname() || nickname.equals(other.nickname))
         && (!hasSignature() || signature.equals(other.signature))
@@ -956,60 +908,56 @@ public final class PlayerSimpleInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 64);
         output.writeInt64NoTag(logoutTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(uid);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(personalCard);
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(chatBubble);
+        output.writeRawByte((byte) 32);
+        output.writeUInt32NoTag(headIcon);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         output.writeRawByte((byte) 96);
-        output.writeUInt32NoTag(headIcon);
+        output.writeUInt32NoTag(chatBubble);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(level);
+        output.writeRawByte((byte) 56);
+        output.writeEnumNoTag(onlineStatus);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 72);
         output.writeEnumNoTag(platform);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeEnumNoTag(onlineStatus);
-      }
-      if ((bitField0_ & 0x00000100) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 48);
         output.writeBoolNoTag(isBanned);
       }
-      if ((bitField0_ & 0x00000200) != 0) {
-        output.writeRawByte((byte) 10);
+      if ((bitField0_ & 0x00000100) != 0) {
+        output.writeRawByte((byte) 18);
         output.writeStringNoTag(nickname);
       }
-      if ((bitField0_ & 0x00000400) != 0) {
-        output.writeRawByte((byte) 18);
+      if ((bitField0_ & 0x00000200) != 0) {
+        output.writeRawByte((byte) 42);
         output.writeStringNoTag(signature);
       }
-      if ((bitField0_ & 0x00000800) != 0) {
-        output.writeRawByte((byte) 26);
+      if ((bitField0_ & 0x00000400) != 0) {
+        output.writeRawByte((byte) 82);
         output.writeStringNoTag(platformUuid);
       }
-      if ((bitField0_ & 0x00001000) != 0) {
-        output.writeRawByte((byte) 50);
+      if ((bitField0_ & 0x00000800) != 0) {
+        output.writeRawByte((byte) 90);
         output.writeStringNoTag(platformNick);
       }
-      if ((bitField0_ & 0x00002000) != 0) {
+      if ((bitField0_ & 0x00001000) != 0) {
         for (int i = 0; i < assistInfoList.length(); i++) {
-          output.writeRawByte((byte) 122);
+          output.writeRawByte((byte) 106);
           output.writeMessageNoTag(assistInfoList.get(i));
         }
       }
@@ -1025,39 +973,36 @@ public final class PlayerSimpleInfoOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(uid);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(personalCard);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(chatBubble);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(headIcon);
       }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(chatBubble);
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
+        size += 1 + ProtoSink.computeEnumSizeNoTag(onlineStatus);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         size += 1 + ProtoSink.computeEnumSizeNoTag(platform);
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        size += 1 + ProtoSink.computeEnumSizeNoTag(onlineStatus);
-      }
-      if ((bitField0_ & 0x00000100) != 0) {
         size += 2;
       }
-      if ((bitField0_ & 0x00000200) != 0) {
+      if ((bitField0_ & 0x00000100) != 0) {
         size += 1 + ProtoSink.computeStringSizeNoTag(nickname);
       }
-      if ((bitField0_ & 0x00000400) != 0) {
+      if ((bitField0_ & 0x00000200) != 0) {
         size += 1 + ProtoSink.computeStringSizeNoTag(signature);
       }
-      if ((bitField0_ & 0x00000800) != 0) {
+      if ((bitField0_ & 0x00000400) != 0) {
         size += 1 + ProtoSink.computeStringSizeNoTag(platformUuid);
       }
-      if ((bitField0_ & 0x00001000) != 0) {
+      if ((bitField0_ & 0x00000800) != 0) {
         size += 1 + ProtoSink.computeStringSizeNoTag(platformNick);
       }
-      if ((bitField0_ & 0x00002000) != 0) {
+      if ((bitField0_ & 0x00001000) != 0) {
         size += (1 * assistInfoList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(assistInfoList);
       }
       return size;
@@ -1070,36 +1015,36 @@ public final class PlayerSimpleInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 64: {
             // logoutTime
             logoutTime = input.readInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 40) {
+            if (tag != 8) {
               break;
             }
           }
-          case 40: {
+          case 8: {
             // uid
             uid = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 24) {
               break;
             }
           }
-          case 64: {
-            // personalCard
-            personalCard = input.readUInt32();
+          case 24: {
+            // level
+            level = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 32) {
               break;
             }
           }
-          case 88: {
-            // chatBubble
-            chatBubble = input.readUInt32();
+          case 32: {
+            // headIcon
+            headIcon = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 96) {
@@ -1107,24 +1052,27 @@ public final class PlayerSimpleInfoOuterClass {
             }
           }
           case 96: {
-            // headIcon
-            headIcon = input.readUInt32();
+            // chatBubble
+            chatBubble = input.readUInt32();
             bitField0_ |= 0x00000010;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
-            // level
-            level = input.readUInt32();
-            bitField0_ |= 0x00000020;
             tag = input.readTag();
             if (tag != 56) {
               break;
             }
           }
           case 56: {
+            // onlineStatus
+            final int value = input.readInt32();
+            if (FriendOnlineStatusOuterClass.FriendOnlineStatus.forNumber(value) != null) {
+              onlineStatus = value;
+              bitField0_ |= 0x00000020;
+            }
+            tag = input.readTag();
+            if (tag != 72) {
+              break;
+            }
+          }
+          case 72: {
             // platform
             final int value = input.readInt32();
             if (PlatformTypeOuterClass.PlatformType.forNumber(value) != null) {
@@ -1132,71 +1080,59 @@ public final class PlayerSimpleInfoOuterClass {
               bitField0_ |= 0x00000040;
             }
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 48) {
               break;
             }
           }
-          case 80: {
-            // onlineStatus
-            final int value = input.readInt32();
-            if (FriendOnlineStatusOuterClass.FriendOnlineStatus.forNumber(value) != null) {
-              onlineStatus = value;
-              bitField0_ |= 0x00000080;
-            }
-            tag = input.readTag();
-            if (tag != 104) {
-              break;
-            }
-          }
-          case 104: {
+          case 48: {
             // isBanned
             isBanned = input.readBool();
-            bitField0_ |= 0x00000100;
-            tag = input.readTag();
-            if (tag != 10) {
-              break;
-            }
-          }
-          case 10: {
-            // nickname
-            input.readString(nickname);
-            bitField0_ |= 0x00000200;
+            bitField0_ |= 0x00000080;
             tag = input.readTag();
             if (tag != 18) {
               break;
             }
           }
           case 18: {
+            // nickname
+            input.readString(nickname);
+            bitField0_ |= 0x00000100;
+            tag = input.readTag();
+            if (tag != 42) {
+              break;
+            }
+          }
+          case 42: {
             // signature
             input.readString(signature);
-            bitField0_ |= 0x00000400;
+            bitField0_ |= 0x00000200;
             tag = input.readTag();
-            if (tag != 26) {
+            if (tag != 82) {
               break;
             }
           }
-          case 26: {
+          case 82: {
             // platformUuid
             input.readString(platformUuid);
-            bitField0_ |= 0x00000800;
+            bitField0_ |= 0x00000400;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 90) {
               break;
             }
           }
-          case 50: {
+          case 90: {
             // platformNick
             input.readString(platformNick);
-            bitField0_ |= 0x00001000;
+            bitField0_ |= 0x00000800;
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 106) {
               break;
             }
           }
-          case 122: {
+          case 106: {
             // assistInfoList
             tag = input.readRepeatedMessage(assistInfoList, tag);
-            bitField0_ |= 0x00002000;
+            bitField0_ |= 0x00001000;
             if (tag != 0) {
               break;
             }
@@ -1225,39 +1161,36 @@ public final class PlayerSimpleInfoOuterClass {
         output.writeUInt32(FieldNames.uid, uid);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.personalCard, personalCard);
+        output.writeUInt32(FieldNames.level, level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.chatBubble, chatBubble);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         output.writeUInt32(FieldNames.headIcon, headIcon);
       }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeUInt32(FieldNames.chatBubble, chatBubble);
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeUInt32(FieldNames.level, level);
+        output.writeEnum(FieldNames.onlineStatus, onlineStatus, FriendOnlineStatusOuterClass.FriendOnlineStatus.converter());
       }
       if ((bitField0_ & 0x00000040) != 0) {
         output.writeEnum(FieldNames.platform, platform, PlatformTypeOuterClass.PlatformType.converter());
       }
       if ((bitField0_ & 0x00000080) != 0) {
-        output.writeEnum(FieldNames.onlineStatus, onlineStatus, FriendOnlineStatusOuterClass.FriendOnlineStatus.converter());
-      }
-      if ((bitField0_ & 0x00000100) != 0) {
         output.writeBool(FieldNames.isBanned, isBanned);
       }
-      if ((bitField0_ & 0x00000200) != 0) {
+      if ((bitField0_ & 0x00000100) != 0) {
         output.writeString(FieldNames.nickname, nickname);
       }
-      if ((bitField0_ & 0x00000400) != 0) {
+      if ((bitField0_ & 0x00000200) != 0) {
         output.writeString(FieldNames.signature, signature);
       }
-      if ((bitField0_ & 0x00000800) != 0) {
+      if ((bitField0_ & 0x00000400) != 0) {
         output.writeString(FieldNames.platformUuid, platformUuid);
       }
-      if ((bitField0_ & 0x00001000) != 0) {
+      if ((bitField0_ & 0x00000800) != 0) {
         output.writeString(FieldNames.platformNick, platformNick);
       }
-      if ((bitField0_ & 0x00002000) != 0) {
+      if ((bitField0_ & 0x00001000) != 0) {
         output.writeRepeatedMessage(FieldNames.assistInfoList, assistInfoList);
       }
       output.endObject();
@@ -1293,24 +1226,11 @@ public final class PlayerSimpleInfoOuterClass {
             }
             break;
           }
-          case -259197584:
-          case 580711855: {
-            if (input.isAtField(FieldNames.personalCard)) {
+          case 102865796: {
+            if (input.isAtField(FieldNames.level)) {
               if (!input.trySkipNullValue()) {
-                personalCard = input.readUInt32();
+                level = input.readUInt32();
                 bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -2145955324:
-          case 1636248403: {
-            if (input.isAtField(FieldNames.chatBubble)) {
-              if (!input.trySkipNullValue()) {
-                chatBubble = input.readUInt32();
-                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -1322,6 +1242,18 @@ public final class PlayerSimpleInfoOuterClass {
             if (input.isAtField(FieldNames.headIcon)) {
               if (!input.trySkipNullValue()) {
                 headIcon = input.readUInt32();
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -2145955324:
+          case 1636248403: {
+            if (input.isAtField(FieldNames.chatBubble)) {
+              if (!input.trySkipNullValue()) {
+                chatBubble = input.readUInt32();
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -1329,11 +1261,17 @@ public final class PlayerSimpleInfoOuterClass {
             }
             break;
           }
-          case 102865796: {
-            if (input.isAtField(FieldNames.level)) {
+          case 1159866405:
+          case -650386594: {
+            if (input.isAtField(FieldNames.onlineStatus)) {
               if (!input.trySkipNullValue()) {
-                level = input.readUInt32();
-                bitField0_ |= 0x00000020;
+                final FriendOnlineStatusOuterClass.FriendOnlineStatus value = input.readEnum(FriendOnlineStatusOuterClass.FriendOnlineStatus.converter());
+                if (value != null) {
+                  onlineStatus = value.getNumber();
+                  bitField0_ |= 0x00000020;
+                } else {
+                  input.skipUnknownEnumValue();
+                }
               }
             } else {
               input.skipUnknownField();
@@ -1356,29 +1294,12 @@ public final class PlayerSimpleInfoOuterClass {
             }
             break;
           }
-          case 1159866405:
-          case -650386594: {
-            if (input.isAtField(FieldNames.onlineStatus)) {
-              if (!input.trySkipNullValue()) {
-                final FriendOnlineStatusOuterClass.FriendOnlineStatus value = input.readEnum(FriendOnlineStatusOuterClass.FriendOnlineStatus.converter());
-                if (value != null) {
-                  onlineStatus = value.getNumber();
-                  bitField0_ |= 0x00000080;
-                } else {
-                  input.skipUnknownEnumValue();
-                }
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case -722308888:
           case -932303917: {
             if (input.isAtField(FieldNames.isBanned)) {
               if (!input.trySkipNullValue()) {
                 isBanned = input.readBool();
-                bitField0_ |= 0x00000100;
+                bitField0_ |= 0x00000080;
               }
             } else {
               input.skipUnknownField();
@@ -1389,7 +1310,7 @@ public final class PlayerSimpleInfoOuterClass {
             if (input.isAtField(FieldNames.nickname)) {
               if (!input.trySkipNullValue()) {
                 input.readString(nickname);
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000100;
               }
             } else {
               input.skipUnknownField();
@@ -1400,7 +1321,7 @@ public final class PlayerSimpleInfoOuterClass {
             if (input.isAtField(FieldNames.signature)) {
               if (!input.trySkipNullValue()) {
                 input.readString(signature);
-                bitField0_ |= 0x00000400;
+                bitField0_ |= 0x00000200;
               }
             } else {
               input.skipUnknownField();
@@ -1412,7 +1333,7 @@ public final class PlayerSimpleInfoOuterClass {
             if (input.isAtField(FieldNames.platformUuid)) {
               if (!input.trySkipNullValue()) {
                 input.readString(platformUuid);
-                bitField0_ |= 0x00000800;
+                bitField0_ |= 0x00000400;
               }
             } else {
               input.skipUnknownField();
@@ -1424,7 +1345,7 @@ public final class PlayerSimpleInfoOuterClass {
             if (input.isAtField(FieldNames.platformNick)) {
               if (!input.trySkipNullValue()) {
                 input.readString(platformNick);
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00000800;
               }
             } else {
               input.skipUnknownField();
@@ -1436,7 +1357,7 @@ public final class PlayerSimpleInfoOuterClass {
             if (input.isAtField(FieldNames.assistInfoList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(assistInfoList);
-                bitField0_ |= 0x00002000;
+                bitField0_ |= 0x00001000;
               }
             } else {
               input.skipUnknownField();
@@ -1500,17 +1421,15 @@ public final class PlayerSimpleInfoOuterClass {
 
       static final FieldName uid = FieldName.forField("uid");
 
-      static final FieldName personalCard = FieldName.forField("personalCard", "personal_card");
-
-      static final FieldName chatBubble = FieldName.forField("chatBubble", "chat_bubble");
+      static final FieldName level = FieldName.forField("level");
 
       static final FieldName headIcon = FieldName.forField("headIcon", "head_icon");
 
-      static final FieldName level = FieldName.forField("level");
-
-      static final FieldName platform = FieldName.forField("platform");
+      static final FieldName chatBubble = FieldName.forField("chatBubble", "chat_bubble");
 
       static final FieldName onlineStatus = FieldName.forField("onlineStatus", "online_status");
+
+      static final FieldName platform = FieldName.forField("platform");
 
       static final FieldName isBanned = FieldName.forField("isBanned", "is_banned");
 

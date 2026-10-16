@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "GachaCeilingAvatar.proto";
+
+message GachaCeiling {
+  optional uint32 ceiling_num = 1;
+  optional bool is_claimed = 15;
+  repeated GachaCeilingAvatar avatar_list = 13;
+}

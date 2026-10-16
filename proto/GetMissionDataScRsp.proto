@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MainMissionData.proto";
+import "Mission.proto";
+
+message GetMissionDataScRsp {
+  optional uint32 retcode = 6;
+  repeated MainMissionData main_mission_list = 11;
+  repeated Mission mission_list = 8;
+}

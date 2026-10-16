@@ -22,32 +22,32 @@ public final class GetPlayerBoardDataScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 current_head_icon_id = 2;</code>
-     */
-    private int currentHeadIconId;
-
-    /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 1;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .DisplayAvatarVec display_avatar_vec = 15;</code>
+     * <code>optional uint32 current_head_icon_id = 15;</code>
+     */
+    private int currentHeadIconId;
+
+    /**
+     * <code>optional .DisplayAvatarVec display_avatar_vec = 4;</code>
      */
     private final DisplayAvatarVecOuterClass.DisplayAvatarVec displayAvatarVec = DisplayAvatarVecOuterClass.DisplayAvatarVec.newInstance();
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      */
     private final Utf8String signature = Utf8String.newEmptyInstance();
 
     /**
-     * <code>repeated uint32 display_support_avatar_vec = 7;</code>
+     * <code>repeated uint32 display_support_avatar_vec = 12;</code>
      */
     private final RepeatedInt displaySupportAvatarVec = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated .HeadIcon unlocked_head_icon_list = 9;</code>
+     * <code>repeated .HeadIcon unlocked_head_icon_list = 13;</code>
      */
     private final RepeatedMessage<HeadIconOuterClass.HeadIcon> unlockedHeadIconList = RepeatedMessage.newEmptyInstance(HeadIconOuterClass.HeadIcon.getFactory());
 
@@ -62,62 +62,25 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 current_head_icon_id = 2;</code>
-     * @return whether the currentHeadIconId field is set
+     * <code>optional uint32 retcode = 1;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasCurrentHeadIconId() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 current_head_icon_id = 2;</code>
-     * @return this
-     */
-    public GetPlayerBoardDataScRsp clearCurrentHeadIconId() {
-      bitField0_ &= ~0x00000001;
-      currentHeadIconId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 current_head_icon_id = 2;</code>
-     * @return the currentHeadIconId
-     */
-    public int getCurrentHeadIconId() {
-      return currentHeadIconId;
-    }
-
-    /**
-     * <code>optional uint32 current_head_icon_id = 2;</code>
-     * @param value the currentHeadIconId to set
-     * @return this
-     */
-    public GetPlayerBoardDataScRsp setCurrentHeadIconId(final int value) {
-      bitField0_ |= 0x00000001;
-      currentHeadIconId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 8;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @return this
      */
     public GetPlayerBoardDataScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -125,18 +88,55 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 1;</code>
      * @param value the retcode to set
      * @return this
      */
     public GetPlayerBoardDataScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
       return this;
     }
 
     /**
-     * <code>optional .DisplayAvatarVec display_avatar_vec = 15;</code>
+     * <code>optional uint32 current_head_icon_id = 15;</code>
+     * @return whether the currentHeadIconId field is set
+     */
+    public boolean hasCurrentHeadIconId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 current_head_icon_id = 15;</code>
+     * @return this
+     */
+    public GetPlayerBoardDataScRsp clearCurrentHeadIconId() {
+      bitField0_ &= ~0x00000002;
+      currentHeadIconId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 current_head_icon_id = 15;</code>
+     * @return the currentHeadIconId
+     */
+    public int getCurrentHeadIconId() {
+      return currentHeadIconId;
+    }
+
+    /**
+     * <code>optional uint32 current_head_icon_id = 15;</code>
+     * @param value the currentHeadIconId to set
+     * @return this
+     */
+    public GetPlayerBoardDataScRsp setCurrentHeadIconId(final int value) {
+      bitField0_ |= 0x00000002;
+      currentHeadIconId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .DisplayAvatarVec display_avatar_vec = 4;</code>
      * @return whether the displayAvatarVec field is set
      */
     public boolean hasDisplayAvatarVec() {
@@ -144,7 +144,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .DisplayAvatarVec display_avatar_vec = 15;</code>
+     * <code>optional .DisplayAvatarVec display_avatar_vec = 4;</code>
      * @return this
      */
     public GetPlayerBoardDataScRsp clearDisplayAvatarVec() {
@@ -154,7 +154,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .DisplayAvatarVec display_avatar_vec = 15;</code>
+     * <code>optional .DisplayAvatarVec display_avatar_vec = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -168,7 +168,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .DisplayAvatarVec display_avatar_vec = 15;</code>
+     * <code>optional .DisplayAvatarVec display_avatar_vec = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -182,7 +182,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .DisplayAvatarVec display_avatar_vec = 15;</code>
+     * <code>optional .DisplayAvatarVec display_avatar_vec = 4;</code>
      * @param value the displayAvatarVec to set
      * @return this
      */
@@ -194,7 +194,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      * @return whether the signature field is set
      */
     public boolean hasSignature() {
@@ -202,7 +202,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      * @return this
      */
     public GetPlayerBoardDataScRsp clearSignature() {
@@ -212,7 +212,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      * @return the signature
      */
     public String getSignature() {
@@ -220,7 +220,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      * @return internal {@code Utf8String} representation of signature for reading
      */
     public Utf8String getSignatureBytes() {
@@ -228,7 +228,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      * @return internal {@code Utf8String} representation of signature for modifications
      */
     public Utf8String getMutableSignatureBytes() {
@@ -237,7 +237,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      * @param value the signature to set
      * @return this
      */
@@ -248,7 +248,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>optional string signature = 6;</code>
+     * <code>optional string signature = 5;</code>
      * @param value the signature to set
      * @return this
      */
@@ -259,7 +259,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 display_support_avatar_vec = 7;</code>
+     * <code>repeated uint32 display_support_avatar_vec = 12;</code>
      * @return whether the displaySupportAvatarVec field is set
      */
     public boolean hasDisplaySupportAvatarVec() {
@@ -267,7 +267,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 display_support_avatar_vec = 7;</code>
+     * <code>repeated uint32 display_support_avatar_vec = 12;</code>
      * @return this
      */
     public GetPlayerBoardDataScRsp clearDisplaySupportAvatarVec() {
@@ -277,7 +277,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 display_support_avatar_vec = 7;</code>
+     * <code>repeated uint32 display_support_avatar_vec = 12;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -291,7 +291,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 display_support_avatar_vec = 7;</code>
+     * <code>repeated uint32 display_support_avatar_vec = 12;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -305,7 +305,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 display_support_avatar_vec = 7;</code>
+     * <code>repeated uint32 display_support_avatar_vec = 12;</code>
      * @param value the displaySupportAvatarVec to add
      * @return this
      */
@@ -316,7 +316,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 display_support_avatar_vec = 7;</code>
+     * <code>repeated uint32 display_support_avatar_vec = 12;</code>
      * @param values the displaySupportAvatarVec to add
      * @return this
      */
@@ -327,7 +327,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated .HeadIcon unlocked_head_icon_list = 9;</code>
+     * <code>repeated .HeadIcon unlocked_head_icon_list = 13;</code>
      * @return whether the unlockedHeadIconList field is set
      */
     public boolean hasUnlockedHeadIconList() {
@@ -335,7 +335,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated .HeadIcon unlocked_head_icon_list = 9;</code>
+     * <code>repeated .HeadIcon unlocked_head_icon_list = 13;</code>
      * @return this
      */
     public GetPlayerBoardDataScRsp clearUnlockedHeadIconList() {
@@ -345,7 +345,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated .HeadIcon unlocked_head_icon_list = 9;</code>
+     * <code>repeated .HeadIcon unlocked_head_icon_list = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -359,7 +359,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated .HeadIcon unlocked_head_icon_list = 9;</code>
+     * <code>repeated .HeadIcon unlocked_head_icon_list = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -373,7 +373,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated .HeadIcon unlocked_head_icon_list = 9;</code>
+     * <code>repeated .HeadIcon unlocked_head_icon_list = 13;</code>
      * @param value the unlockedHeadIconList to add
      * @return this
      */
@@ -385,7 +385,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated .HeadIcon unlocked_head_icon_list = 9;</code>
+     * <code>repeated .HeadIcon unlocked_head_icon_list = 13;</code>
      * @param values the unlockedHeadIconList to add
      * @return this
      */
@@ -401,8 +401,8 @@ public final class GetPlayerBoardDataScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        currentHeadIconId = other.currentHeadIconId;
         retcode = other.retcode;
+        currentHeadIconId = other.currentHeadIconId;
         displayAvatarVec.copyFrom(other.displayAvatarVec);
         signature.copyFrom(other.signature);
         displaySupportAvatarVec.copyFrom(other.displaySupportAvatarVec);
@@ -417,11 +417,11 @@ public final class GetPlayerBoardDataScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasCurrentHeadIconId()) {
-        setCurrentHeadIconId(other.currentHeadIconId);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
+      }
+      if (other.hasCurrentHeadIconId()) {
+        setCurrentHeadIconId(other.currentHeadIconId);
       }
       if (other.hasDisplayAvatarVec()) {
         getMutableDisplayAvatarVec().mergeFrom(other.displayAvatarVec);
@@ -445,8 +445,8 @@ public final class GetPlayerBoardDataScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      currentHeadIconId = 0;
       retcode = 0;
+      currentHeadIconId = 0;
       displayAvatarVec.clear();
       signature.clear();
       displaySupportAvatarVec.clear();
@@ -478,8 +478,8 @@ public final class GetPlayerBoardDataScRspOuterClass {
       }
       GetPlayerBoardDataScRsp other = (GetPlayerBoardDataScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasCurrentHeadIconId() || currentHeadIconId == other.currentHeadIconId)
         && (!hasRetcode() || retcode == other.retcode)
+        && (!hasCurrentHeadIconId() || currentHeadIconId == other.currentHeadIconId)
         && (!hasDisplayAvatarVec() || displayAvatarVec.equals(other.displayAvatarVec))
         && (!hasSignature() || signature.equals(other.signature))
         && (!hasDisplaySupportAvatarVec() || displaySupportAvatarVec.equals(other.displaySupportAvatarVec))
@@ -489,30 +489,30 @@ public final class GetPlayerBoardDataScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(currentHeadIconId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(retcode);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(currentHeadIconId);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 122);
+        output.writeRawByte((byte) 34);
         output.writeMessageNoTag(displayAvatarVec);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 50);
+        output.writeRawByte((byte) 42);
         output.writeStringNoTag(signature);
       }
       if ((bitField0_ & 0x00000010) != 0) {
         for (int i = 0; i < displaySupportAvatarVec.length(); i++) {
-          output.writeRawByte((byte) 56);
+          output.writeRawByte((byte) 96);
           output.writeUInt32NoTag(displaySupportAvatarVec.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000020) != 0) {
         for (int i = 0; i < unlockedHeadIconList.length(); i++) {
-          output.writeRawByte((byte) 74);
+          output.writeRawByte((byte) 106);
           output.writeMessageNoTag(unlockedHeadIconList.get(i));
         }
       }
@@ -522,10 +522,10 @@ public final class GetPlayerBoardDataScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(currentHeadIconId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(currentHeadIconId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(displayAvatarVec);
@@ -549,52 +549,52 @@ public final class GetPlayerBoardDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // currentHeadIconId
-            currentHeadIconId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 64) {
-              break;
-            }
-          }
-          case 64: {
+          case 8: {
             // retcode
             retcode = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 120) {
               break;
             }
           }
-          case 122: {
+          case 120: {
+            // currentHeadIconId
+            currentHeadIconId = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 34) {
+              break;
+            }
+          }
+          case 34: {
             // displayAvatarVec
             input.readMessage(displayAvatarVec);
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 42) {
               break;
             }
           }
-          case 50: {
+          case 42: {
             // signature
             input.readString(signature);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 98) {
               break;
             }
           }
-          case 58: {
+          case 98: {
             // displaySupportAvatarVec [packed=true]
             input.readPackedUInt32(displaySupportAvatarVec, tag);
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 74) {
+            if (tag != 106) {
               break;
             }
           }
-          case 74: {
+          case 106: {
             // unlockedHeadIconList
             tag = input.readRepeatedMessage(unlockedHeadIconList, tag);
             bitField0_ |= 0x00000020;
@@ -612,7 +612,7 @@ public final class GetPlayerBoardDataScRspOuterClass {
             tag = input.readTag();
             break;
           }
-          case 56: {
+          case 96: {
             // displaySupportAvatarVec [packed=false]
             tag = input.readRepeatedUInt32(displaySupportAvatarVec, tag);
             bitField0_ |= 0x00000010;
@@ -626,10 +626,10 @@ public final class GetPlayerBoardDataScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.currentHeadIconId, currentHeadIconId);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.currentHeadIconId, currentHeadIconId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeMessage(FieldNames.displayAvatarVec, displayAvatarVec);
@@ -653,11 +653,10 @@ public final class GetPlayerBoardDataScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 2107487181:
-          case -1003133880: {
-            if (input.isAtField(FieldNames.currentHeadIconId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                currentHeadIconId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -665,10 +664,11 @@ public final class GetPlayerBoardDataScRspOuterClass {
             }
             break;
           }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case 2107487181:
+          case -1003133880: {
+            if (input.isAtField(FieldNames.currentHeadIconId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                currentHeadIconId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -776,9 +776,9 @@ public final class GetPlayerBoardDataScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName currentHeadIconId = FieldName.forField("currentHeadIconId", "current_head_icon_id");
-
       static final FieldName retcode = FieldName.forField("retcode");
+
+      static final FieldName currentHeadIconId = FieldName.forField("currentHeadIconId", "current_head_icon_id");
 
       static final FieldName displayAvatarVec = FieldName.forField("displayAvatarVec", "display_avatar_vec");
 

@@ -20,27 +20,17 @@ public final class QueryProductInfoScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint64 month_card_outdate_time = 11;</code>
+     * <code>optional uint64 month_card_outdate_time = 2;</code>
      */
     private long monthCardOutdateTime;
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 8;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 gift_coin_bought_history_version = 7;</code>
-     */
-    private int giftCoinBoughtHistoryVersion;
-
-    /**
-     * <code>optional uint32 gift_coin_cur_version = 12;</code>
-     */
-    private int giftCoinCurVersion;
-
-    /**
-     * <code>repeated .Product product_list = 10;</code>
+     * <code>repeated .Product product_list = 11;</code>
      */
     private final RepeatedMessage<ProductOuterClass.Product> productList = RepeatedMessage.newEmptyInstance(ProductOuterClass.Product.getFactory());
 
@@ -55,7 +45,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 month_card_outdate_time = 11;</code>
+     * <code>optional uint64 month_card_outdate_time = 2;</code>
      * @return whether the monthCardOutdateTime field is set
      */
     public boolean hasMonthCardOutdateTime() {
@@ -63,7 +53,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 month_card_outdate_time = 11;</code>
+     * <code>optional uint64 month_card_outdate_time = 2;</code>
      * @return this
      */
     public QueryProductInfoScRsp clearMonthCardOutdateTime() {
@@ -73,7 +63,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 month_card_outdate_time = 11;</code>
+     * <code>optional uint64 month_card_outdate_time = 2;</code>
      * @return the monthCardOutdateTime
      */
     public long getMonthCardOutdateTime() {
@@ -81,7 +71,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 month_card_outdate_time = 11;</code>
+     * <code>optional uint64 month_card_outdate_time = 2;</code>
      * @param value the monthCardOutdateTime to set
      * @return this
      */
@@ -92,7 +82,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -100,7 +90,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @return this
      */
     public QueryProductInfoScRsp clearRetcode() {
@@ -110,7 +100,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -118,7 +108,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 8;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -129,99 +119,25 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 gift_coin_bought_history_version = 7;</code>
-     * @return whether the giftCoinBoughtHistoryVersion field is set
+     * <code>repeated .Product product_list = 11;</code>
+     * @return whether the productList field is set
      */
-    public boolean hasGiftCoinBoughtHistoryVersion() {
+    public boolean hasProductList() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 gift_coin_bought_history_version = 7;</code>
-     * @return this
-     */
-    public QueryProductInfoScRsp clearGiftCoinBoughtHistoryVersion() {
-      bitField0_ &= ~0x00000004;
-      giftCoinBoughtHistoryVersion = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 gift_coin_bought_history_version = 7;</code>
-     * @return the giftCoinBoughtHistoryVersion
-     */
-    public int getGiftCoinBoughtHistoryVersion() {
-      return giftCoinBoughtHistoryVersion;
-    }
-
-    /**
-     * <code>optional uint32 gift_coin_bought_history_version = 7;</code>
-     * @param value the giftCoinBoughtHistoryVersion to set
-     * @return this
-     */
-    public QueryProductInfoScRsp setGiftCoinBoughtHistoryVersion(final int value) {
-      bitField0_ |= 0x00000004;
-      giftCoinBoughtHistoryVersion = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 gift_coin_cur_version = 12;</code>
-     * @return whether the giftCoinCurVersion field is set
-     */
-    public boolean hasGiftCoinCurVersion() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 gift_coin_cur_version = 12;</code>
-     * @return this
-     */
-    public QueryProductInfoScRsp clearGiftCoinCurVersion() {
-      bitField0_ &= ~0x00000008;
-      giftCoinCurVersion = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 gift_coin_cur_version = 12;</code>
-     * @return the giftCoinCurVersion
-     */
-    public int getGiftCoinCurVersion() {
-      return giftCoinCurVersion;
-    }
-
-    /**
-     * <code>optional uint32 gift_coin_cur_version = 12;</code>
-     * @param value the giftCoinCurVersion to set
-     * @return this
-     */
-    public QueryProductInfoScRsp setGiftCoinCurVersion(final int value) {
-      bitField0_ |= 0x00000008;
-      giftCoinCurVersion = value;
-      return this;
-    }
-
-    /**
-     * <code>repeated .Product product_list = 10;</code>
-     * @return whether the productList field is set
-     */
-    public boolean hasProductList() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>repeated .Product product_list = 10;</code>
+     * <code>repeated .Product product_list = 11;</code>
      * @return this
      */
     public QueryProductInfoScRsp clearProductList() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000004;
       productList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .Product product_list = 10;</code>
+     * <code>repeated .Product product_list = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -235,7 +151,7 @@ public final class QueryProductInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Product product_list = 10;</code>
+     * <code>repeated .Product product_list = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -244,28 +160,28 @@ public final class QueryProductInfoScRspOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<ProductOuterClass.Product> getMutableProductList() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       return productList;
     }
 
     /**
-     * <code>repeated .Product product_list = 10;</code>
+     * <code>repeated .Product product_list = 11;</code>
      * @param value the productList to add
      * @return this
      */
     public QueryProductInfoScRsp addProductList(final ProductOuterClass.Product value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       productList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .Product product_list = 10;</code>
+     * <code>repeated .Product product_list = 11;</code>
      * @param values the productList to add
      * @return this
      */
     public QueryProductInfoScRsp addAllProductList(final ProductOuterClass.Product... values) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       productList.addAll(values);
       return this;
     }
@@ -277,8 +193,6 @@ public final class QueryProductInfoScRspOuterClass {
         bitField0_ = other.bitField0_;
         monthCardOutdateTime = other.monthCardOutdateTime;
         retcode = other.retcode;
-        giftCoinBoughtHistoryVersion = other.giftCoinBoughtHistoryVersion;
-        giftCoinCurVersion = other.giftCoinCurVersion;
         productList.copyFrom(other.productList);
       }
       return this;
@@ -296,12 +210,6 @@ public final class QueryProductInfoScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasGiftCoinBoughtHistoryVersion()) {
-        setGiftCoinBoughtHistoryVersion(other.giftCoinBoughtHistoryVersion);
-      }
-      if (other.hasGiftCoinCurVersion()) {
-        setGiftCoinCurVersion(other.giftCoinCurVersion);
-      }
       if (other.hasProductList()) {
         getMutableProductList().addAll(other.productList);
       }
@@ -317,8 +225,6 @@ public final class QueryProductInfoScRspOuterClass {
       bitField0_ = 0;
       monthCardOutdateTime = 0L;
       retcode = 0;
-      giftCoinBoughtHistoryVersion = 0;
-      giftCoinCurVersion = 0;
       productList.clear();
       return this;
     }
@@ -346,32 +252,22 @@ public final class QueryProductInfoScRspOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasMonthCardOutdateTime() || monthCardOutdateTime == other.monthCardOutdateTime)
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasGiftCoinBoughtHistoryVersion() || giftCoinBoughtHistoryVersion == other.giftCoinBoughtHistoryVersion)
-        && (!hasGiftCoinCurVersion() || giftCoinCurVersion == other.giftCoinCurVersion)
         && (!hasProductList() || productList.equals(other.productList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 16);
         output.writeUInt64NoTag(monthCardOutdateTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(giftCoinBoughtHistoryVersion);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 96);
-        output.writeUInt32NoTag(giftCoinCurVersion);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         for (int i = 0; i < productList.length(); i++) {
-          output.writeRawByte((byte) 82);
+          output.writeRawByte((byte) 90);
           output.writeMessageNoTag(productList.get(i));
         }
       }
@@ -387,12 +283,6 @@ public final class QueryProductInfoScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(giftCoinBoughtHistoryVersion);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(giftCoinCurVersion);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         size += (1 * productList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(productList);
       }
       return size;
@@ -405,46 +295,28 @@ public final class QueryProductInfoScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
+          case 16: {
             // monthCardOutdateTime
             monthCardOutdateTime = input.readUInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 64) {
               break;
             }
           }
-          case 48: {
+          case 64: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 90) {
               break;
             }
           }
-          case 56: {
-            // giftCoinBoughtHistoryVersion
-            giftCoinBoughtHistoryVersion = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 96) {
-              break;
-            }
-          }
-          case 96: {
-            // giftCoinCurVersion
-            giftCoinCurVersion = input.readUInt32();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 82) {
-              break;
-            }
-          }
-          case 82: {
+          case 90: {
             // productList
             tag = input.readRepeatedMessage(productList, tag);
-            bitField0_ |= 0x00000010;
+            bitField0_ |= 0x00000004;
             if (tag != 0) {
               break;
             }
@@ -473,12 +345,6 @@ public final class QueryProductInfoScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.giftCoinBoughtHistoryVersion, giftCoinBoughtHistoryVersion);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.giftCoinCurVersion, giftCoinCurVersion);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         output.writeRepeatedMessage(FieldNames.productList, productList);
       }
       output.endObject();
@@ -514,36 +380,12 @@ public final class QueryProductInfoScRspOuterClass {
             }
             break;
           }
-          case 337076464:
-          case 1032039352: {
-            if (input.isAtField(FieldNames.giftCoinBoughtHistoryVersion)) {
-              if (!input.trySkipNullValue()) {
-                giftCoinBoughtHistoryVersion = input.readUInt32();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -623323847:
-          case 347029594: {
-            if (input.isAtField(FieldNames.giftCoinCurVersion)) {
-              if (!input.trySkipNullValue()) {
-                giftCoinCurVersion = input.readUInt32();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case -1491869139:
           case 1014323694: {
             if (input.isAtField(FieldNames.productList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(productList);
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -606,10 +448,6 @@ public final class QueryProductInfoScRspOuterClass {
       static final FieldName monthCardOutdateTime = FieldName.forField("monthCardOutdateTime", "month_card_outdate_time");
 
       static final FieldName retcode = FieldName.forField("retcode");
-
-      static final FieldName giftCoinBoughtHistoryVersion = FieldName.forField("giftCoinBoughtHistoryVersion", "gift_coin_bought_history_version");
-
-      static final FieldName giftCoinCurVersion = FieldName.forField("giftCoinCurVersion", "gift_coin_cur_version");
 
       static final FieldName productList = FieldName.forField("productList", "product_list");
     }

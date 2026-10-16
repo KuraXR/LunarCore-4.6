@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "FeatureSwitchInfo.proto";
+
+message UpdateFeatureSwitchScNotify {
+  repeated FeatureSwitchInfo switch_info_list = 9;
+}

@@ -22,44 +22,24 @@ public final class ProductOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional int64 begin_time = 3;</code>
+     * <code>optional int64 begin_time = 14;</code>
      */
     private long beginTime;
 
     /**
-     * <code>optional int64 end_time = 6;</code>
+     * <code>optional int64 end_time = 15;</code>
      */
     private long endTime;
 
     /**
-     * <code>optional uint32 max_buy_times = 4;</code>
-     */
-    private int maxBuyTimes;
-
-    /**
-     * <code>optional uint32 buy_times = 7;</code>
-     */
-    private int buyTimes;
-
-    /**
-     * <code>optional .Product.ProductGiftType product_gift_type = 13;</code>
-     */
-    private int productGiftType;
-
-    /**
-     * <code>optional bool is_first_recharge = 14;</code>
-     */
-    private boolean isFirstRecharge;
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     */
-    private final Utf8String productId = Utf8String.newEmptyInstance();
-
-    /**
-     * <code>optional string price_tier = 11;</code>
+     * <code>optional string price_tier = 3;</code>
      */
     private final Utf8String priceTier = Utf8String.newEmptyInstance();
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     */
+    private final Utf8String productId = Utf8String.newEmptyInstance();
 
     private Product() {
     }
@@ -72,7 +52,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 3;</code>
+     * <code>optional int64 begin_time = 14;</code>
      * @return whether the beginTime field is set
      */
     public boolean hasBeginTime() {
@@ -80,7 +60,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 3;</code>
+     * <code>optional int64 begin_time = 14;</code>
      * @return this
      */
     public Product clearBeginTime() {
@@ -90,7 +70,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 3;</code>
+     * <code>optional int64 begin_time = 14;</code>
      * @return the beginTime
      */
     public long getBeginTime() {
@@ -98,7 +78,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 begin_time = 3;</code>
+     * <code>optional int64 begin_time = 14;</code>
      * @param value the beginTime to set
      * @return this
      */
@@ -109,7 +89,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 6;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @return whether the endTime field is set
      */
     public boolean hasEndTime() {
@@ -117,7 +97,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 6;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @return this
      */
     public Product clearEndTime() {
@@ -127,7 +107,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 6;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @return the endTime
      */
     public long getEndTime() {
@@ -135,7 +115,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional int64 end_time = 6;</code>
+     * <code>optional int64 end_time = 15;</code>
      * @param value the endTime to set
      * @return this
      */
@@ -146,263 +126,25 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional uint32 max_buy_times = 4;</code>
-     * @return whether the maxBuyTimes field is set
+     * <code>optional string price_tier = 3;</code>
+     * @return whether the priceTier field is set
      */
-    public boolean hasMaxBuyTimes() {
+    public boolean hasPriceTier() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 max_buy_times = 4;</code>
-     * @return this
-     */
-    public Product clearMaxBuyTimes() {
-      bitField0_ &= ~0x00000004;
-      maxBuyTimes = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 max_buy_times = 4;</code>
-     * @return the maxBuyTimes
-     */
-    public int getMaxBuyTimes() {
-      return maxBuyTimes;
-    }
-
-    /**
-     * <code>optional uint32 max_buy_times = 4;</code>
-     * @param value the maxBuyTimes to set
-     * @return this
-     */
-    public Product setMaxBuyTimes(final int value) {
-      bitField0_ |= 0x00000004;
-      maxBuyTimes = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 buy_times = 7;</code>
-     * @return whether the buyTimes field is set
-     */
-    public boolean hasBuyTimes() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 buy_times = 7;</code>
-     * @return this
-     */
-    public Product clearBuyTimes() {
-      bitField0_ &= ~0x00000008;
-      buyTimes = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 buy_times = 7;</code>
-     * @return the buyTimes
-     */
-    public int getBuyTimes() {
-      return buyTimes;
-    }
-
-    /**
-     * <code>optional uint32 buy_times = 7;</code>
-     * @param value the buyTimes to set
-     * @return this
-     */
-    public Product setBuyTimes(final int value) {
-      bitField0_ |= 0x00000008;
-      buyTimes = value;
-      return this;
-    }
-
-    /**
-     * <code>optional .Product.ProductGiftType product_gift_type = 13;</code>
-     * @return whether the productGiftType field is set
-     */
-    public boolean hasProductGiftType() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional .Product.ProductGiftType product_gift_type = 13;</code>
-     * @return this
-     */
-    public Product clearProductGiftType() {
-      bitField0_ &= ~0x00000010;
-      productGiftType = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional .Product.ProductGiftType product_gift_type = 13;</code>
-     * @return the productGiftType
-     */
-    public ProductGiftType getProductGiftType() {
-      return ProductGiftType.forNumber(productGiftType);
-    }
-
-    /**
-     * Gets the value of the internal enum store. The result is
-     * equivalent to {@link Product#getProductGiftType()}.getNumber().
-     *
-     * @return numeric wire representation
-     */
-    public int getProductGiftTypeValue() {
-      return productGiftType;
-    }
-
-    /**
-     * Sets the value of the internal enum store. This does not
-     * do any validity checks, so be sure to use appropriate value
-     * constants from {@link ProductGiftType}. Setting an invalid value
-     * can cause {@link Product#getProductGiftType()} to return null
-     *
-     * @param value the numeric wire value to set
-     * @return this
-     */
-    public Product setProductGiftTypeValue(final int value) {
-      bitField0_ |= 0x00000010;
-      productGiftType = value;
-      return this;
-    }
-
-    /**
-     * <code>optional .Product.ProductGiftType product_gift_type = 13;</code>
-     * @param value the productGiftType to set
-     * @return this
-     */
-    public Product setProductGiftType(final ProductGiftType value) {
-      bitField0_ |= 0x00000010;
-      productGiftType = value.getNumber();
-      return this;
-    }
-
-    /**
-     * <code>optional bool is_first_recharge = 14;</code>
-     * @return whether the isFirstRecharge field is set
-     */
-    public boolean hasIsFirstRecharge() {
-      return (bitField0_ & 0x00000020) != 0;
-    }
-
-    /**
-     * <code>optional bool is_first_recharge = 14;</code>
-     * @return this
-     */
-    public Product clearIsFirstRecharge() {
-      bitField0_ &= ~0x00000020;
-      isFirstRecharge = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool is_first_recharge = 14;</code>
-     * @return the isFirstRecharge
-     */
-    public boolean getIsFirstRecharge() {
-      return isFirstRecharge;
-    }
-
-    /**
-     * <code>optional bool is_first_recharge = 14;</code>
-     * @param value the isFirstRecharge to set
-     * @return this
-     */
-    public Product setIsFirstRecharge(final boolean value) {
-      bitField0_ |= 0x00000020;
-      isFirstRecharge = value;
-      return this;
-    }
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     * @return whether the productId field is set
-     */
-    public boolean hasProductId() {
-      return (bitField0_ & 0x00000040) != 0;
-    }
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     * @return this
-     */
-    public Product clearProductId() {
-      bitField0_ &= ~0x00000040;
-      productId.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     * @return the productId
-     */
-    public String getProductId() {
-      return productId.getString();
-    }
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     * @return internal {@code Utf8String} representation of productId for reading
-     */
-    public Utf8String getProductIdBytes() {
-      return this.productId;
-    }
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     * @return internal {@code Utf8String} representation of productId for modifications
-     */
-    public Utf8String getMutableProductIdBytes() {
-      bitField0_ |= 0x00000040;
-      return this.productId;
-    }
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     * @param value the productId to set
-     * @return this
-     */
-    public Product setProductId(final CharSequence value) {
-      bitField0_ |= 0x00000040;
-      productId.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional string product_id = 2;</code>
-     * @param value the productId to set
-     * @return this
-     */
-    public Product setProductId(final Utf8String value) {
-      bitField0_ |= 0x00000040;
-      productId.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional string price_tier = 11;</code>
-     * @return whether the priceTier field is set
-     */
-    public boolean hasPriceTier() {
-      return (bitField0_ & 0x00000080) != 0;
-    }
-
-    /**
-     * <code>optional string price_tier = 11;</code>
+     * <code>optional string price_tier = 3;</code>
      * @return this
      */
     public Product clearPriceTier() {
-      bitField0_ &= ~0x00000080;
+      bitField0_ &= ~0x00000004;
       priceTier.clear();
       return this;
     }
 
     /**
-     * <code>optional string price_tier = 11;</code>
+     * <code>optional string price_tier = 3;</code>
      * @return the priceTier
      */
     public String getPriceTier() {
@@ -410,7 +152,7 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional string price_tier = 11;</code>
+     * <code>optional string price_tier = 3;</code>
      * @return internal {@code Utf8String} representation of priceTier for reading
      */
     public Utf8String getPriceTierBytes() {
@@ -418,33 +160,98 @@ public final class ProductOuterClass {
     }
 
     /**
-     * <code>optional string price_tier = 11;</code>
+     * <code>optional string price_tier = 3;</code>
      * @return internal {@code Utf8String} representation of priceTier for modifications
      */
     public Utf8String getMutablePriceTierBytes() {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000004;
       return this.priceTier;
     }
 
     /**
-     * <code>optional string price_tier = 11;</code>
+     * <code>optional string price_tier = 3;</code>
      * @param value the priceTier to set
      * @return this
      */
     public Product setPriceTier(final CharSequence value) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000004;
       priceTier.copyFrom(value);
       return this;
     }
 
     /**
-     * <code>optional string price_tier = 11;</code>
+     * <code>optional string price_tier = 3;</code>
      * @param value the priceTier to set
      * @return this
      */
     public Product setPriceTier(final Utf8String value) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000004;
       priceTier.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     * @return whether the productId field is set
+     */
+    public boolean hasProductId() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     * @return this
+     */
+    public Product clearProductId() {
+      bitField0_ &= ~0x00000008;
+      productId.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     * @return the productId
+     */
+    public String getProductId() {
+      return productId.getString();
+    }
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     * @return internal {@code Utf8String} representation of productId for reading
+     */
+    public Utf8String getProductIdBytes() {
+      return this.productId;
+    }
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     * @return internal {@code Utf8String} representation of productId for modifications
+     */
+    public Utf8String getMutableProductIdBytes() {
+      bitField0_ |= 0x00000008;
+      return this.productId;
+    }
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     * @param value the productId to set
+     * @return this
+     */
+    public Product setProductId(final CharSequence value) {
+      bitField0_ |= 0x00000008;
+      productId.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional string product_id = 9;</code>
+     * @param value the productId to set
+     * @return this
+     */
+    public Product setProductId(final Utf8String value) {
+      bitField0_ |= 0x00000008;
+      productId.copyFrom(value);
       return this;
     }
 
@@ -455,12 +262,8 @@ public final class ProductOuterClass {
         bitField0_ = other.bitField0_;
         beginTime = other.beginTime;
         endTime = other.endTime;
-        maxBuyTimes = other.maxBuyTimes;
-        buyTimes = other.buyTimes;
-        productGiftType = other.productGiftType;
-        isFirstRecharge = other.isFirstRecharge;
-        productId.copyFrom(other.productId);
         priceTier.copyFrom(other.priceTier);
+        productId.copyFrom(other.productId);
       }
       return this;
     }
@@ -477,23 +280,11 @@ public final class ProductOuterClass {
       if (other.hasEndTime()) {
         setEndTime(other.endTime);
       }
-      if (other.hasMaxBuyTimes()) {
-        setMaxBuyTimes(other.maxBuyTimes);
-      }
-      if (other.hasBuyTimes()) {
-        setBuyTimes(other.buyTimes);
-      }
-      if (other.hasProductGiftType()) {
-        setProductGiftTypeValue(other.productGiftType);
-      }
-      if (other.hasIsFirstRecharge()) {
-        setIsFirstRecharge(other.isFirstRecharge);
+      if (other.hasPriceTier()) {
+        getMutablePriceTierBytes().copyFrom(other.priceTier);
       }
       if (other.hasProductId()) {
         getMutableProductIdBytes().copyFrom(other.productId);
-      }
-      if (other.hasPriceTier()) {
-        getMutablePriceTierBytes().copyFrom(other.priceTier);
       }
       return this;
     }
@@ -507,12 +298,8 @@ public final class ProductOuterClass {
       bitField0_ = 0;
       beginTime = 0L;
       endTime = 0L;
-      maxBuyTimes = 0;
-      buyTimes = 0;
-      productGiftType = 0;
-      isFirstRecharge = false;
-      productId.clear();
       priceTier.clear();
+      productId.clear();
       return this;
     }
 
@@ -523,8 +310,8 @@ public final class ProductOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      productId.clear();
       priceTier.clear();
+      productId.clear();
       return this;
     }
 
@@ -540,47 +327,27 @@ public final class ProductOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasBeginTime() || beginTime == other.beginTime)
         && (!hasEndTime() || endTime == other.endTime)
-        && (!hasMaxBuyTimes() || maxBuyTimes == other.maxBuyTimes)
-        && (!hasBuyTimes() || buyTimes == other.buyTimes)
-        && (!hasProductGiftType() || productGiftType == other.productGiftType)
-        && (!hasIsFirstRecharge() || isFirstRecharge == other.isFirstRecharge)
-        && (!hasProductId() || productId.equals(other.productId))
-        && (!hasPriceTier() || priceTier.equals(other.priceTier));
+        && (!hasPriceTier() || priceTier.equals(other.priceTier))
+        && (!hasProductId() || productId.equals(other.productId));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 112);
         output.writeInt64NoTag(beginTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 120);
         output.writeInt64NoTag(endTime);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(maxBuyTimes);
+        output.writeRawByte((byte) 26);
+        output.writeStringNoTag(priceTier);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(buyTimes);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 104);
-        output.writeEnumNoTag(productGiftType);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeBoolNoTag(isFirstRecharge);
-      }
-      if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 18);
+        output.writeRawByte((byte) 74);
         output.writeStringNoTag(productId);
-      }
-      if ((bitField0_ & 0x00000080) != 0) {
-        output.writeRawByte((byte) 90);
-        output.writeStringNoTag(priceTier);
       }
     }
 
@@ -594,22 +361,10 @@ public final class ProductOuterClass {
         size += 1 + ProtoSink.computeInt64SizeNoTag(endTime);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(maxBuyTimes);
+        size += 1 + ProtoSink.computeStringSizeNoTag(priceTier);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(buyTimes);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        size += 1 + ProtoSink.computeEnumSizeNoTag(productGiftType);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000040) != 0) {
         size += 1 + ProtoSink.computeStringSizeNoTag(productId);
-      }
-      if ((bitField0_ & 0x00000080) != 0) {
-        size += 1 + ProtoSink.computeStringSizeNoTag(priceTier);
       }
       return size;
     }
@@ -621,76 +376,37 @@ public final class ProductOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 112: {
             // beginTime
             beginTime = input.readInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 120) {
               break;
             }
           }
-          case 48: {
+          case 120: {
             // endTime
             endTime = input.readInt64();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 26) {
               break;
             }
           }
-          case 32: {
-            // maxBuyTimes
-            maxBuyTimes = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 56) {
-              break;
-            }
-          }
-          case 56: {
-            // buyTimes
-            buyTimes = input.readUInt32();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 104) {
-              break;
-            }
-          }
-          case 104: {
-            // productGiftType
-            final int value = input.readInt32();
-            if (ProductGiftType.forNumber(value) != null) {
-              productGiftType = value;
-              bitField0_ |= 0x00000010;
-            }
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
-            // isFirstRecharge
-            isFirstRecharge = input.readBool();
-            bitField0_ |= 0x00000020;
-            tag = input.readTag();
-            if (tag != 18) {
-              break;
-            }
-          }
-          case 18: {
-            // productId
-            input.readString(productId);
-            bitField0_ |= 0x00000040;
-            tag = input.readTag();
-            if (tag != 90) {
-              break;
-            }
-          }
-          case 90: {
+          case 26: {
             // priceTier
             input.readString(priceTier);
-            bitField0_ |= 0x00000080;
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 74) {
+              break;
+            }
+          }
+          case 74: {
+            // productId
+            input.readString(productId);
+            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -720,22 +436,10 @@ public final class ProductOuterClass {
         output.writeInt64(FieldNames.endTime, endTime);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.maxBuyTimes, maxBuyTimes);
+        output.writeString(FieldNames.priceTier, priceTier);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.buyTimes, buyTimes);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeEnum(FieldNames.productGiftType, productGiftType, ProductGiftType.converter());
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeBool(FieldNames.isFirstRecharge, isFirstRecharge);
-      }
-      if ((bitField0_ & 0x00000040) != 0) {
         output.writeString(FieldNames.productId, productId);
-      }
-      if ((bitField0_ & 0x00000080) != 0) {
-        output.writeString(FieldNames.priceTier, priceTier);
       }
       output.endObject();
     }
@@ -771,53 +475,12 @@ public final class ProductOuterClass {
             }
             break;
           }
-          case 1037705700:
-          case -802382030: {
-            if (input.isAtField(FieldNames.maxBuyTimes)) {
+          case -2125747509:
+          case -1463173352: {
+            if (input.isAtField(FieldNames.priceTier)) {
               if (!input.trySkipNullValue()) {
-                maxBuyTimes = input.readUInt32();
+                input.readString(priceTier);
                 bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -994591648:
-          case -442602419: {
-            if (input.isAtField(FieldNames.buyTimes)) {
-              if (!input.trySkipNullValue()) {
-                buyTimes = input.readUInt32();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 996157081:
-          case 713409945: {
-            if (input.isAtField(FieldNames.productGiftType)) {
-              if (!input.trySkipNullValue()) {
-                final ProductGiftType value = input.readEnum(ProductGiftType.converter());
-                if (value != null) {
-                  productGiftType = value.getNumber();
-                  bitField0_ |= 0x00000010;
-                } else {
-                  input.skipUnknownEnumValue();
-                }
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1091216275:
-          case 1798441739: {
-            if (input.isAtField(FieldNames.isFirstRecharge)) {
-              if (!input.trySkipNullValue()) {
-                isFirstRecharge = input.readBool();
-                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -829,19 +492,7 @@ public final class ProductOuterClass {
             if (input.isAtField(FieldNames.productId)) {
               if (!input.trySkipNullValue()) {
                 input.readString(productId);
-                bitField0_ |= 0x00000040;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -2125747509:
-          case -1463173352: {
-            if (input.isAtField(FieldNames.priceTier)) {
-              if (!input.trySkipNullValue()) {
-                input.readString(priceTier);
-                bitField0_ |= 0x00000080;
+                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -1347,17 +998,9 @@ public final class ProductOuterClass {
 
       static final FieldName endTime = FieldName.forField("endTime", "end_time");
 
-      static final FieldName maxBuyTimes = FieldName.forField("maxBuyTimes", "max_buy_times");
-
-      static final FieldName buyTimes = FieldName.forField("buyTimes", "buy_times");
-
-      static final FieldName productGiftType = FieldName.forField("productGiftType", "product_gift_type");
-
-      static final FieldName isFirstRecharge = FieldName.forField("isFirstRecharge", "is_first_recharge");
+      static final FieldName priceTier = FieldName.forField("priceTier", "price_tier");
 
       static final FieldName productId = FieldName.forField("productId", "product_id");
-
-      static final FieldName priceTier = FieldName.forField("priceTier", "price_tier");
     }
   }
 }

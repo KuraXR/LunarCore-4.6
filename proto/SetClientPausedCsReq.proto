@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message SetClientPausedCsReq {
+  optional bool paused = 8;
+}

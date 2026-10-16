@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message UnlockSkilltreeScRsp {
+  optional uint32 point_id = 7;
+  optional uint32 level = 13;
+  optional uint32 retcode = 14;
+}

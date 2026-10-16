@@ -19,24 +19,14 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
+     * <code>optional uint32 retcode = 12;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 5;</code>
      */
     private int recommendType;
-
-    /**
-     * <code>optional .AvatarReccomendData avatar_reccomend_data = 4;</code>
-     */
-    private final AvatarReccomendDataOuterClass.AvatarReccomendData avatarReccomendData = AvatarReccomendDataOuterClass.AvatarReccomendData.newInstance();
-
-    /**
-     * <code>optional .RelicReccomendData relic_reccomend_data = 15;</code>
-     */
-    private final RelicReccomendDataOuterClass.RelicReccomendData relicReccomendData = RelicReccomendDataOuterClass.RelicReccomendData.newInstance();
 
     private GetBigDataAllRecommendScRsp() {
     }
@@ -49,7 +39,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -57,7 +47,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @return this
      */
     public GetBigDataAllRecommendScRsp clearRetcode() {
@@ -67,7 +57,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -75,7 +65,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -86,7 +76,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 5;</code>
      * @return whether the recommendType field is set
      */
     public boolean hasRecommendType() {
@@ -94,7 +84,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 5;</code>
      * @return this
      */
     public GetBigDataAllRecommendScRsp clearRecommendType() {
@@ -104,7 +94,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 5;</code>
      * @return the recommendType
      */
     public BigDataRecommendTypeOuterClass.BigDataRecommendType getRecommendType() {
@@ -137,7 +127,7 @@ public final class GetBigDataAllRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 2;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 5;</code>
      * @param value the recommendType to set
      * @return this
      */
@@ -148,122 +138,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       return this;
     }
 
-    /**
-     * <code>optional .AvatarReccomendData avatar_reccomend_data = 4;</code>
-     * @return whether the avatarReccomendData field is set
-     */
-    public boolean hasAvatarReccomendData() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional .AvatarReccomendData avatar_reccomend_data = 4;</code>
-     * @return this
-     */
-    public GetBigDataAllRecommendScRsp clearAvatarReccomendData() {
-      bitField0_ &= ~0x00000004;
-      avatarReccomendData.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .AvatarReccomendData avatar_reccomend_data = 4;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableAvatarReccomendData()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public AvatarReccomendDataOuterClass.AvatarReccomendData getAvatarReccomendData() {
-      return avatarReccomendData;
-    }
-
-    /**
-     * <code>optional .AvatarReccomendData avatar_reccomend_data = 4;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public AvatarReccomendDataOuterClass.AvatarReccomendData getMutableAvatarReccomendData() {
-      bitField0_ |= 0x00000004;
-      return avatarReccomendData;
-    }
-
-    /**
-     * <code>optional .AvatarReccomendData avatar_reccomend_data = 4;</code>
-     * @param value the avatarReccomendData to set
-     * @return this
-     */
-    public GetBigDataAllRecommendScRsp setAvatarReccomendData(
-        final AvatarReccomendDataOuterClass.AvatarReccomendData value) {
-      bitField0_ |= 0x00000004;
-      avatarReccomendData.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .RelicReccomendData relic_reccomend_data = 15;</code>
-     * @return whether the relicReccomendData field is set
-     */
-    public boolean hasRelicReccomendData() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional .RelicReccomendData relic_reccomend_data = 15;</code>
-     * @return this
-     */
-    public GetBigDataAllRecommendScRsp clearRelicReccomendData() {
-      bitField0_ &= ~0x00000008;
-      relicReccomendData.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .RelicReccomendData relic_reccomend_data = 15;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableRelicReccomendData()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RelicReccomendDataOuterClass.RelicReccomendData getRelicReccomendData() {
-      return relicReccomendData;
-    }
-
-    /**
-     * <code>optional .RelicReccomendData relic_reccomend_data = 15;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RelicReccomendDataOuterClass.RelicReccomendData getMutableRelicReccomendData() {
-      bitField0_ |= 0x00000008;
-      return relicReccomendData;
-    }
-
-    /**
-     * <code>optional .RelicReccomendData relic_reccomend_data = 15;</code>
-     * @param value the relicReccomendData to set
-     * @return this
-     */
-    public GetBigDataAllRecommendScRsp setRelicReccomendData(
-        final RelicReccomendDataOuterClass.RelicReccomendData value) {
-      bitField0_ |= 0x00000008;
-      relicReccomendData.copyFrom(value);
-      return this;
-    }
-
     @Override
     public GetBigDataAllRecommendScRsp copyFrom(final GetBigDataAllRecommendScRsp other) {
       cachedSize = other.cachedSize;
@@ -271,8 +145,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
         recommendType = other.recommendType;
-        avatarReccomendData.copyFrom(other.avatarReccomendData);
-        relicReccomendData.copyFrom(other.relicReccomendData);
       }
       return this;
     }
@@ -289,12 +161,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       if (other.hasRecommendType()) {
         setRecommendTypeValue(other.recommendType);
       }
-      if (other.hasAvatarReccomendData()) {
-        getMutableAvatarReccomendData().mergeFrom(other.avatarReccomendData);
-      }
-      if (other.hasRelicReccomendData()) {
-        getMutableRelicReccomendData().mergeFrom(other.relicReccomendData);
-      }
       return this;
     }
 
@@ -307,8 +173,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       bitField0_ = 0;
       retcode = 0;
       recommendType = 0;
-      avatarReccomendData.clear();
-      relicReccomendData.clear();
       return this;
     }
 
@@ -319,8 +183,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      avatarReccomendData.clearQuick();
-      relicReccomendData.clearQuick();
       return this;
     }
 
@@ -335,28 +197,18 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       GetBigDataAllRecommendScRsp other = (GetBigDataAllRecommendScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasRecommendType() || recommendType == other.recommendType)
-        && (!hasAvatarReccomendData() || avatarReccomendData.equals(other.avatarReccomendData))
-        && (!hasRelicReccomendData() || relicReccomendData.equals(other.relicReccomendData));
+        && (!hasRecommendType() || recommendType == other.recommendType);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 40);
         output.writeEnumNoTag(recommendType);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 34);
-        output.writeMessageNoTag(avatarReccomendData);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 122);
-        output.writeMessageNoTag(relicReccomendData);
       }
     }
 
@@ -369,12 +221,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeEnumSizeNoTag(recommendType);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(avatarReccomendData);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(relicReccomendData);
-      }
       return size;
     }
 
@@ -385,40 +231,22 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 96: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 16) {
+            if (tag != 40) {
               break;
             }
           }
-          case 16: {
+          case 40: {
             // recommendType
             final int value = input.readInt32();
             if (BigDataRecommendTypeOuterClass.BigDataRecommendType.forNumber(value) != null) {
               recommendType = value;
               bitField0_ |= 0x00000002;
             }
-            tag = input.readTag();
-            if (tag != 34) {
-              break;
-            }
-          }
-          case 34: {
-            // avatarReccomendData
-            input.readMessage(avatarReccomendData);
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 122) {
-              break;
-            }
-          }
-          case 122: {
-            // relicReccomendData
-            input.readMessage(relicReccomendData);
-            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -446,12 +274,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeEnum(FieldNames.recommendType, recommendType, BigDataRecommendTypeOuterClass.BigDataRecommendType.converter());
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeMessage(FieldNames.avatarReccomendData, avatarReccomendData);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeMessage(FieldNames.relicReccomendData, relicReccomendData);
       }
       output.endObject();
     }
@@ -485,30 +307,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
                 } else {
                   input.skipUnknownEnumValue();
                 }
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1865912773:
-          case -1772298715: {
-            if (input.isAtField(FieldNames.avatarReccomendData)) {
-              if (!input.trySkipNullValue()) {
-                input.readMessage(avatarReccomendData);
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1508304481:
-          case -1849826101: {
-            if (input.isAtField(FieldNames.relicReccomendData)) {
-              if (!input.trySkipNullValue()) {
-                input.readMessage(relicReccomendData);
-                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -572,10 +370,6 @@ public final class GetBigDataAllRecommendScRspOuterClass {
       static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName recommendType = FieldName.forField("recommendType", "recommend_type");
-
-      static final FieldName avatarReccomendData = FieldName.forField("avatarReccomendData", "avatar_reccomend_data");
-
-      static final FieldName relicReccomendData = FieldName.forField("relicReccomendData", "relic_reccomend_data");
     }
   }
 }

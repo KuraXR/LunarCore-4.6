@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "FriendChallengeInfo.proto";
+
+message GetFriendChallengeLineupScRsp {
+  optional uint32 retcode = 13;
+  optional bool b11 = 10;
+  repeated FriendChallengeInfo friend_challenge_infos = 8;
+}

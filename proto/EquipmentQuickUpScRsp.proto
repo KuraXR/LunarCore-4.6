@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PileItem.proto";
+
+message EquipmentQuickUpScRsp {
+  repeated PileItem return_item_list = 10;
+  optional uint32 retcode = 15;
+}

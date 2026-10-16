@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 
 public final class ChallengePeakSettleScNotifyOuterClass {
   /**
@@ -20,54 +19,14 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 challenge_peak_id = 6;</code>
+     * <code>optional uint32 challenge_peak_id = 4;</code>
      */
     private int challengePeakId;
 
     /**
-     * <code>optional uint32 LBGCPOKPKBB = 7;</code>
-     */
-    private int lBGCPOKPKBB;
-
-    /**
-     * <code>optional uint32 GGICFFIOOGP = 10;</code>
-     */
-    private int gGICFFIOOGP;
-
-    /**
-     * <code>optional bool LBOJBLCKAJF = 2;</code>
-     */
-    private boolean lBOJBLCKAJF;
-
-    /**
-     * <code>optional bool KJFCNFOGCHP = 3;</code>
-     */
-    private boolean kJFCNFOGCHP;
-
-    /**
-     * <code>optional bool GEKPDLJNOHA = 8;</code>
-     */
-    private boolean gEKPDLJNOHA;
-
-    /**
-     * <code>optional bool CMGKJJKNCNB = 11;</code>
-     */
-    private boolean cMGKJJKNCNB;
-
-    /**
-     * <code>optional bool is_win = 13;</code>
+     * <code>optional bool is_win = 2;</code>
      */
     private boolean isWin;
-
-    /**
-     * <code>optional bool IIJODHANFDC = 15;</code>
-     */
-    private boolean iIJODHANFDC;
-
-    /**
-     * <code>repeated uint32 NKGLPNJHEON = 5;</code>
-     */
-    private final RepeatedInt nKGLPNJHEON = RepeatedInt.newEmptyInstance();
 
     private ChallengePeakSettleScNotify() {
     }
@@ -80,7 +39,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 6;</code>
+     * <code>optional uint32 challenge_peak_id = 4;</code>
      * @return whether the challengePeakId field is set
      */
     public boolean hasChallengePeakId() {
@@ -88,7 +47,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 6;</code>
+     * <code>optional uint32 challenge_peak_id = 4;</code>
      * @return this
      */
     public ChallengePeakSettleScNotify clearChallengePeakId() {
@@ -98,7 +57,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 6;</code>
+     * <code>optional uint32 challenge_peak_id = 4;</code>
      * @return the challengePeakId
      */
     public int getChallengePeakId() {
@@ -106,7 +65,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 6;</code>
+     * <code>optional uint32 challenge_peak_id = 4;</code>
      * @param value the challengePeakId to set
      * @return this
      */
@@ -117,247 +76,25 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 LBGCPOKPKBB = 7;</code>
-     * @return whether the lBGCPOKPKBB field is set
+     * <code>optional bool is_win = 2;</code>
+     * @return whether the isWin field is set
      */
-    public boolean hasLBGCPOKPKBB() {
+    public boolean hasIsWin() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 LBGCPOKPKBB = 7;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearLBGCPOKPKBB() {
-      bitField0_ &= ~0x00000002;
-      lBGCPOKPKBB = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 LBGCPOKPKBB = 7;</code>
-     * @return the lBGCPOKPKBB
-     */
-    public int getLBGCPOKPKBB() {
-      return lBGCPOKPKBB;
-    }
-
-    /**
-     * <code>optional uint32 LBGCPOKPKBB = 7;</code>
-     * @param value the lBGCPOKPKBB to set
-     * @return this
-     */
-    public ChallengePeakSettleScNotify setLBGCPOKPKBB(final int value) {
-      bitField0_ |= 0x00000002;
-      lBGCPOKPKBB = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 GGICFFIOOGP = 10;</code>
-     * @return whether the gGICFFIOOGP field is set
-     */
-    public boolean hasGGICFFIOOGP() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 GGICFFIOOGP = 10;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearGGICFFIOOGP() {
-      bitField0_ &= ~0x00000004;
-      gGICFFIOOGP = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 GGICFFIOOGP = 10;</code>
-     * @return the gGICFFIOOGP
-     */
-    public int getGGICFFIOOGP() {
-      return gGICFFIOOGP;
-    }
-
-    /**
-     * <code>optional uint32 GGICFFIOOGP = 10;</code>
-     * @param value the gGICFFIOOGP to set
-     * @return this
-     */
-    public ChallengePeakSettleScNotify setGGICFFIOOGP(final int value) {
-      bitField0_ |= 0x00000004;
-      gGICFFIOOGP = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool LBOJBLCKAJF = 2;</code>
-     * @return whether the lBOJBLCKAJF field is set
-     */
-    public boolean hasLBOJBLCKAJF() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional bool LBOJBLCKAJF = 2;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearLBOJBLCKAJF() {
-      bitField0_ &= ~0x00000008;
-      lBOJBLCKAJF = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool LBOJBLCKAJF = 2;</code>
-     * @return the lBOJBLCKAJF
-     */
-    public boolean getLBOJBLCKAJF() {
-      return lBOJBLCKAJF;
-    }
-
-    /**
-     * <code>optional bool LBOJBLCKAJF = 2;</code>
-     * @param value the lBOJBLCKAJF to set
-     * @return this
-     */
-    public ChallengePeakSettleScNotify setLBOJBLCKAJF(final boolean value) {
-      bitField0_ |= 0x00000008;
-      lBOJBLCKAJF = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool KJFCNFOGCHP = 3;</code>
-     * @return whether the kJFCNFOGCHP field is set
-     */
-    public boolean hasKJFCNFOGCHP() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional bool KJFCNFOGCHP = 3;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearKJFCNFOGCHP() {
-      bitField0_ &= ~0x00000010;
-      kJFCNFOGCHP = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool KJFCNFOGCHP = 3;</code>
-     * @return the kJFCNFOGCHP
-     */
-    public boolean getKJFCNFOGCHP() {
-      return kJFCNFOGCHP;
-    }
-
-    /**
-     * <code>optional bool KJFCNFOGCHP = 3;</code>
-     * @param value the kJFCNFOGCHP to set
-     * @return this
-     */
-    public ChallengePeakSettleScNotify setKJFCNFOGCHP(final boolean value) {
-      bitField0_ |= 0x00000010;
-      kJFCNFOGCHP = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool GEKPDLJNOHA = 8;</code>
-     * @return whether the gEKPDLJNOHA field is set
-     */
-    public boolean hasGEKPDLJNOHA() {
-      return (bitField0_ & 0x00000020) != 0;
-    }
-
-    /**
-     * <code>optional bool GEKPDLJNOHA = 8;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearGEKPDLJNOHA() {
-      bitField0_ &= ~0x00000020;
-      gEKPDLJNOHA = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool GEKPDLJNOHA = 8;</code>
-     * @return the gEKPDLJNOHA
-     */
-    public boolean getGEKPDLJNOHA() {
-      return gEKPDLJNOHA;
-    }
-
-    /**
-     * <code>optional bool GEKPDLJNOHA = 8;</code>
-     * @param value the gEKPDLJNOHA to set
-     * @return this
-     */
-    public ChallengePeakSettleScNotify setGEKPDLJNOHA(final boolean value) {
-      bitField0_ |= 0x00000020;
-      gEKPDLJNOHA = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool CMGKJJKNCNB = 11;</code>
-     * @return whether the cMGKJJKNCNB field is set
-     */
-    public boolean hasCMGKJJKNCNB() {
-      return (bitField0_ & 0x00000040) != 0;
-    }
-
-    /**
-     * <code>optional bool CMGKJJKNCNB = 11;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearCMGKJJKNCNB() {
-      bitField0_ &= ~0x00000040;
-      cMGKJJKNCNB = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool CMGKJJKNCNB = 11;</code>
-     * @return the cMGKJJKNCNB
-     */
-    public boolean getCMGKJJKNCNB() {
-      return cMGKJJKNCNB;
-    }
-
-    /**
-     * <code>optional bool CMGKJJKNCNB = 11;</code>
-     * @param value the cMGKJJKNCNB to set
-     * @return this
-     */
-    public ChallengePeakSettleScNotify setCMGKJJKNCNB(final boolean value) {
-      bitField0_ |= 0x00000040;
-      cMGKJJKNCNB = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool is_win = 13;</code>
-     * @return whether the isWin field is set
-     */
-    public boolean hasIsWin() {
-      return (bitField0_ & 0x00000080) != 0;
-    }
-
-    /**
-     * <code>optional bool is_win = 13;</code>
+     * <code>optional bool is_win = 2;</code>
      * @return this
      */
     public ChallengePeakSettleScNotify clearIsWin() {
-      bitField0_ &= ~0x00000080;
+      bitField0_ &= ~0x00000002;
       isWin = false;
       return this;
     }
 
     /**
-     * <code>optional bool is_win = 13;</code>
+     * <code>optional bool is_win = 2;</code>
      * @return the isWin
      */
     public boolean getIsWin() {
@@ -365,118 +102,13 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     }
 
     /**
-     * <code>optional bool is_win = 13;</code>
+     * <code>optional bool is_win = 2;</code>
      * @param value the isWin to set
      * @return this
      */
     public ChallengePeakSettleScNotify setIsWin(final boolean value) {
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000002;
       isWin = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool IIJODHANFDC = 15;</code>
-     * @return whether the iIJODHANFDC field is set
-     */
-    public boolean hasIIJODHANFDC() {
-      return (bitField0_ & 0x00000100) != 0;
-    }
-
-    /**
-     * <code>optional bool IIJODHANFDC = 15;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearIIJODHANFDC() {
-      bitField0_ &= ~0x00000100;
-      iIJODHANFDC = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool IIJODHANFDC = 15;</code>
-     * @return the iIJODHANFDC
-     */
-    public boolean getIIJODHANFDC() {
-      return iIJODHANFDC;
-    }
-
-    /**
-     * <code>optional bool IIJODHANFDC = 15;</code>
-     * @param value the iIJODHANFDC to set
-     * @return this
-     */
-    public ChallengePeakSettleScNotify setIIJODHANFDC(final boolean value) {
-      bitField0_ |= 0x00000100;
-      iIJODHANFDC = value;
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 NKGLPNJHEON = 5;</code>
-     * @return whether the nKGLPNJHEON field is set
-     */
-    public boolean hasNKGLPNJHEON() {
-      return (bitField0_ & 0x00000200) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 NKGLPNJHEON = 5;</code>
-     * @return this
-     */
-    public ChallengePeakSettleScNotify clearNKGLPNJHEON() {
-      bitField0_ &= ~0x00000200;
-      nKGLPNJHEON.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 NKGLPNJHEON = 5;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableNKGLPNJHEON()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getNKGLPNJHEON() {
-      return nKGLPNJHEON;
-    }
-
-    /**
-     * <code>repeated uint32 NKGLPNJHEON = 5;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableNKGLPNJHEON() {
-      bitField0_ |= 0x00000200;
-      return nKGLPNJHEON;
-    }
-
-    /**
-     * <code>repeated uint32 NKGLPNJHEON = 5;</code>
-     * @param value the nKGLPNJHEON to add
-     * @return this
-     */
-    public ChallengePeakSettleScNotify addNKGLPNJHEON(final int value) {
-      bitField0_ |= 0x00000200;
-      nKGLPNJHEON.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 NKGLPNJHEON = 5;</code>
-     * @param values the nKGLPNJHEON to add
-     * @return this
-     */
-    public ChallengePeakSettleScNotify addAllNKGLPNJHEON(final int... values) {
-      bitField0_ |= 0x00000200;
-      nKGLPNJHEON.addAll(values);
       return this;
     }
 
@@ -486,15 +118,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         challengePeakId = other.challengePeakId;
-        lBGCPOKPKBB = other.lBGCPOKPKBB;
-        gGICFFIOOGP = other.gGICFFIOOGP;
-        lBOJBLCKAJF = other.lBOJBLCKAJF;
-        kJFCNFOGCHP = other.kJFCNFOGCHP;
-        gEKPDLJNOHA = other.gEKPDLJNOHA;
-        cMGKJJKNCNB = other.cMGKJJKNCNB;
         isWin = other.isWin;
-        iIJODHANFDC = other.iIJODHANFDC;
-        nKGLPNJHEON.copyFrom(other.nKGLPNJHEON);
       }
       return this;
     }
@@ -508,32 +132,8 @@ public final class ChallengePeakSettleScNotifyOuterClass {
       if (other.hasChallengePeakId()) {
         setChallengePeakId(other.challengePeakId);
       }
-      if (other.hasLBGCPOKPKBB()) {
-        setLBGCPOKPKBB(other.lBGCPOKPKBB);
-      }
-      if (other.hasGGICFFIOOGP()) {
-        setGGICFFIOOGP(other.gGICFFIOOGP);
-      }
-      if (other.hasLBOJBLCKAJF()) {
-        setLBOJBLCKAJF(other.lBOJBLCKAJF);
-      }
-      if (other.hasKJFCNFOGCHP()) {
-        setKJFCNFOGCHP(other.kJFCNFOGCHP);
-      }
-      if (other.hasGEKPDLJNOHA()) {
-        setGEKPDLJNOHA(other.gEKPDLJNOHA);
-      }
-      if (other.hasCMGKJJKNCNB()) {
-        setCMGKJJKNCNB(other.cMGKJJKNCNB);
-      }
       if (other.hasIsWin()) {
         setIsWin(other.isWin);
-      }
-      if (other.hasIIJODHANFDC()) {
-        setIIJODHANFDC(other.iIJODHANFDC);
-      }
-      if (other.hasNKGLPNJHEON()) {
-        getMutableNKGLPNJHEON().addAll(other.nKGLPNJHEON);
       }
       return this;
     }
@@ -546,15 +146,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       challengePeakId = 0;
-      lBGCPOKPKBB = 0;
-      gGICFFIOOGP = 0;
-      lBOJBLCKAJF = false;
-      kJFCNFOGCHP = false;
-      gEKPDLJNOHA = false;
-      cMGKJJKNCNB = false;
       isWin = false;
-      iIJODHANFDC = false;
-      nKGLPNJHEON.clear();
       return this;
     }
 
@@ -565,7 +157,6 @@ public final class ChallengePeakSettleScNotifyOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      nKGLPNJHEON.clear();
       return this;
     }
 
@@ -580,60 +171,18 @@ public final class ChallengePeakSettleScNotifyOuterClass {
       ChallengePeakSettleScNotify other = (ChallengePeakSettleScNotify) o;
       return bitField0_ == other.bitField0_
         && (!hasChallengePeakId() || challengePeakId == other.challengePeakId)
-        && (!hasLBGCPOKPKBB() || lBGCPOKPKBB == other.lBGCPOKPKBB)
-        && (!hasGGICFFIOOGP() || gGICFFIOOGP == other.gGICFFIOOGP)
-        && (!hasLBOJBLCKAJF() || lBOJBLCKAJF == other.lBOJBLCKAJF)
-        && (!hasKJFCNFOGCHP() || kJFCNFOGCHP == other.kJFCNFOGCHP)
-        && (!hasGEKPDLJNOHA() || gEKPDLJNOHA == other.gEKPDLJNOHA)
-        && (!hasCMGKJJKNCNB() || cMGKJJKNCNB == other.cMGKJJKNCNB)
-        && (!hasIsWin() || isWin == other.isWin)
-        && (!hasIIJODHANFDC() || iIJODHANFDC == other.iIJODHANFDC)
-        && (!hasNKGLPNJHEON() || nKGLPNJHEON.equals(other.nKGLPNJHEON));
+        && (!hasIsWin() || isWin == other.isWin);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(lBGCPOKPKBB);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeUInt32NoTag(gGICFFIOOGP);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
         output.writeRawByte((byte) 16);
-        output.writeBoolNoTag(lBOJBLCKAJF);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeBoolNoTag(kJFCNFOGCHP);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeBoolNoTag(gEKPDLJNOHA);
-      }
-      if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeBoolNoTag(cMGKJJKNCNB);
-      }
-      if ((bitField0_ & 0x00000080) != 0) {
-        output.writeRawByte((byte) 104);
         output.writeBoolNoTag(isWin);
-      }
-      if ((bitField0_ & 0x00000100) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeBoolNoTag(iIJODHANFDC);
-      }
-      if ((bitField0_ & 0x00000200) != 0) {
-        for (int i = 0; i < nKGLPNJHEON.length(); i++) {
-          output.writeRawByte((byte) 40);
-          output.writeUInt32NoTag(nKGLPNJHEON.array()[i]);
-        }
       }
     }
 
@@ -644,31 +193,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(lBGCPOKPKBB);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(gGICFFIOOGP);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
         size += 2;
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000040) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000080) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000100) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000200) != 0) {
-        size += (1 * nKGLPNJHEON.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(nKGLPNJHEON);
       }
       return size;
     }
@@ -680,91 +205,19 @@ public final class ChallengePeakSettleScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 32: {
             // challengePeakId
             challengePeakId = input.readUInt32();
             bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 56) {
-              break;
-            }
-          }
-          case 56: {
-            // lBGCPOKPKBB
-            lBGCPOKPKBB = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 80) {
-              break;
-            }
-          }
-          case 80: {
-            // gGICFFIOOGP
-            gGICFFIOOGP = input.readUInt32();
-            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 16) {
               break;
             }
           }
           case 16: {
-            // lBOJBLCKAJF
-            lBOJBLCKAJF = input.readBool();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 24) {
-              break;
-            }
-          }
-          case 24: {
-            // kJFCNFOGCHP
-            kJFCNFOGCHP = input.readBool();
-            bitField0_ |= 0x00000010;
-            tag = input.readTag();
-            if (tag != 64) {
-              break;
-            }
-          }
-          case 64: {
-            // gEKPDLJNOHA
-            gEKPDLJNOHA = input.readBool();
-            bitField0_ |= 0x00000020;
-            tag = input.readTag();
-            if (tag != 88) {
-              break;
-            }
-          }
-          case 88: {
-            // cMGKJJKNCNB
-            cMGKJJKNCNB = input.readBool();
-            bitField0_ |= 0x00000040;
-            tag = input.readTag();
-            if (tag != 104) {
-              break;
-            }
-          }
-          case 104: {
             // isWin
             isWin = input.readBool();
-            bitField0_ |= 0x00000080;
-            tag = input.readTag();
-            if (tag != 120) {
-              break;
-            }
-          }
-          case 120: {
-            // iIJODHANFDC
-            iIJODHANFDC = input.readBool();
-            bitField0_ |= 0x00000100;
-            tag = input.readTag();
-            if (tag != 42) {
-              break;
-            }
-          }
-          case 42: {
-            // nKGLPNJHEON [packed=true]
-            input.readPackedUInt32(nKGLPNJHEON, tag);
-            bitField0_ |= 0x00000200;
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -780,12 +233,6 @@ public final class ChallengePeakSettleScNotifyOuterClass {
             tag = input.readTag();
             break;
           }
-          case 40: {
-            // nKGLPNJHEON [packed=false]
-            tag = input.readRepeatedUInt32(nKGLPNJHEON, tag);
-            bitField0_ |= 0x00000200;
-            break;
-          }
         }
       }
     }
@@ -797,31 +244,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
         output.writeUInt32(FieldNames.challengePeakId, challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.lBGCPOKPKBB, lBGCPOKPKBB);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.gGICFFIOOGP, gGICFFIOOGP);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeBool(FieldNames.lBOJBLCKAJF, lBOJBLCKAJF);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeBool(FieldNames.kJFCNFOGCHP, kJFCNFOGCHP);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeBool(FieldNames.gEKPDLJNOHA, gEKPDLJNOHA);
-      }
-      if ((bitField0_ & 0x00000040) != 0) {
-        output.writeBool(FieldNames.cMGKJJKNCNB, cMGKJJKNCNB);
-      }
-      if ((bitField0_ & 0x00000080) != 0) {
         output.writeBool(FieldNames.isWin, isWin);
-      }
-      if ((bitField0_ & 0x00000100) != 0) {
-        output.writeBool(FieldNames.iIJODHANFDC, iIJODHANFDC);
-      }
-      if ((bitField0_ & 0x00000200) != 0) {
-        output.writeRepeatedUInt32(FieldNames.nKGLPNJHEON, nKGLPNJHEON);
       }
       output.endObject();
     }
@@ -845,100 +268,12 @@ public final class ChallengePeakSettleScNotifyOuterClass {
             }
             break;
           }
-          case -1866104171: {
-            if (input.isAtField(FieldNames.lBGCPOKPKBB)) {
-              if (!input.trySkipNullValue()) {
-                lBGCPOKPKBB = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1976538776: {
-            if (input.isAtField(FieldNames.gGICFFIOOGP)) {
-              if (!input.trySkipNullValue()) {
-                gGICFFIOOGP = input.readUInt32();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 535316186: {
-            if (input.isAtField(FieldNames.lBOJBLCKAJF)) {
-              if (!input.trySkipNullValue()) {
-                lBOJBLCKAJF = input.readBool();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1863057633: {
-            if (input.isAtField(FieldNames.kJFCNFOGCHP)) {
-              if (!input.trySkipNullValue()) {
-                kJFCNFOGCHP = input.readBool();
-                bitField0_ |= 0x00000010;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1665983975: {
-            if (input.isAtField(FieldNames.gEKPDLJNOHA)) {
-              if (!input.trySkipNullValue()) {
-                gEKPDLJNOHA = input.readBool();
-                bitField0_ |= 0x00000020;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -855779034: {
-            if (input.isAtField(FieldNames.cMGKJJKNCNB)) {
-              if (!input.trySkipNullValue()) {
-                cMGKJJKNCNB = input.readBool();
-                bitField0_ |= 0x00000040;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 100482642:
           case -1179753657: {
             if (input.isAtField(FieldNames.isWin)) {
               if (!input.trySkipNullValue()) {
                 isWin = input.readBool();
-                bitField0_ |= 0x00000080;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1809166353: {
-            if (input.isAtField(FieldNames.iIJODHANFDC)) {
-              if (!input.trySkipNullValue()) {
-                iIJODHANFDC = input.readBool();
-                bitField0_ |= 0x00000100;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -163066362: {
-            if (input.isAtField(FieldNames.nKGLPNJHEON)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(nKGLPNJHEON);
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -1001,23 +336,7 @@ public final class ChallengePeakSettleScNotifyOuterClass {
     static class FieldNames {
       static final FieldName challengePeakId = FieldName.forField("challengePeakId", "challenge_peak_id");
 
-      static final FieldName lBGCPOKPKBB = FieldName.forField("LBGCPOKPKBB");
-
-      static final FieldName gGICFFIOOGP = FieldName.forField("GGICFFIOOGP");
-
-      static final FieldName lBOJBLCKAJF = FieldName.forField("LBOJBLCKAJF");
-
-      static final FieldName kJFCNFOGCHP = FieldName.forField("KJFCNFOGCHP");
-
-      static final FieldName gEKPDLJNOHA = FieldName.forField("GEKPDLJNOHA");
-
-      static final FieldName cMGKJJKNCNB = FieldName.forField("CMGKJJKNCNB");
-
       static final FieldName isWin = FieldName.forField("isWin", "is_win");
-
-      static final FieldName iIJODHANFDC = FieldName.forField("IIJODHANFDC");
-
-      static final FieldName nKGLPNJHEON = FieldName.forField("NKGLPNJHEON");
     }
   }
 }

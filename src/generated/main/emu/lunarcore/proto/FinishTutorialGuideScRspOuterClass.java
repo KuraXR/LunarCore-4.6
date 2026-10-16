@@ -19,17 +19,17 @@ public final class FinishTutorialGuideScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 4;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .ItemList reward = 1;</code>
+     * <code>optional .ItemList reward = 3;</code>
      */
     private final ItemListOuterClass.ItemList reward = ItemListOuterClass.ItemList.newInstance();
 
     /**
-     * <code>optional .TutorialGuide tutorial_guide = 7;</code>
+     * <code>optional .TutorialGuide tutorial_guide = 8;</code>
      */
     private final TutorialGuideOuterClass.TutorialGuide tutorialGuide = TutorialGuideOuterClass.TutorialGuide.newInstance();
 
@@ -44,7 +44,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -52,7 +52,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return this
      */
     public FinishTutorialGuideScRsp clearRetcode() {
@@ -62,7 +62,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -70,7 +70,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 1;</code>
+     * <code>optional .ItemList reward = 3;</code>
      * @return whether the reward field is set
      */
     public boolean hasReward() {
@@ -89,7 +89,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 1;</code>
+     * <code>optional .ItemList reward = 3;</code>
      * @return this
      */
     public FinishTutorialGuideScRsp clearReward() {
@@ -99,7 +99,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 1;</code>
+     * <code>optional .ItemList reward = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -113,7 +113,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 1;</code>
+     * <code>optional .ItemList reward = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -127,7 +127,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .ItemList reward = 1;</code>
+     * <code>optional .ItemList reward = 3;</code>
      * @param value the reward to set
      * @return this
      */
@@ -138,7 +138,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .TutorialGuide tutorial_guide = 7;</code>
+     * <code>optional .TutorialGuide tutorial_guide = 8;</code>
      * @return whether the tutorialGuide field is set
      */
     public boolean hasTutorialGuide() {
@@ -146,7 +146,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .TutorialGuide tutorial_guide = 7;</code>
+     * <code>optional .TutorialGuide tutorial_guide = 8;</code>
      * @return this
      */
     public FinishTutorialGuideScRsp clearTutorialGuide() {
@@ -156,7 +156,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .TutorialGuide tutorial_guide = 7;</code>
+     * <code>optional .TutorialGuide tutorial_guide = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -170,7 +170,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .TutorialGuide tutorial_guide = 7;</code>
+     * <code>optional .TutorialGuide tutorial_guide = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -184,7 +184,7 @@ public final class FinishTutorialGuideScRspOuterClass {
     }
 
     /**
-     * <code>optional .TutorialGuide tutorial_guide = 7;</code>
+     * <code>optional .TutorialGuide tutorial_guide = 8;</code>
      * @param value the tutorialGuide to set
      * @return this
      */
@@ -268,15 +268,15 @@ public final class FinishTutorialGuideScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 10);
+        output.writeRawByte((byte) 26);
         output.writeMessageNoTag(reward);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 58);
+        output.writeRawByte((byte) 66);
         output.writeMessageNoTag(tutorialGuide);
       }
     }
@@ -303,25 +303,25 @@ public final class FinishTutorialGuideScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 32: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 26) {
               break;
             }
           }
-          case 10: {
+          case 26: {
             // reward
             input.readMessage(reward);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 66) {
               break;
             }
           }
-          case 58: {
+          case 66: {
             // tutorialGuide
             input.readMessage(tutorialGuide);
             bitField0_ |= 0x00000004;

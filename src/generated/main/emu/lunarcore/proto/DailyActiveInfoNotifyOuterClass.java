@@ -15,39 +15,23 @@ import us.hebi.quickbuf.RepeatedMessage;
 
 public final class DailyActiveInfoNotifyOuterClass {
   /**
-   * <pre>
-   *  LFLGIDKBPHD
-   * </pre>
-   *
    * Protobuf type {@code DailyActiveInfoNotify}
    */
   public static final class DailyActiveInfoNotify extends ProtoMessage<DailyActiveInfoNotify> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  DLCIALOCJDC
-     * </pre>
-     *
-     * <code>optional uint32 daily_active_point = 14;</code>
+     * <code>optional uint32 daily_active_point = 15;</code>
      */
     private int dailyActivePoint;
 
     /**
-     * <pre>
-     *  CAFMJIPAFEO
-     * </pre>
-     *
-     * <code>repeated uint32 daily_active_quest_id_list = 15;</code>
+     * <code>repeated uint32 daily_active_quest_id_list = 1;</code>
      */
     private final RepeatedInt dailyActiveQuestIdList = RepeatedInt.newEmptyInstance();
 
     /**
-     * <pre>
-     *  MKBAFLKCFCI
-     * </pre>
-     *
-     * <code>repeated .DailyActivityInfo daily_active_level_list = 6;</code>
+     * <code>repeated .DailyActivityInfo daily_active_level_list = 2;</code>
      */
     private final RepeatedMessage<DailyActivityInfoOuterClass.DailyActivityInfo> dailyActiveLevelList = RepeatedMessage.newEmptyInstance(DailyActivityInfoOuterClass.DailyActivityInfo.getFactory());
 
@@ -55,10 +39,6 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  LFLGIDKBPHD
-     * </pre>
-     *
      * @return a new empty instance of {@code DailyActiveInfoNotify}
      */
     public static DailyActiveInfoNotify newInstance() {
@@ -66,11 +46,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  DLCIALOCJDC
-     * </pre>
-     *
-     * <code>optional uint32 daily_active_point = 14;</code>
+     * <code>optional uint32 daily_active_point = 15;</code>
      * @return whether the dailyActivePoint field is set
      */
     public boolean hasDailyActivePoint() {
@@ -78,11 +54,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  DLCIALOCJDC
-     * </pre>
-     *
-     * <code>optional uint32 daily_active_point = 14;</code>
+     * <code>optional uint32 daily_active_point = 15;</code>
      * @return this
      */
     public DailyActiveInfoNotify clearDailyActivePoint() {
@@ -92,11 +64,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  DLCIALOCJDC
-     * </pre>
-     *
-     * <code>optional uint32 daily_active_point = 14;</code>
+     * <code>optional uint32 daily_active_point = 15;</code>
      * @return the dailyActivePoint
      */
     public int getDailyActivePoint() {
@@ -104,11 +72,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  DLCIALOCJDC
-     * </pre>
-     *
-     * <code>optional uint32 daily_active_point = 14;</code>
+     * <code>optional uint32 daily_active_point = 15;</code>
      * @param value the dailyActivePoint to set
      * @return this
      */
@@ -119,11 +83,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CAFMJIPAFEO
-     * </pre>
-     *
-     * <code>repeated uint32 daily_active_quest_id_list = 15;</code>
+     * <code>repeated uint32 daily_active_quest_id_list = 1;</code>
      * @return whether the dailyActiveQuestIdList field is set
      */
     public boolean hasDailyActiveQuestIdList() {
@@ -131,11 +91,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CAFMJIPAFEO
-     * </pre>
-     *
-     * <code>repeated uint32 daily_active_quest_id_list = 15;</code>
+     * <code>repeated uint32 daily_active_quest_id_list = 1;</code>
      * @return this
      */
     public DailyActiveInfoNotify clearDailyActiveQuestIdList() {
@@ -145,11 +101,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CAFMJIPAFEO
-     * </pre>
-     *
-     * <code>repeated uint32 daily_active_quest_id_list = 15;</code>
+     * <code>repeated uint32 daily_active_quest_id_list = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -163,11 +115,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CAFMJIPAFEO
-     * </pre>
-     *
-     * <code>repeated uint32 daily_active_quest_id_list = 15;</code>
+     * <code>repeated uint32 daily_active_quest_id_list = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -181,11 +129,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CAFMJIPAFEO
-     * </pre>
-     *
-     * <code>repeated uint32 daily_active_quest_id_list = 15;</code>
+     * <code>repeated uint32 daily_active_quest_id_list = 1;</code>
      * @param value the dailyActiveQuestIdList to add
      * @return this
      */
@@ -196,11 +140,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CAFMJIPAFEO
-     * </pre>
-     *
-     * <code>repeated uint32 daily_active_quest_id_list = 15;</code>
+     * <code>repeated uint32 daily_active_quest_id_list = 1;</code>
      * @param values the dailyActiveQuestIdList to add
      * @return this
      */
@@ -211,11 +151,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  MKBAFLKCFCI
-     * </pre>
-     *
-     * <code>repeated .DailyActivityInfo daily_active_level_list = 6;</code>
+     * <code>repeated .DailyActivityInfo daily_active_level_list = 2;</code>
      * @return whether the dailyActiveLevelList field is set
      */
     public boolean hasDailyActiveLevelList() {
@@ -223,11 +159,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  MKBAFLKCFCI
-     * </pre>
-     *
-     * <code>repeated .DailyActivityInfo daily_active_level_list = 6;</code>
+     * <code>repeated .DailyActivityInfo daily_active_level_list = 2;</code>
      * @return this
      */
     public DailyActiveInfoNotify clearDailyActiveLevelList() {
@@ -237,11 +169,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  MKBAFLKCFCI
-     * </pre>
-     *
-     * <code>repeated .DailyActivityInfo daily_active_level_list = 6;</code>
+     * <code>repeated .DailyActivityInfo daily_active_level_list = 2;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -256,11 +184,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  MKBAFLKCFCI
-     * </pre>
-     *
-     * <code>repeated .DailyActivityInfo daily_active_level_list = 6;</code>
+     * <code>repeated .DailyActivityInfo daily_active_level_list = 2;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -275,11 +199,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  MKBAFLKCFCI
-     * </pre>
-     *
-     * <code>repeated .DailyActivityInfo daily_active_level_list = 6;</code>
+     * <code>repeated .DailyActivityInfo daily_active_level_list = 2;</code>
      * @param value the dailyActiveLevelList to add
      * @return this
      */
@@ -291,11 +211,7 @@ public final class DailyActiveInfoNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  MKBAFLKCFCI
-     * </pre>
-     *
-     * <code>repeated .DailyActivityInfo daily_active_level_list = 6;</code>
+     * <code>repeated .DailyActivityInfo daily_active_level_list = 2;</code>
      * @param values the dailyActiveLevelList to add
      * @return this
      */
@@ -379,18 +295,18 @@ public final class DailyActiveInfoNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(dailyActivePoint);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < dailyActiveQuestIdList.length(); i++) {
-          output.writeRawByte((byte) 120);
+          output.writeRawByte((byte) 8);
           output.writeUInt32NoTag(dailyActiveQuestIdList.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < dailyActiveLevelList.length(); i++) {
-          output.writeRawByte((byte) 50);
+          output.writeRawByte((byte) 18);
           output.writeMessageNoTag(dailyActiveLevelList.get(i));
         }
       }
@@ -418,25 +334,25 @@ public final class DailyActiveInfoNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 112: {
+          case 120: {
             // dailyActivePoint
             dailyActivePoint = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 122) {
+            if (tag != 10) {
               break;
             }
           }
-          case 122: {
+          case 10: {
             // dailyActiveQuestIdList [packed=true]
             input.readPackedUInt32(dailyActiveQuestIdList, tag);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 18) {
               break;
             }
           }
-          case 50: {
+          case 18: {
             // dailyActiveLevelList
             tag = input.readRepeatedMessage(dailyActiveLevelList, tag);
             bitField0_ |= 0x00000004;
@@ -454,7 +370,7 @@ public final class DailyActiveInfoNotifyOuterClass {
             tag = input.readTag();
             break;
           }
-          case 120: {
+          case 8: {
             // dailyActiveQuestIdList [packed=false]
             tag = input.readRepeatedUInt32(dailyActiveQuestIdList, tag);
             bitField0_ |= 0x00000002;

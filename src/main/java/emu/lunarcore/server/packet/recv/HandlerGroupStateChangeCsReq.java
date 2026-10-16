@@ -5,7 +5,6 @@ import emu.lunarcore.server.game.GameSession;
 import emu.lunarcore.server.packet.CmdId;
 import emu.lunarcore.server.packet.Opcodes;
 import emu.lunarcore.server.packet.PacketHandler;
-import emu.lunarcore.server.packet.send.PacketGroupStateChangeScNotify;
 import emu.lunarcore.server.packet.send.PacketGroupStateChangeScRsp;
 
 @Opcodes(CmdId.GroupStateChangeCsReq)
@@ -16,7 +15,7 @@ public class HandlerGroupStateChangeCsReq extends PacketHandler {
         var req = GroupStateChangeCsReq.parseFrom(data);
         var groupStateInfo = req.getMutableGroupInfo();
         
-        session.send(new PacketGroupStateChangeScNotify(groupStateInfo));
+        // 4.6 has no GroupStateChangeScNotify; the response alone carries the state
         session.send(new PacketGroupStateChangeScRsp(groupStateInfo));
     }
 

@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "RegionEntry.proto";
+
+message DispatchRegionData {
+  optional uint32 retcode = 1;
+  optional string msg = 2;
+  optional string top_sever_region_name = 3;
+  optional string stop_desc = 5;
+  repeated RegionEntry region_list = 4;
+}

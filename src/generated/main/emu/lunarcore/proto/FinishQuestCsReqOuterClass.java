@@ -19,19 +19,19 @@ public final class FinishQuestCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 prop_id = 9;</code>
+     * <code>optional uint32 quest_id = 7;</code>
+     */
+    private int questId;
+
+    /**
+     * <code>optional uint32 prop_id = 8;</code>
      */
     private int propId;
 
     /**
-     * <code>optional uint32 group_id = 14;</code>
+     * <code>optional uint32 group_id = 11;</code>
      */
     private int groupId;
-
-    /**
-     * <code>optional uint32 quest_id = 15;</code>
-     */
-    private int questId;
 
     private FinishQuestCsReq() {
     }
@@ -44,99 +44,25 @@ public final class FinishQuestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 prop_id = 9;</code>
-     * @return whether the propId field is set
+     * <code>optional uint32 quest_id = 7;</code>
+     * @return whether the questId field is set
      */
-    public boolean hasPropId() {
+    public boolean hasQuestId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 prop_id = 9;</code>
-     * @return this
-     */
-    public FinishQuestCsReq clearPropId() {
-      bitField0_ &= ~0x00000001;
-      propId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 prop_id = 9;</code>
-     * @return the propId
-     */
-    public int getPropId() {
-      return propId;
-    }
-
-    /**
-     * <code>optional uint32 prop_id = 9;</code>
-     * @param value the propId to set
-     * @return this
-     */
-    public FinishQuestCsReq setPropId(final int value) {
-      bitField0_ |= 0x00000001;
-      propId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 14;</code>
-     * @return whether the groupId field is set
-     */
-    public boolean hasGroupId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 14;</code>
-     * @return this
-     */
-    public FinishQuestCsReq clearGroupId() {
-      bitField0_ &= ~0x00000002;
-      groupId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 14;</code>
-     * @return the groupId
-     */
-    public int getGroupId() {
-      return groupId;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 14;</code>
-     * @param value the groupId to set
-     * @return this
-     */
-    public FinishQuestCsReq setGroupId(final int value) {
-      bitField0_ |= 0x00000002;
-      groupId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 quest_id = 15;</code>
-     * @return whether the questId field is set
-     */
-    public boolean hasQuestId() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 quest_id = 15;</code>
+     * <code>optional uint32 quest_id = 7;</code>
      * @return this
      */
     public FinishQuestCsReq clearQuestId() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000001;
       questId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 quest_id = 15;</code>
+     * <code>optional uint32 quest_id = 7;</code>
      * @return the questId
      */
     public int getQuestId() {
@@ -144,13 +70,87 @@ public final class FinishQuestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 quest_id = 15;</code>
+     * <code>optional uint32 quest_id = 7;</code>
      * @param value the questId to set
      * @return this
      */
     public FinishQuestCsReq setQuestId(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       questId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 prop_id = 8;</code>
+     * @return whether the propId field is set
+     */
+    public boolean hasPropId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 prop_id = 8;</code>
+     * @return this
+     */
+    public FinishQuestCsReq clearPropId() {
+      bitField0_ &= ~0x00000002;
+      propId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 prop_id = 8;</code>
+     * @return the propId
+     */
+    public int getPropId() {
+      return propId;
+    }
+
+    /**
+     * <code>optional uint32 prop_id = 8;</code>
+     * @param value the propId to set
+     * @return this
+     */
+    public FinishQuestCsReq setPropId(final int value) {
+      bitField0_ |= 0x00000002;
+      propId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 group_id = 11;</code>
+     * @return whether the groupId field is set
+     */
+    public boolean hasGroupId() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 group_id = 11;</code>
+     * @return this
+     */
+    public FinishQuestCsReq clearGroupId() {
+      bitField0_ &= ~0x00000004;
+      groupId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 group_id = 11;</code>
+     * @return the groupId
+     */
+    public int getGroupId() {
+      return groupId;
+    }
+
+    /**
+     * <code>optional uint32 group_id = 11;</code>
+     * @param value the groupId to set
+     * @return this
+     */
+    public FinishQuestCsReq setGroupId(final int value) {
+      bitField0_ |= 0x00000004;
+      groupId = value;
       return this;
     }
 
@@ -159,9 +159,9 @@ public final class FinishQuestCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
+        questId = other.questId;
         propId = other.propId;
         groupId = other.groupId;
-        questId = other.questId;
       }
       return this;
     }
@@ -172,14 +172,14 @@ public final class FinishQuestCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasQuestId()) {
+        setQuestId(other.questId);
+      }
       if (other.hasPropId()) {
         setPropId(other.propId);
       }
       if (other.hasGroupId()) {
         setGroupId(other.groupId);
-      }
-      if (other.hasQuestId()) {
-        setQuestId(other.questId);
       }
       return this;
     }
@@ -191,9 +191,9 @@ public final class FinishQuestCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      questId = 0;
       propId = 0;
       groupId = 0;
-      questId = 0;
       return this;
     }
 
@@ -217,24 +217,24 @@ public final class FinishQuestCsReqOuterClass {
       }
       FinishQuestCsReq other = (FinishQuestCsReq) o;
       return bitField0_ == other.bitField0_
+        && (!hasQuestId() || questId == other.questId)
         && (!hasPropId() || propId == other.propId)
-        && (!hasGroupId() || groupId == other.groupId)
-        && (!hasQuestId() || questId == other.questId);
+        && (!hasGroupId() || groupId == other.groupId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
-        output.writeUInt32NoTag(propId);
+        output.writeRawByte((byte) 56);
+        output.writeUInt32NoTag(questId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(groupId);
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(propId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(questId);
+        output.writeRawByte((byte) 88);
+        output.writeUInt32NoTag(groupId);
       }
     }
 
@@ -242,13 +242,13 @@ public final class FinishQuestCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(propId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(questId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(propId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(questId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
       }
       return size;
     }
@@ -260,27 +260,27 @@ public final class FinishQuestCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
-            // propId
-            propId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
-            // groupId
-            groupId = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 120) {
-              break;
-            }
-          }
-          case 120: {
+          case 56: {
             // questId
             questId = input.readUInt32();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 64) {
+              break;
+            }
+          }
+          case 64: {
+            // propId
+            propId = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 88) {
+              break;
+            }
+          }
+          case 88: {
+            // groupId
+            groupId = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
@@ -305,13 +305,13 @@ public final class FinishQuestCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.propId, propId);
+        output.writeUInt32(FieldNames.questId, questId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.groupId, groupId);
+        output.writeUInt32(FieldNames.propId, propId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.questId, questId);
+        output.writeUInt32(FieldNames.groupId, groupId);
       }
       output.endObject();
     }
@@ -323,12 +323,24 @@ public final class FinishQuestCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
+          case 655126941:
+          case -1165879912: {
+            if (input.isAtField(FieldNames.questId)) {
+              if (!input.trySkipNullValue()) {
+                questId = input.readUInt32();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case -979804194:
           case -309137545: {
             if (input.isAtField(FieldNames.propId)) {
               if (!input.trySkipNullValue()) {
                 propId = input.readUInt32();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -340,18 +352,6 @@ public final class FinishQuestCsReqOuterClass {
             if (input.isAtField(FieldNames.groupId)) {
               if (!input.trySkipNullValue()) {
                 groupId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 655126941:
-          case -1165879912: {
-            if (input.isAtField(FieldNames.questId)) {
-              if (!input.trySkipNullValue()) {
-                questId = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -412,11 +412,11 @@ public final class FinishQuestCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName questId = FieldName.forField("questId", "quest_id");
+
       static final FieldName propId = FieldName.forField("propId", "prop_id");
 
       static final FieldName groupId = FieldName.forField("groupId", "group_id");
-
-      static final FieldName questId = FieldName.forField("questId", "quest_id");
     }
   }
 }

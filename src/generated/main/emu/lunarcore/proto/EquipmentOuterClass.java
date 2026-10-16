@@ -19,37 +19,37 @@ public final class EquipmentOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
-     */
-    private int promotion;
-
-    /**
-     * <code>optional uint32 equip_avatar_id = 4;</code>
-     */
-    private int equipAvatarId;
-
-    /**
-     * <code>optional uint32 exp = 5;</code>
-     */
-    private int exp;
-
-    /**
-     * <code>optional uint32 level = 7;</code>
+     * <code>optional uint32 level = 1;</code>
      */
     private int level;
 
     /**
-     * <code>optional uint32 rank = 10;</code>
-     */
-    private int rank;
-
-    /**
-     * <code>optional uint32 unique_id = 11;</code>
+     * <code>optional uint32 unique_id = 3;</code>
      */
     private int uniqueId;
 
     /**
-     * <code>optional uint32 tid = 12;</code>
+     * <code>optional uint32 exp = 6;</code>
+     */
+    private int exp;
+
+    /**
+     * <code>optional uint32 promotion = 7;</code>
+     */
+    private int promotion;
+
+    /**
+     * <code>optional uint32 equip_avatar_id = 9;</code>
+     */
+    private int equipAvatarId;
+
+    /**
+     * <code>optional uint32 rank = 14;</code>
+     */
+    private int rank;
+
+    /**
+     * <code>optional uint32 tid = 15;</code>
      */
     private int tid;
 
@@ -69,81 +69,81 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
-     * @return whether the promotion field is set
+     * <code>optional uint32 level = 1;</code>
+     * @return whether the level field is set
      */
-    public boolean hasPromotion() {
+    public boolean hasLevel() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
+     * <code>optional uint32 level = 1;</code>
      * @return this
      */
-    public Equipment clearPromotion() {
+    public Equipment clearLevel() {
       bitField0_ &= ~0x00000001;
-      promotion = 0;
+      level = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
-     * @return the promotion
+     * <code>optional uint32 level = 1;</code>
+     * @return the level
      */
-    public int getPromotion() {
-      return promotion;
+    public int getLevel() {
+      return level;
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
-     * @param value the promotion to set
+     * <code>optional uint32 level = 1;</code>
+     * @param value the level to set
      * @return this
      */
-    public Equipment setPromotion(final int value) {
+    public Equipment setLevel(final int value) {
       bitField0_ |= 0x00000001;
-      promotion = value;
+      level = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 equip_avatar_id = 4;</code>
-     * @return whether the equipAvatarId field is set
+     * <code>optional uint32 unique_id = 3;</code>
+     * @return whether the uniqueId field is set
      */
-    public boolean hasEquipAvatarId() {
+    public boolean hasUniqueId() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 equip_avatar_id = 4;</code>
+     * <code>optional uint32 unique_id = 3;</code>
      * @return this
      */
-    public Equipment clearEquipAvatarId() {
+    public Equipment clearUniqueId() {
       bitField0_ &= ~0x00000002;
-      equipAvatarId = 0;
+      uniqueId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 equip_avatar_id = 4;</code>
-     * @return the equipAvatarId
+     * <code>optional uint32 unique_id = 3;</code>
+     * @return the uniqueId
      */
-    public int getEquipAvatarId() {
-      return equipAvatarId;
+    public int getUniqueId() {
+      return uniqueId;
     }
 
     /**
-     * <code>optional uint32 equip_avatar_id = 4;</code>
-     * @param value the equipAvatarId to set
+     * <code>optional uint32 unique_id = 3;</code>
+     * @param value the uniqueId to set
      * @return this
      */
-    public Equipment setEquipAvatarId(final int value) {
+    public Equipment setUniqueId(final int value) {
       bitField0_ |= 0x00000002;
-      equipAvatarId = value;
+      uniqueId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 exp = 5;</code>
+     * <code>optional uint32 exp = 6;</code>
      * @return whether the exp field is set
      */
     public boolean hasExp() {
@@ -151,7 +151,7 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 exp = 5;</code>
+     * <code>optional uint32 exp = 6;</code>
      * @return this
      */
     public Equipment clearExp() {
@@ -161,7 +161,7 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 exp = 5;</code>
+     * <code>optional uint32 exp = 6;</code>
      * @return the exp
      */
     public int getExp() {
@@ -169,7 +169,7 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 exp = 5;</code>
+     * <code>optional uint32 exp = 6;</code>
      * @param value the exp to set
      * @return this
      */
@@ -180,62 +180,99 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
-     * @return whether the level field is set
+     * <code>optional uint32 promotion = 7;</code>
+     * @return whether the promotion field is set
      */
-    public boolean hasLevel() {
+    public boolean hasPromotion() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
+     * <code>optional uint32 promotion = 7;</code>
      * @return this
      */
-    public Equipment clearLevel() {
+    public Equipment clearPromotion() {
       bitField0_ &= ~0x00000008;
-      level = 0;
+      promotion = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
-     * @return the level
+     * <code>optional uint32 promotion = 7;</code>
+     * @return the promotion
      */
-    public int getLevel() {
-      return level;
+    public int getPromotion() {
+      return promotion;
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
-     * @param value the level to set
+     * <code>optional uint32 promotion = 7;</code>
+     * @param value the promotion to set
      * @return this
      */
-    public Equipment setLevel(final int value) {
+    public Equipment setPromotion(final int value) {
       bitField0_ |= 0x00000008;
-      level = value;
+      promotion = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 rank = 10;</code>
-     * @return whether the rank field is set
+     * <code>optional uint32 equip_avatar_id = 9;</code>
+     * @return whether the equipAvatarId field is set
      */
-    public boolean hasRank() {
+    public boolean hasEquipAvatarId() {
       return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
-     * <code>optional uint32 rank = 10;</code>
+     * <code>optional uint32 equip_avatar_id = 9;</code>
+     * @return this
+     */
+    public Equipment clearEquipAvatarId() {
+      bitField0_ &= ~0x00000010;
+      equipAvatarId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 equip_avatar_id = 9;</code>
+     * @return the equipAvatarId
+     */
+    public int getEquipAvatarId() {
+      return equipAvatarId;
+    }
+
+    /**
+     * <code>optional uint32 equip_avatar_id = 9;</code>
+     * @param value the equipAvatarId to set
+     * @return this
+     */
+    public Equipment setEquipAvatarId(final int value) {
+      bitField0_ |= 0x00000010;
+      equipAvatarId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 rank = 14;</code>
+     * @return whether the rank field is set
+     */
+    public boolean hasRank() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>optional uint32 rank = 14;</code>
      * @return this
      */
     public Equipment clearRank() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000020;
       rank = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 rank = 10;</code>
+     * <code>optional uint32 rank = 14;</code>
      * @return the rank
      */
     public int getRank() {
@@ -243,55 +280,18 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 rank = 10;</code>
+     * <code>optional uint32 rank = 14;</code>
      * @param value the rank to set
      * @return this
      */
     public Equipment setRank(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       rank = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 unique_id = 11;</code>
-     * @return whether the uniqueId field is set
-     */
-    public boolean hasUniqueId() {
-      return (bitField0_ & 0x00000020) != 0;
-    }
-
-    /**
-     * <code>optional uint32 unique_id = 11;</code>
-     * @return this
-     */
-    public Equipment clearUniqueId() {
-      bitField0_ &= ~0x00000020;
-      uniqueId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 unique_id = 11;</code>
-     * @return the uniqueId
-     */
-    public int getUniqueId() {
-      return uniqueId;
-    }
-
-    /**
-     * <code>optional uint32 unique_id = 11;</code>
-     * @param value the uniqueId to set
-     * @return this
-     */
-    public Equipment setUniqueId(final int value) {
-      bitField0_ |= 0x00000020;
-      uniqueId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 tid = 12;</code>
+     * <code>optional uint32 tid = 15;</code>
      * @return whether the tid field is set
      */
     public boolean hasTid() {
@@ -299,7 +299,7 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 tid = 12;</code>
+     * <code>optional uint32 tid = 15;</code>
      * @return this
      */
     public Equipment clearTid() {
@@ -309,7 +309,7 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 tid = 12;</code>
+     * <code>optional uint32 tid = 15;</code>
      * @return the tid
      */
     public int getTid() {
@@ -317,7 +317,7 @@ public final class EquipmentOuterClass {
     }
 
     /**
-     * <code>optional uint32 tid = 12;</code>
+     * <code>optional uint32 tid = 15;</code>
      * @param value the tid to set
      * @return this
      */
@@ -369,12 +369,12 @@ public final class EquipmentOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
+        level = other.level;
+        uniqueId = other.uniqueId;
+        exp = other.exp;
         promotion = other.promotion;
         equipAvatarId = other.equipAvatarId;
-        exp = other.exp;
-        level = other.level;
         rank = other.rank;
-        uniqueId = other.uniqueId;
         tid = other.tid;
         isProtected = other.isProtected;
       }
@@ -387,23 +387,23 @@ public final class EquipmentOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasLevel()) {
+        setLevel(other.level);
+      }
+      if (other.hasUniqueId()) {
+        setUniqueId(other.uniqueId);
+      }
+      if (other.hasExp()) {
+        setExp(other.exp);
+      }
       if (other.hasPromotion()) {
         setPromotion(other.promotion);
       }
       if (other.hasEquipAvatarId()) {
         setEquipAvatarId(other.equipAvatarId);
       }
-      if (other.hasExp()) {
-        setExp(other.exp);
-      }
-      if (other.hasLevel()) {
-        setLevel(other.level);
-      }
       if (other.hasRank()) {
         setRank(other.rank);
-      }
-      if (other.hasUniqueId()) {
-        setUniqueId(other.uniqueId);
       }
       if (other.hasTid()) {
         setTid(other.tid);
@@ -421,12 +421,12 @@ public final class EquipmentOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      level = 0;
+      uniqueId = 0;
+      exp = 0;
       promotion = 0;
       equipAvatarId = 0;
-      exp = 0;
-      level = 0;
       rank = 0;
-      uniqueId = 0;
       tid = 0;
       isProtected = false;
       return this;
@@ -452,12 +452,12 @@ public final class EquipmentOuterClass {
       }
       Equipment other = (Equipment) o;
       return bitField0_ == other.bitField0_
+        && (!hasLevel() || level == other.level)
+        && (!hasUniqueId() || uniqueId == other.uniqueId)
+        && (!hasExp() || exp == other.exp)
         && (!hasPromotion() || promotion == other.promotion)
         && (!hasEquipAvatarId() || equipAvatarId == other.equipAvatarId)
-        && (!hasExp() || exp == other.exp)
-        && (!hasLevel() || level == other.level)
         && (!hasRank() || rank == other.rank)
-        && (!hasUniqueId() || uniqueId == other.uniqueId)
         && (!hasTid() || tid == other.tid)
         && (!hasIsProtected() || isProtected == other.isProtected);
     }
@@ -465,31 +465,31 @@ public final class EquipmentOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(promotion);
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(level);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(equipAvatarId);
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(uniqueId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(exp);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(level);
+        output.writeUInt32NoTag(promotion);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeUInt32NoTag(rank);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(equipAvatarId);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(uniqueId);
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(rank);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(tid);
       }
       if ((bitField0_ & 0x00000080) != 0) {
@@ -502,22 +502,22 @@ public final class EquipmentOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(promotion);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(equipAvatarId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(uniqueId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(exp);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(promotion);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(rank);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(equipAvatarId);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(uniqueId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(rank);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(tid);
@@ -535,25 +535,25 @@ public final class EquipmentOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
-            // promotion
-            promotion = input.readUInt32();
+          case 8: {
+            // level
+            level = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 24) {
               break;
             }
           }
-          case 32: {
-            // equipAvatarId
-            equipAvatarId = input.readUInt32();
+          case 24: {
+            // uniqueId
+            uniqueId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 40) {
+            if (tag != 48) {
               break;
             }
           }
-          case 40: {
+          case 48: {
             // exp
             exp = input.readUInt32();
             bitField0_ |= 0x00000004;
@@ -563,33 +563,33 @@ public final class EquipmentOuterClass {
             }
           }
           case 56: {
-            // level
-            level = input.readUInt32();
+            // promotion
+            promotion = input.readUInt32();
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 72) {
               break;
             }
           }
-          case 80: {
-            // rank
-            rank = input.readUInt32();
+          case 72: {
+            // equipAvatarId
+            equipAvatarId = input.readUInt32();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 112) {
               break;
             }
           }
-          case 88: {
-            // uniqueId
-            uniqueId = input.readUInt32();
+          case 112: {
+            // rank
+            rank = input.readUInt32();
             bitField0_ |= 0x00000020;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 120) {
               break;
             }
           }
-          case 96: {
+          case 120: {
             // tid
             tid = input.readUInt32();
             bitField0_ |= 0x00000040;
@@ -625,22 +625,22 @@ public final class EquipmentOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.promotion, promotion);
+        output.writeUInt32(FieldNames.level, level);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.equipAvatarId, equipAvatarId);
+        output.writeUInt32(FieldNames.uniqueId, uniqueId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.exp, exp);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.level, level);
+        output.writeUInt32(FieldNames.promotion, promotion);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeUInt32(FieldNames.rank, rank);
+        output.writeUInt32(FieldNames.equipAvatarId, equipAvatarId);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeUInt32(FieldNames.uniqueId, uniqueId);
+        output.writeUInt32(FieldNames.rank, rank);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         output.writeUInt32(FieldNames.tid, tid);
@@ -658,10 +658,10 @@ public final class EquipmentOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -799212381: {
-            if (input.isAtField(FieldNames.promotion)) {
+          case 102865796: {
+            if (input.isAtField(FieldNames.level)) {
               if (!input.trySkipNullValue()) {
-                promotion = input.readUInt32();
+                level = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -669,11 +669,11 @@ public final class EquipmentOuterClass {
             }
             break;
           }
-          case 169047204:
-          case 33057906: {
-            if (input.isAtField(FieldNames.equipAvatarId)) {
+          case -294460212:
+          case -538310583: {
+            if (input.isAtField(FieldNames.uniqueId)) {
               if (!input.trySkipNullValue()) {
-                equipAvatarId = input.readUInt32();
+                uniqueId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -692,11 +692,23 @@ public final class EquipmentOuterClass {
             }
             break;
           }
-          case 102865796: {
-            if (input.isAtField(FieldNames.level)) {
+          case -799212381: {
+            if (input.isAtField(FieldNames.promotion)) {
               if (!input.trySkipNullValue()) {
-                level = input.readUInt32();
+                promotion = input.readUInt32();
                 bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 169047204:
+          case 33057906: {
+            if (input.isAtField(FieldNames.equipAvatarId)) {
+              if (!input.trySkipNullValue()) {
+                equipAvatarId = input.readUInt32();
+                bitField0_ |= 0x00000010;
               }
             } else {
               input.skipUnknownField();
@@ -707,18 +719,6 @@ public final class EquipmentOuterClass {
             if (input.isAtField(FieldNames.rank)) {
               if (!input.trySkipNullValue()) {
                 rank = input.readUInt32();
-                bitField0_ |= 0x00000010;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -294460212:
-          case -538310583: {
-            if (input.isAtField(FieldNames.uniqueId)) {
-              if (!input.trySkipNullValue()) {
-                uniqueId = input.readUInt32();
                 bitField0_ |= 0x00000020;
               }
             } else {
@@ -801,17 +801,17 @@ public final class EquipmentOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName level = FieldName.forField("level");
+
+      static final FieldName uniqueId = FieldName.forField("uniqueId", "unique_id");
+
+      static final FieldName exp = FieldName.forField("exp");
+
       static final FieldName promotion = FieldName.forField("promotion");
 
       static final FieldName equipAvatarId = FieldName.forField("equipAvatarId", "equip_avatar_id");
 
-      static final FieldName exp = FieldName.forField("exp");
-
-      static final FieldName level = FieldName.forField("level");
-
       static final FieldName rank = FieldName.forField("rank");
-
-      static final FieldName uniqueId = FieldName.forField("uniqueId", "unique_id");
 
       static final FieldName tid = FieldName.forField("tid");
 

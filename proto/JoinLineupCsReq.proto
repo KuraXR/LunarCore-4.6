@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "AvatarType.proto";
+import "ExtraLineupType.proto";
+
+message JoinLineupCsReq {
+  optional uint32 index = 6;
+  optional uint32 plane_id = 14;
+  optional uint32 slot = 8;
+  optional uint32 base_avatar_id = 1;
+  optional AvatarType avatar_type = 3;
+  optional ExtraLineupType extra_lineup_type = 15;
+}

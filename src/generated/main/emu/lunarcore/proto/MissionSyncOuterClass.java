@@ -21,12 +21,12 @@ public final class MissionSyncOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated uint32 main_mission_id = 1;</code>
+     * <code>repeated uint32 main_mission_id = 5;</code>
      */
     private final RepeatedInt mainMissionId = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated .Mission mission_list = 5;</code>
+     * <code>repeated .Mission mission_list = 11;</code>
      */
     private final RepeatedMessage<MissionOuterClass.Mission> missionList = RepeatedMessage.newEmptyInstance(MissionOuterClass.Mission.getFactory());
 
@@ -41,7 +41,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id = 1;</code>
+     * <code>repeated uint32 main_mission_id = 5;</code>
      * @return whether the mainMissionId field is set
      */
     public boolean hasMainMissionId() {
@@ -49,7 +49,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id = 1;</code>
+     * <code>repeated uint32 main_mission_id = 5;</code>
      * @return this
      */
     public MissionSync clearMainMissionId() {
@@ -59,7 +59,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id = 1;</code>
+     * <code>repeated uint32 main_mission_id = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -73,7 +73,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id = 1;</code>
+     * <code>repeated uint32 main_mission_id = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -87,7 +87,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id = 1;</code>
+     * <code>repeated uint32 main_mission_id = 5;</code>
      * @param value the mainMissionId to add
      * @return this
      */
@@ -98,7 +98,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id = 1;</code>
+     * <code>repeated uint32 main_mission_id = 5;</code>
      * @param values the mainMissionId to add
      * @return this
      */
@@ -109,7 +109,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated .Mission mission_list = 5;</code>
+     * <code>repeated .Mission mission_list = 11;</code>
      * @return whether the missionList field is set
      */
     public boolean hasMissionList() {
@@ -117,7 +117,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated .Mission mission_list = 5;</code>
+     * <code>repeated .Mission mission_list = 11;</code>
      * @return this
      */
     public MissionSync clearMissionList() {
@@ -127,7 +127,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated .Mission mission_list = 5;</code>
+     * <code>repeated .Mission mission_list = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -141,7 +141,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated .Mission mission_list = 5;</code>
+     * <code>repeated .Mission mission_list = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -155,7 +155,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated .Mission mission_list = 5;</code>
+     * <code>repeated .Mission mission_list = 11;</code>
      * @param value the missionList to add
      * @return this
      */
@@ -166,7 +166,7 @@ public final class MissionSyncOuterClass {
     }
 
     /**
-     * <code>repeated .Mission mission_list = 5;</code>
+     * <code>repeated .Mission mission_list = 11;</code>
      * @param values the missionList to add
      * @return this
      */
@@ -244,13 +244,13 @@ public final class MissionSyncOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < mainMissionId.length(); i++) {
-          output.writeRawByte((byte) 8);
+          output.writeRawByte((byte) 40);
           output.writeUInt32NoTag(mainMissionId.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < missionList.length(); i++) {
-          output.writeRawByte((byte) 42);
+          output.writeRawByte((byte) 90);
           output.writeMessageNoTag(missionList.get(i));
         }
       }
@@ -275,16 +275,16 @@ public final class MissionSyncOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 10: {
+          case 42: {
             // mainMissionId [packed=true]
             input.readPackedUInt32(mainMissionId, tag);
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 42) {
+            if (tag != 90) {
               break;
             }
           }
-          case 42: {
+          case 90: {
             // missionList
             tag = input.readRepeatedMessage(missionList, tag);
             bitField0_ |= 0x00000002;
@@ -302,7 +302,7 @@ public final class MissionSyncOuterClass {
             tag = input.readTag();
             break;
           }
-          case 8: {
+          case 40: {
             // mainMissionId [packed=false]
             tag = input.readRepeatedUInt32(mainMissionId, tag);
             bitField0_ |= 0x00000001;

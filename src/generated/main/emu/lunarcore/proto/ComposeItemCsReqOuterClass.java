@@ -19,17 +19,17 @@ public final class ComposeItemCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 compose_id = 6;</code>
+     * <code>optional uint32 compose_id = 2;</code>
      */
     private int composeId;
 
     /**
-     * <code>optional uint32 count = 12;</code>
+     * <code>optional uint32 count = 7;</code>
      */
     private int count;
 
     /**
-     * <code>optional .ItemCostList compose_item_list = 13;</code>
+     * <code>optional .ItemCostList compose_item_list = 9;</code>
      */
     private final ItemCostListOuterClass.ItemCostList composeItemList = ItemCostListOuterClass.ItemCostList.newInstance();
 
@@ -44,7 +44,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 6;</code>
+     * <code>optional uint32 compose_id = 2;</code>
      * @return whether the composeId field is set
      */
     public boolean hasComposeId() {
@@ -52,7 +52,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 6;</code>
+     * <code>optional uint32 compose_id = 2;</code>
      * @return this
      */
     public ComposeItemCsReq clearComposeId() {
@@ -62,7 +62,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 6;</code>
+     * <code>optional uint32 compose_id = 2;</code>
      * @return the composeId
      */
     public int getComposeId() {
@@ -70,7 +70,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 compose_id = 6;</code>
+     * <code>optional uint32 compose_id = 2;</code>
      * @param value the composeId to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 12;</code>
+     * <code>optional uint32 count = 7;</code>
      * @return whether the count field is set
      */
     public boolean hasCount() {
@@ -89,7 +89,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 12;</code>
+     * <code>optional uint32 count = 7;</code>
      * @return this
      */
     public ComposeItemCsReq clearCount() {
@@ -99,7 +99,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 12;</code>
+     * <code>optional uint32 count = 7;</code>
      * @return the count
      */
     public int getCount() {
@@ -107,7 +107,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 count = 12;</code>
+     * <code>optional uint32 count = 7;</code>
      * @param value the count to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList compose_item_list = 13;</code>
+     * <code>optional .ItemCostList compose_item_list = 9;</code>
      * @return whether the composeItemList field is set
      */
     public boolean hasComposeItemList() {
@@ -126,7 +126,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList compose_item_list = 13;</code>
+     * <code>optional .ItemCostList compose_item_list = 9;</code>
      * @return this
      */
     public ComposeItemCsReq clearComposeItemList() {
@@ -136,7 +136,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList compose_item_list = 13;</code>
+     * <code>optional .ItemCostList compose_item_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -150,7 +150,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList compose_item_list = 13;</code>
+     * <code>optional .ItemCostList compose_item_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -164,7 +164,7 @@ public final class ComposeItemCsReqOuterClass {
     }
 
     /**
-     * <code>optional .ItemCostList compose_item_list = 13;</code>
+     * <code>optional .ItemCostList compose_item_list = 9;</code>
      * @param value the composeItemList to set
      * @return this
      */
@@ -246,15 +246,15 @@ public final class ComposeItemCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(composeId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(count);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 106);
+        output.writeRawByte((byte) 74);
         output.writeMessageNoTag(composeItemList);
       }
     }
@@ -281,25 +281,25 @@ public final class ComposeItemCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 16: {
             // composeId
             composeId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 56) {
               break;
             }
           }
-          case 96: {
+          case 56: {
             // count
             count = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 106) {
+            if (tag != 74) {
               break;
             }
           }
-          case 106: {
+          case 74: {
             // composeItemList
             input.readMessage(composeItemList);
             bitField0_ |= 0x00000004;

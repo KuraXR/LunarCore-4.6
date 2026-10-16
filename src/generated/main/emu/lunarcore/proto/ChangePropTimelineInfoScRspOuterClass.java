@@ -19,14 +19,14 @@ public final class ChangePropTimelineInfoScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 prop_entity_id = 3;</code>
-     */
-    private int propEntityId;
-
-    /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 4;</code>
      */
     private int retcode;
+
+    /**
+     * <code>optional uint32 prop_entity_id = 9;</code>
+     */
+    private int propEntityId;
 
     private ChangePropTimelineInfoScRsp() {
     }
@@ -39,62 +39,25 @@ public final class ChangePropTimelineInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 prop_entity_id = 3;</code>
-     * @return whether the propEntityId field is set
+     * <code>optional uint32 retcode = 4;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasPropEntityId() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 prop_entity_id = 3;</code>
-     * @return this
-     */
-    public ChangePropTimelineInfoScRsp clearPropEntityId() {
-      bitField0_ &= ~0x00000001;
-      propEntityId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 prop_entity_id = 3;</code>
-     * @return the propEntityId
-     */
-    public int getPropEntityId() {
-      return propEntityId;
-    }
-
-    /**
-     * <code>optional uint32 prop_entity_id = 3;</code>
-     * @param value the propEntityId to set
-     * @return this
-     */
-    public ChangePropTimelineInfoScRsp setPropEntityId(final int value) {
-      bitField0_ |= 0x00000001;
-      propEntityId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 12;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return this
      */
     public ChangePropTimelineInfoScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -102,13 +65,50 @@ public final class ChangePropTimelineInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 4;</code>
      * @param value the retcode to set
      * @return this
      */
     public ChangePropTimelineInfoScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 9;</code>
+     * @return whether the propEntityId field is set
+     */
+    public boolean hasPropEntityId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 9;</code>
+     * @return this
+     */
+    public ChangePropTimelineInfoScRsp clearPropEntityId() {
+      bitField0_ &= ~0x00000002;
+      propEntityId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 9;</code>
+     * @return the propEntityId
+     */
+    public int getPropEntityId() {
+      return propEntityId;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 9;</code>
+     * @param value the propEntityId to set
+     * @return this
+     */
+    public ChangePropTimelineInfoScRsp setPropEntityId(final int value) {
+      bitField0_ |= 0x00000002;
+      propEntityId = value;
       return this;
     }
 
@@ -117,8 +117,8 @@ public final class ChangePropTimelineInfoScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        propEntityId = other.propEntityId;
         retcode = other.retcode;
+        propEntityId = other.propEntityId;
       }
       return this;
     }
@@ -129,11 +129,11 @@ public final class ChangePropTimelineInfoScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasPropEntityId()) {
-        setPropEntityId(other.propEntityId);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
+      }
+      if (other.hasPropEntityId()) {
+        setPropEntityId(other.propEntityId);
       }
       return this;
     }
@@ -145,8 +145,8 @@ public final class ChangePropTimelineInfoScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      propEntityId = 0;
       retcode = 0;
+      propEntityId = 0;
       return this;
     }
 
@@ -170,19 +170,19 @@ public final class ChangePropTimelineInfoScRspOuterClass {
       }
       ChangePropTimelineInfoScRsp other = (ChangePropTimelineInfoScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasPropEntityId() || propEntityId == other.propEntityId)
-        && (!hasRetcode() || retcode == other.retcode);
+        && (!hasRetcode() || retcode == other.retcode)
+        && (!hasPropEntityId() || propEntityId == other.propEntityId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(propEntityId);
+        output.writeRawByte((byte) 32);
+        output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
-        output.writeUInt32NoTag(retcode);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(propEntityId);
       }
     }
 
@@ -190,10 +190,10 @@ public final class ChangePropTimelineInfoScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(propEntityId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(propEntityId);
       }
       return size;
     }
@@ -205,18 +205,18 @@ public final class ChangePropTimelineInfoScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
-            // propEntityId
-            propEntityId = input.readUInt32();
+          case 32: {
+            // retcode
+            retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 72) {
               break;
             }
           }
-          case 96: {
-            // retcode
-            retcode = input.readUInt32();
+          case 72: {
+            // propEntityId
+            propEntityId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +241,10 @@ public final class ChangePropTimelineInfoScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.propEntityId, propEntityId);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.propEntityId, propEntityId);
       }
       output.endObject();
     }
@@ -256,11 +256,10 @@ public final class ChangePropTimelineInfoScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -68717343:
-          case -57484005: {
-            if (input.isAtField(FieldNames.propEntityId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                propEntityId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -268,10 +267,11 @@ public final class ChangePropTimelineInfoScRspOuterClass {
             }
             break;
           }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case -68717343:
+          case -57484005: {
+            if (input.isAtField(FieldNames.propEntityId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                propEntityId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -333,9 +333,9 @@ public final class ChangePropTimelineInfoScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName propEntityId = FieldName.forField("propEntityId", "prop_entity_id");
-
       static final FieldName retcode = FieldName.forField("retcode");
+
+      static final FieldName propEntityId = FieldName.forField("propEntityId", "prop_entity_id");
     }
   }
 }

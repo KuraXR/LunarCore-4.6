@@ -24,12 +24,12 @@ public final class RemoveRotaterScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>optional .RotaterData rotater_data = 6;</code>
+     * <code>optional .RotaterData rotater_data = 12;</code>
      */
     private final RotaterDataOuterClass.RotaterData rotaterData = RotaterDataOuterClass.RotaterData.newInstance();
 
     /**
-     * <code>optional .RotatorEnergyInfo energy_info = 9;</code>
+     * <code>optional .RotatorEnergyInfo energy_info = 15;</code>
      */
     private final RotatorEnergyInfoOuterClass.RotatorEnergyInfo energyInfo = RotatorEnergyInfoOuterClass.RotatorEnergyInfo.newInstance();
 
@@ -81,7 +81,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotaterData rotater_data = 6;</code>
+     * <code>optional .RotaterData rotater_data = 12;</code>
      * @return whether the rotaterData field is set
      */
     public boolean hasRotaterData() {
@@ -89,7 +89,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotaterData rotater_data = 6;</code>
+     * <code>optional .RotaterData rotater_data = 12;</code>
      * @return this
      */
     public RemoveRotaterScRsp clearRotaterData() {
@@ -99,7 +99,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotaterData rotater_data = 6;</code>
+     * <code>optional .RotaterData rotater_data = 12;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -113,7 +113,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotaterData rotater_data = 6;</code>
+     * <code>optional .RotaterData rotater_data = 12;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -127,7 +127,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotaterData rotater_data = 6;</code>
+     * <code>optional .RotaterData rotater_data = 12;</code>
      * @param value the rotaterData to set
      * @return this
      */
@@ -138,7 +138,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotatorEnergyInfo energy_info = 9;</code>
+     * <code>optional .RotatorEnergyInfo energy_info = 15;</code>
      * @return whether the energyInfo field is set
      */
     public boolean hasEnergyInfo() {
@@ -146,7 +146,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotatorEnergyInfo energy_info = 9;</code>
+     * <code>optional .RotatorEnergyInfo energy_info = 15;</code>
      * @return this
      */
     public RemoveRotaterScRsp clearEnergyInfo() {
@@ -156,7 +156,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotatorEnergyInfo energy_info = 9;</code>
+     * <code>optional .RotatorEnergyInfo energy_info = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -170,7 +170,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotatorEnergyInfo energy_info = 9;</code>
+     * <code>optional .RotatorEnergyInfo energy_info = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -184,7 +184,7 @@ public final class RemoveRotaterScRspOuterClass {
     }
 
     /**
-     * <code>optional .RotatorEnergyInfo energy_info = 9;</code>
+     * <code>optional .RotatorEnergyInfo energy_info = 15;</code>
      * @param value the energyInfo to set
      * @return this
      */
@@ -272,11 +272,11 @@ public final class RemoveRotaterScRspOuterClass {
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 50);
+        output.writeRawByte((byte) 98);
         output.writeMessageNoTag(rotaterData);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 74);
+        output.writeRawByte((byte) 122);
         output.writeMessageNoTag(energyInfo);
       }
     }
@@ -308,20 +308,20 @@ public final class RemoveRotaterScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 98) {
               break;
             }
           }
-          case 50: {
+          case 98: {
             // rotaterData
             input.readMessage(rotaterData);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 74) {
+            if (tag != 122) {
               break;
             }
           }
-          case 74: {
+          case 122: {
             // energyInfo
             input.readMessage(energyInfo);
             bitField0_ |= 0x00000004;

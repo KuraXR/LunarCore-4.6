@@ -19,7 +19,7 @@ public final class FirstNpcTalkInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 npc_id = 12;</code>
+     * <code>optional uint32 npc_id = 1;</code>
      */
     private int npcId;
 
@@ -34,7 +34,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 12;</code>
+     * <code>optional uint32 npc_id = 1;</code>
      * @return whether the npcId field is set
      */
     public boolean hasNpcId() {
@@ -42,7 +42,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 12;</code>
+     * <code>optional uint32 npc_id = 1;</code>
      * @return this
      */
     public FirstNpcTalkInfo clearNpcId() {
@@ -52,7 +52,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 12;</code>
+     * <code>optional uint32 npc_id = 1;</code>
      * @return the npcId
      */
     public int getNpcId() {
@@ -60,7 +60,7 @@ public final class FirstNpcTalkInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 npc_id = 12;</code>
+     * <code>optional uint32 npc_id = 1;</code>
      * @param value the npcId to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class FirstNpcTalkInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(npcId);
       }
     }
@@ -150,7 +150,7 @@ public final class FirstNpcTalkInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 96: {
+          case 8: {
             // npcId
             npcId = input.readUInt32();
             bitField0_ |= 0x00000001;

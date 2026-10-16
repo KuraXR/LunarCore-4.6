@@ -19,7 +19,7 @@ public final class SelectInclinationTextScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 11;</code>
      */
     private int inclinationTextId;
 
@@ -39,7 +39,7 @@ public final class SelectInclinationTextScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 11;</code>
      * @return whether the inclinationTextId field is set
      */
     public boolean hasInclinationTextId() {
@@ -47,7 +47,7 @@ public final class SelectInclinationTextScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 11;</code>
      * @return this
      */
     public SelectInclinationTextScRsp clearInclinationTextId() {
@@ -57,7 +57,7 @@ public final class SelectInclinationTextScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 11;</code>
      * @return the inclinationTextId
      */
     public int getInclinationTextId() {
@@ -65,7 +65,7 @@ public final class SelectInclinationTextScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 11;</code>
      * @param value the inclinationTextId to set
      * @return this
      */
@@ -177,7 +177,7 @@ public final class SelectInclinationTextScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(inclinationTextId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -205,7 +205,7 @@ public final class SelectInclinationTextScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 88: {
             // inclinationTextId
             inclinationTextId = input.readUInt32();
             bitField0_ |= 0x00000001;

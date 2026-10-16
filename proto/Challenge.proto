@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeExtInfo.proto";
+
+message Challenge {
+  optional uint32 score_two = 11;
+  optional uint32 taken_reward = 12;
+  optional uint32 score = 4;
+  optional uint32 challenge_id = 14;
+  optional uint32 stars = 3;
+  optional ChallengeExtInfo ext_info = 5;
+}

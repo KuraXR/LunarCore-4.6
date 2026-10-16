@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "Mission.proto";
+
+message MissionStatusBySceneInfo {
+  repeated uint32 disabled_main_mission_id_list = 2;
+  repeated uint32 finished_main_mission_id_list = 15;
+  repeated uint32 unfinished_main_mission_id_list = 3;
+  repeated Mission sub_mission_status_list = 7;
+}

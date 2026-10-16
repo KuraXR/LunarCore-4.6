@@ -19,12 +19,12 @@ public final class ContentPackageInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 content_id = 1;</code>
+     * <code>optional uint32 content_id = 10;</code>
      */
     private int contentId;
 
     /**
-     * <code>optional .ContentPackageStatus status = 15;</code>
+     * <code>optional .ContentPackageStatus status = 13;</code>
      */
     private int status;
 
@@ -39,7 +39,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 content_id = 1;</code>
+     * <code>optional uint32 content_id = 10;</code>
      * @return whether the contentId field is set
      */
     public boolean hasContentId() {
@@ -47,7 +47,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 content_id = 1;</code>
+     * <code>optional uint32 content_id = 10;</code>
      * @return this
      */
     public ContentPackageInfo clearContentId() {
@@ -57,7 +57,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 content_id = 1;</code>
+     * <code>optional uint32 content_id = 10;</code>
      * @return the contentId
      */
     public int getContentId() {
@@ -65,7 +65,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 content_id = 1;</code>
+     * <code>optional uint32 content_id = 10;</code>
      * @param value the contentId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional .ContentPackageStatus status = 15;</code>
+     * <code>optional .ContentPackageStatus status = 13;</code>
      * @return whether the status field is set
      */
     public boolean hasStatus() {
@@ -84,7 +84,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional .ContentPackageStatus status = 15;</code>
+     * <code>optional .ContentPackageStatus status = 13;</code>
      * @return this
      */
     public ContentPackageInfo clearStatus() {
@@ -94,7 +94,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional .ContentPackageStatus status = 15;</code>
+     * <code>optional .ContentPackageStatus status = 13;</code>
      * @return the status
      */
     public ContentPackageStatusOuterClass.ContentPackageStatus getStatus() {
@@ -127,7 +127,7 @@ public final class ContentPackageInfoOuterClass {
     }
 
     /**
-     * <code>optional .ContentPackageStatus status = 15;</code>
+     * <code>optional .ContentPackageStatus status = 13;</code>
      * @param value the status to set
      * @return this
      */
@@ -203,11 +203,11 @@ public final class ContentPackageInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(contentId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 104);
         output.writeEnumNoTag(status);
       }
     }
@@ -231,16 +231,16 @@ public final class ContentPackageInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 80: {
             // contentId
             contentId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 104) {
               break;
             }
           }
-          case 120: {
+          case 104: {
             // status
             final int value = input.readInt32();
             if (ContentPackageStatusOuterClass.ContentPackageStatus.forNumber(value) != null) {

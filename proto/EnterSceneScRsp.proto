@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "SceneIdentifierInfo.proto";
+
+message EnterSceneScRsp {
+  optional uint32 retcode = 2;
+  optional SceneIdentifierInfo scene_identifier = 3;
+  optional bool is_entered = 6;
+  optional bool is_full_scene = 11;
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message DiscardRelicCsReq {
+  optional bool is_discard = 4;
+  repeated uint32 relic_id_list = 2;
+}

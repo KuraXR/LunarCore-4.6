@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message SetTrainWorldIdScRsp {
+  optional uint32 train_world_id = 9;
+  optional uint32 retcode = 7;
+}

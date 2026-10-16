@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ChallengePeakLevelInfo {
+  optional uint32 challenge_peak_id = 13;
+  optional uint32 GGICFFIOOGP = 15;
+  optional bool FGEGDFGKDNB = 4;
+  repeated uint32 NKGLPNJHEON = 3;
+  repeated uint32 challenge_avatar_id_list = 11;
+}

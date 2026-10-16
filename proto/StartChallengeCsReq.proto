@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeLineupAvatar.proto";
+import "StartChallengeStoryInfo.proto";
+
+message StartChallengeCsReq {
+  optional uint32 challenge_id = 3;
+  optional StartChallengeStoryInfo ext_info = 14;
+  repeated uint32 second_half_lineup = 12;
+  repeated uint32 first_half_lineup = 5;
+  repeated ChallengeLineupAvatar avatar_lineup_first = 11;
+  repeated ChallengeLineupAvatar avatar_lineup_second = 8;
+}

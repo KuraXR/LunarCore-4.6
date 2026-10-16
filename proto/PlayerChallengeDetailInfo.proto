@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message PlayerChallengeDetailInfo {
+  message KIEEFAOCOCC {
+    optional PlayerChallengeDetailInfo.CGLILDEBBIH unk_info = 1;
+  }
+  message CGLILDEBBIH {
+    optional PlayerChallengeDetailInfo.CEGOPFBELBL unk_info = 3;
+  }
+  message CEGOPFBELBL {
+    optional uint32 KKFBLJNMDFJ = 7;
+    optional uint32 KBFDOPNODBL = 15;
+    repeated uint32 PGKLOMAJMDC = 11;
+  }
+  optional PlayerChallengeDetailInfo.KIEEFAOCOCC unk_info = 11;
+}

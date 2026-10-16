@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedMessage;
 
 public final class GetSocialEventServerCacheScRspOuterClass {
   /**
@@ -20,14 +19,9 @@ public final class GetSocialEventServerCacheScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 10;</code>
      */
     private int retcode;
-
-    /**
-     * <code>repeated .SocialEventServerCache social_event = 6;</code>
-     */
-    private final RepeatedMessage<SocialEventServerCacheOuterClass.SocialEventServerCache> socialEvent = RepeatedMessage.newEmptyInstance(SocialEventServerCacheOuterClass.SocialEventServerCache.getFactory());
 
     private GetSocialEventServerCacheScRsp() {
     }
@@ -40,7 +34,7 @@ public final class GetSocialEventServerCacheScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -48,7 +42,7 @@ public final class GetSocialEventServerCacheScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return this
      */
     public GetSocialEventServerCacheScRsp clearRetcode() {
@@ -58,7 +52,7 @@ public final class GetSocialEventServerCacheScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -66,7 +60,7 @@ public final class GetSocialEventServerCacheScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 12;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -76,85 +70,12 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       return this;
     }
 
-    /**
-     * <code>repeated .SocialEventServerCache social_event = 6;</code>
-     * @return whether the socialEvent field is set
-     */
-    public boolean hasSocialEvent() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>repeated .SocialEventServerCache social_event = 6;</code>
-     * @return this
-     */
-    public GetSocialEventServerCacheScRsp clearSocialEvent() {
-      bitField0_ &= ~0x00000002;
-      socialEvent.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated .SocialEventServerCache social_event = 6;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableSocialEvent()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedMessage<SocialEventServerCacheOuterClass.SocialEventServerCache> getSocialEvent(
-        ) {
-      return socialEvent;
-    }
-
-    /**
-     * <code>repeated .SocialEventServerCache social_event = 6;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<SocialEventServerCacheOuterClass.SocialEventServerCache> getMutableSocialEvent(
-        ) {
-      bitField0_ |= 0x00000002;
-      return socialEvent;
-    }
-
-    /**
-     * <code>repeated .SocialEventServerCache social_event = 6;</code>
-     * @param value the socialEvent to add
-     * @return this
-     */
-    public GetSocialEventServerCacheScRsp addSocialEvent(
-        final SocialEventServerCacheOuterClass.SocialEventServerCache value) {
-      bitField0_ |= 0x00000002;
-      socialEvent.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .SocialEventServerCache social_event = 6;</code>
-     * @param values the socialEvent to add
-     * @return this
-     */
-    public GetSocialEventServerCacheScRsp addAllSocialEvent(
-        final SocialEventServerCacheOuterClass.SocialEventServerCache... values) {
-      bitField0_ |= 0x00000002;
-      socialEvent.addAll(values);
-      return this;
-    }
-
     @Override
     public GetSocialEventServerCacheScRsp copyFrom(final GetSocialEventServerCacheScRsp other) {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        socialEvent.copyFrom(other.socialEvent);
       }
       return this;
     }
@@ -168,9 +89,6 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasSocialEvent()) {
-        getMutableSocialEvent().addAll(other.socialEvent);
-      }
       return this;
     }
 
@@ -182,7 +100,6 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      socialEvent.clear();
       return this;
     }
 
@@ -193,7 +110,6 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      socialEvent.clearQuick();
       return this;
     }
 
@@ -207,21 +123,14 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       }
       GetSocialEventServerCacheScRsp other = (GetSocialEventServerCacheScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasRetcode() || retcode == other.retcode)
-        && (!hasSocialEvent() || socialEvent.equals(other.socialEvent));
+        && (!hasRetcode() || retcode == other.retcode);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        for (int i = 0; i < socialEvent.length(); i++) {
-          output.writeRawByte((byte) 50);
-          output.writeMessageNoTag(socialEvent.get(i));
-        }
       }
     }
 
@@ -230,9 +139,6 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        size += (1 * socialEvent.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(socialEvent);
       }
       return size;
     }
@@ -244,19 +150,11 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 96: {
+          case 80: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 50) {
-              break;
-            }
-          }
-          case 50: {
-            // socialEvent
-            tag = input.readRepeatedMessage(socialEvent, tag);
-            bitField0_ |= 0x00000002;
             if (tag != 0) {
               break;
             }
@@ -281,9 +179,6 @@ public final class GetSocialEventServerCacheScRspOuterClass {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRepeatedMessage(FieldNames.socialEvent, socialEvent);
-      }
       output.endObject();
     }
 
@@ -299,18 +194,6 @@ public final class GetSocialEventServerCacheScRspOuterClass {
               if (!input.trySkipNullValue()) {
                 retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -2014181587:
-          case -1580931256: {
-            if (input.isAtField(FieldNames.socialEvent)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(socialEvent);
-                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -373,8 +256,6 @@ public final class GetSocialEventServerCacheScRspOuterClass {
      */
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
-
-      static final FieldName socialEvent = FieldName.forField("socialEvent", "social_event");
     }
   }
 }

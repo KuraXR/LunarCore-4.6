@@ -20,45 +20,32 @@ public final class UpdateGroupPropertyScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 5;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 PJMIHPLBCEM = 11;</code>
-     */
-    private int pJMIHPLBCEM;
-
-    /**
-     * <pre>
-     *  MOAJOOLLPLH
-     * </pre>
-     *
-     * <code>optional uint32 floor_id = 13;</code>
-     */
-    private int floorId;
-
-    /**
-     * <code>optional uint32 group_id = 15;</code>
+     * <code>optional uint32 group_id = 8;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional sint32 cur_property_value = 6;</code>
+     * <code>optional uint32 floor_id = 10;</code>
+     */
+    private int floorId;
+
+    /**
+     * <code>optional sint32 cur_property_value = 14;</code>
      */
     private int curPropertyValue;
 
     /**
-     * <code>optional sint32 BNINLHOKICO = 7;</code>
+     * <code>optional sint32 cur_property_value_alt = 15;</code>
      */
-    private int bNINLHOKICO;
+    private int curPropertyValueAlt;
 
     /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
+     * <code>optional string property_name = 3;</code>
      */
     private final Utf8String propertyName = Utf8String.newEmptyInstance();
 
@@ -73,7 +60,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -81,7 +68,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return this
      */
     public UpdateGroupPropertyScRsp clearRetcode() {
@@ -91,7 +78,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -99,7 +86,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 5;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -110,48 +97,44 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 PJMIHPLBCEM = 11;</code>
-     * @return whether the pJMIHPLBCEM field is set
+     * <code>optional uint32 group_id = 8;</code>
+     * @return whether the groupId field is set
      */
-    public boolean hasPJMIHPLBCEM() {
+    public boolean hasGroupId() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 PJMIHPLBCEM = 11;</code>
+     * <code>optional uint32 group_id = 8;</code>
      * @return this
      */
-    public UpdateGroupPropertyScRsp clearPJMIHPLBCEM() {
+    public UpdateGroupPropertyScRsp clearGroupId() {
       bitField0_ &= ~0x00000002;
-      pJMIHPLBCEM = 0;
+      groupId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 PJMIHPLBCEM = 11;</code>
-     * @return the pJMIHPLBCEM
+     * <code>optional uint32 group_id = 8;</code>
+     * @return the groupId
      */
-    public int getPJMIHPLBCEM() {
-      return pJMIHPLBCEM;
+    public int getGroupId() {
+      return groupId;
     }
 
     /**
-     * <code>optional uint32 PJMIHPLBCEM = 11;</code>
-     * @param value the pJMIHPLBCEM to set
+     * <code>optional uint32 group_id = 8;</code>
+     * @param value the groupId to set
      * @return this
      */
-    public UpdateGroupPropertyScRsp setPJMIHPLBCEM(final int value) {
+    public UpdateGroupPropertyScRsp setGroupId(final int value) {
       bitField0_ |= 0x00000002;
-      pJMIHPLBCEM = value;
+      groupId = value;
       return this;
     }
 
     /**
-     * <pre>
-     *  MOAJOOLLPLH
-     * </pre>
-     *
-     * <code>optional uint32 floor_id = 13;</code>
+     * <code>optional uint32 floor_id = 10;</code>
      * @return whether the floorId field is set
      */
     public boolean hasFloorId() {
@@ -159,11 +142,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  MOAJOOLLPLH
-     * </pre>
-     *
-     * <code>optional uint32 floor_id = 13;</code>
+     * <code>optional uint32 floor_id = 10;</code>
      * @return this
      */
     public UpdateGroupPropertyScRsp clearFloorId() {
@@ -173,11 +152,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  MOAJOOLLPLH
-     * </pre>
-     *
-     * <code>optional uint32 floor_id = 13;</code>
+     * <code>optional uint32 floor_id = 10;</code>
      * @return the floorId
      */
     public int getFloorId() {
@@ -185,11 +160,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  MOAJOOLLPLH
-     * </pre>
-     *
-     * <code>optional uint32 floor_id = 13;</code>
+     * <code>optional uint32 floor_id = 10;</code>
      * @param value the floorId to set
      * @return this
      */
@@ -200,62 +171,25 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 15;</code>
-     * @return whether the groupId field is set
+     * <code>optional sint32 cur_property_value = 14;</code>
+     * @return whether the curPropertyValue field is set
      */
-    public boolean hasGroupId() {
+    public boolean hasCurPropertyValue() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional uint32 group_id = 15;</code>
-     * @return this
-     */
-    public UpdateGroupPropertyScRsp clearGroupId() {
-      bitField0_ &= ~0x00000008;
-      groupId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 15;</code>
-     * @return the groupId
-     */
-    public int getGroupId() {
-      return groupId;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 15;</code>
-     * @param value the groupId to set
-     * @return this
-     */
-    public UpdateGroupPropertyScRsp setGroupId(final int value) {
-      bitField0_ |= 0x00000008;
-      groupId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional sint32 cur_property_value = 6;</code>
-     * @return whether the curPropertyValue field is set
-     */
-    public boolean hasCurPropertyValue() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional sint32 cur_property_value = 6;</code>
+     * <code>optional sint32 cur_property_value = 14;</code>
      * @return this
      */
     public UpdateGroupPropertyScRsp clearCurPropertyValue() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000008;
       curPropertyValue = 0;
       return this;
     }
 
     /**
-     * <code>optional sint32 cur_property_value = 6;</code>
+     * <code>optional sint32 cur_property_value = 14;</code>
      * @return the curPropertyValue
      */
     public int getCurPropertyValue() {
@@ -263,85 +197,73 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <code>optional sint32 cur_property_value = 6;</code>
+     * <code>optional sint32 cur_property_value = 14;</code>
      * @param value the curPropertyValue to set
      * @return this
      */
     public UpdateGroupPropertyScRsp setCurPropertyValue(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       curPropertyValue = value;
       return this;
     }
 
     /**
-     * <code>optional sint32 BNINLHOKICO = 7;</code>
-     * @return whether the bNINLHOKICO field is set
+     * <code>optional sint32 cur_property_value_alt = 15;</code>
+     * @return whether the curPropertyValueAlt field is set
      */
-    public boolean hasBNINLHOKICO() {
+    public boolean hasCurPropertyValueAlt() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional sint32 cur_property_value_alt = 15;</code>
+     * @return this
+     */
+    public UpdateGroupPropertyScRsp clearCurPropertyValueAlt() {
+      bitField0_ &= ~0x00000010;
+      curPropertyValueAlt = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional sint32 cur_property_value_alt = 15;</code>
+     * @return the curPropertyValueAlt
+     */
+    public int getCurPropertyValueAlt() {
+      return curPropertyValueAlt;
+    }
+
+    /**
+     * <code>optional sint32 cur_property_value_alt = 15;</code>
+     * @param value the curPropertyValueAlt to set
+     * @return this
+     */
+    public UpdateGroupPropertyScRsp setCurPropertyValueAlt(final int value) {
+      bitField0_ |= 0x00000010;
+      curPropertyValueAlt = value;
+      return this;
+    }
+
+    /**
+     * <code>optional string property_name = 3;</code>
+     * @return whether the propertyName field is set
+     */
+    public boolean hasPropertyName() {
       return (bitField0_ & 0x00000020) != 0;
     }
 
     /**
-     * <code>optional sint32 BNINLHOKICO = 7;</code>
-     * @return this
-     */
-    public UpdateGroupPropertyScRsp clearBNINLHOKICO() {
-      bitField0_ &= ~0x00000020;
-      bNINLHOKICO = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional sint32 BNINLHOKICO = 7;</code>
-     * @return the bNINLHOKICO
-     */
-    public int getBNINLHOKICO() {
-      return bNINLHOKICO;
-    }
-
-    /**
-     * <code>optional sint32 BNINLHOKICO = 7;</code>
-     * @param value the bNINLHOKICO to set
-     * @return this
-     */
-    public UpdateGroupPropertyScRsp setBNINLHOKICO(final int value) {
-      bitField0_ |= 0x00000020;
-      bNINLHOKICO = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
-     * @return whether the propertyName field is set
-     */
-    public boolean hasPropertyName() {
-      return (bitField0_ & 0x00000040) != 0;
-    }
-
-    /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
+     * <code>optional string property_name = 3;</code>
      * @return this
      */
     public UpdateGroupPropertyScRsp clearPropertyName() {
-      bitField0_ &= ~0x00000040;
+      bitField0_ &= ~0x00000020;
       propertyName.clear();
       return this;
     }
 
     /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
+     * <code>optional string property_name = 3;</code>
      * @return the propertyName
      */
     public String getPropertyName() {
@@ -349,11 +271,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
+     * <code>optional string property_name = 3;</code>
      * @return internal {@code Utf8String} representation of propertyName for reading
      */
     public Utf8String getPropertyNameBytes() {
@@ -361,44 +279,32 @@ public final class UpdateGroupPropertyScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
+     * <code>optional string property_name = 3;</code>
      * @return internal {@code Utf8String} representation of propertyName for modifications
      */
     public Utf8String getMutablePropertyNameBytes() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       return this.propertyName;
     }
 
     /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
+     * <code>optional string property_name = 3;</code>
      * @param value the propertyName to set
      * @return this
      */
     public UpdateGroupPropertyScRsp setPropertyName(final CharSequence value) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       propertyName.copyFrom(value);
       return this;
     }
 
     /**
-     * <pre>
-     *  GCJKIDIBJHJ
-     * </pre>
-     *
-     * <code>optional string property_name = 4;</code>
+     * <code>optional string property_name = 3;</code>
      * @param value the propertyName to set
      * @return this
      */
     public UpdateGroupPropertyScRsp setPropertyName(final Utf8String value) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       propertyName.copyFrom(value);
       return this;
     }
@@ -409,11 +315,10 @@ public final class UpdateGroupPropertyScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        pJMIHPLBCEM = other.pJMIHPLBCEM;
-        floorId = other.floorId;
         groupId = other.groupId;
+        floorId = other.floorId;
         curPropertyValue = other.curPropertyValue;
-        bNINLHOKICO = other.bNINLHOKICO;
+        curPropertyValueAlt = other.curPropertyValueAlt;
         propertyName.copyFrom(other.propertyName);
       }
       return this;
@@ -428,20 +333,17 @@ public final class UpdateGroupPropertyScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasPJMIHPLBCEM()) {
-        setPJMIHPLBCEM(other.pJMIHPLBCEM);
+      if (other.hasGroupId()) {
+        setGroupId(other.groupId);
       }
       if (other.hasFloorId()) {
         setFloorId(other.floorId);
       }
-      if (other.hasGroupId()) {
-        setGroupId(other.groupId);
-      }
       if (other.hasCurPropertyValue()) {
         setCurPropertyValue(other.curPropertyValue);
       }
-      if (other.hasBNINLHOKICO()) {
-        setBNINLHOKICO(other.bNINLHOKICO);
+      if (other.hasCurPropertyValueAlt()) {
+        setCurPropertyValueAlt(other.curPropertyValueAlt);
       }
       if (other.hasPropertyName()) {
         getMutablePropertyNameBytes().copyFrom(other.propertyName);
@@ -457,11 +359,10 @@ public final class UpdateGroupPropertyScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      pJMIHPLBCEM = 0;
-      floorId = 0;
       groupId = 0;
+      floorId = 0;
       curPropertyValue = 0;
-      bNINLHOKICO = 0;
+      curPropertyValueAlt = 0;
       propertyName.clear();
       return this;
     }
@@ -488,42 +389,37 @@ public final class UpdateGroupPropertyScRspOuterClass {
       UpdateGroupPropertyScRsp other = (UpdateGroupPropertyScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasPJMIHPLBCEM() || pJMIHPLBCEM == other.pJMIHPLBCEM)
-        && (!hasFloorId() || floorId == other.floorId)
         && (!hasGroupId() || groupId == other.groupId)
+        && (!hasFloorId() || floorId == other.floorId)
         && (!hasCurPropertyValue() || curPropertyValue == other.curPropertyValue)
-        && (!hasBNINLHOKICO() || bNINLHOKICO == other.bNINLHOKICO)
+        && (!hasCurPropertyValueAlt() || curPropertyValueAlt == other.curPropertyValueAlt)
         && (!hasPropertyName() || propertyName.equals(other.propertyName));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(pJMIHPLBCEM);
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(floorId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(groupId);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 112);
         output.writeSInt32NoTag(curPropertyValue);
       }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeSInt32NoTag(bNINLHOKICO);
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRawByte((byte) 120);
+        output.writeSInt32NoTag(curPropertyValueAlt);
       }
-      if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 34);
+      if ((bitField0_ & 0x00000020) != 0) {
+        output.writeRawByte((byte) 26);
         output.writeStringNoTag(propertyName);
       }
     }
@@ -535,21 +431,18 @@ public final class UpdateGroupPropertyScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(pJMIHPLBCEM);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(floorId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         size += 1 + ProtoSink.computeSInt32SizeNoTag(curPropertyValue);
       }
-      if ((bitField0_ & 0x00000020) != 0) {
-        size += 1 + ProtoSink.computeSInt32SizeNoTag(bNINLHOKICO);
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += 1 + ProtoSink.computeSInt32SizeNoTag(curPropertyValueAlt);
       }
-      if ((bitField0_ & 0x00000040) != 0) {
+      if ((bitField0_ & 0x00000020) != 0) {
         size += 1 + ProtoSink.computeStringSizeNoTag(propertyName);
       }
       return size;
@@ -562,64 +455,55 @@ public final class UpdateGroupPropertyScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 40: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 64) {
               break;
             }
           }
-          case 88: {
-            // pJMIHPLBCEM
-            pJMIHPLBCEM = input.readUInt32();
+          case 64: {
+            // groupId
+            groupId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 80) {
               break;
             }
           }
-          case 104: {
+          case 80: {
             // floorId
             floorId = input.readUInt32();
             bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 112) {
+              break;
+            }
+          }
+          case 112: {
+            // curPropertyValue
+            curPropertyValue = input.readSInt32();
+            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 120) {
               break;
             }
           }
           case 120: {
-            // groupId
-            groupId = input.readUInt32();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
-            // curPropertyValue
-            curPropertyValue = input.readSInt32();
+            // curPropertyValueAlt
+            curPropertyValueAlt = input.readSInt32();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 26) {
               break;
             }
           }
-          case 56: {
-            // bNINLHOKICO
-            bNINLHOKICO = input.readSInt32();
-            bitField0_ |= 0x00000020;
-            tag = input.readTag();
-            if (tag != 34) {
-              break;
-            }
-          }
-          case 34: {
+          case 26: {
             // propertyName
             input.readString(propertyName);
-            bitField0_ |= 0x00000040;
+            bitField0_ |= 0x00000020;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -646,21 +530,18 @@ public final class UpdateGroupPropertyScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.pJMIHPLBCEM, pJMIHPLBCEM);
+        output.writeUInt32(FieldNames.groupId, groupId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.floorId, floorId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.groupId, groupId);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         output.writeSInt32(FieldNames.curPropertyValue, curPropertyValue);
       }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeSInt32(FieldNames.bNINLHOKICO, bNINLHOKICO);
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeSInt32(FieldNames.curPropertyValueAlt, curPropertyValueAlt);
       }
-      if ((bitField0_ & 0x00000040) != 0) {
+      if ((bitField0_ & 0x00000020) != 0) {
         output.writeString(FieldNames.propertyName, propertyName);
       }
       output.endObject();
@@ -684,10 +565,11 @@ public final class UpdateGroupPropertyScRspOuterClass {
             }
             break;
           }
-          case -904914665: {
-            if (input.isAtField(FieldNames.pJMIHPLBCEM)) {
+          case 293428218:
+          case 506361563: {
+            if (input.isAtField(FieldNames.groupId)) {
               if (!input.trySkipNullValue()) {
-                pJMIHPLBCEM = input.readUInt32();
+                groupId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -707,11 +589,11 @@ public final class UpdateGroupPropertyScRspOuterClass {
             }
             break;
           }
-          case 293428218:
-          case 506361563: {
-            if (input.isAtField(FieldNames.groupId)) {
+          case -741771716:
+          case 1375371878: {
+            if (input.isAtField(FieldNames.curPropertyValue)) {
               if (!input.trySkipNullValue()) {
-                groupId = input.readUInt32();
+                curPropertyValue = input.readSInt32();
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -719,23 +601,12 @@ public final class UpdateGroupPropertyScRspOuterClass {
             }
             break;
           }
-          case -741771716:
-          case 1375371878: {
-            if (input.isAtField(FieldNames.curPropertyValue)) {
+          case -514387507:
+          case -223115184: {
+            if (input.isAtField(FieldNames.curPropertyValueAlt)) {
               if (!input.trySkipNullValue()) {
-                curPropertyValue = input.readSInt32();
+                curPropertyValueAlt = input.readSInt32();
                 bitField0_ |= 0x00000010;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -215427188: {
-            if (input.isAtField(FieldNames.bNINLHOKICO)) {
-              if (!input.trySkipNullValue()) {
-                bNINLHOKICO = input.readSInt32();
-                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -747,7 +618,7 @@ public final class UpdateGroupPropertyScRspOuterClass {
             if (input.isAtField(FieldNames.propertyName)) {
               if (!input.trySkipNullValue()) {
                 input.readString(propertyName);
-                bitField0_ |= 0x00000040;
+                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -809,15 +680,13 @@ public final class UpdateGroupPropertyScRspOuterClass {
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
 
-      static final FieldName pJMIHPLBCEM = FieldName.forField("PJMIHPLBCEM");
+      static final FieldName groupId = FieldName.forField("groupId", "group_id");
 
       static final FieldName floorId = FieldName.forField("floorId", "floor_id");
 
-      static final FieldName groupId = FieldName.forField("groupId", "group_id");
-
       static final FieldName curPropertyValue = FieldName.forField("curPropertyValue", "cur_property_value");
 
-      static final FieldName bNINLHOKICO = FieldName.forField("BNINLHOKICO");
+      static final FieldName curPropertyValueAlt = FieldName.forField("curPropertyValueAlt", "cur_property_value_alt");
 
       static final FieldName propertyName = FieldName.forField("propertyName", "property_name");
     }

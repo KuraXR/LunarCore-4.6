@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PlayerSettingInfo.proto";
+
+message GetBasicInfoScRsp {
+  optional int64 next_recover_time = 7;
+  optional int64 last_set_nickname_time = 1;
+  optional uint32 gender = 6;
+  optional uint32 cur_day = 8;
+  optional uint32 gameplay_birthday = 15;
+  optional uint32 week_cocoon_finished_count = 9;
+  optional uint32 exchange_times = 14;
+  optional uint32 retcode = 5;
+  optional bool is_gender_set = 10;
+  optional PlayerSettingInfo player_setting_info = 11;
+}

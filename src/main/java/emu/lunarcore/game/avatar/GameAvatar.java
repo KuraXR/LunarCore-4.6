@@ -316,7 +316,8 @@ public class GameAvatar extends BaseAvatar implements GameEntity {
             }
         }
         
-        if (this.isHero()) {
+        // Current path for every multi-path avatar (Trailblazer and March 7th), not just the hero
+        if (this.getMultiPath() != null) {
             proto.setChangedAvatarType(this.getMultiPath().getExcelId());
         } else {
             proto.setChangedAvatarType(this.getAvatarId());

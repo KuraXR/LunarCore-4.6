@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message Goods {
+  optional int64 end_time = 10;
+  optional int64 begin_time = 2;
+  optional uint32 buy_times = 13;
+  optional uint32 goods_id = 7;
+  optional uint32 item_id = 6;
+}

@@ -19,7 +19,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint64 client_time_ms = 9;</code>
+     * <code>optional uint64 client_time_ms = 3;</code>
      */
     private long clientTimeMs;
 
@@ -29,7 +29,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     private long serverTimeMs;
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 15;</code>
      */
     private int retcode;
 
@@ -44,7 +44,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 9;</code>
+     * <code>optional uint64 client_time_ms = 3;</code>
      * @return whether the clientTimeMs field is set
      */
     public boolean hasClientTimeMs() {
@@ -52,7 +52,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 9;</code>
+     * <code>optional uint64 client_time_ms = 3;</code>
      * @return this
      */
     public PlayerHeartBeatScRsp clearClientTimeMs() {
@@ -62,7 +62,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 9;</code>
+     * <code>optional uint64 client_time_ms = 3;</code>
      * @return the clientTimeMs
      */
     public long getClientTimeMs() {
@@ -70,7 +70,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 9;</code>
+     * <code>optional uint64 client_time_ms = 3;</code>
      * @param value the clientTimeMs to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -126,7 +126,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return this
      */
     public PlayerHeartBeatScRsp clearRetcode() {
@@ -136,7 +136,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -144,7 +144,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -225,7 +225,7 @@ public final class PlayerHeartBeatScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 24);
         output.writeUInt64NoTag(clientTimeMs);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -233,7 +233,7 @@ public final class PlayerHeartBeatScRspOuterClass {
         output.writeUInt64NoTag(serverTimeMs);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(retcode);
       }
     }
@@ -260,7 +260,7 @@ public final class PlayerHeartBeatScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 24: {
             // clientTimeMs
             clientTimeMs = input.readUInt64();
             bitField0_ |= 0x00000001;
@@ -274,11 +274,11 @@ public final class PlayerHeartBeatScRspOuterClass {
             serverTimeMs = input.readUInt64();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 120) {
               break;
             }
           }
-          case 64: {
+          case 120: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000004;

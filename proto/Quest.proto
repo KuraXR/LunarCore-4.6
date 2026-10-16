@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "QuestStatus.proto";
+
+message Quest {
+  optional int64 finish_time = 3;
+  optional uint32 progress = 14;
+  optional uint32 id = 12;
+  optional QuestStatus status = 1;
+}

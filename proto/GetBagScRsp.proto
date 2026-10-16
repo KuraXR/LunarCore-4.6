@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "Equipment.proto";
+import "Material.proto";
+import "Relic.proto";
+
+message GetBagScRsp {
+  optional uint32 retcode = 3;
+  repeated Equipment equipment_list = 10;
+  repeated Relic relic_list = 9;
+  repeated Material material_list = 4;
+}

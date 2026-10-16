@@ -210,7 +210,12 @@ public class HttpServer {
     private void addGateServerRoutes() {
         // Gateway info
         getApp().get("/query_gateway", new QueryGatewayHandler());
-        
+
+        // Client's cached design data (see DesignDataHandler)
+        var designData = new DesignDataHandler();
+        getApp().get(DesignDataHandler.PATH + "/*", designData);
+        getApp().head(DesignDataHandler.PATH + "/*", designData);
+
         // Add mode
         this.modes.add("GATESERVER");
     }

@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ExtraLineupType.proto";
+import "LineupAvatar.proto";
+
+message LineupInfo {
+  optional uint32 max_mp = 12;
+  optional uint32 mp = 10;
+  optional uint32 index = 14;
+  optional uint32 leader_slot = 6;
+  optional uint32 plane_id = 13;
+  optional ExtraLineupType extra_lineup_type = 15;
+  optional string name = 2;
+  repeated LineupAvatar avatar_list = 4;
+}

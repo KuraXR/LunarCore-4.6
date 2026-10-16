@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "AvatarBattleInfo.proto";
+import "BattleEndReason.proto";
+import "BattleTargetList.proto";
+
+message BattleStatistics {
+  optional double total_delay_cumulate = 5;
+  optional double cost_time = 6;
+  optional uint32 total_battle_turns = 1;
+  optional uint32 total_auto_turns = 2;
+  optional uint32 ultra_cnt = 4;
+  optional uint32 round_cnt = 9;
+  optional uint32 cocoon_dead_wave = 10;
+  optional uint32 avatar_battle_turns = 11;
+  optional uint32 monster_battle_turns = 12;
+  optional uint32 challenge_score = 14;
+  optional BattleEndReason end_reason = 19;
+  repeated uint32 avatar_id_list = 3;
+  repeated AvatarBattleInfo battle_avatar_list = 7;
+  map<string, float> custom_values = 13;
+  map<uint32, BattleTargetList> battle_target_info = 28;
+}

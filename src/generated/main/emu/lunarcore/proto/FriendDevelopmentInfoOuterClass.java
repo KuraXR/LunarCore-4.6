@@ -44,11 +44,6 @@ public final class FriendDevelopmentInfoOuterClass {
     private int developmentType;
 
     /**
-     * <pre>
-     *  MLLFMKOKJFK CEOFECGIHPD = 1319;
-     *  NIOIGPPBPEH LFHOJLFBGDI = 1267; // NEW WTF?
-     * </pre>
-     *
      * <code>optional .ChallengeDevelopmentInfo challenge_development_info = 120;</code>
      */
     private final ChallengeDevelopmentInfoOuterClass.ChallengeDevelopmentInfo challengeDevelopmentInfo = ChallengeDevelopmentInfoOuterClass.ChallengeDevelopmentInfo.newInstance();
@@ -275,11 +270,6 @@ public final class FriendDevelopmentInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  MLLFMKOKJFK CEOFECGIHPD = 1319;
-     *  NIOIGPPBPEH LFHOJLFBGDI = 1267; // NEW WTF?
-     * </pre>
-     *
      * <code>optional .ChallengeDevelopmentInfo challenge_development_info = 120;</code>
      * @return whether the challengeDevelopmentInfo field is set
      */
@@ -288,11 +278,6 @@ public final class FriendDevelopmentInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  MLLFMKOKJFK CEOFECGIHPD = 1319;
-     *  NIOIGPPBPEH LFHOJLFBGDI = 1267; // NEW WTF?
-     * </pre>
-     *
      * <code>optional .ChallengeDevelopmentInfo challenge_development_info = 120;</code>
      * @return this
      */
@@ -303,11 +288,6 @@ public final class FriendDevelopmentInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  MLLFMKOKJFK CEOFECGIHPD = 1319;
-     *  NIOIGPPBPEH LFHOJLFBGDI = 1267; // NEW WTF?
-     * </pre>
-     *
      * <code>optional .ChallengeDevelopmentInfo challenge_development_info = 120;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -323,11 +303,6 @@ public final class FriendDevelopmentInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  MLLFMKOKJFK CEOFECGIHPD = 1319;
-     *  NIOIGPPBPEH LFHOJLFBGDI = 1267; // NEW WTF?
-     * </pre>
-     *
      * <code>optional .ChallengeDevelopmentInfo challenge_development_info = 120;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -343,11 +318,6 @@ public final class FriendDevelopmentInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  MLLFMKOKJFK CEOFECGIHPD = 1319;
-     *  NIOIGPPBPEH LFHOJLFBGDI = 1267; // NEW WTF?
-     * </pre>
-     *
      * <code>optional .ChallengeDevelopmentInfo challenge_development_info = 120;</code>
      * @param value the challengeDevelopmentInfo to set
      * @return this

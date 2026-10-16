@@ -18,7 +18,6 @@ import emu.lunarcore.game.player.lineup.PlayerLineup;
 import emu.lunarcore.proto.MotionInfoOuterClass.MotionInfo;
 import emu.lunarcore.proto.SceneEntityGroupInfoOuterClass.SceneEntityGroupInfo;
 import emu.lunarcore.proto.SceneEntityGroupInfoOuterClass.SceneEntityGroupInfo.GroupPropertyMapEntry;
-import emu.lunarcore.proto.SceneGroupStateOuterClass.SceneGroupState;
 import emu.lunarcore.proto.SceneInfoOuterClass.SceneInfo;
 import emu.lunarcore.proto.MapPropDefInfoOuterClass.MapPropDefInfo;
 import emu.lunarcore.server.game.Tickable;
@@ -129,6 +128,11 @@ public class Scene implements Tickable {
     }
     
     public void loadGroup(GroupInfo group) {
+        // Groups with RandomInit spawn one random set of npcs and props per control id
+        IntSet randomInitIds = new IntOpenHashSet();
+        IntSet pickedIds = new IntOpenHashSet();
+        group.pickRandomInit(randomInitIds, pickedIds);
+
         // Add monsters
         if (group.getMonsterList() != null && group.getMonsterList().size() > 0) {
             for (MonsterInfo monsterInfo : group.getMonsterList()) {
@@ -144,6 +148,11 @@ public class Scene implements Tickable {
         // Add props
         if (group.getPropList() != null && group.getPropList().size() > 0) {
             for (PropInfo propInfo : group.getPropList()) {
+                // Skip props of crowd sets that were not picked
+                if (randomInitIds.contains(propInfo.getID()) && !pickedIds.contains(propInfo.getID())) {
+                    continue;
+                }
+
                 try {
                     EntityProp prop = this.getEntityLoader().loadProp(this, group, propInfo);
                     this.addEntity(prop, this.isLoaded());
@@ -156,6 +165,11 @@ public class Scene implements Tickable {
         // Add NPCs
         if (group.getNPCList() != null && group.getNPCList().size() > 0) {
             for (NpcInfo npcInfo : group.getNPCList()) {
+                // Skip npcs of random sets that were not picked
+                if (randomInitIds.contains(npcInfo.getID()) && !pickedIds.contains(npcInfo.getID())) {
+                    continue;
+                }
+
                 try {
                     EntityNpc npc = this.getEntityLoader().loadNpc(this, group, npcInfo);
                     this.addEntity(npc, this.isLoaded());
@@ -164,7 +178,7 @@ public class Scene implements Tickable {
                 }
             }
         }
-        
+
         // Add group properties
         if (group.getGroupPropertyMap() != null && group.getGroupPropertyMap().size() > 0) {
             var sceneGroup = this.getGroups().computeIfAbsent(group.getId(), i -> new SceneGroup(i));
@@ -221,7 +235,15 @@ public class Scene implements Tickable {
 
         // Add/Remove
         List<GameAvatar> toAdd = new ArrayList<>();
-        List<GameAvatar> toRemove = new ArrayList<>();
+        IntList toRemove = new IntArrayList();
+
+        // Old avatars are removed by their entity ids, so collect them before the ids are cleared
+        for (var avatar : this.avatars.values()) {
+            if (!newAvatars.containsKey(avatar.getAvatarId())) {
+                toRemove.add(avatar.getEntityId());
+                avatar.setEntityId(0);
+            }
+        }
 
         for (var avatar : newAvatars.values()) {
             if (!this.avatars.containsKey(avatar.getAvatarId())) {
@@ -231,20 +253,26 @@ public class Scene implements Tickable {
 
             // Add to entity id cache
             this.avatarEntityIds.add(avatar.getEntityId());
-            
+
             // Clear avatar's buff
             avatar.getBuffs().clear();
         }
 
-        for (var avatar : this.avatars.values()) {
-            if (!newAvatars.containsKey(avatar.getAvatarId())) {
-                toRemove.add(avatar);
-                avatar.setEntityId(0);
+        // The scene now holds the new lineup
+        this.avatars.clear();
+        this.avatars.putAll(newAvatars);
+
+        // The 4.6 client needs the leader on map layer 1, like in the scene info
+        int leaderEntityId = 0;
+        if (lineup.getLeader() < lineup.getAvatars().size()) {
+            GameAvatar leader = newAvatars.get((int) lineup.getAvatars().get(lineup.getLeader()));
+            if (leader != null) {
+                leaderEntityId = leader.getEntityId();
             }
         }
 
         // Sync packet
-        getPlayer().sendPacket(new PacketSceneGroupRefreshScNotify(this, toAdd, toRemove));
+        getPlayer().sendPacket(new PacketSceneGroupRefreshScNotify(this, toAdd, toRemove, leaderEntityId));
     }
     
     public boolean activateFarmElement(int entityId, int worldLevel) {
@@ -547,15 +575,12 @@ public class Scene implements Tickable {
                     group.addGroupPropertyMap(property);
                 }
             }
-            
-            // Add group states 
+
+            // Group state. 4.6 dropped group_state_list; the state is sent on the group itself
+            // (SceneEntityGroupInfo.state; non-default states are untested)
             if (sceneGroup.getState() != 0) {
-                var state = SceneGroupState.newInstance()
-                        .setGroupId(sceneGroup.getId())
-                        .setState(sceneGroup.getState())
-                        .setIsDefault(true);
-                
-                proto.addGroupStateList(state);  
+                groups.computeIfAbsent(sceneGroup.getId(), i -> SceneEntityGroupInfo.newInstance().setGroupId(i))
+                    .setState(sceneGroup.getState());
             }
         }
 

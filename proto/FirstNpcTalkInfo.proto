@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message FirstNpcTalkInfo {
+  optional uint32 npc_id = 1;
+}

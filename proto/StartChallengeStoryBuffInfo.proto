@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message StartChallengeStoryBuffInfo {
+  optional uint32 story_buff_two = 7;
+  optional uint32 story_buff_one = 12;
+}

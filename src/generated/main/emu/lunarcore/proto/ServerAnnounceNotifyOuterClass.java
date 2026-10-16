@@ -11,7 +11,6 @@ import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
 import us.hebi.quickbuf.RepeatedMessage;
-import us.hebi.quickbuf.Utf8String;
 
 public final class ServerAnnounceNotifyOuterClass {
   /**
@@ -21,7 +20,7 @@ public final class ServerAnnounceNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 2;</code>
+     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 9;</code>
      */
     private final RepeatedMessage<AnnounceData> announceDataList = RepeatedMessage.newEmptyInstance(AnnounceData.getFactory());
 
@@ -36,7 +35,7 @@ public final class ServerAnnounceNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 2;</code>
+     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 9;</code>
      * @return whether the announceDataList field is set
      */
     public boolean hasAnnounceDataList() {
@@ -44,7 +43,7 @@ public final class ServerAnnounceNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 2;</code>
+     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 9;</code>
      * @return this
      */
     public ServerAnnounceNotify clearAnnounceDataList() {
@@ -54,7 +53,7 @@ public final class ServerAnnounceNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 2;</code>
+     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -68,7 +67,7 @@ public final class ServerAnnounceNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 2;</code>
+     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -82,7 +81,7 @@ public final class ServerAnnounceNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 2;</code>
+     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 9;</code>
      * @param value the announceDataList to add
      * @return this
      */
@@ -93,7 +92,7 @@ public final class ServerAnnounceNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 2;</code>
+     * <code>repeated .ServerAnnounceNotify.AnnounceData announce_data_list = 9;</code>
      * @param values the announceDataList to add
      * @return this
      */
@@ -164,7 +163,7 @@ public final class ServerAnnounceNotifyOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < announceDataList.length(); i++) {
-          output.writeRawByte((byte) 18);
+          output.writeRawByte((byte) 74);
           output.writeMessageNoTag(announceDataList.get(i));
         }
       }
@@ -186,7 +185,7 @@ public final class ServerAnnounceNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 18: {
+          case 74: {
             // announceDataList
             tag = input.readRepeatedMessage(announceDataList, tag);
             bitField0_ |= 0x00000001;
@@ -283,49 +282,19 @@ public final class ServerAnnounceNotifyOuterClass {
       private static final long serialVersionUID = 0L;
 
       /**
-       * <code>optional int64 end_time = 2;</code>
+       * <code>optional int64 end_time = 6;</code>
        */
       private long endTime;
 
       /**
-       * <code>optional int64 begin_time = 8;</code>
+       * <code>optional int64 begin_time = 15;</code>
        */
       private long beginTime;
 
       /**
-       * <code>optional uint32 config_id = 7;</code>
+       * <code>optional uint32 config_id = 12;</code>
        */
       private int configId;
-
-      /**
-       * <code>optional uint32 CCOCHKOLEPN = 11;</code>
-       */
-      private int cCOCHKOLEPN;
-
-      /**
-       * <code>optional uint32 MAMIBMNFJKJ = 12;</code>
-       */
-      private int mAMIBMNFJKJ;
-
-      /**
-       * <code>optional bool is_center_system_last_5_every_minutes = 10;</code>
-       */
-      private boolean isCenterSystemLast5EveryMinutes;
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       */
-      private final Utf8String nPIBJLGALPA = Utf8String.newEmptyInstance();
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       */
-      private final Utf8String jENBMJAJLAK = Utf8String.newEmptyInstance();
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       */
-      private final Utf8String kICNNEODFGD = Utf8String.newEmptyInstance();
 
       private AnnounceData() {
       }
@@ -338,7 +307,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 end_time = 2;</code>
+       * <code>optional int64 end_time = 6;</code>
        * @return whether the endTime field is set
        */
       public boolean hasEndTime() {
@@ -346,7 +315,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 end_time = 2;</code>
+       * <code>optional int64 end_time = 6;</code>
        * @return this
        */
       public AnnounceData clearEndTime() {
@@ -356,7 +325,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 end_time = 2;</code>
+       * <code>optional int64 end_time = 6;</code>
        * @return the endTime
        */
       public long getEndTime() {
@@ -364,7 +333,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 end_time = 2;</code>
+       * <code>optional int64 end_time = 6;</code>
        * @param value the endTime to set
        * @return this
        */
@@ -375,7 +344,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 begin_time = 8;</code>
+       * <code>optional int64 begin_time = 15;</code>
        * @return whether the beginTime field is set
        */
       public boolean hasBeginTime() {
@@ -383,7 +352,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 begin_time = 8;</code>
+       * <code>optional int64 begin_time = 15;</code>
        * @return this
        */
       public AnnounceData clearBeginTime() {
@@ -393,7 +362,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 begin_time = 8;</code>
+       * <code>optional int64 begin_time = 15;</code>
        * @return the beginTime
        */
       public long getBeginTime() {
@@ -401,7 +370,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional int64 begin_time = 8;</code>
+       * <code>optional int64 begin_time = 15;</code>
        * @param value the beginTime to set
        * @return this
        */
@@ -412,7 +381,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional uint32 config_id = 7;</code>
+       * <code>optional uint32 config_id = 12;</code>
        * @return whether the configId field is set
        */
       public boolean hasConfigId() {
@@ -420,7 +389,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional uint32 config_id = 7;</code>
+       * <code>optional uint32 config_id = 12;</code>
        * @return this
        */
       public AnnounceData clearConfigId() {
@@ -430,7 +399,7 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional uint32 config_id = 7;</code>
+       * <code>optional uint32 config_id = 12;</code>
        * @return the configId
        */
       public int getConfigId() {
@@ -438,319 +407,13 @@ public final class ServerAnnounceNotifyOuterClass {
       }
 
       /**
-       * <code>optional uint32 config_id = 7;</code>
+       * <code>optional uint32 config_id = 12;</code>
        * @param value the configId to set
        * @return this
        */
       public AnnounceData setConfigId(final int value) {
         bitField0_ |= 0x00000004;
         configId = value;
-        return this;
-      }
-
-      /**
-       * <code>optional uint32 CCOCHKOLEPN = 11;</code>
-       * @return whether the cCOCHKOLEPN field is set
-       */
-      public boolean hasCCOCHKOLEPN() {
-        return (bitField0_ & 0x00000008) != 0;
-      }
-
-      /**
-       * <code>optional uint32 CCOCHKOLEPN = 11;</code>
-       * @return this
-       */
-      public AnnounceData clearCCOCHKOLEPN() {
-        bitField0_ &= ~0x00000008;
-        cCOCHKOLEPN = 0;
-        return this;
-      }
-
-      /**
-       * <code>optional uint32 CCOCHKOLEPN = 11;</code>
-       * @return the cCOCHKOLEPN
-       */
-      public int getCCOCHKOLEPN() {
-        return cCOCHKOLEPN;
-      }
-
-      /**
-       * <code>optional uint32 CCOCHKOLEPN = 11;</code>
-       * @param value the cCOCHKOLEPN to set
-       * @return this
-       */
-      public AnnounceData setCCOCHKOLEPN(final int value) {
-        bitField0_ |= 0x00000008;
-        cCOCHKOLEPN = value;
-        return this;
-      }
-
-      /**
-       * <code>optional uint32 MAMIBMNFJKJ = 12;</code>
-       * @return whether the mAMIBMNFJKJ field is set
-       */
-      public boolean hasMAMIBMNFJKJ() {
-        return (bitField0_ & 0x00000010) != 0;
-      }
-
-      /**
-       * <code>optional uint32 MAMIBMNFJKJ = 12;</code>
-       * @return this
-       */
-      public AnnounceData clearMAMIBMNFJKJ() {
-        bitField0_ &= ~0x00000010;
-        mAMIBMNFJKJ = 0;
-        return this;
-      }
-
-      /**
-       * <code>optional uint32 MAMIBMNFJKJ = 12;</code>
-       * @return the mAMIBMNFJKJ
-       */
-      public int getMAMIBMNFJKJ() {
-        return mAMIBMNFJKJ;
-      }
-
-      /**
-       * <code>optional uint32 MAMIBMNFJKJ = 12;</code>
-       * @param value the mAMIBMNFJKJ to set
-       * @return this
-       */
-      public AnnounceData setMAMIBMNFJKJ(final int value) {
-        bitField0_ |= 0x00000010;
-        mAMIBMNFJKJ = value;
-        return this;
-      }
-
-      /**
-       * <code>optional bool is_center_system_last_5_every_minutes = 10;</code>
-       * @return whether the isCenterSystemLast5EveryMinutes field is set
-       */
-      public boolean hasIsCenterSystemLast5EveryMinutes() {
-        return (bitField0_ & 0x00000020) != 0;
-      }
-
-      /**
-       * <code>optional bool is_center_system_last_5_every_minutes = 10;</code>
-       * @return this
-       */
-      public AnnounceData clearIsCenterSystemLast5EveryMinutes() {
-        bitField0_ &= ~0x00000020;
-        isCenterSystemLast5EveryMinutes = false;
-        return this;
-      }
-
-      /**
-       * <code>optional bool is_center_system_last_5_every_minutes = 10;</code>
-       * @return the isCenterSystemLast5EveryMinutes
-       */
-      public boolean getIsCenterSystemLast5EveryMinutes() {
-        return isCenterSystemLast5EveryMinutes;
-      }
-
-      /**
-       * <code>optional bool is_center_system_last_5_every_minutes = 10;</code>
-       * @param value the isCenterSystemLast5EveryMinutes to set
-       * @return this
-       */
-      public AnnounceData setIsCenterSystemLast5EveryMinutes(final boolean value) {
-        bitField0_ |= 0x00000020;
-        isCenterSystemLast5EveryMinutes = value;
-        return this;
-      }
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       * @return whether the nPIBJLGALPA field is set
-       */
-      public boolean hasNPIBJLGALPA() {
-        return (bitField0_ & 0x00000040) != 0;
-      }
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       * @return this
-       */
-      public AnnounceData clearNPIBJLGALPA() {
-        bitField0_ &= ~0x00000040;
-        nPIBJLGALPA.clear();
-        return this;
-      }
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       * @return the nPIBJLGALPA
-       */
-      public String getNPIBJLGALPA() {
-        return nPIBJLGALPA.getString();
-      }
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       * @return internal {@code Utf8String} representation of nPIBJLGALPA for reading
-       */
-      public Utf8String getNPIBJLGALPABytes() {
-        return this.nPIBJLGALPA;
-      }
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       * @return internal {@code Utf8String} representation of nPIBJLGALPA for modifications
-       */
-      public Utf8String getMutableNPIBJLGALPABytes() {
-        bitField0_ |= 0x00000040;
-        return this.nPIBJLGALPA;
-      }
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       * @param value the nPIBJLGALPA to set
-       * @return this
-       */
-      public AnnounceData setNPIBJLGALPA(final CharSequence value) {
-        bitField0_ |= 0x00000040;
-        nPIBJLGALPA.copyFrom(value);
-        return this;
-      }
-
-      /**
-       * <code>optional string NPIBJLGALPA = 13;</code>
-       * @param value the nPIBJLGALPA to set
-       * @return this
-       */
-      public AnnounceData setNPIBJLGALPA(final Utf8String value) {
-        bitField0_ |= 0x00000040;
-        nPIBJLGALPA.copyFrom(value);
-        return this;
-      }
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       * @return whether the jENBMJAJLAK field is set
-       */
-      public boolean hasJENBMJAJLAK() {
-        return (bitField0_ & 0x00000080) != 0;
-      }
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       * @return this
-       */
-      public AnnounceData clearJENBMJAJLAK() {
-        bitField0_ &= ~0x00000080;
-        jENBMJAJLAK.clear();
-        return this;
-      }
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       * @return the jENBMJAJLAK
-       */
-      public String getJENBMJAJLAK() {
-        return jENBMJAJLAK.getString();
-      }
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       * @return internal {@code Utf8String} representation of jENBMJAJLAK for reading
-       */
-      public Utf8String getJENBMJAJLAKBytes() {
-        return this.jENBMJAJLAK;
-      }
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       * @return internal {@code Utf8String} representation of jENBMJAJLAK for modifications
-       */
-      public Utf8String getMutableJENBMJAJLAKBytes() {
-        bitField0_ |= 0x00000080;
-        return this.jENBMJAJLAK;
-      }
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       * @param value the jENBMJAJLAK to set
-       * @return this
-       */
-      public AnnounceData setJENBMJAJLAK(final CharSequence value) {
-        bitField0_ |= 0x00000080;
-        jENBMJAJLAK.copyFrom(value);
-        return this;
-      }
-
-      /**
-       * <code>optional string JENBMJAJLAK = 14;</code>
-       * @param value the jENBMJAJLAK to set
-       * @return this
-       */
-      public AnnounceData setJENBMJAJLAK(final Utf8String value) {
-        bitField0_ |= 0x00000080;
-        jENBMJAJLAK.copyFrom(value);
-        return this;
-      }
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       * @return whether the kICNNEODFGD field is set
-       */
-      public boolean hasKICNNEODFGD() {
-        return (bitField0_ & 0x00000100) != 0;
-      }
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       * @return this
-       */
-      public AnnounceData clearKICNNEODFGD() {
-        bitField0_ &= ~0x00000100;
-        kICNNEODFGD.clear();
-        return this;
-      }
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       * @return the kICNNEODFGD
-       */
-      public String getKICNNEODFGD() {
-        return kICNNEODFGD.getString();
-      }
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       * @return internal {@code Utf8String} representation of kICNNEODFGD for reading
-       */
-      public Utf8String getKICNNEODFGDBytes() {
-        return this.kICNNEODFGD;
-      }
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       * @return internal {@code Utf8String} representation of kICNNEODFGD for modifications
-       */
-      public Utf8String getMutableKICNNEODFGDBytes() {
-        bitField0_ |= 0x00000100;
-        return this.kICNNEODFGD;
-      }
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       * @param value the kICNNEODFGD to set
-       * @return this
-       */
-      public AnnounceData setKICNNEODFGD(final CharSequence value) {
-        bitField0_ |= 0x00000100;
-        kICNNEODFGD.copyFrom(value);
-        return this;
-      }
-
-      /**
-       * <code>optional string KICNNEODFGD = 15;</code>
-       * @param value the kICNNEODFGD to set
-       * @return this
-       */
-      public AnnounceData setKICNNEODFGD(final Utf8String value) {
-        bitField0_ |= 0x00000100;
-        kICNNEODFGD.copyFrom(value);
         return this;
       }
 
@@ -762,12 +425,6 @@ public final class ServerAnnounceNotifyOuterClass {
           endTime = other.endTime;
           beginTime = other.beginTime;
           configId = other.configId;
-          cCOCHKOLEPN = other.cCOCHKOLEPN;
-          mAMIBMNFJKJ = other.mAMIBMNFJKJ;
-          isCenterSystemLast5EveryMinutes = other.isCenterSystemLast5EveryMinutes;
-          nPIBJLGALPA.copyFrom(other.nPIBJLGALPA);
-          jENBMJAJLAK.copyFrom(other.jENBMJAJLAK);
-          kICNNEODFGD.copyFrom(other.kICNNEODFGD);
         }
         return this;
       }
@@ -787,24 +444,6 @@ public final class ServerAnnounceNotifyOuterClass {
         if (other.hasConfigId()) {
           setConfigId(other.configId);
         }
-        if (other.hasCCOCHKOLEPN()) {
-          setCCOCHKOLEPN(other.cCOCHKOLEPN);
-        }
-        if (other.hasMAMIBMNFJKJ()) {
-          setMAMIBMNFJKJ(other.mAMIBMNFJKJ);
-        }
-        if (other.hasIsCenterSystemLast5EveryMinutes()) {
-          setIsCenterSystemLast5EveryMinutes(other.isCenterSystemLast5EveryMinutes);
-        }
-        if (other.hasNPIBJLGALPA()) {
-          getMutableNPIBJLGALPABytes().copyFrom(other.nPIBJLGALPA);
-        }
-        if (other.hasJENBMJAJLAK()) {
-          getMutableJENBMJAJLAKBytes().copyFrom(other.jENBMJAJLAK);
-        }
-        if (other.hasKICNNEODFGD()) {
-          getMutableKICNNEODFGDBytes().copyFrom(other.kICNNEODFGD);
-        }
         return this;
       }
 
@@ -818,12 +457,6 @@ public final class ServerAnnounceNotifyOuterClass {
         endTime = 0L;
         beginTime = 0L;
         configId = 0;
-        cCOCHKOLEPN = 0;
-        mAMIBMNFJKJ = 0;
-        isCenterSystemLast5EveryMinutes = false;
-        nPIBJLGALPA.clear();
-        jENBMJAJLAK.clear();
-        kICNNEODFGD.clear();
         return this;
       }
 
@@ -834,9 +467,6 @@ public final class ServerAnnounceNotifyOuterClass {
         }
         cachedSize = -1;
         bitField0_ = 0;
-        nPIBJLGALPA.clear();
-        jENBMJAJLAK.clear();
-        kICNNEODFGD.clear();
         return this;
       }
 
@@ -852,52 +482,22 @@ public final class ServerAnnounceNotifyOuterClass {
         return bitField0_ == other.bitField0_
           && (!hasEndTime() || endTime == other.endTime)
           && (!hasBeginTime() || beginTime == other.beginTime)
-          && (!hasConfigId() || configId == other.configId)
-          && (!hasCCOCHKOLEPN() || cCOCHKOLEPN == other.cCOCHKOLEPN)
-          && (!hasMAMIBMNFJKJ() || mAMIBMNFJKJ == other.mAMIBMNFJKJ)
-          && (!hasIsCenterSystemLast5EveryMinutes() || isCenterSystemLast5EveryMinutes == other.isCenterSystemLast5EveryMinutes)
-          && (!hasNPIBJLGALPA() || nPIBJLGALPA.equals(other.nPIBJLGALPA))
-          && (!hasJENBMJAJLAK() || jENBMJAJLAK.equals(other.jENBMJAJLAK))
-          && (!hasKICNNEODFGD() || kICNNEODFGD.equals(other.kICNNEODFGD));
+          && (!hasConfigId() || configId == other.configId);
       }
 
       @Override
       public void writeTo(final ProtoSink output) throws IOException {
         if ((bitField0_ & 0x00000001) != 0) {
-          output.writeRawByte((byte) 16);
+          output.writeRawByte((byte) 48);
           output.writeInt64NoTag(endTime);
         }
         if ((bitField0_ & 0x00000002) != 0) {
-          output.writeRawByte((byte) 64);
+          output.writeRawByte((byte) 120);
           output.writeInt64NoTag(beginTime);
         }
         if ((bitField0_ & 0x00000004) != 0) {
-          output.writeRawByte((byte) 56);
-          output.writeUInt32NoTag(configId);
-        }
-        if ((bitField0_ & 0x00000008) != 0) {
-          output.writeRawByte((byte) 88);
-          output.writeUInt32NoTag(cCOCHKOLEPN);
-        }
-        if ((bitField0_ & 0x00000010) != 0) {
           output.writeRawByte((byte) 96);
-          output.writeUInt32NoTag(mAMIBMNFJKJ);
-        }
-        if ((bitField0_ & 0x00000020) != 0) {
-          output.writeRawByte((byte) 80);
-          output.writeBoolNoTag(isCenterSystemLast5EveryMinutes);
-        }
-        if ((bitField0_ & 0x00000040) != 0) {
-          output.writeRawByte((byte) 106);
-          output.writeStringNoTag(nPIBJLGALPA);
-        }
-        if ((bitField0_ & 0x00000080) != 0) {
-          output.writeRawByte((byte) 114);
-          output.writeStringNoTag(jENBMJAJLAK);
-        }
-        if ((bitField0_ & 0x00000100) != 0) {
-          output.writeRawByte((byte) 122);
-          output.writeStringNoTag(kICNNEODFGD);
+          output.writeUInt32NoTag(configId);
         }
       }
 
@@ -913,24 +513,6 @@ public final class ServerAnnounceNotifyOuterClass {
         if ((bitField0_ & 0x00000004) != 0) {
           size += 1 + ProtoSink.computeUInt32SizeNoTag(configId);
         }
-        if ((bitField0_ & 0x00000008) != 0) {
-          size += 1 + ProtoSink.computeUInt32SizeNoTag(cCOCHKOLEPN);
-        }
-        if ((bitField0_ & 0x00000010) != 0) {
-          size += 1 + ProtoSink.computeUInt32SizeNoTag(mAMIBMNFJKJ);
-        }
-        if ((bitField0_ & 0x00000020) != 0) {
-          size += 2;
-        }
-        if ((bitField0_ & 0x00000040) != 0) {
-          size += 1 + ProtoSink.computeStringSizeNoTag(nPIBJLGALPA);
-        }
-        if ((bitField0_ & 0x00000080) != 0) {
-          size += 1 + ProtoSink.computeStringSizeNoTag(jENBMJAJLAK);
-        }
-        if ((bitField0_ & 0x00000100) != 0) {
-          size += 1 + ProtoSink.computeStringSizeNoTag(kICNNEODFGD);
-        }
         return size;
       }
 
@@ -941,82 +523,28 @@ public final class ServerAnnounceNotifyOuterClass {
         int tag = input.readTag();
         while (true) {
           switch (tag) {
-            case 16: {
+            case 48: {
               // endTime
               endTime = input.readInt64();
               bitField0_ |= 0x00000001;
               tag = input.readTag();
-              if (tag != 64) {
+              if (tag != 120) {
                 break;
               }
             }
-            case 64: {
+            case 120: {
               // beginTime
               beginTime = input.readInt64();
               bitField0_ |= 0x00000002;
-              tag = input.readTag();
-              if (tag != 56) {
-                break;
-              }
-            }
-            case 56: {
-              // configId
-              configId = input.readUInt32();
-              bitField0_ |= 0x00000004;
-              tag = input.readTag();
-              if (tag != 88) {
-                break;
-              }
-            }
-            case 88: {
-              // cCOCHKOLEPN
-              cCOCHKOLEPN = input.readUInt32();
-              bitField0_ |= 0x00000008;
               tag = input.readTag();
               if (tag != 96) {
                 break;
               }
             }
             case 96: {
-              // mAMIBMNFJKJ
-              mAMIBMNFJKJ = input.readUInt32();
-              bitField0_ |= 0x00000010;
-              tag = input.readTag();
-              if (tag != 80) {
-                break;
-              }
-            }
-            case 80: {
-              // isCenterSystemLast5EveryMinutes
-              isCenterSystemLast5EveryMinutes = input.readBool();
-              bitField0_ |= 0x00000020;
-              tag = input.readTag();
-              if (tag != 106) {
-                break;
-              }
-            }
-            case 106: {
-              // nPIBJLGALPA
-              input.readString(nPIBJLGALPA);
-              bitField0_ |= 0x00000040;
-              tag = input.readTag();
-              if (tag != 114) {
-                break;
-              }
-            }
-            case 114: {
-              // jENBMJAJLAK
-              input.readString(jENBMJAJLAK);
-              bitField0_ |= 0x00000080;
-              tag = input.readTag();
-              if (tag != 122) {
-                break;
-              }
-            }
-            case 122: {
-              // kICNNEODFGD
-              input.readString(kICNNEODFGD);
-              bitField0_ |= 0x00000100;
+              // configId
+              configId = input.readUInt32();
+              bitField0_ |= 0x00000004;
               tag = input.readTag();
               if (tag != 0) {
                 break;
@@ -1047,24 +575,6 @@ public final class ServerAnnounceNotifyOuterClass {
         }
         if ((bitField0_ & 0x00000004) != 0) {
           output.writeUInt32(FieldNames.configId, configId);
-        }
-        if ((bitField0_ & 0x00000008) != 0) {
-          output.writeUInt32(FieldNames.cCOCHKOLEPN, cCOCHKOLEPN);
-        }
-        if ((bitField0_ & 0x00000010) != 0) {
-          output.writeUInt32(FieldNames.mAMIBMNFJKJ, mAMIBMNFJKJ);
-        }
-        if ((bitField0_ & 0x00000020) != 0) {
-          output.writeBool(FieldNames.isCenterSystemLast5EveryMinutes, isCenterSystemLast5EveryMinutes);
-        }
-        if ((bitField0_ & 0x00000040) != 0) {
-          output.writeString(FieldNames.nPIBJLGALPA, nPIBJLGALPA);
-        }
-        if ((bitField0_ & 0x00000080) != 0) {
-          output.writeString(FieldNames.jENBMJAJLAK, jENBMJAJLAK);
-        }
-        if ((bitField0_ & 0x00000100) != 0) {
-          output.writeString(FieldNames.kICNNEODFGD, kICNNEODFGD);
         }
         output.endObject();
       }
@@ -1106,73 +616,6 @@ public final class ServerAnnounceNotifyOuterClass {
                 if (!input.trySkipNullValue()) {
                   configId = input.readUInt32();
                   bitField0_ |= 0x00000004;
-                }
-              } else {
-                input.skipUnknownField();
-              }
-              break;
-            }
-            case 1029266991: {
-              if (input.isAtField(FieldNames.cCOCHKOLEPN)) {
-                if (!input.trySkipNullValue()) {
-                  cCOCHKOLEPN = input.readUInt32();
-                  bitField0_ |= 0x00000008;
-                }
-              } else {
-                input.skipUnknownField();
-              }
-              break;
-            }
-            case 845624534: {
-              if (input.isAtField(FieldNames.mAMIBMNFJKJ)) {
-                if (!input.trySkipNullValue()) {
-                  mAMIBMNFJKJ = input.readUInt32();
-                  bitField0_ |= 0x00000010;
-                }
-              } else {
-                input.skipUnknownField();
-              }
-              break;
-            }
-            case -68660299:
-            case -630028317: {
-              if (input.isAtField(FieldNames.isCenterSystemLast5EveryMinutes)) {
-                if (!input.trySkipNullValue()) {
-                  isCenterSystemLast5EveryMinutes = input.readBool();
-                  bitField0_ |= 0x00000020;
-                }
-              } else {
-                input.skipUnknownField();
-              }
-              break;
-            }
-            case -1804095130: {
-              if (input.isAtField(FieldNames.nPIBJLGALPA)) {
-                if (!input.trySkipNullValue()) {
-                  input.readString(nPIBJLGALPA);
-                  bitField0_ |= 0x00000040;
-                }
-              } else {
-                input.skipUnknownField();
-              }
-              break;
-            }
-            case 1108065825: {
-              if (input.isAtField(FieldNames.jENBMJAJLAK)) {
-                if (!input.trySkipNullValue()) {
-                  input.readString(jENBMJAJLAK);
-                  bitField0_ |= 0x00000080;
-                }
-              } else {
-                input.skipUnknownField();
-              }
-              break;
-            }
-            case 1423180782: {
-              if (input.isAtField(FieldNames.kICNNEODFGD)) {
-                if (!input.trySkipNullValue()) {
-                  input.readString(kICNNEODFGD);
-                  bitField0_ |= 0x00000100;
                 }
               } else {
                 input.skipUnknownField();
@@ -1237,18 +680,6 @@ public final class ServerAnnounceNotifyOuterClass {
         static final FieldName beginTime = FieldName.forField("beginTime", "begin_time");
 
         static final FieldName configId = FieldName.forField("configId", "config_id");
-
-        static final FieldName cCOCHKOLEPN = FieldName.forField("CCOCHKOLEPN");
-
-        static final FieldName mAMIBMNFJKJ = FieldName.forField("MAMIBMNFJKJ");
-
-        static final FieldName isCenterSystemLast5EveryMinutes = FieldName.forField("isCenterSystemLast5EveryMinutes", "is_center_system_last_5_every_minutes");
-
-        static final FieldName nPIBJLGALPA = FieldName.forField("NPIBJLGALPA");
-
-        static final FieldName jENBMJAJLAK = FieldName.forField("JENBMJAJLAK");
-
-        static final FieldName kICNNEODFGD = FieldName.forField("KICNNEODFGD");
       }
     }
 

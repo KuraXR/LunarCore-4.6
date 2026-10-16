@@ -20,7 +20,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated uint32 offering_id_list = 12;</code>
+     * <code>repeated uint32 offering_id_list = 5;</code>
      */
     private final RepeatedInt offeringIdList = RepeatedInt.newEmptyInstance();
 
@@ -35,7 +35,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 offering_id_list = 12;</code>
+     * <code>repeated uint32 offering_id_list = 5;</code>
      * @return whether the offeringIdList field is set
      */
     public boolean hasOfferingIdList() {
@@ -43,7 +43,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 offering_id_list = 12;</code>
+     * <code>repeated uint32 offering_id_list = 5;</code>
      * @return this
      */
     public GetOfferingInfoCsReq clearOfferingIdList() {
@@ -53,7 +53,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 offering_id_list = 12;</code>
+     * <code>repeated uint32 offering_id_list = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -67,7 +67,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 offering_id_list = 12;</code>
+     * <code>repeated uint32 offering_id_list = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -81,7 +81,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 offering_id_list = 12;</code>
+     * <code>repeated uint32 offering_id_list = 5;</code>
      * @param value the offeringIdList to add
      * @return this
      */
@@ -92,7 +92,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 offering_id_list = 12;</code>
+     * <code>repeated uint32 offering_id_list = 5;</code>
      * @param values the offeringIdList to add
      * @return this
      */
@@ -163,7 +163,7 @@ public final class GetOfferingInfoCsReqOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < offeringIdList.length(); i++) {
-          output.writeRawByte((byte) 96);
+          output.writeRawByte((byte) 40);
           output.writeUInt32NoTag(offeringIdList.array()[i]);
         }
       }
@@ -185,7 +185,7 @@ public final class GetOfferingInfoCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 98: {
+          case 42: {
             // offeringIdList [packed=true]
             input.readPackedUInt32(offeringIdList, tag);
             bitField0_ |= 0x00000001;
@@ -204,7 +204,7 @@ public final class GetOfferingInfoCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 96: {
+          case 40: {
             // offeringIdList [packed=false]
             tag = input.readRepeatedUInt32(offeringIdList, tag);
             bitField0_ |= 0x00000001;

@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "HeroBasicType.proto";
+
+message UnlockHeroBasicTypeCsReq {
+  optional HeroBasicType basic_type = 10;
+}

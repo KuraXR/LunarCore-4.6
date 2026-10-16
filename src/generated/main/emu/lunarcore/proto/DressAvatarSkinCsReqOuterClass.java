@@ -19,14 +19,14 @@ public final class DressAvatarSkinCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 avatar_id = 2;</code>
-     */
-    private int avatarId;
-
-    /**
-     * <code>optional uint32 avatar_skin_id = 8;</code>
+     * <code>optional uint32 avatar_skin_id = 3;</code>
      */
     private int avatarSkinId;
+
+    /**
+     * <code>optional uint32 avatar_id = 11;</code>
+     */
+    private int avatarId;
 
     private DressAvatarSkinCsReq() {
     }
@@ -39,62 +39,25 @@ public final class DressAvatarSkinCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 2;</code>
-     * @return whether the avatarId field is set
+     * <code>optional uint32 avatar_skin_id = 3;</code>
+     * @return whether the avatarSkinId field is set
      */
-    public boolean hasAvatarId() {
+    public boolean hasAvatarSkinId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 avatar_id = 2;</code>
-     * @return this
-     */
-    public DressAvatarSkinCsReq clearAvatarId() {
-      bitField0_ &= ~0x00000001;
-      avatarId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 avatar_id = 2;</code>
-     * @return the avatarId
-     */
-    public int getAvatarId() {
-      return avatarId;
-    }
-
-    /**
-     * <code>optional uint32 avatar_id = 2;</code>
-     * @param value the avatarId to set
-     * @return this
-     */
-    public DressAvatarSkinCsReq setAvatarId(final int value) {
-      bitField0_ |= 0x00000001;
-      avatarId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 avatar_skin_id = 8;</code>
-     * @return whether the avatarSkinId field is set
-     */
-    public boolean hasAvatarSkinId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 avatar_skin_id = 8;</code>
+     * <code>optional uint32 avatar_skin_id = 3;</code>
      * @return this
      */
     public DressAvatarSkinCsReq clearAvatarSkinId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       avatarSkinId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 avatar_skin_id = 8;</code>
+     * <code>optional uint32 avatar_skin_id = 3;</code>
      * @return the avatarSkinId
      */
     public int getAvatarSkinId() {
@@ -102,13 +65,50 @@ public final class DressAvatarSkinCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_skin_id = 8;</code>
+     * <code>optional uint32 avatar_skin_id = 3;</code>
      * @param value the avatarSkinId to set
      * @return this
      */
     public DressAvatarSkinCsReq setAvatarSkinId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       avatarSkinId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 11;</code>
+     * @return whether the avatarId field is set
+     */
+    public boolean hasAvatarId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 11;</code>
+     * @return this
+     */
+    public DressAvatarSkinCsReq clearAvatarId() {
+      bitField0_ &= ~0x00000002;
+      avatarId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 11;</code>
+     * @return the avatarId
+     */
+    public int getAvatarId() {
+      return avatarId;
+    }
+
+    /**
+     * <code>optional uint32 avatar_id = 11;</code>
+     * @param value the avatarId to set
+     * @return this
+     */
+    public DressAvatarSkinCsReq setAvatarId(final int value) {
+      bitField0_ |= 0x00000002;
+      avatarId = value;
       return this;
     }
 
@@ -117,8 +117,8 @@ public final class DressAvatarSkinCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        avatarId = other.avatarId;
         avatarSkinId = other.avatarSkinId;
+        avatarId = other.avatarId;
       }
       return this;
     }
@@ -129,11 +129,11 @@ public final class DressAvatarSkinCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasAvatarId()) {
-        setAvatarId(other.avatarId);
-      }
       if (other.hasAvatarSkinId()) {
         setAvatarSkinId(other.avatarSkinId);
+      }
+      if (other.hasAvatarId()) {
+        setAvatarId(other.avatarId);
       }
       return this;
     }
@@ -145,8 +145,8 @@ public final class DressAvatarSkinCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      avatarId = 0;
       avatarSkinId = 0;
+      avatarId = 0;
       return this;
     }
 
@@ -170,19 +170,19 @@ public final class DressAvatarSkinCsReqOuterClass {
       }
       DressAvatarSkinCsReq other = (DressAvatarSkinCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasAvatarId() || avatarId == other.avatarId)
-        && (!hasAvatarSkinId() || avatarSkinId == other.avatarSkinId);
+        && (!hasAvatarSkinId() || avatarSkinId == other.avatarSkinId)
+        && (!hasAvatarId() || avatarId == other.avatarId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(avatarId);
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(avatarSkinId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(avatarSkinId);
+        output.writeRawByte((byte) 88);
+        output.writeUInt32NoTag(avatarId);
       }
     }
 
@@ -190,10 +190,10 @@ public final class DressAvatarSkinCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarSkinId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarSkinId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarId);
       }
       return size;
     }
@@ -205,18 +205,18 @@ public final class DressAvatarSkinCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // avatarId
-            avatarId = input.readUInt32();
+          case 24: {
+            // avatarSkinId
+            avatarSkinId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 88) {
               break;
             }
           }
-          case 64: {
-            // avatarSkinId
-            avatarSkinId = input.readUInt32();
+          case 88: {
+            // avatarId
+            avatarId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +241,10 @@ public final class DressAvatarSkinCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.avatarId, avatarId);
+        output.writeUInt32(FieldNames.avatarSkinId, avatarSkinId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.avatarSkinId, avatarSkinId);
+        output.writeUInt32(FieldNames.avatarId, avatarId);
       }
       output.endObject();
     }
@@ -256,11 +256,11 @@ public final class DressAvatarSkinCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1787287636:
-          case -428636735: {
-            if (input.isAtField(FieldNames.avatarId)) {
+          case -920647119:
+          case -1975894473: {
+            if (input.isAtField(FieldNames.avatarSkinId)) {
               if (!input.trySkipNullValue()) {
-                avatarId = input.readUInt32();
+                avatarSkinId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -268,11 +268,11 @@ public final class DressAvatarSkinCsReqOuterClass {
             }
             break;
           }
-          case -920647119:
-          case -1975894473: {
-            if (input.isAtField(FieldNames.avatarSkinId)) {
+          case 1787287636:
+          case -428636735: {
+            if (input.isAtField(FieldNames.avatarId)) {
               if (!input.trySkipNullValue()) {
-                avatarSkinId = input.readUInt32();
+                avatarId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -333,9 +333,9 @@ public final class DressAvatarSkinCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName avatarId = FieldName.forField("avatarId", "avatar_id");
-
       static final FieldName avatarSkinId = FieldName.forField("avatarSkinId", "avatar_skin_id");
+
+      static final FieldName avatarId = FieldName.forField("avatarId", "avatar_id");
     }
   }
 }

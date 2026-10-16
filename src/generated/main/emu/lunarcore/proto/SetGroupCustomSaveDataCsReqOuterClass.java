@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.Utf8String;
 
 public final class SetGroupCustomSaveDataCsReqOuterClass {
   /**
@@ -20,23 +19,14 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  CCIIHMMJOEM
-     * </pre>
-     *
-     * <code>optional uint32 entry_id = 9;</code>
-     */
-    private int entryId;
-
-    /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional string group_save_data = 8;</code>
+     * <code>optional uint32 entry_id = 15;</code>
      */
-    private final Utf8String groupSaveData = Utf8String.newEmptyInstance();
+    private int entryId;
 
     private SetGroupCustomSaveDataCsReq() {
     }
@@ -49,78 +39,25 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  CCIIHMMJOEM
-     * </pre>
-     *
-     * <code>optional uint32 entry_id = 9;</code>
-     * @return whether the entryId field is set
+     * <code>optional uint32 group_id = 10;</code>
+     * @return whether the groupId field is set
      */
-    public boolean hasEntryId() {
+    public boolean hasGroupId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <pre>
-     *  CCIIHMMJOEM
-     * </pre>
-     *
-     * <code>optional uint32 entry_id = 9;</code>
-     * @return this
-     */
-    public SetGroupCustomSaveDataCsReq clearEntryId() {
-      bitField0_ &= ~0x00000001;
-      entryId = 0;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  CCIIHMMJOEM
-     * </pre>
-     *
-     * <code>optional uint32 entry_id = 9;</code>
-     * @return the entryId
-     */
-    public int getEntryId() {
-      return entryId;
-    }
-
-    /**
-     * <pre>
-     *  CCIIHMMJOEM
-     * </pre>
-     *
-     * <code>optional uint32 entry_id = 9;</code>
-     * @param value the entryId to set
-     * @return this
-     */
-    public SetGroupCustomSaveDataCsReq setEntryId(final int value) {
-      bitField0_ |= 0x00000001;
-      entryId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 13;</code>
-     * @return whether the groupId field is set
-     */
-    public boolean hasGroupId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return this
      */
     public SetGroupCustomSaveDataCsReq clearGroupId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       groupId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -128,78 +65,50 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @param value the groupId to set
      * @return this
      */
     public SetGroupCustomSaveDataCsReq setGroupId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       groupId = value;
       return this;
     }
 
     /**
-     * <code>optional string group_save_data = 8;</code>
-     * @return whether the groupSaveData field is set
+     * <code>optional uint32 entry_id = 15;</code>
+     * @return whether the entryId field is set
      */
-    public boolean hasGroupSaveData() {
-      return (bitField0_ & 0x00000004) != 0;
+    public boolean hasEntryId() {
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional string group_save_data = 8;</code>
+     * <code>optional uint32 entry_id = 15;</code>
      * @return this
      */
-    public SetGroupCustomSaveDataCsReq clearGroupSaveData() {
-      bitField0_ &= ~0x00000004;
-      groupSaveData.clear();
+    public SetGroupCustomSaveDataCsReq clearEntryId() {
+      bitField0_ &= ~0x00000002;
+      entryId = 0;
       return this;
     }
 
     /**
-     * <code>optional string group_save_data = 8;</code>
-     * @return the groupSaveData
+     * <code>optional uint32 entry_id = 15;</code>
+     * @return the entryId
      */
-    public String getGroupSaveData() {
-      return groupSaveData.getString();
+    public int getEntryId() {
+      return entryId;
     }
 
     /**
-     * <code>optional string group_save_data = 8;</code>
-     * @return internal {@code Utf8String} representation of groupSaveData for reading
-     */
-    public Utf8String getGroupSaveDataBytes() {
-      return this.groupSaveData;
-    }
-
-    /**
-     * <code>optional string group_save_data = 8;</code>
-     * @return internal {@code Utf8String} representation of groupSaveData for modifications
-     */
-    public Utf8String getMutableGroupSaveDataBytes() {
-      bitField0_ |= 0x00000004;
-      return this.groupSaveData;
-    }
-
-    /**
-     * <code>optional string group_save_data = 8;</code>
-     * @param value the groupSaveData to set
+     * <code>optional uint32 entry_id = 15;</code>
+     * @param value the entryId to set
      * @return this
      */
-    public SetGroupCustomSaveDataCsReq setGroupSaveData(final CharSequence value) {
-      bitField0_ |= 0x00000004;
-      groupSaveData.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional string group_save_data = 8;</code>
-     * @param value the groupSaveData to set
-     * @return this
-     */
-    public SetGroupCustomSaveDataCsReq setGroupSaveData(final Utf8String value) {
-      bitField0_ |= 0x00000004;
-      groupSaveData.copyFrom(value);
+    public SetGroupCustomSaveDataCsReq setEntryId(final int value) {
+      bitField0_ |= 0x00000002;
+      entryId = value;
       return this;
     }
 
@@ -208,9 +117,8 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        entryId = other.entryId;
         groupId = other.groupId;
-        groupSaveData.copyFrom(other.groupSaveData);
+        entryId = other.entryId;
       }
       return this;
     }
@@ -221,14 +129,11 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasEntryId()) {
-        setEntryId(other.entryId);
-      }
       if (other.hasGroupId()) {
         setGroupId(other.groupId);
       }
-      if (other.hasGroupSaveData()) {
-        getMutableGroupSaveDataBytes().copyFrom(other.groupSaveData);
+      if (other.hasEntryId()) {
+        setEntryId(other.entryId);
       }
       return this;
     }
@@ -240,9 +145,8 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      entryId = 0;
       groupId = 0;
-      groupSaveData.clear();
+      entryId = 0;
       return this;
     }
 
@@ -253,7 +157,6 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      groupSaveData.clear();
       return this;
     }
 
@@ -267,24 +170,19 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
       }
       SetGroupCustomSaveDataCsReq other = (SetGroupCustomSaveDataCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasEntryId() || entryId == other.entryId)
         && (!hasGroupId() || groupId == other.groupId)
-        && (!hasGroupSaveData() || groupSaveData.equals(other.groupSaveData));
+        && (!hasEntryId() || entryId == other.entryId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
-        output.writeUInt32NoTag(entryId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(groupId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 66);
-        output.writeStringNoTag(groupSaveData);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(entryId);
       }
     }
 
@@ -292,13 +190,10 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(entryId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeStringSizeNoTag(groupSaveData);
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(entryId);
       }
       return size;
     }
@@ -310,28 +205,19 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
-            // entryId
-            entryId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 104) {
-              break;
-            }
-          }
-          case 104: {
+          case 80: {
             // groupId
             groupId = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 120) {
               break;
             }
           }
-          case 66: {
-            // groupSaveData
-            input.readString(groupSaveData);
-            bitField0_ |= 0x00000004;
+          case 120: {
+            // entryId
+            entryId = input.readUInt32();
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -355,13 +241,10 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.entryId, entryId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.groupId, groupId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeString(FieldNames.groupSaveData, groupSaveData);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.entryId, entryId);
       }
       output.endObject();
     }
@@ -373,11 +256,11 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1591558867:
-          case -2093663224: {
-            if (input.isAtField(FieldNames.entryId)) {
+          case 293428218:
+          case 506361563: {
+            if (input.isAtField(FieldNames.groupId)) {
               if (!input.trySkipNullValue()) {
-                entryId = input.readUInt32();
+                groupId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -385,24 +268,12 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
             }
             break;
           }
-          case 293428218:
-          case 506361563: {
-            if (input.isAtField(FieldNames.groupId)) {
+          case -1591558867:
+          case -2093663224: {
+            if (input.isAtField(FieldNames.entryId)) {
               if (!input.trySkipNullValue()) {
-                groupId = input.readUInt32();
+                entryId = input.readUInt32();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -20477338:
-          case -2125632660: {
-            if (input.isAtField(FieldNames.groupSaveData)) {
-              if (!input.trySkipNullValue()) {
-                input.readString(groupSaveData);
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -463,11 +334,9 @@ public final class SetGroupCustomSaveDataCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName entryId = FieldName.forField("entryId", "entry_id");
-
       static final FieldName groupId = FieldName.forField("groupId", "group_id");
 
-      static final FieldName groupSaveData = FieldName.forField("groupSaveData", "group_save_data");
+      static final FieldName entryId = FieldName.forField("entryId", "entry_id");
     }
   }
 }

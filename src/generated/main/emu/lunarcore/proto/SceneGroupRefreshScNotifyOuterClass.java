@@ -20,12 +20,12 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 floor_id = 11;</code>
+     * <code>optional uint32 floor_id = 12;</code>
      */
     private int floorId;
 
     /**
-     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 2;</code>
+     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 7;</code>
      */
     private final RepeatedMessage<SceneGroupRefreshInfoOuterClass.SceneGroupRefreshInfo> groupRefreshInfo = RepeatedMessage.newEmptyInstance(SceneGroupRefreshInfoOuterClass.SceneGroupRefreshInfo.getFactory());
 
@@ -40,7 +40,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 11;</code>
+     * <code>optional uint32 floor_id = 12;</code>
      * @return whether the floorId field is set
      */
     public boolean hasFloorId() {
@@ -48,7 +48,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 11;</code>
+     * <code>optional uint32 floor_id = 12;</code>
      * @return this
      */
     public SceneGroupRefreshScNotify clearFloorId() {
@@ -58,7 +58,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 11;</code>
+     * <code>optional uint32 floor_id = 12;</code>
      * @return the floorId
      */
     public int getFloorId() {
@@ -66,7 +66,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 11;</code>
+     * <code>optional uint32 floor_id = 12;</code>
      * @param value the floorId to set
      * @return this
      */
@@ -77,7 +77,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 2;</code>
+     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 7;</code>
      * @return whether the groupRefreshInfo field is set
      */
     public boolean hasGroupRefreshInfo() {
@@ -85,7 +85,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 2;</code>
+     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 7;</code>
      * @return this
      */
     public SceneGroupRefreshScNotify clearGroupRefreshInfo() {
@@ -95,7 +95,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 2;</code>
+     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -110,7 +110,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 2;</code>
+     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -125,7 +125,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 2;</code>
+     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 7;</code>
      * @param value the groupRefreshInfo to add
      * @return this
      */
@@ -137,7 +137,7 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 2;</code>
+     * <code>repeated .SceneGroupRefreshInfo group_refresh_info = 7;</code>
      * @param values the groupRefreshInfo to add
      * @return this
      */
@@ -214,12 +214,12 @@ public final class SceneGroupRefreshScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(floorId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < groupRefreshInfo.length(); i++) {
-          output.writeRawByte((byte) 18);
+          output.writeRawByte((byte) 58);
           output.writeMessageNoTag(groupRefreshInfo.get(i));
         }
       }
@@ -244,16 +244,16 @@ public final class SceneGroupRefreshScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
+          case 96: {
             // floorId
             floorId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 18) {
+            if (tag != 58) {
               break;
             }
           }
-          case 18: {
+          case 58: {
             // groupRefreshInfo
             tag = input.readRepeatedMessage(groupRefreshInfo, tag);
             bitField0_ |= 0x00000002;

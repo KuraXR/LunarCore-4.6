@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message DispatchToken {
+  optional uint32 time = 4;
+  optional uint32 unk_uint_1 = 5;
+  optional uint32 account_id = 6;
+  optional bool unk_bool_1 = 1;
+  optional bool unk_bool_2 = 7;
+  optional string unk_string_1 = 2;
+  optional string unk_string_2 = 3;
+  optional string region = 8;
+  optional string country_code = 13;
+}

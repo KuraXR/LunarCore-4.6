@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemCostList.proto";
+
+message AvatarQuickLevelUpCsReq {
+  optional uint32 target_level = 1;
+  optional uint32 base_avatar_id = 9;
+  optional ItemCostList exp_item_cost_list = 10;
+  optional ItemCostList promotion_item_cost_list = 13;
+  optional uint32 target_promotion = 15;
+}

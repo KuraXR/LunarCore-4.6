@@ -30,7 +30,8 @@ public class HandlerStartPartialChallengeCsReq extends PacketHandler {
             }
         }
 
-        manager.startChallenge(req.getChallengeId(), lineup1, lineup2, firstHalfBuff, secondHalfBuff);
+        // The client waits for StartPartialChallengeScRsp (1717), not StartChallengeScRsp
+        manager.startChallenge(req.getChallengeId(), lineup1, lineup2, firstHalfBuff, secondHalfBuff, true);
     }
 
 }

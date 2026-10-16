@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BlackInfo.proto";
+
+message PlayerGetTokenScRsp {
+  optional uint64 secret_key_seed = 12;
+  optional uint32 retcode = 3;
+  optional uint32 uid = 15;
+  optional BlackInfo black_info = 9;
+  optional string msg = 10;
+}

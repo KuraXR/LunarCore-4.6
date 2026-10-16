@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "Goods.proto";
+
+message Shop {
+  optional int64 end_time = 13;
+  optional int64 begin_time = 6;
+  optional uint64 city_taken_level_reward = 2;
+  optional uint32 city_exp = 14;
+  optional uint32 shop_id = 11;
+  optional uint32 city_level = 1;
+  repeated Goods goods_list = 15;
+}

@@ -13,30 +13,18 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class CurTrialActivityScNotifyOuterClass {
   /**
-   * <pre>
-   *  EOIMLNJCEBG
-   * </pre>
-   *
    * Protobuf type {@code CurTrialActivityScNotify}
    */
   public static final class CurTrialActivityScNotify extends ProtoMessage<CurTrialActivityScNotify> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  CMNIOHBPIDG
-     * </pre>
-     *
-     * <code>optional uint32 trial_stage_id = 14;</code>
+     * <code>optional uint32 trial_stage_id = 1;</code>
      */
     private int trialStageId;
 
     /**
-     * <pre>
-     *  LGPBJOGHHEP
-     * </pre>
-     *
-     * <code>optional .TrialActivityStatus status = 3;</code>
+     * <code>optional .TrialActivityStatus status = 10;</code>
      */
     private int status;
 
@@ -44,10 +32,6 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  EOIMLNJCEBG
-     * </pre>
-     *
      * @return a new empty instance of {@code CurTrialActivityScNotify}
      */
     public static CurTrialActivityScNotify newInstance() {
@@ -55,11 +39,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CMNIOHBPIDG
-     * </pre>
-     *
-     * <code>optional uint32 trial_stage_id = 14;</code>
+     * <code>optional uint32 trial_stage_id = 1;</code>
      * @return whether the trialStageId field is set
      */
     public boolean hasTrialStageId() {
@@ -67,11 +47,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CMNIOHBPIDG
-     * </pre>
-     *
-     * <code>optional uint32 trial_stage_id = 14;</code>
+     * <code>optional uint32 trial_stage_id = 1;</code>
      * @return this
      */
     public CurTrialActivityScNotify clearTrialStageId() {
@@ -81,11 +57,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CMNIOHBPIDG
-     * </pre>
-     *
-     * <code>optional uint32 trial_stage_id = 14;</code>
+     * <code>optional uint32 trial_stage_id = 1;</code>
      * @return the trialStageId
      */
     public int getTrialStageId() {
@@ -93,11 +65,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  CMNIOHBPIDG
-     * </pre>
-     *
-     * <code>optional uint32 trial_stage_id = 14;</code>
+     * <code>optional uint32 trial_stage_id = 1;</code>
      * @param value the trialStageId to set
      * @return this
      */
@@ -108,11 +76,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  LGPBJOGHHEP
-     * </pre>
-     *
-     * <code>optional .TrialActivityStatus status = 3;</code>
+     * <code>optional .TrialActivityStatus status = 10;</code>
      * @return whether the status field is set
      */
     public boolean hasStatus() {
@@ -120,11 +84,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  LGPBJOGHHEP
-     * </pre>
-     *
-     * <code>optional .TrialActivityStatus status = 3;</code>
+     * <code>optional .TrialActivityStatus status = 10;</code>
      * @return this
      */
     public CurTrialActivityScNotify clearStatus() {
@@ -134,11 +94,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  LGPBJOGHHEP
-     * </pre>
-     *
-     * <code>optional .TrialActivityStatus status = 3;</code>
+     * <code>optional .TrialActivityStatus status = 10;</code>
      * @return the status
      */
     public TrialActivityStatusOuterClass.TrialActivityStatus getStatus() {
@@ -171,11 +127,7 @@ public final class CurTrialActivityScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  LGPBJOGHHEP
-     * </pre>
-     *
-     * <code>optional .TrialActivityStatus status = 3;</code>
+     * <code>optional .TrialActivityStatus status = 10;</code>
      * @param value the status to set
      * @return this
      */
@@ -251,11 +203,11 @@ public final class CurTrialActivityScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(trialStageId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 80);
         output.writeEnumNoTag(status);
       }
     }
@@ -279,16 +231,16 @@ public final class CurTrialActivityScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 112: {
+          case 8: {
             // trialStageId
             trialStageId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 24) {
+            if (tag != 80) {
               break;
             }
           }
-          case 24: {
+          case 80: {
             // status
             final int value = input.readInt32();
             if (TrialActivityStatusOuterClass.TrialActivityStatus.forNumber(value) != null) {

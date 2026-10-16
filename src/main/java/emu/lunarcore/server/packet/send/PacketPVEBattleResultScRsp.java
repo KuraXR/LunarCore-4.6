@@ -32,7 +32,8 @@ public class PacketPVEBattleResultScRsp extends BasePacket {
         // Battle result
         var data = PVEBattleResultScRsp.newInstance()
                 .setDropData(dropData)
-                .setResVersion(Integer.toString(req.getClientResVersion()))
+                // 4.6 removed client_res_version from the request; the reply sends a version string
+                .setResVersion("")
                 .setBinVersion("")
                 .setBattleId(req.getBattleId())
                 .setStageId(req.getStageId())

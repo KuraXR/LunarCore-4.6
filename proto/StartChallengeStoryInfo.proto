@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeBossBuffInfo.proto";
+import "ChallengeStoryBuffInfo.proto";
+import "StartNewChallengeStoryBuffInfo.proto";
+
+message StartChallengeStoryInfo {
+  optional StartNewChallengeStoryBuffInfo new_story_buff_info = 11;
+  optional ChallengeStoryBuffInfo story_buff_info = 13;
+  optional ChallengeBossBuffInfo boss_buff_info = 5;
+}

@@ -5,6 +5,7 @@ import emu.lunarcore.LunarCore;
 import emu.lunarcore.game.player.BasePlayerManager;
 import emu.lunarcore.game.player.Player;
 import emu.lunarcore.server.packet.BasePacket;
+import emu.lunarcore.server.packet.Retcode;
 import emu.lunarcore.server.packet.send.*;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
@@ -74,21 +75,33 @@ public class FriendList extends BasePlayerManager {
     }
     
     public synchronized void handleFriendRequest(int targetUid, boolean action) {
+        // Every early exit still answers, or the client keeps waiting on the request
+
         // Make sure we have enough room
         if (this.getFriends().size() >= GameConstants.MAX_FRIENDSHIPS) {
+            getPlayer().sendPacket(new PacketHandleFriendScRsp(targetUid, Retcode.FRIEND_NUMBER_LIMIT));
             return;
         }
-        
+
         // Check if player has sent friend request
         Friendship myFriendship = this.getPendingFriendById(targetUid);
-        if (myFriendship == null) return;
-        
+        if (myFriendship == null) {
+            getPlayer().sendPacket(new PacketHandleFriendScRsp(targetUid, Retcode.FRIEND_APPLY_EXPIRE));
+            return;
+        }
+
         // Make sure this player is not the asker
-        if (myFriendship.getAskerUid() == this.getPlayer().getUid()) return;
-        
+        if (myFriendship.getAskerUid() == this.getPlayer().getUid()) {
+            getPlayer().sendPacket(new PacketHandleFriendScRsp(targetUid, Retcode.FRIEND_APPLY_EXPIRE));
+            return;
+        }
+
         // Get target player
         Player target = getServer().getPlayerByUid(targetUid, true);
-        if (target == null) return;
+        if (target == null) {
+            getPlayer().sendPacket(new PacketHandleFriendScRsp(targetUid, Retcode.FRIEND_APPLY_EXPIRE));
+            return;
+        }
         
         // Get target player's friendship
         Friendship theirFriendship = target.getFriendList().getPendingFriendById(getPlayer().getUid());

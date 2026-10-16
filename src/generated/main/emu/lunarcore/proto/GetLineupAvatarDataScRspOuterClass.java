@@ -20,7 +20,7 @@ public final class GetLineupAvatarDataScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      */
     private int retcode;
 
@@ -40,7 +40,7 @@ public final class GetLineupAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -48,7 +48,7 @@ public final class GetLineupAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return this
      */
     public GetLineupAvatarDataScRsp clearRetcode() {
@@ -58,7 +58,7 @@ public final class GetLineupAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -66,7 +66,7 @@ public final class GetLineupAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 14;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -213,7 +213,7 @@ public final class GetLineupAvatarDataScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -243,7 +243,7 @@ public final class GetLineupAvatarDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 112: {
+          case 120: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;

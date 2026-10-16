@@ -19,16 +19,12 @@ public final class UnlockTutorialScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 11;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .Tutorial tutorial = 14;</code>
+     * <code>optional .Tutorial tutorial = 15;</code>
      */
     private final TutorialOuterClass.Tutorial tutorial = TutorialOuterClass.Tutorial.newInstance();
 
@@ -43,11 +39,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -55,11 +47,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return this
      */
     public UnlockTutorialScRsp clearRetcode() {
@@ -69,11 +57,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -81,11 +65,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -96,7 +76,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <code>optional .Tutorial tutorial = 14;</code>
+     * <code>optional .Tutorial tutorial = 15;</code>
      * @return whether the tutorial field is set
      */
     public boolean hasTutorial() {
@@ -104,7 +84,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <code>optional .Tutorial tutorial = 14;</code>
+     * <code>optional .Tutorial tutorial = 15;</code>
      * @return this
      */
     public UnlockTutorialScRsp clearTutorial() {
@@ -114,7 +94,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <code>optional .Tutorial tutorial = 14;</code>
+     * <code>optional .Tutorial tutorial = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -128,7 +108,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <code>optional .Tutorial tutorial = 14;</code>
+     * <code>optional .Tutorial tutorial = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -142,7 +122,7 @@ public final class UnlockTutorialScRspOuterClass {
     }
 
     /**
-     * <code>optional .Tutorial tutorial = 14;</code>
+     * <code>optional .Tutorial tutorial = 15;</code>
      * @param value the tutorial to set
      * @return this
      */
@@ -218,11 +198,11 @@ public final class UnlockTutorialScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 114);
+        output.writeRawByte((byte) 122);
         output.writeMessageNoTag(tutorial);
       }
     }
@@ -246,16 +226,16 @@ public final class UnlockTutorialScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 88: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 114) {
+            if (tag != 122) {
               break;
             }
           }
-          case 114: {
+          case 122: {
             // tutorial
             input.readMessage(tutorial);
             bitField0_ |= 0x00000002;

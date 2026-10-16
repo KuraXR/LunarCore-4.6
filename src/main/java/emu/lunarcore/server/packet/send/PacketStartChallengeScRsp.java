@@ -3,12 +3,15 @@ package emu.lunarcore.server.packet.send;
 import emu.lunarcore.game.challenge.ChallengeInstance;
 import emu.lunarcore.game.challenge.ChallengeType;
 import emu.lunarcore.game.player.Player;
+import emu.lunarcore.proto.AvatarTypeOuterClass.AvatarType;
+import emu.lunarcore.proto.ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar;
 import emu.lunarcore.proto.ExtraLineupTypeOuterClass.ExtraLineupType;
 import emu.lunarcore.proto.StartChallengeScRspOuterClass.StartChallengeScRsp;
 import emu.lunarcore.server.packet.BasePacket;
 import emu.lunarcore.server.packet.CmdId;
 import emu.lunarcore.server.packet.Retcode;
 import us.hebi.quickbuf.RepeatedInt;
+import us.hebi.quickbuf.RepeatedMessage;
 
 public class PacketStartChallengeScRsp extends BasePacket {
 
@@ -44,6 +47,10 @@ public class PacketStartChallengeScRsp extends BasePacket {
 
                 info.getMutableFirstNode();
                 info.getMutableSecondNode();
+
+                // 4.6 boss info also carries both teams
+                addAvatars(info.getMutableAvatarLineupFirst(), lineup1);
+                addAvatars(info.getMutableAvatarLineupSecond(), lineup2);
             } else if (challenge.getType() == ChallengeType.STORY) {
                 data.getMutableExtInfo().getMutableBossInfo();
             }
@@ -52,5 +59,13 @@ public class PacketStartChallengeScRsp extends BasePacket {
         }
 
         this.setData(data);
+    }
+
+    private static void addAvatars(RepeatedMessage<ChallengeLineupAvatar> list, RepeatedInt ids) {
+        for (int i = 0; i < ids.length(); i++) {
+            list.add(ChallengeLineupAvatar.newInstance()
+                    .setId(ids.get(i))
+                    .setAvatarType(AvatarType.AVATAR_FORMAL_TYPE));
+        }
     }
 }

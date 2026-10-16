@@ -20,29 +20,24 @@ public final class AvatarOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint64 first_met_timestamp = 2;</code>
+     * <code>optional uint64 first_met_timestamp = 9;</code>
      */
     private long firstMetTimestamp;
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
+     * <code>optional uint32 changed_avatar_type = 2;</code>
      */
-    private int promotion;
+    private int changedAvatarType;
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 4;</code>
      */
     private int level;
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
+     * <code>optional uint32 promotion = 13;</code>
      */
-    private int baseAvatarId;
-
-    /**
-     * <code>optional uint32 changed_avatar_type = 13;</code>
-     */
-    private int changedAvatarType;
+    private int promotion;
 
     /**
      * <code>optional uint32 exp = 14;</code>
@@ -50,7 +45,12 @@ public final class AvatarOuterClass {
     private int exp;
 
     /**
-     * <code>optional bool is_marked = 5;</code>
+     * <code>optional uint32 base_avatar_id = 15;</code>
+     */
+    private int baseAvatarId;
+
+    /**
+     * <code>optional bool is_marked = 10;</code>
      */
     private boolean isMarked;
 
@@ -70,7 +70,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint64 first_met_timestamp = 2;</code>
+     * <code>optional uint64 first_met_timestamp = 9;</code>
      * @return whether the firstMetTimestamp field is set
      */
     public boolean hasFirstMetTimestamp() {
@@ -78,7 +78,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint64 first_met_timestamp = 2;</code>
+     * <code>optional uint64 first_met_timestamp = 9;</code>
      * @return this
      */
     public Avatar clearFirstMetTimestamp() {
@@ -88,7 +88,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint64 first_met_timestamp = 2;</code>
+     * <code>optional uint64 first_met_timestamp = 9;</code>
      * @return the firstMetTimestamp
      */
     public long getFirstMetTimestamp() {
@@ -96,7 +96,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint64 first_met_timestamp = 2;</code>
+     * <code>optional uint64 first_met_timestamp = 9;</code>
      * @param value the firstMetTimestamp to set
      * @return this
      */
@@ -107,44 +107,44 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
-     * @return whether the promotion field is set
+     * <code>optional uint32 changed_avatar_type = 2;</code>
+     * @return whether the changedAvatarType field is set
      */
-    public boolean hasPromotion() {
+    public boolean hasChangedAvatarType() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
+     * <code>optional uint32 changed_avatar_type = 2;</code>
      * @return this
      */
-    public Avatar clearPromotion() {
+    public Avatar clearChangedAvatarType() {
       bitField0_ &= ~0x00000002;
-      promotion = 0;
+      changedAvatarType = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
-     * @return the promotion
+     * <code>optional uint32 changed_avatar_type = 2;</code>
+     * @return the changedAvatarType
      */
-    public int getPromotion() {
-      return promotion;
+    public int getChangedAvatarType() {
+      return changedAvatarType;
     }
 
     /**
-     * <code>optional uint32 promotion = 3;</code>
-     * @param value the promotion to set
+     * <code>optional uint32 changed_avatar_type = 2;</code>
+     * @param value the changedAvatarType to set
      * @return this
      */
-    public Avatar setPromotion(final int value) {
+    public Avatar setChangedAvatarType(final int value) {
       bitField0_ |= 0x00000002;
-      promotion = value;
+      changedAvatarType = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 4;</code>
      * @return whether the level field is set
      */
     public boolean hasLevel() {
@@ -152,7 +152,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 4;</code>
      * @return this
      */
     public Avatar clearLevel() {
@@ -162,7 +162,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 4;</code>
      * @return the level
      */
     public int getLevel() {
@@ -170,7 +170,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 8;</code>
+     * <code>optional uint32 level = 4;</code>
      * @param value the level to set
      * @return this
      */
@@ -181,76 +181,39 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
-     * @return whether the baseAvatarId field is set
+     * <code>optional uint32 promotion = 13;</code>
+     * @return whether the promotion field is set
      */
-    public boolean hasBaseAvatarId() {
+    public boolean hasPromotion() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
+     * <code>optional uint32 promotion = 13;</code>
      * @return this
      */
-    public Avatar clearBaseAvatarId() {
+    public Avatar clearPromotion() {
       bitField0_ &= ~0x00000008;
-      baseAvatarId = 0;
+      promotion = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
-     * @return the baseAvatarId
+     * <code>optional uint32 promotion = 13;</code>
+     * @return the promotion
      */
-    public int getBaseAvatarId() {
-      return baseAvatarId;
+    public int getPromotion() {
+      return promotion;
     }
 
     /**
-     * <code>optional uint32 base_avatar_id = 9;</code>
-     * @param value the baseAvatarId to set
+     * <code>optional uint32 promotion = 13;</code>
+     * @param value the promotion to set
      * @return this
      */
-    public Avatar setBaseAvatarId(final int value) {
+    public Avatar setPromotion(final int value) {
       bitField0_ |= 0x00000008;
-      baseAvatarId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 changed_avatar_type = 13;</code>
-     * @return whether the changedAvatarType field is set
-     */
-    public boolean hasChangedAvatarType() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional uint32 changed_avatar_type = 13;</code>
-     * @return this
-     */
-    public Avatar clearChangedAvatarType() {
-      bitField0_ &= ~0x00000010;
-      changedAvatarType = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 changed_avatar_type = 13;</code>
-     * @return the changedAvatarType
-     */
-    public int getChangedAvatarType() {
-      return changedAvatarType;
-    }
-
-    /**
-     * <code>optional uint32 changed_avatar_type = 13;</code>
-     * @param value the changedAvatarType to set
-     * @return this
-     */
-    public Avatar setChangedAvatarType(final int value) {
-      bitField0_ |= 0x00000010;
-      changedAvatarType = value;
+      promotion = value;
       return this;
     }
 
@@ -259,7 +222,7 @@ public final class AvatarOuterClass {
      * @return whether the exp field is set
      */
     public boolean hasExp() {
-      return (bitField0_ & 0x00000020) != 0;
+      return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
@@ -267,7 +230,7 @@ public final class AvatarOuterClass {
      * @return this
      */
     public Avatar clearExp() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000010;
       exp = 0;
       return this;
     }
@@ -286,13 +249,50 @@ public final class AvatarOuterClass {
      * @return this
      */
     public Avatar setExp(final int value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000010;
       exp = value;
       return this;
     }
 
     /**
-     * <code>optional bool is_marked = 5;</code>
+     * <code>optional uint32 base_avatar_id = 15;</code>
+     * @return whether the baseAvatarId field is set
+     */
+    public boolean hasBaseAvatarId() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>optional uint32 base_avatar_id = 15;</code>
+     * @return this
+     */
+    public Avatar clearBaseAvatarId() {
+      bitField0_ &= ~0x00000020;
+      baseAvatarId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 base_avatar_id = 15;</code>
+     * @return the baseAvatarId
+     */
+    public int getBaseAvatarId() {
+      return baseAvatarId;
+    }
+
+    /**
+     * <code>optional uint32 base_avatar_id = 15;</code>
+     * @param value the baseAvatarId to set
+     * @return this
+     */
+    public Avatar setBaseAvatarId(final int value) {
+      bitField0_ |= 0x00000020;
+      baseAvatarId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional bool is_marked = 10;</code>
      * @return whether the isMarked field is set
      */
     public boolean hasIsMarked() {
@@ -300,7 +300,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 5;</code>
+     * <code>optional bool is_marked = 10;</code>
      * @return this
      */
     public Avatar clearIsMarked() {
@@ -310,7 +310,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 5;</code>
+     * <code>optional bool is_marked = 10;</code>
      * @return the isMarked
      */
     public boolean getIsMarked() {
@@ -318,7 +318,7 @@ public final class AvatarOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 5;</code>
+     * <code>optional bool is_marked = 10;</code>
      * @param value the isMarked to set
      * @return this
      */
@@ -402,11 +402,11 @@ public final class AvatarOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         firstMetTimestamp = other.firstMetTimestamp;
-        promotion = other.promotion;
-        level = other.level;
-        baseAvatarId = other.baseAvatarId;
         changedAvatarType = other.changedAvatarType;
+        level = other.level;
+        promotion = other.promotion;
         exp = other.exp;
+        baseAvatarId = other.baseAvatarId;
         isMarked = other.isMarked;
         takenRewards.copyFrom(other.takenRewards);
       }
@@ -422,20 +422,20 @@ public final class AvatarOuterClass {
       if (other.hasFirstMetTimestamp()) {
         setFirstMetTimestamp(other.firstMetTimestamp);
       }
-      if (other.hasPromotion()) {
-        setPromotion(other.promotion);
+      if (other.hasChangedAvatarType()) {
+        setChangedAvatarType(other.changedAvatarType);
       }
       if (other.hasLevel()) {
         setLevel(other.level);
       }
-      if (other.hasBaseAvatarId()) {
-        setBaseAvatarId(other.baseAvatarId);
-      }
-      if (other.hasChangedAvatarType()) {
-        setChangedAvatarType(other.changedAvatarType);
+      if (other.hasPromotion()) {
+        setPromotion(other.promotion);
       }
       if (other.hasExp()) {
         setExp(other.exp);
+      }
+      if (other.hasBaseAvatarId()) {
+        setBaseAvatarId(other.baseAvatarId);
       }
       if (other.hasIsMarked()) {
         setIsMarked(other.isMarked);
@@ -454,11 +454,11 @@ public final class AvatarOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       firstMetTimestamp = 0L;
-      promotion = 0;
-      level = 0;
-      baseAvatarId = 0;
       changedAvatarType = 0;
+      level = 0;
+      promotion = 0;
       exp = 0;
+      baseAvatarId = 0;
       isMarked = false;
       takenRewards.clear();
       return this;
@@ -486,11 +486,11 @@ public final class AvatarOuterClass {
       Avatar other = (Avatar) o;
       return bitField0_ == other.bitField0_
         && (!hasFirstMetTimestamp() || firstMetTimestamp == other.firstMetTimestamp)
-        && (!hasPromotion() || promotion == other.promotion)
-        && (!hasLevel() || level == other.level)
-        && (!hasBaseAvatarId() || baseAvatarId == other.baseAvatarId)
         && (!hasChangedAvatarType() || changedAvatarType == other.changedAvatarType)
+        && (!hasLevel() || level == other.level)
+        && (!hasPromotion() || promotion == other.promotion)
         && (!hasExp() || exp == other.exp)
+        && (!hasBaseAvatarId() || baseAvatarId == other.baseAvatarId)
         && (!hasIsMarked() || isMarked == other.isMarked)
         && (!hasTakenRewards() || takenRewards.equals(other.takenRewards));
     }
@@ -498,31 +498,31 @@ public final class AvatarOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 72);
         output.writeUInt64NoTag(firstMetTimestamp);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(promotion);
+        output.writeRawByte((byte) 16);
+        output.writeUInt32NoTag(changedAvatarType);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 72);
-        output.writeUInt32NoTag(baseAvatarId);
+        output.writeRawByte((byte) 104);
+        output.writeUInt32NoTag(promotion);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 104);
-        output.writeUInt32NoTag(changedAvatarType);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
         output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(exp);
       }
+      if ((bitField0_ & 0x00000020) != 0) {
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(baseAvatarId);
+      }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 80);
         output.writeBoolNoTag(isMarked);
       }
       if ((bitField0_ & 0x00000080) != 0) {
@@ -540,19 +540,19 @@ public final class AvatarOuterClass {
         size += 1 + ProtoSink.computeUInt64SizeNoTag(firstMetTimestamp);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(promotion);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(changedAvatarType);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(baseAvatarId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(promotion);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(changedAvatarType);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(exp);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(exp);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(baseAvatarId);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         size += 2;
@@ -570,46 +570,37 @@ public final class AvatarOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 72: {
             // firstMetTimestamp
             firstMetTimestamp = input.readUInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 24) {
+            if (tag != 16) {
               break;
             }
           }
-          case 24: {
-            // promotion
-            promotion = input.readUInt32();
+          case 16: {
+            // changedAvatarType
+            changedAvatarType = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 32) {
               break;
             }
           }
-          case 64: {
+          case 32: {
             // level
             level = input.readUInt32();
             bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 72) {
-              break;
-            }
-          }
-          case 72: {
-            // baseAvatarId
-            baseAvatarId = input.readUInt32();
-            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 104) {
               break;
             }
           }
           case 104: {
-            // changedAvatarType
-            changedAvatarType = input.readUInt32();
-            bitField0_ |= 0x00000010;
+            // promotion
+            promotion = input.readUInt32();
+            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 112) {
               break;
@@ -618,13 +609,22 @@ public final class AvatarOuterClass {
           case 112: {
             // exp
             exp = input.readUInt32();
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 40) {
+            if (tag != 120) {
               break;
             }
           }
-          case 40: {
+          case 120: {
+            // baseAvatarId
+            baseAvatarId = input.readUInt32();
+            bitField0_ |= 0x00000020;
+            tag = input.readTag();
+            if (tag != 80) {
+              break;
+            }
+          }
+          case 80: {
             // isMarked
             isMarked = input.readBool();
             bitField0_ |= 0x00000040;
@@ -669,19 +669,19 @@ public final class AvatarOuterClass {
         output.writeUInt64(FieldNames.firstMetTimestamp, firstMetTimestamp);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.promotion, promotion);
+        output.writeUInt32(FieldNames.changedAvatarType, changedAvatarType);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.level, level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.baseAvatarId, baseAvatarId);
+        output.writeUInt32(FieldNames.promotion, promotion);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeUInt32(FieldNames.changedAvatarType, changedAvatarType);
+        output.writeUInt32(FieldNames.exp, exp);
       }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeUInt32(FieldNames.exp, exp);
+        output.writeUInt32(FieldNames.baseAvatarId, baseAvatarId);
       }
       if ((bitField0_ & 0x00000040) != 0) {
         output.writeBool(FieldNames.isMarked, isMarked);
@@ -711,10 +711,11 @@ public final class AvatarOuterClass {
             }
             break;
           }
-          case -799212381: {
-            if (input.isAtField(FieldNames.promotion)) {
+          case 1985011207:
+          case 1120127317: {
+            if (input.isAtField(FieldNames.changedAvatarType)) {
               if (!input.trySkipNullValue()) {
-                promotion = input.readUInt32();
+                changedAvatarType = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -733,24 +734,11 @@ public final class AvatarOuterClass {
             }
             break;
           }
-          case 118022725:
-          case -1756826157: {
-            if (input.isAtField(FieldNames.baseAvatarId)) {
+          case -799212381: {
+            if (input.isAtField(FieldNames.promotion)) {
               if (!input.trySkipNullValue()) {
-                baseAvatarId = input.readUInt32();
+                promotion = input.readUInt32();
                 bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1985011207:
-          case 1120127317: {
-            if (input.isAtField(FieldNames.changedAvatarType)) {
-              if (!input.trySkipNullValue()) {
-                changedAvatarType = input.readUInt32();
-                bitField0_ |= 0x00000010;
               }
             } else {
               input.skipUnknownField();
@@ -761,6 +749,18 @@ public final class AvatarOuterClass {
             if (input.isAtField(FieldNames.exp)) {
               if (!input.trySkipNullValue()) {
                 exp = input.readUInt32();
+                bitField0_ |= 0x00000010;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 118022725:
+          case -1756826157: {
+            if (input.isAtField(FieldNames.baseAvatarId)) {
+              if (!input.trySkipNullValue()) {
+                baseAvatarId = input.readUInt32();
                 bitField0_ |= 0x00000020;
               }
             } else {
@@ -846,15 +846,15 @@ public final class AvatarOuterClass {
     static class FieldNames {
       static final FieldName firstMetTimestamp = FieldName.forField("firstMetTimestamp", "first_met_timestamp");
 
-      static final FieldName promotion = FieldName.forField("promotion");
+      static final FieldName changedAvatarType = FieldName.forField("changedAvatarType", "changed_avatar_type");
 
       static final FieldName level = FieldName.forField("level");
 
-      static final FieldName baseAvatarId = FieldName.forField("baseAvatarId", "base_avatar_id");
-
-      static final FieldName changedAvatarType = FieldName.forField("changedAvatarType", "changed_avatar_type");
+      static final FieldName promotion = FieldName.forField("promotion");
 
       static final FieldName exp = FieldName.forField("exp");
+
+      static final FieldName baseAvatarId = FieldName.forField("baseAvatarId", "base_avatar_id");
 
       static final FieldName isMarked = FieldName.forField("isMarked", "is_marked");
 

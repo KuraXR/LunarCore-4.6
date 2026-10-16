@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message GetFriendLoginInfoScRsp {
+  optional uint32 retcode = 13;
+  repeated uint32 friend_uid_list = 3;
+}

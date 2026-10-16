@@ -14,10 +14,6 @@ import us.hebi.quickbuf.RepeatedMessage;
 
 public final class MultiPathAvatarInfoOuterClass {
   /**
-   * <pre>
-   *  ANJKJIDCFIO
-   * </pre>
-   *
    * Protobuf type {@code MultiPathAvatarInfo}
    */
   public static final class MultiPathAvatarInfo extends ProtoMessage<MultiPathAvatarInfo> implements Cloneable {
@@ -29,46 +25,26 @@ public final class MultiPathAvatarInfoOuterClass {
     private int rank;
 
     /**
-     * <pre>
-     *  PDLDBGNNKJI
-     * </pre>
-     *
      * <code>optional uint32 enhance_id = 10;</code>
      */
     private int enhanceId;
 
     /**
-     * <pre>
-     *  PCJODMEPONH
-     * </pre>
-     *
      * <code>optional uint32 path_equipment_id = 15;</code>
      */
     private int pathEquipmentId;
 
     /**
-     * <pre>
-     *  PMHEJNFFAKI
-     * </pre>
-     *
      * <code>optional .MultiPathAvatarType avatar_id = 4;</code>
      */
     private int avatarId;
 
     /**
-     * <pre>
-     *  DOLKNNEAGGE
-     * </pre>
-     *
      * <code>repeated .EquipRelic equip_relic_list = 13;</code>
      */
     private final RepeatedMessage<EquipRelicOuterClass.EquipRelic> equipRelicList = RepeatedMessage.newEmptyInstance(EquipRelicOuterClass.EquipRelic.getFactory());
 
     /**
-     * <pre>
-     *  CDMBHMEKAGM
-     * </pre>
-     *
      * <code>repeated .AvatarSkillTree multi_path_skill_tree = 14;</code>
      */
     private final RepeatedMessage<AvatarSkillTreeOuterClass.AvatarSkillTree> multiPathSkillTree = RepeatedMessage.newEmptyInstance(AvatarSkillTreeOuterClass.AvatarSkillTree.getFactory());
@@ -77,10 +53,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ANJKJIDCFIO
-     * </pre>
-     *
      * @return a new empty instance of {@code MultiPathAvatarInfo}
      */
     public static MultiPathAvatarInfo newInstance() {
@@ -125,10 +97,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDLDBGNNKJI
-     * </pre>
-     *
      * <code>optional uint32 enhance_id = 10;</code>
      * @return whether the enhanceId field is set
      */
@@ -137,10 +105,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDLDBGNNKJI
-     * </pre>
-     *
      * <code>optional uint32 enhance_id = 10;</code>
      * @return this
      */
@@ -151,10 +115,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDLDBGNNKJI
-     * </pre>
-     *
      * <code>optional uint32 enhance_id = 10;</code>
      * @return the enhanceId
      */
@@ -163,10 +123,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PDLDBGNNKJI
-     * </pre>
-     *
      * <code>optional uint32 enhance_id = 10;</code>
      * @param value the enhanceId to set
      * @return this
@@ -178,10 +134,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PCJODMEPONH
-     * </pre>
-     *
      * <code>optional uint32 path_equipment_id = 15;</code>
      * @return whether the pathEquipmentId field is set
      */
@@ -190,10 +142,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PCJODMEPONH
-     * </pre>
-     *
      * <code>optional uint32 path_equipment_id = 15;</code>
      * @return this
      */
@@ -204,10 +152,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PCJODMEPONH
-     * </pre>
-     *
      * <code>optional uint32 path_equipment_id = 15;</code>
      * @return the pathEquipmentId
      */
@@ -216,10 +160,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PCJODMEPONH
-     * </pre>
-     *
      * <code>optional uint32 path_equipment_id = 15;</code>
      * @param value the pathEquipmentId to set
      * @return this
@@ -231,10 +171,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PMHEJNFFAKI
-     * </pre>
-     *
      * <code>optional .MultiPathAvatarType avatar_id = 4;</code>
      * @return whether the avatarId field is set
      */
@@ -243,10 +179,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PMHEJNFFAKI
-     * </pre>
-     *
      * <code>optional .MultiPathAvatarType avatar_id = 4;</code>
      * @return this
      */
@@ -257,10 +189,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PMHEJNFFAKI
-     * </pre>
-     *
      * <code>optional .MultiPathAvatarType avatar_id = 4;</code>
      * @return the avatarId
      */
@@ -294,10 +222,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  PMHEJNFFAKI
-     * </pre>
-     *
      * <code>optional .MultiPathAvatarType avatar_id = 4;</code>
      * @param value the avatarId to set
      * @return this
@@ -310,10 +234,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  DOLKNNEAGGE
-     * </pre>
-     *
      * <code>repeated .EquipRelic equip_relic_list = 13;</code>
      * @return whether the equipRelicList field is set
      */
@@ -322,10 +242,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  DOLKNNEAGGE
-     * </pre>
-     *
      * <code>repeated .EquipRelic equip_relic_list = 13;</code>
      * @return this
      */
@@ -336,10 +252,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  DOLKNNEAGGE
-     * </pre>
-     *
      * <code>repeated .EquipRelic equip_relic_list = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -354,10 +266,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  DOLKNNEAGGE
-     * </pre>
-     *
      * <code>repeated .EquipRelic equip_relic_list = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -372,10 +280,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  DOLKNNEAGGE
-     * </pre>
-     *
      * <code>repeated .EquipRelic equip_relic_list = 13;</code>
      * @param value the equipRelicList to add
      * @return this
@@ -387,10 +291,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  DOLKNNEAGGE
-     * </pre>
-     *
      * <code>repeated .EquipRelic equip_relic_list = 13;</code>
      * @param values the equipRelicList to add
      * @return this
@@ -403,10 +303,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  CDMBHMEKAGM
-     * </pre>
-     *
      * <code>repeated .AvatarSkillTree multi_path_skill_tree = 14;</code>
      * @return whether the multiPathSkillTree field is set
      */
@@ -415,10 +311,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  CDMBHMEKAGM
-     * </pre>
-     *
      * <code>repeated .AvatarSkillTree multi_path_skill_tree = 14;</code>
      * @return this
      */
@@ -429,10 +321,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  CDMBHMEKAGM
-     * </pre>
-     *
      * <code>repeated .AvatarSkillTree multi_path_skill_tree = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -447,10 +335,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  CDMBHMEKAGM
-     * </pre>
-     *
      * <code>repeated .AvatarSkillTree multi_path_skill_tree = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -466,10 +350,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  CDMBHMEKAGM
-     * </pre>
-     *
      * <code>repeated .AvatarSkillTree multi_path_skill_tree = 14;</code>
      * @param value the multiPathSkillTree to add
      * @return this
@@ -482,10 +362,6 @@ public final class MultiPathAvatarInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  CDMBHMEKAGM
-     * </pre>
-     *
      * <code>repeated .AvatarSkillTree multi_path_skill_tree = 14;</code>
      * @param values the multiPathSkillTree to add
      * @return this

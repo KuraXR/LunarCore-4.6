@@ -16,7 +16,7 @@ public class HandlerSendMsgCsReq extends PacketHandler {
 
         for (int targetUid : req.getToUidList()) {
             var content = req.getChatContent();
-            
+
             if (content.getMsgType() == MsgType.MSG_TYPE_CUSTOM_TEXT) {
                 session.getPlayer().getChatManager().sendChat(targetUid, content.getChatMsg().getChatText());
             } else if (content.getMsgType() == MsgType.MSG_TYPE_EMOJI) {

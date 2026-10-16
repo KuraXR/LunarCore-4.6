@@ -4,7 +4,7 @@ import emu.lunarcore.server.game.GameSession;
 import emu.lunarcore.server.packet.CmdId;
 import emu.lunarcore.server.packet.Opcodes;
 import emu.lunarcore.server.packet.PacketHandler;
-import emu.lunarcore.server.packet.send.PacketCurPetChangedScNotify;
+import emu.lunarcore.server.packet.send.PacketRecallPetScRsp;
 
 @Opcodes(CmdId.RecallPetCsReq)
 public class HandlerRecallPetCsReq extends PacketHandler {
@@ -14,8 +14,8 @@ public class HandlerRecallPetCsReq extends PacketHandler {
         session.getPlayer().setPetId(0);
         session.getPlayer().save();
 
-        session.send(new PacketCurPetChangedScNotify(session.getPlayer()));
-        session.send(CmdId.RecallPetScRsp);
+        // 4.6 has no CurPetChangedScNotify; the reply carries the cleared summon state
+        session.send(new PacketRecallPetScRsp());
     }
 
 }

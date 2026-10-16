@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message RelicReforgeCsReq {
+  optional uint32 reforge_block_sub_affix_id = 10;
+  optional uint32 relic_unique_id = 6;
+}

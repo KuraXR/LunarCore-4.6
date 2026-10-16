@@ -19,7 +19,7 @@ public final class HeadIconFrameInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 head_icon_frame_id = 9;</code>
+     * <code>optional uint32 head_icon_frame_id = 1;</code>
      */
     private int headIconFrameId;
 
@@ -34,7 +34,7 @@ public final class HeadIconFrameInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 head_icon_frame_id = 9;</code>
+     * <code>optional uint32 head_icon_frame_id = 1;</code>
      * @return whether the headIconFrameId field is set
      */
     public boolean hasHeadIconFrameId() {
@@ -42,7 +42,7 @@ public final class HeadIconFrameInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 head_icon_frame_id = 9;</code>
+     * <code>optional uint32 head_icon_frame_id = 1;</code>
      * @return this
      */
     public HeadIconFrameInfo clearHeadIconFrameId() {
@@ -52,7 +52,7 @@ public final class HeadIconFrameInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 head_icon_frame_id = 9;</code>
+     * <code>optional uint32 head_icon_frame_id = 1;</code>
      * @return the headIconFrameId
      */
     public int getHeadIconFrameId() {
@@ -60,7 +60,7 @@ public final class HeadIconFrameInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 head_icon_frame_id = 9;</code>
+     * <code>optional uint32 head_icon_frame_id = 1;</code>
      * @param value the headIconFrameId to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class HeadIconFrameInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(headIconFrameId);
       }
     }
@@ -150,7 +150,7 @@ public final class HeadIconFrameInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 8: {
             // headIconFrameId
             headIconFrameId = input.readUInt32();
             bitField0_ |= 0x00000001;

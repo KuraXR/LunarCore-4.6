@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message RegionEntry {
+  optional string name = 1;
+  optional string title = 2;
+  optional string dispatch_url = 3;
+  optional string env_type = 4;
+  optional string display_name = 5;
+  optional string msg = 6;
+}

@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "AvatarType.proto";
+
+message BattleRecordType2 {
+  message RecordDisplayAvatar {
+    optional uint32 level = 1;
+    optional uint32 slot = 3;
+    optional uint32 id = 5;
+    optional AvatarType avatar_type = 2;
+  }
+  message RecordDisplayInfo {
+    repeated uint32 unk_repeated = 8;
+    repeated BattleRecordType2.RecordDisplayAvatar avatar_list = 5;
+  }
+  message RecordType2 {
+    optional uint32 score = 9;
+    optional uint32 int2 = 1131;
+    optional uint32 int1 = 1911;
+    optional bool is_win = 4;
+    optional BattleRecordType2.RecordDisplayInfo display_info = 5;
+  }
+  optional uint32 record_id = 3;
+  optional BattleRecordType2.RecordType2 record = 7;
+}

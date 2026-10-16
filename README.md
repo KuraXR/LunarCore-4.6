@@ -1,30 +1,39 @@
-![LunarCore](https://socialify.git.ci/Melledy/LunarCore/image?description=1&descriptionEditable=A%20game%20server%20reimplementation%20for%20version%204.2.0%20of%20a%20certain%20turn-based%20anime%20game%20for%20educational%20purposes.%20&font=Inter&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light)
-<div align="center"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Melledy/LunarCore?logo=java&style=for-the-badge"> <img alt="GitHub" src="https://img.shields.io/github/license/Melledy/LunarCore?style=for-the-badge"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Melledy/LunarCore?style=for-the-badge"> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/Melledy/LunarCore/build.yml?branch=development&logo=github&style=for-the-badge"></div>
+# LunarCore 4.6
 
-<div align="center"><a href="https://discord.gg/cfPKJ6N5hw"><img alt="Discord - LunarCore" src="https://img.shields.io/discord/1163718404067303444?label=Discord&logo=discord&style=for-the-badge"></a></div>
+A game server reimplementation for version 4.6.0 of a certain turn-based anime game for educational purposes.
+
+This is a port of [Melledy/LunarCore](https://github.com/Melledy/LunarCore) (4.2.0) to the 4.6.0 client. All credit for the server itself goes to Melledy and the LunarCore contributors; this repository only moves it onto the 4.6 protocol and game data.
 
 [EN](README.md) | [ID](docs/README_id-ID.md) | [简中](docs/README_zh-CN.md) | [繁中](docs/README_zh-TW.md) | [JP](docs/README_ja-JP.md) | [RU](docs/README_ru-RU.md) | [FR](docs/README_fr-FR.md) | [KR](docs/README_ko-KR.md) | [VI](docs/README_vi-VI.md)
 
-**Attention:** For any extra support, questions, or discussions, check out our [Discord](https://discord.gg/cfPKJ6N5hw).
+**Attention:** the translated READMEs are upstream's 4.2 instructions. They don't include the 4.6 steps below (game data version and `clientDataDir`).
 
 ### Notable features
-- Basic game features: Logging in, team setup, inventory, basic scene/entity management
+- Basic game features: Logging in, team setup and switching, inventory, basic scene/entity management
 - Monster battles working
-- Natural world monster/prop/NPC spawns
+- Natural world monster/prop/NPC spawns (only the groups the server owns, as on the official server)
 - Character techniques
 - Crafting/Consumables working
 - NPC shops handled
 - Gacha system
 - Mail system
 - Friend system (Assists are not working yet)
-- Forgotten hall
-- Pure Fiction
+- In-game chat commands through the "Server" friend
+- Memory of Chaos, Pure Fiction and Apocalyptic Shadow (both halves, buffs, statistics)
+- 4.6 one-step level up and ascension for characters and light cones
+- Multi-path characters (Trailblazer, March 7th) including light cones per path
 - Simulated universe (Runs can be finished, but many features are missing)
+
+### Known issues
+- Battle pass rewards can't be claimed (upstream LunarCore never implemented claiming).
+- Some puzzles (rotators, power chargers) and talk missions don't react yet; their handlers were removed upstream in 4.2.
+- Several 4.x event menus open with empty data.
 
 # Running the server and client
 
 ### Prerequisites
 * [Java 21 JDK](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
+* The 4.6.0 game client, logged in to an official server at least once so it has downloaded its game data
 
 ### Recommended
 * [Java 25 JDK](https://www.oracle.com/java/technologies/javase/jdk25-archive-downloads.html)
@@ -33,8 +42,14 @@
 ### Compiling the server
 1. Open your system terminal, and compile the server with `./gradlew jar`
 2. Create a folder named `resources` in your server directory
-3. Download the `Config`, `TextMap`, and `ExcelBin` folders from [https://github.com/Dimbreath/StarRailData](https://gitlab.com/Dimbreath/turnbasedgamedata) and place them into your resources folder.
-4. Run the server with `java -jar LunarCore.jar` from your system terminal. Lunar Core comes with a built-in internal MongoDB server for its database, so no Mongodb installation is required. However, it is highly recommended to install Mongodb anyway.
+3. Download the `Config`, `TextMap`, and `ExcelOutput` folders for **4.6** from [https://gitlab.com/Dimbreath/turnbasedgamedata](https://gitlab.com/Dimbreath/turnbasedgamedata) (tag `v4.6-D16728363`) and place them into your resources folder.
+4. Run the server once with `java -jar LunarCore.jar` to create `config.json`, then stop it.
+5. **4.6 only:** set `clientDataDir` in `config.json` to your client's `StarRail_Data` folder, for example:
+   ```json
+   "clientDataDir": "C:/Program Files/HoYoPlay/games/Star Rail Games/StarRail_Data"
+   ```
+   The 4.6 client won't load without design data from the server. LunarCore hands the client its own cached copy (read only, nothing is downloaded or changed). If this is empty the client stops at 0% with an empty dialog.
+6. Run the server with `java -jar LunarCore.jar` from your system terminal. Lunar Core comes with a built-in internal MongoDB server for its database, so no Mongodb installation is required. However, it is highly recommended to install Mongodb anyway.
 
 ### Connecting with the client (Fiddler method)
 1. **Log in with the client to an official server and Hoyoverse account at least once to download game data.**
@@ -61,6 +76,8 @@ class Handlers
 4. If `autoCreateAccount` is set to true in the config, then you can skip this step. Otherwise, type `/account create [account name]` in the server console to create an account.
 5. Login with your account name, the password field is ignored by the server and can be set to anything.
 
+If you change `httpServer.bindPort` in the config (for example to use a launcher proxy), point the proxy at that port instead.
+
 ### Server commands
 Server commands can be run in the server console or in-game. There is a dummy user named "Server" in every player's friends list that you can message to use in-game commands.
 
@@ -79,6 +96,7 @@ Server commands can be run in the server console or in-game. There is a dummy us
 /lineup [avatar ids]. USE AT YOUR OWN RISK. Sets your current lineup with the specified avatar ids.
 /mail [content]. Sends the targeted player a system mail.
 /permission {add | remove | clear} [permission]. Gives/removes a permission from the targeted player.
+/porttest [summonswap | groupprop] [on | off]. 4.6 mapping test switches.
 /refill - refill your skill points in open world.
 /reload. Reloads the server config.
 /scene [scene id] [floor id]. Teleports the player to the specified scene.
@@ -90,3 +108,9 @@ Server commands can be run in the server console or in-game. There is a dummy us
 /unstuck @[player id]. Unstucks an offline player if theyre in a scene that doesnt load.
 /worldlevel [world level]. Sets the targeted player's equilibrium level.
 ```
+
+# Credits
+- [Melledy](https://github.com/Melledy) and all [LunarCore contributors](https://github.com/Melledy/LunarCore/graphs/contributors) for the server this is built on
+- [Dimbreath](https://gitlab.com/Dimbreath/turnbasedgamedata) for the game data
+
+LunarCore is licensed under the [AGPL-3.0](LICENSE); this port keeps the same license.

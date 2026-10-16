@@ -10,81 +10,33 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 
 public final class OfferingInfoOuterClass {
   /**
-   * <pre>
-   *  EPBFDKPHGKB
-   * </pre>
-   *
    * Protobuf type {@code OfferingInfo}
    */
   public static final class OfferingInfo extends ProtoMessage<OfferingInfo> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  LNAJBIJGLEM
-     * </pre>
-     *
-     * <code>optional uint32 total_submitted_num = 8;</code>
-     */
-    private int totalSubmittedNum;
-
-    /**
-     * <pre>
-     *  EKDOHEDHBML
-     * </pre>
-     *
-     * <code>optional uint32 offering_level = 12;</code>
-     */
-    private int offeringLevel;
-
-    /**
-     * <pre>
-     *  NHJNFGEDACC
-     * </pre>
-     *
-     * <code>optional uint32 offering_id = 13;</code>
+     * <code>optional uint32 offering_id = 5;</code>
      */
     private int offeringId;
 
     /**
-     * <pre>
-     *  ADECCLMAAAF
-     * </pre>
-     *
-     * <code>optional uint32 submitted_num = 15;</code>
+     * <code>optional uint32 offering_level = 7;</code>
      */
-    private int submittedNum;
+    private int offeringLevel;
 
     /**
-     * <pre>
-     *  NLOENEDONMP
-     * </pre>
-     *
-     * <code>optional .OfferingState offering_state = 6;</code>
+     * <code>optional .OfferingState offering_state = 2;</code>
      */
     private int offeringState;
-
-    /**
-     * <pre>
-     *  HNDLHBNPDBO
-     * </pre>
-     *
-     * <code>repeated uint32 taken_reward_level_list = 9;</code>
-     */
-    private final RepeatedInt takenRewardLevelList = RepeatedInt.newEmptyInstance();
 
     private OfferingInfo() {
     }
 
     /**
-     * <pre>
-     *  EPBFDKPHGKB
-     * </pre>
-     *
      * @return a new empty instance of {@code OfferingInfo}
      */
     public static OfferingInfo newInstance() {
@@ -92,64 +44,44 @@ public final class OfferingInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  LNAJBIJGLEM
-     * </pre>
-     *
-     * <code>optional uint32 total_submitted_num = 8;</code>
-     * @return whether the totalSubmittedNum field is set
+     * <code>optional uint32 offering_id = 5;</code>
+     * @return whether the offeringId field is set
      */
-    public boolean hasTotalSubmittedNum() {
+    public boolean hasOfferingId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <pre>
-     *  LNAJBIJGLEM
-     * </pre>
-     *
-     * <code>optional uint32 total_submitted_num = 8;</code>
+     * <code>optional uint32 offering_id = 5;</code>
      * @return this
      */
-    public OfferingInfo clearTotalSubmittedNum() {
+    public OfferingInfo clearOfferingId() {
       bitField0_ &= ~0x00000001;
-      totalSubmittedNum = 0;
+      offeringId = 0;
       return this;
     }
 
     /**
-     * <pre>
-     *  LNAJBIJGLEM
-     * </pre>
-     *
-     * <code>optional uint32 total_submitted_num = 8;</code>
-     * @return the totalSubmittedNum
+     * <code>optional uint32 offering_id = 5;</code>
+     * @return the offeringId
      */
-    public int getTotalSubmittedNum() {
-      return totalSubmittedNum;
+    public int getOfferingId() {
+      return offeringId;
     }
 
     /**
-     * <pre>
-     *  LNAJBIJGLEM
-     * </pre>
-     *
-     * <code>optional uint32 total_submitted_num = 8;</code>
-     * @param value the totalSubmittedNum to set
+     * <code>optional uint32 offering_id = 5;</code>
+     * @param value the offeringId to set
      * @return this
      */
-    public OfferingInfo setTotalSubmittedNum(final int value) {
+    public OfferingInfo setOfferingId(final int value) {
       bitField0_ |= 0x00000001;
-      totalSubmittedNum = value;
+      offeringId = value;
       return this;
     }
 
     /**
-     * <pre>
-     *  EKDOHEDHBML
-     * </pre>
-     *
-     * <code>optional uint32 offering_level = 12;</code>
+     * <code>optional uint32 offering_level = 7;</code>
      * @return whether the offeringLevel field is set
      */
     public boolean hasOfferingLevel() {
@@ -157,11 +89,7 @@ public final class OfferingInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  EKDOHEDHBML
-     * </pre>
-     *
-     * <code>optional uint32 offering_level = 12;</code>
+     * <code>optional uint32 offering_level = 7;</code>
      * @return this
      */
     public OfferingInfo clearOfferingLevel() {
@@ -171,11 +99,7 @@ public final class OfferingInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  EKDOHEDHBML
-     * </pre>
-     *
-     * <code>optional uint32 offering_level = 12;</code>
+     * <code>optional uint32 offering_level = 7;</code>
      * @return the offeringLevel
      */
     public int getOfferingLevel() {
@@ -183,11 +107,7 @@ public final class OfferingInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  EKDOHEDHBML
-     * </pre>
-     *
-     * <code>optional uint32 offering_level = 12;</code>
+     * <code>optional uint32 offering_level = 7;</code>
      * @param value the offeringLevel to set
      * @return this
      */
@@ -198,143 +118,25 @@ public final class OfferingInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  NHJNFGEDACC
-     * </pre>
-     *
-     * <code>optional uint32 offering_id = 13;</code>
-     * @return whether the offeringId field is set
+     * <code>optional .OfferingState offering_state = 2;</code>
+     * @return whether the offeringState field is set
      */
-    public boolean hasOfferingId() {
+    public boolean hasOfferingState() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <pre>
-     *  NHJNFGEDACC
-     * </pre>
-     *
-     * <code>optional uint32 offering_id = 13;</code>
-     * @return this
-     */
-    public OfferingInfo clearOfferingId() {
-      bitField0_ &= ~0x00000004;
-      offeringId = 0;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  NHJNFGEDACC
-     * </pre>
-     *
-     * <code>optional uint32 offering_id = 13;</code>
-     * @return the offeringId
-     */
-    public int getOfferingId() {
-      return offeringId;
-    }
-
-    /**
-     * <pre>
-     *  NHJNFGEDACC
-     * </pre>
-     *
-     * <code>optional uint32 offering_id = 13;</code>
-     * @param value the offeringId to set
-     * @return this
-     */
-    public OfferingInfo setOfferingId(final int value) {
-      bitField0_ |= 0x00000004;
-      offeringId = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  ADECCLMAAAF
-     * </pre>
-     *
-     * <code>optional uint32 submitted_num = 15;</code>
-     * @return whether the submittedNum field is set
-     */
-    public boolean hasSubmittedNum() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <pre>
-     *  ADECCLMAAAF
-     * </pre>
-     *
-     * <code>optional uint32 submitted_num = 15;</code>
-     * @return this
-     */
-    public OfferingInfo clearSubmittedNum() {
-      bitField0_ &= ~0x00000008;
-      submittedNum = 0;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  ADECCLMAAAF
-     * </pre>
-     *
-     * <code>optional uint32 submitted_num = 15;</code>
-     * @return the submittedNum
-     */
-    public int getSubmittedNum() {
-      return submittedNum;
-    }
-
-    /**
-     * <pre>
-     *  ADECCLMAAAF
-     * </pre>
-     *
-     * <code>optional uint32 submitted_num = 15;</code>
-     * @param value the submittedNum to set
-     * @return this
-     */
-    public OfferingInfo setSubmittedNum(final int value) {
-      bitField0_ |= 0x00000008;
-      submittedNum = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  NLOENEDONMP
-     * </pre>
-     *
-     * <code>optional .OfferingState offering_state = 6;</code>
-     * @return whether the offeringState field is set
-     */
-    public boolean hasOfferingState() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <pre>
-     *  NLOENEDONMP
-     * </pre>
-     *
-     * <code>optional .OfferingState offering_state = 6;</code>
+     * <code>optional .OfferingState offering_state = 2;</code>
      * @return this
      */
     public OfferingInfo clearOfferingState() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000004;
       offeringState = 0;
       return this;
     }
 
     /**
-     * <pre>
-     *  NLOENEDONMP
-     * </pre>
-     *
-     * <code>optional .OfferingState offering_state = 6;</code>
+     * <code>optional .OfferingState offering_state = 2;</code>
      * @return the offeringState
      */
     public OfferingStateOuterClass.OfferingState getOfferingState() {
@@ -361,115 +163,19 @@ public final class OfferingInfoOuterClass {
      * @return this
      */
     public OfferingInfo setOfferingStateValue(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       offeringState = value;
       return this;
     }
 
     /**
-     * <pre>
-     *  NLOENEDONMP
-     * </pre>
-     *
-     * <code>optional .OfferingState offering_state = 6;</code>
+     * <code>optional .OfferingState offering_state = 2;</code>
      * @param value the offeringState to set
      * @return this
      */
     public OfferingInfo setOfferingState(final OfferingStateOuterClass.OfferingState value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       offeringState = value.getNumber();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  HNDLHBNPDBO
-     * </pre>
-     *
-     * <code>repeated uint32 taken_reward_level_list = 9;</code>
-     * @return whether the takenRewardLevelList field is set
-     */
-    public boolean hasTakenRewardLevelList() {
-      return (bitField0_ & 0x00000020) != 0;
-    }
-
-    /**
-     * <pre>
-     *  HNDLHBNPDBO
-     * </pre>
-     *
-     * <code>repeated uint32 taken_reward_level_list = 9;</code>
-     * @return this
-     */
-    public OfferingInfo clearTakenRewardLevelList() {
-      bitField0_ &= ~0x00000020;
-      takenRewardLevelList.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  HNDLHBNPDBO
-     * </pre>
-     *
-     * <code>repeated uint32 taken_reward_level_list = 9;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableTakenRewardLevelList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getTakenRewardLevelList() {
-      return takenRewardLevelList;
-    }
-
-    /**
-     * <pre>
-     *  HNDLHBNPDBO
-     * </pre>
-     *
-     * <code>repeated uint32 taken_reward_level_list = 9;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableTakenRewardLevelList() {
-      bitField0_ |= 0x00000020;
-      return takenRewardLevelList;
-    }
-
-    /**
-     * <pre>
-     *  HNDLHBNPDBO
-     * </pre>
-     *
-     * <code>repeated uint32 taken_reward_level_list = 9;</code>
-     * @param value the takenRewardLevelList to add
-     * @return this
-     */
-    public OfferingInfo addTakenRewardLevelList(final int value) {
-      bitField0_ |= 0x00000020;
-      takenRewardLevelList.add(value);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  HNDLHBNPDBO
-     * </pre>
-     *
-     * <code>repeated uint32 taken_reward_level_list = 9;</code>
-     * @param values the takenRewardLevelList to add
-     * @return this
-     */
-    public OfferingInfo addAllTakenRewardLevelList(final int... values) {
-      bitField0_ |= 0x00000020;
-      takenRewardLevelList.addAll(values);
       return this;
     }
 
@@ -478,12 +184,9 @@ public final class OfferingInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        totalSubmittedNum = other.totalSubmittedNum;
-        offeringLevel = other.offeringLevel;
         offeringId = other.offeringId;
-        submittedNum = other.submittedNum;
+        offeringLevel = other.offeringLevel;
         offeringState = other.offeringState;
-        takenRewardLevelList.copyFrom(other.takenRewardLevelList);
       }
       return this;
     }
@@ -494,23 +197,14 @@ public final class OfferingInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasTotalSubmittedNum()) {
-        setTotalSubmittedNum(other.totalSubmittedNum);
+      if (other.hasOfferingId()) {
+        setOfferingId(other.offeringId);
       }
       if (other.hasOfferingLevel()) {
         setOfferingLevel(other.offeringLevel);
       }
-      if (other.hasOfferingId()) {
-        setOfferingId(other.offeringId);
-      }
-      if (other.hasSubmittedNum()) {
-        setSubmittedNum(other.submittedNum);
-      }
       if (other.hasOfferingState()) {
         setOfferingStateValue(other.offeringState);
-      }
-      if (other.hasTakenRewardLevelList()) {
-        getMutableTakenRewardLevelList().addAll(other.takenRewardLevelList);
       }
       return this;
     }
@@ -522,12 +216,9 @@ public final class OfferingInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      totalSubmittedNum = 0;
-      offeringLevel = 0;
       offeringId = 0;
-      submittedNum = 0;
+      offeringLevel = 0;
       offeringState = 0;
-      takenRewardLevelList.clear();
       return this;
     }
 
@@ -538,7 +229,6 @@ public final class OfferingInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      takenRewardLevelList.clear();
       return this;
     }
 
@@ -552,41 +242,24 @@ public final class OfferingInfoOuterClass {
       }
       OfferingInfo other = (OfferingInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasTotalSubmittedNum() || totalSubmittedNum == other.totalSubmittedNum)
-        && (!hasOfferingLevel() || offeringLevel == other.offeringLevel)
         && (!hasOfferingId() || offeringId == other.offeringId)
-        && (!hasSubmittedNum() || submittedNum == other.submittedNum)
-        && (!hasOfferingState() || offeringState == other.offeringState)
-        && (!hasTakenRewardLevelList() || takenRewardLevelList.equals(other.takenRewardLevelList));
+        && (!hasOfferingLevel() || offeringLevel == other.offeringLevel)
+        && (!hasOfferingState() || offeringState == other.offeringState);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(totalSubmittedNum);
+        output.writeRawByte((byte) 40);
+        output.writeUInt32NoTag(offeringId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(offeringLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 104);
-        output.writeUInt32NoTag(offeringId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(submittedNum);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 16);
         output.writeEnumNoTag(offeringState);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        for (int i = 0; i < takenRewardLevelList.length(); i++) {
-          output.writeRawByte((byte) 72);
-          output.writeUInt32NoTag(takenRewardLevelList.array()[i]);
-        }
       }
     }
 
@@ -594,22 +267,13 @@ public final class OfferingInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(totalSubmittedNum);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(offeringId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(offeringLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(offeringId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(submittedNum);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         size += 1 + ProtoSink.computeEnumSizeNoTag(offeringState);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        size += (1 * takenRewardLevelList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(takenRewardLevelList);
       }
       return size;
     }
@@ -621,58 +285,31 @@ public final class OfferingInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
-            // totalSubmittedNum
-            totalSubmittedNum = input.readUInt32();
+          case 40: {
+            // offeringId
+            offeringId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 56) {
               break;
             }
           }
-          case 96: {
+          case 56: {
             // offeringLevel
             offeringLevel = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 104) {
+            if (tag != 16) {
               break;
             }
           }
-          case 104: {
-            // offeringId
-            offeringId = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 120) {
-              break;
-            }
-          }
-          case 120: {
-            // submittedNum
-            submittedNum = input.readUInt32();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
+          case 16: {
             // offeringState
             final int value = input.readInt32();
             if (OfferingStateOuterClass.OfferingState.forNumber(value) != null) {
               offeringState = value;
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000004;
             }
-            tag = input.readTag();
-            if (tag != 74) {
-              break;
-            }
-          }
-          case 74: {
-            // takenRewardLevelList [packed=true]
-            input.readPackedUInt32(takenRewardLevelList, tag);
-            bitField0_ |= 0x00000020;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -688,12 +325,6 @@ public final class OfferingInfoOuterClass {
             tag = input.readTag();
             break;
           }
-          case 72: {
-            // takenRewardLevelList [packed=false]
-            tag = input.readRepeatedUInt32(takenRewardLevelList, tag);
-            bitField0_ |= 0x00000020;
-            break;
-          }
         }
       }
     }
@@ -702,22 +333,13 @@ public final class OfferingInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.totalSubmittedNum, totalSubmittedNum);
+        output.writeUInt32(FieldNames.offeringId, offeringId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.offeringLevel, offeringLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.offeringId, offeringId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.submittedNum, submittedNum);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         output.writeEnum(FieldNames.offeringState, offeringState, OfferingStateOuterClass.OfferingState.converter());
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRepeatedUInt32(FieldNames.takenRewardLevelList, takenRewardLevelList);
       }
       output.endObject();
     }
@@ -729,11 +351,11 @@ public final class OfferingInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -693023249:
-          case 1675883655: {
-            if (input.isAtField(FieldNames.totalSubmittedNum)) {
+          case 170733505:
+          case 997792756: {
+            if (input.isAtField(FieldNames.offeringId)) {
               if (!input.trySkipNullValue()) {
-                totalSubmittedNum = input.readUInt32();
+                offeringId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -753,30 +375,6 @@ public final class OfferingInfoOuterClass {
             }
             break;
           }
-          case 170733505:
-          case 997792756: {
-            if (input.isAtField(FieldNames.offeringId)) {
-              if (!input.trySkipNullValue()) {
-                offeringId = input.readUInt32();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -2047744885:
-          case 944918082: {
-            if (input.isAtField(FieldNames.submittedNum)) {
-              if (!input.trySkipNullValue()) {
-                submittedNum = input.readUInt32();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 1090377771:
           case -214852840: {
             if (input.isAtField(FieldNames.offeringState)) {
@@ -784,22 +382,10 @@ public final class OfferingInfoOuterClass {
                 final OfferingStateOuterClass.OfferingState value = input.readEnum(OfferingStateOuterClass.OfferingState.converter());
                 if (value != null) {
                   offeringState = value.getNumber();
-                  bitField0_ |= 0x00000010;
+                  bitField0_ |= 0x00000004;
                 } else {
                   input.skipUnknownEnumValue();
                 }
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1221470220:
-          case 1483712017: {
-            if (input.isAtField(FieldNames.takenRewardLevelList)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(takenRewardLevelList);
-                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -858,17 +444,11 @@ public final class OfferingInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName totalSubmittedNum = FieldName.forField("totalSubmittedNum", "total_submitted_num");
+      static final FieldName offeringId = FieldName.forField("offeringId", "offering_id");
 
       static final FieldName offeringLevel = FieldName.forField("offeringLevel", "offering_level");
 
-      static final FieldName offeringId = FieldName.forField("offeringId", "offering_id");
-
-      static final FieldName submittedNum = FieldName.forField("submittedNum", "submitted_num");
-
       static final FieldName offeringState = FieldName.forField("offeringState", "offering_state");
-
-      static final FieldName takenRewardLevelList = FieldName.forField("takenRewardLevelList", "taken_reward_level_list");
     }
   }
 }

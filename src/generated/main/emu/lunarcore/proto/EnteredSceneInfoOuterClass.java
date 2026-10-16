@@ -24,7 +24,7 @@ public final class EnteredSceneInfoOuterClass {
     private int planeId;
 
     /**
-     * <code>optional uint32 floor_id = 8;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      */
     private int floorId;
 
@@ -76,7 +76,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 8;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @return whether the floorId field is set
      */
     public boolean hasFloorId() {
@@ -84,7 +84,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 8;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @return this
      */
     public EnteredSceneInfo clearFloorId() {
@@ -94,7 +94,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 8;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @return the floorId
      */
     public int getFloorId() {
@@ -102,7 +102,7 @@ public final class EnteredSceneInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 8;</code>
+     * <code>optional uint32 floor_id = 13;</code>
      * @param value the floorId to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class EnteredSceneInfoOuterClass {
         output.writeUInt32NoTag(planeId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(floorId);
       }
     }
@@ -210,11 +210,11 @@ public final class EnteredSceneInfoOuterClass {
             planeId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 104) {
               break;
             }
           }
-          case 64: {
+          case 104: {
             // floorId
             floorId = input.readUInt32();
             bitField0_ |= 0x00000002;

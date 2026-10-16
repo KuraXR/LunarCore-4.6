@@ -22,6 +22,7 @@ plugins {
 
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
+compileJava.options.compilerArgs += ["-Xmaxerrs", "2000"]
 
 sourceCompatibility = JavaVersion.VERSION_21
 targetCompatibility = JavaVersion.VERSION_21

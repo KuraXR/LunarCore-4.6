@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 
 public final class ChallengeBossBuffInfoOuterClass {
   /**
@@ -20,9 +19,14 @@ public final class ChallengeBossBuffInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated uint32 buff_list = 13;</code>
+     * <code>optional uint32 buff_one = 1;</code>
      */
-    private final RepeatedInt buffList = RepeatedInt.newEmptyInstance();
+    private int buffOne;
+
+    /**
+     * <code>optional uint32 buff_two = 5;</code>
+     */
+    private int buffTwo;
 
     private ChallengeBossBuffInfo() {
     }
@@ -35,70 +39,76 @@ public final class ChallengeBossBuffInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 buff_list = 13;</code>
-     * @return whether the buffList field is set
+     * <code>optional uint32 buff_one = 1;</code>
+     * @return whether the buffOne field is set
      */
-    public boolean hasBuffList() {
+    public boolean hasBuffOne() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>repeated uint32 buff_list = 13;</code>
+     * <code>optional uint32 buff_one = 1;</code>
      * @return this
      */
-    public ChallengeBossBuffInfo clearBuffList() {
+    public ChallengeBossBuffInfo clearBuffOne() {
       bitField0_ &= ~0x00000001;
-      buffList.clear();
+      buffOne = 0;
       return this;
     }
 
     /**
-     * <code>repeated uint32 buff_list = 13;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableBuffList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
+     * <code>optional uint32 buff_one = 1;</code>
+     * @return the buffOne
      */
-    public RepeatedInt getBuffList() {
-      return buffList;
+    public int getBuffOne() {
+      return buffOne;
     }
 
     /**
-     * <code>repeated uint32 buff_list = 13;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableBuffList() {
-      bitField0_ |= 0x00000001;
-      return buffList;
-    }
-
-    /**
-     * <code>repeated uint32 buff_list = 13;</code>
-     * @param value the buffList to add
+     * <code>optional uint32 buff_one = 1;</code>
+     * @param value the buffOne to set
      * @return this
      */
-    public ChallengeBossBuffInfo addBuffList(final int value) {
+    public ChallengeBossBuffInfo setBuffOne(final int value) {
       bitField0_ |= 0x00000001;
-      buffList.add(value);
+      buffOne = value;
       return this;
     }
 
     /**
-     * <code>repeated uint32 buff_list = 13;</code>
-     * @param values the buffList to add
+     * <code>optional uint32 buff_two = 5;</code>
+     * @return whether the buffTwo field is set
+     */
+    public boolean hasBuffTwo() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 buff_two = 5;</code>
      * @return this
      */
-    public ChallengeBossBuffInfo addAllBuffList(final int... values) {
-      bitField0_ |= 0x00000001;
-      buffList.addAll(values);
+    public ChallengeBossBuffInfo clearBuffTwo() {
+      bitField0_ &= ~0x00000002;
+      buffTwo = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 buff_two = 5;</code>
+     * @return the buffTwo
+     */
+    public int getBuffTwo() {
+      return buffTwo;
+    }
+
+    /**
+     * <code>optional uint32 buff_two = 5;</code>
+     * @param value the buffTwo to set
+     * @return this
+     */
+    public ChallengeBossBuffInfo setBuffTwo(final int value) {
+      bitField0_ |= 0x00000002;
+      buffTwo = value;
       return this;
     }
 
@@ -107,7 +117,8 @@ public final class ChallengeBossBuffInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        buffList.copyFrom(other.buffList);
+        buffOne = other.buffOne;
+        buffTwo = other.buffTwo;
       }
       return this;
     }
@@ -118,8 +129,11 @@ public final class ChallengeBossBuffInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasBuffList()) {
-        getMutableBuffList().addAll(other.buffList);
+      if (other.hasBuffOne()) {
+        setBuffOne(other.buffOne);
+      }
+      if (other.hasBuffTwo()) {
+        setBuffTwo(other.buffTwo);
       }
       return this;
     }
@@ -131,7 +145,8 @@ public final class ChallengeBossBuffInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      buffList.clear();
+      buffOne = 0;
+      buffTwo = 0;
       return this;
     }
 
@@ -142,7 +157,6 @@ public final class ChallengeBossBuffInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      buffList.clear();
       return this;
     }
 
@@ -156,16 +170,19 @@ public final class ChallengeBossBuffInfoOuterClass {
       }
       ChallengeBossBuffInfo other = (ChallengeBossBuffInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasBuffList() || buffList.equals(other.buffList));
+        && (!hasBuffOne() || buffOne == other.buffOne)
+        && (!hasBuffTwo() || buffTwo == other.buffTwo);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        for (int i = 0; i < buffList.length(); i++) {
-          output.writeRawByte((byte) 104);
-          output.writeUInt32NoTag(buffList.array()[i]);
-        }
+        output.writeRawByte((byte) 8);
+        output.writeUInt32NoTag(buffOne);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 40);
+        output.writeUInt32NoTag(buffTwo);
       }
     }
 
@@ -173,7 +190,10 @@ public final class ChallengeBossBuffInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += (1 * buffList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(buffList);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(buffOne);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(buffTwo);
       }
       return size;
     }
@@ -185,10 +205,19 @@ public final class ChallengeBossBuffInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 106: {
-            // buffList [packed=true]
-            input.readPackedUInt32(buffList, tag);
+          case 8: {
+            // buffOne
+            buffOne = input.readUInt32();
             bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 40) {
+              break;
+            }
+          }
+          case 40: {
+            // buffTwo
+            buffTwo = input.readUInt32();
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -204,12 +233,6 @@ public final class ChallengeBossBuffInfoOuterClass {
             tag = input.readTag();
             break;
           }
-          case 104: {
-            // buffList [packed=false]
-            tag = input.readRepeatedUInt32(buffList, tag);
-            bitField0_ |= 0x00000001;
-            break;
-          }
         }
       }
     }
@@ -218,7 +241,10 @@ public final class ChallengeBossBuffInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRepeatedUInt32(FieldNames.buffList, buffList);
+        output.writeUInt32(FieldNames.buffOne, buffOne);
+      }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeUInt32(FieldNames.buffTwo, buffTwo);
       }
       output.endObject();
     }
@@ -230,12 +256,24 @@ public final class ChallengeBossBuffInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1522789487:
-          case 55792906: {
-            if (input.isAtField(FieldNames.buffList)) {
+          case 227975443:
+          case -1522217862: {
+            if (input.isAtField(FieldNames.buffOne)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(buffList);
+                buffOne = input.readUInt32();
                 bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 227980537:
+          case -1522212768: {
+            if (input.isAtField(FieldNames.buffTwo)) {
+              if (!input.trySkipNullValue()) {
+                buffTwo = input.readUInt32();
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -295,7 +333,9 @@ public final class ChallengeBossBuffInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName buffList = FieldName.forField("buffList", "buff_list");
+      static final FieldName buffOne = FieldName.forField("buffOne", "buff_one");
+
+      static final FieldName buffTwo = FieldName.forField("buffTwo", "buff_two");
     }
   }
 }

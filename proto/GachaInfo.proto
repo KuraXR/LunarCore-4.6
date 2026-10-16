@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "GachaCeiling.proto";
+
+message GachaInfo {
+  optional int64 end_time = 13;
+  optional int64 begin_time = 3;
+  optional uint32 gacha_id = 4;
+  optional GachaCeiling gacha_ceiling = 1;
+  optional string detail_url = 6;
+  optional string history_url = 12;
+  repeated uint32 featured = 5;
+  repeated uint32 up_info = 10;
+}

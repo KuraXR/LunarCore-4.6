@@ -19,9 +19,9 @@ public final class SummonPetCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 summoned_pet_id = 11;</code>
+     * <code>optional uint32 mode = 13;</code>
      */
-    private int summonedPetId;
+    private int mode;
 
     private SummonPetCsReq() {
     }
@@ -34,39 +34,39 @@ public final class SummonPetCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 summoned_pet_id = 11;</code>
-     * @return whether the summonedPetId field is set
+     * <code>optional uint32 mode = 13;</code>
+     * @return whether the mode field is set
      */
-    public boolean hasSummonedPetId() {
+    public boolean hasMode() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 summoned_pet_id = 11;</code>
+     * <code>optional uint32 mode = 13;</code>
      * @return this
      */
-    public SummonPetCsReq clearSummonedPetId() {
+    public SummonPetCsReq clearMode() {
       bitField0_ &= ~0x00000001;
-      summonedPetId = 0;
+      mode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 summoned_pet_id = 11;</code>
-     * @return the summonedPetId
+     * <code>optional uint32 mode = 13;</code>
+     * @return the mode
      */
-    public int getSummonedPetId() {
-      return summonedPetId;
+    public int getMode() {
+      return mode;
     }
 
     /**
-     * <code>optional uint32 summoned_pet_id = 11;</code>
-     * @param value the summonedPetId to set
+     * <code>optional uint32 mode = 13;</code>
+     * @param value the mode to set
      * @return this
      */
-    public SummonPetCsReq setSummonedPetId(final int value) {
+    public SummonPetCsReq setMode(final int value) {
       bitField0_ |= 0x00000001;
-      summonedPetId = value;
+      mode = value;
       return this;
     }
 
@@ -75,7 +75,7 @@ public final class SummonPetCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        summonedPetId = other.summonedPetId;
+        mode = other.mode;
       }
       return this;
     }
@@ -86,8 +86,8 @@ public final class SummonPetCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasSummonedPetId()) {
-        setSummonedPetId(other.summonedPetId);
+      if (other.hasMode()) {
+        setMode(other.mode);
       }
       return this;
     }
@@ -99,7 +99,7 @@ public final class SummonPetCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      summonedPetId = 0;
+      mode = 0;
       return this;
     }
 
@@ -123,14 +123,14 @@ public final class SummonPetCsReqOuterClass {
       }
       SummonPetCsReq other = (SummonPetCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasSummonedPetId() || summonedPetId == other.summonedPetId);
+        && (!hasMode() || mode == other.mode);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
-        output.writeUInt32NoTag(summonedPetId);
+        output.writeRawByte((byte) 104);
+        output.writeUInt32NoTag(mode);
       }
     }
 
@@ -138,7 +138,7 @@ public final class SummonPetCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(summonedPetId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(mode);
       }
       return size;
     }
@@ -150,9 +150,9 @@ public final class SummonPetCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
-            // summonedPetId
-            summonedPetId = input.readUInt32();
+          case 104: {
+            // mode
+            mode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 0) {
@@ -177,7 +177,7 @@ public final class SummonPetCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.summonedPetId, summonedPetId);
+        output.writeUInt32(FieldNames.mode, mode);
       }
       output.endObject();
     }
@@ -189,11 +189,10 @@ public final class SummonPetCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1942999750:
-          case 1818014746: {
-            if (input.isAtField(FieldNames.summonedPetId)) {
+          case 3357091: {
+            if (input.isAtField(FieldNames.mode)) {
               if (!input.trySkipNullValue()) {
-                summonedPetId = input.readUInt32();
+                mode = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -254,7 +253,7 @@ public final class SummonPetCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName summonedPetId = FieldName.forField("summonedPetId", "summoned_pet_id");
+      static final FieldName mode = FieldName.forField("mode");
     }
   }
 }

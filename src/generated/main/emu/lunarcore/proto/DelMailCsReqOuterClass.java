@@ -14,21 +14,13 @@ import us.hebi.quickbuf.RepeatedInt;
 
 public final class DelMailCsReqOuterClass {
   /**
-   * <pre>
-   *  DFLFPLFDDLH
-   * </pre>
-   *
    * Protobuf type {@code DelMailCsReq}
    */
   public static final class DelMailCsReq extends ProtoMessage<DelMailCsReq> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  AFAHOIKCCJA
-     * </pre>
-     *
-     * <code>repeated uint32 id_list = 10;</code>
+     * <code>repeated uint32 id_list = 13;</code>
      */
     private final RepeatedInt idList = RepeatedInt.newEmptyInstance();
 
@@ -36,10 +28,6 @@ public final class DelMailCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  DFLFPLFDDLH
-     * </pre>
-     *
      * @return a new empty instance of {@code DelMailCsReq}
      */
     public static DelMailCsReq newInstance() {
@@ -47,11 +35,7 @@ public final class DelMailCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  AFAHOIKCCJA
-     * </pre>
-     *
-     * <code>repeated uint32 id_list = 10;</code>
+     * <code>repeated uint32 id_list = 13;</code>
      * @return whether the idList field is set
      */
     public boolean hasIdList() {
@@ -59,11 +43,7 @@ public final class DelMailCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  AFAHOIKCCJA
-     * </pre>
-     *
-     * <code>repeated uint32 id_list = 10;</code>
+     * <code>repeated uint32 id_list = 13;</code>
      * @return this
      */
     public DelMailCsReq clearIdList() {
@@ -73,11 +53,7 @@ public final class DelMailCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  AFAHOIKCCJA
-     * </pre>
-     *
-     * <code>repeated uint32 id_list = 10;</code>
+     * <code>repeated uint32 id_list = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -91,11 +67,7 @@ public final class DelMailCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  AFAHOIKCCJA
-     * </pre>
-     *
-     * <code>repeated uint32 id_list = 10;</code>
+     * <code>repeated uint32 id_list = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -109,11 +81,7 @@ public final class DelMailCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  AFAHOIKCCJA
-     * </pre>
-     *
-     * <code>repeated uint32 id_list = 10;</code>
+     * <code>repeated uint32 id_list = 13;</code>
      * @param value the idList to add
      * @return this
      */
@@ -124,11 +92,7 @@ public final class DelMailCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  AFAHOIKCCJA
-     * </pre>
-     *
-     * <code>repeated uint32 id_list = 10;</code>
+     * <code>repeated uint32 id_list = 13;</code>
      * @param values the idList to add
      * @return this
      */
@@ -199,7 +163,7 @@ public final class DelMailCsReqOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < idList.length(); i++) {
-          output.writeRawByte((byte) 80);
+          output.writeRawByte((byte) 104);
           output.writeUInt32NoTag(idList.array()[i]);
         }
       }
@@ -221,7 +185,7 @@ public final class DelMailCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 82: {
+          case 106: {
             // idList [packed=true]
             input.readPackedUInt32(idList, tag);
             bitField0_ |= 0x00000001;
@@ -240,7 +204,7 @@ public final class DelMailCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 80: {
+          case 104: {
             // idList [packed=false]
             tag = input.readRepeatedUInt32(idList, tag);
             bitField0_ |= 0x00000001;

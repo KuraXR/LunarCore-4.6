@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message MaterialSubmitInfo {
+  optional uint32 activity_id = 10;
+  optional uint32 belobog_shop_id = 15;
+  optional bool completed = 7;
+  optional bool is_first_reward_taken = 8;
+}

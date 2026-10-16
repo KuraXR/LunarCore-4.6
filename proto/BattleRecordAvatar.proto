@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "AvatarType.proto";
+
+message BattleRecordAvatar {
+  optional uint32 level = 4;
+  optional uint32 index = 14;
+  optional uint32 id = 15;
+  optional AvatarType avatar_type = 1;
+}

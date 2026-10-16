@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BattleRecordAvatars.proto";
+import "PlayerSimpleInfo.proto";
+
+message FriendChallengeInfo {
+  optional uint32 battle_record_stars = 8;
+  optional uint32 score = 11;
+  optional PlayerSimpleInfo friend_simple_info = 7;
+  repeated BattleRecordAvatars battle_record_avatars = 2;
+}

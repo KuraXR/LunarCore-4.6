@@ -11,6 +11,7 @@ import emu.lunarcore.proto.SceneGroupRefreshScNotifyOuterClass.SceneGroupRefresh
 import emu.lunarcore.proto.SceneGroupRefreshTypeOuterClass.SceneGroupRefreshType;
 import emu.lunarcore.server.packet.BasePacket;
 import emu.lunarcore.server.packet.CmdId;
+import it.unimi.dsi.fastutil.ints.IntCollection;
 
 public class PacketSceneGroupRefreshScNotify extends BasePacket {
 
@@ -35,21 +36,29 @@ public class PacketSceneGroupRefreshScNotify extends BasePacket {
         this.setData(data);
     }
 
-    public PacketSceneGroupRefreshScNotify(Scene scene, Collection<? extends GameEntity> toAdd, Collection<? extends GameEntity> toRemove) {
+    public PacketSceneGroupRefreshScNotify(Scene scene, Collection<? extends GameEntity> toAdd, IntCollection removedEntityIds, int leaderEntityId) {
         super(CmdId.SceneGroupRefreshScNotify);
 
         var group = SceneGroupRefreshInfo.newInstance()
                 .setGroupRefreshTypeValue(3);
 
-        if (toAdd != null) {
-            for (var entity : toAdd) {
-                group.addRefreshEntity(SceneEntityRefreshInfo.newInstance().setAddEntity(entity.toSceneEntityProto()));
+        // Removals first, then additions (4.6 lineup refresh order)
+        if (removedEntityIds != null) {
+            for (int entityId : removedEntityIds) {
+                group.addRefreshEntity(SceneEntityRefreshInfo.newInstance().setDelEntity(entityId));
             }
         }
 
-        if (toRemove != null) {
-            for (var entity : toRemove) {
-                group.addRefreshEntity(SceneEntityRefreshInfo.newInstance().setDelEntity(entity.getEntityId()));
+        if (toAdd != null) {
+            for (var entity : toAdd) {
+                var info = entity.toSceneEntityProto();
+
+                // The leader goes on map layer 1, as in the scene info
+                if (entity.getEntityId() == leaderEntityId && info.hasActor()) {
+                    info.getMutableActor().setMapLayer(1);
+                }
+
+                group.addRefreshEntity(SceneEntityRefreshInfo.newInstance().setAddEntity(info));
             }
         }
 

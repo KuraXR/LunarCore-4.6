@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ServerAnnounceNotify {
+  message AnnounceData {
+    optional int64 end_time = 6;
+    optional int64 begin_time = 15;
+    optional uint32 config_id = 12;
+  }
+  repeated ServerAnnounceNotify.AnnounceData announce_data_list = 9;
+}

@@ -19,23 +19,9 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 uid = 2;</code>
+     * <code>optional uint32 uid = 5;</code>
      */
     private int uid;
-
-    /**
-     * <code>optional uint32 group_id = 9992;</code>
-     */
-    private int groupId;
-
-    /**
-     * <pre>
-     *  those are unused
-     * </pre>
-     *
-     * <code>optional .DisplayRecordType type = 9991;</code>
-     */
-    private int type;
 
     private GetFriendBattleRecordDetailCsReq() {
     }
@@ -48,7 +34,7 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 2;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @return whether the uid field is set
      */
     public boolean hasUid() {
@@ -56,7 +42,7 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 2;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @return this
      */
     public GetFriendBattleRecordDetailCsReq clearUid() {
@@ -66,7 +52,7 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 2;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @return the uid
      */
     public int getUid() {
@@ -74,7 +60,7 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 2;</code>
+     * <code>optional uint32 uid = 5;</code>
      * @param value the uid to set
      * @return this
      */
@@ -84,130 +70,12 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
       return this;
     }
 
-    /**
-     * <code>optional uint32 group_id = 9992;</code>
-     * @return whether the groupId field is set
-     */
-    public boolean hasGroupId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 9992;</code>
-     * @return this
-     */
-    public GetFriendBattleRecordDetailCsReq clearGroupId() {
-      bitField0_ &= ~0x00000002;
-      groupId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 9992;</code>
-     * @return the groupId
-     */
-    public int getGroupId() {
-      return groupId;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 9992;</code>
-     * @param value the groupId to set
-     * @return this
-     */
-    public GetFriendBattleRecordDetailCsReq setGroupId(final int value) {
-      bitField0_ |= 0x00000002;
-      groupId = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  those are unused
-     * </pre>
-     *
-     * <code>optional .DisplayRecordType type = 9991;</code>
-     * @return whether the type field is set
-     */
-    public boolean hasType() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <pre>
-     *  those are unused
-     * </pre>
-     *
-     * <code>optional .DisplayRecordType type = 9991;</code>
-     * @return this
-     */
-    public GetFriendBattleRecordDetailCsReq clearType() {
-      bitField0_ &= ~0x00000004;
-      type = 0;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  those are unused
-     * </pre>
-     *
-     * <code>optional .DisplayRecordType type = 9991;</code>
-     * @return the type
-     */
-    public DisplayRecordTypeOuterClass.DisplayRecordType getType() {
-      return DisplayRecordTypeOuterClass.DisplayRecordType.forNumber(type);
-    }
-
-    /**
-     * Gets the value of the internal enum store. The result is
-     * equivalent to {@link GetFriendBattleRecordDetailCsReq#getType()}.getNumber().
-     *
-     * @return numeric wire representation
-     */
-    public int getTypeValue() {
-      return type;
-    }
-
-    /**
-     * Sets the value of the internal enum store. This does not
-     * do any validity checks, so be sure to use appropriate value
-     * constants from {@link DisplayRecordTypeOuterClass.DisplayRecordType}. Setting an invalid value
-     * can cause {@link GetFriendBattleRecordDetailCsReq#getType()} to return null
-     *
-     * @param value the numeric wire value to set
-     * @return this
-     */
-    public GetFriendBattleRecordDetailCsReq setTypeValue(final int value) {
-      bitField0_ |= 0x00000004;
-      type = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  those are unused
-     * </pre>
-     *
-     * <code>optional .DisplayRecordType type = 9991;</code>
-     * @param value the type to set
-     * @return this
-     */
-    public GetFriendBattleRecordDetailCsReq setType(
-        final DisplayRecordTypeOuterClass.DisplayRecordType value) {
-      bitField0_ |= 0x00000004;
-      type = value.getNumber();
-      return this;
-    }
-
     @Override
     public GetFriendBattleRecordDetailCsReq copyFrom(final GetFriendBattleRecordDetailCsReq other) {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         uid = other.uid;
-        groupId = other.groupId;
-        type = other.type;
       }
       return this;
     }
@@ -222,12 +90,6 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
       if (other.hasUid()) {
         setUid(other.uid);
       }
-      if (other.hasGroupId()) {
-        setGroupId(other.groupId);
-      }
-      if (other.hasType()) {
-        setTypeValue(other.type);
-      }
       return this;
     }
 
@@ -239,8 +101,6 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       uid = 0;
-      groupId = 0;
-      type = 0;
       return this;
     }
 
@@ -264,26 +124,14 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
       }
       GetFriendBattleRecordDetailCsReq other = (GetFriendBattleRecordDetailCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasUid() || uid == other.uid)
-        && (!hasGroupId() || groupId == other.groupId)
-        && (!hasType() || type == other.type);
+        && (!hasUid() || uid == other.uid);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(uid);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawLittleEndian16((short) 61632);
-        output.writeRawByte((byte) 4);
-        output.writeUInt32NoTag(groupId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawLittleEndian16((short) 61624);
-        output.writeRawByte((byte) 4);
-        output.writeEnumNoTag(type);
       }
     }
 
@@ -292,12 +140,6 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(uid);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        size += 3 + ProtoSink.computeUInt32SizeNoTag(groupId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 3 + ProtoSink.computeEnumSizeNoTag(type);
       }
       return size;
     }
@@ -309,31 +151,10 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 40: {
             // uid
             uid = input.readUInt32();
             bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 79936) {
-              break;
-            }
-          }
-          case 79936: {
-            // groupId
-            groupId = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 79928) {
-              break;
-            }
-          }
-          case 79928: {
-            // type
-            final int value = input.readInt32();
-            if (DisplayRecordTypeOuterClass.DisplayRecordType.forNumber(value) != null) {
-              type = value;
-              bitField0_ |= 0x00000004;
-            }
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -359,12 +180,6 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeUInt32(FieldNames.uid, uid);
       }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.groupId, groupId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeEnum(FieldNames.type, type, DisplayRecordTypeOuterClass.DisplayRecordType.converter());
-      }
       output.endObject();
     }
 
@@ -380,34 +195,6 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
               if (!input.trySkipNullValue()) {
                 uid = input.readUInt32();
                 bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 293428218:
-          case 506361563: {
-            if (input.isAtField(FieldNames.groupId)) {
-              if (!input.trySkipNullValue()) {
-                groupId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 3575610: {
-            if (input.isAtField(FieldNames.type)) {
-              if (!input.trySkipNullValue()) {
-                final DisplayRecordTypeOuterClass.DisplayRecordType value = input.readEnum(DisplayRecordTypeOuterClass.DisplayRecordType.converter());
-                if (value != null) {
-                  type = value.getNumber();
-                  bitField0_ |= 0x00000004;
-                } else {
-                  input.skipUnknownEnumValue();
-                }
               }
             } else {
               input.skipUnknownField();
@@ -470,10 +257,6 @@ public final class GetFriendBattleRecordDetailCsReqOuterClass {
      */
     static class FieldNames {
       static final FieldName uid = FieldName.forField("uid");
-
-      static final FieldName groupId = FieldName.forField("groupId", "group_id");
-
-      static final FieldName type = FieldName.forField("type");
     }
   }
 }

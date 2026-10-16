@@ -13,38 +13,22 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class SwitchHandUpdateScRspOuterClass {
   /**
-   * <pre>
-   *  NKIGJEKFDFA
-   * </pre>
-   *
    * Protobuf type {@code SwitchHandUpdateScRsp}
    */
   public static final class SwitchHandUpdateScRsp extends ProtoMessage<SwitchHandUpdateScRsp> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 1;</code>
      */
     private int retcode;
 
     /**
-     * <pre>
-     *  GNHGNIGGOBF
-     * </pre>
-     *
      * <code>optional .SwitchHandData cur_hand_data = 10;</code>
      */
     private final SwitchHandDataOuterClass.SwitchHandData curHandData = SwitchHandDataOuterClass.SwitchHandData.newInstance();
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 11;</code>
      */
     private final SwitchHandOpDataOuterClass.SwitchHandOpData opData = SwitchHandOpDataOuterClass.SwitchHandOpData.newInstance();
@@ -53,10 +37,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  NKIGJEKFDFA
-     * </pre>
-     *
      * @return a new empty instance of {@code SwitchHandUpdateScRsp}
      */
     public static SwitchHandUpdateScRsp newInstance() {
@@ -64,10 +44,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 1;</code>
      * @return whether the retcode field is set
      */
@@ -76,10 +52,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 1;</code>
      * @return this
      */
@@ -90,10 +62,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 1;</code>
      * @return the retcode
      */
@@ -102,10 +70,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 1;</code>
      * @param value the retcode to set
      * @return this
@@ -117,10 +81,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  GNHGNIGGOBF
-     * </pre>
-     *
      * <code>optional .SwitchHandData cur_hand_data = 10;</code>
      * @return whether the curHandData field is set
      */
@@ -129,10 +89,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  GNHGNIGGOBF
-     * </pre>
-     *
      * <code>optional .SwitchHandData cur_hand_data = 10;</code>
      * @return this
      */
@@ -143,10 +99,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  GNHGNIGGOBF
-     * </pre>
-     *
      * <code>optional .SwitchHandData cur_hand_data = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -161,10 +113,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  GNHGNIGGOBF
-     * </pre>
-     *
      * <code>optional .SwitchHandData cur_hand_data = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -179,10 +127,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  GNHGNIGGOBF
-     * </pre>
-     *
      * <code>optional .SwitchHandData cur_hand_data = 10;</code>
      * @param value the curHandData to set
      * @return this
@@ -195,10 +139,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 11;</code>
      * @return whether the opData field is set
      */
@@ -207,10 +147,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 11;</code>
      * @return this
      */
@@ -221,10 +157,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -239,10 +171,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -257,10 +185,6 @@ public final class SwitchHandUpdateScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 11;</code>
      * @param value the opData to set
      * @return this

@@ -19,7 +19,7 @@ public final class PlayerHeartBeatCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint64 client_time_ms = 3;</code>
+     * <code>optional uint64 client_time_ms = 8;</code>
      */
     private long clientTimeMs;
 
@@ -34,7 +34,7 @@ public final class PlayerHeartBeatCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 3;</code>
+     * <code>optional uint64 client_time_ms = 8;</code>
      * @return whether the clientTimeMs field is set
      */
     public boolean hasClientTimeMs() {
@@ -42,7 +42,7 @@ public final class PlayerHeartBeatCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 3;</code>
+     * <code>optional uint64 client_time_ms = 8;</code>
      * @return this
      */
     public PlayerHeartBeatCsReq clearClientTimeMs() {
@@ -52,7 +52,7 @@ public final class PlayerHeartBeatCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 3;</code>
+     * <code>optional uint64 client_time_ms = 8;</code>
      * @return the clientTimeMs
      */
     public long getClientTimeMs() {
@@ -60,7 +60,7 @@ public final class PlayerHeartBeatCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint64 client_time_ms = 3;</code>
+     * <code>optional uint64 client_time_ms = 8;</code>
      * @param value the clientTimeMs to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class PlayerHeartBeatCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 64);
         output.writeUInt64NoTag(clientTimeMs);
       }
     }
@@ -150,7 +150,7 @@ public final class PlayerHeartBeatCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 64: {
             // clientTimeMs
             clientTimeMs = input.readUInt64();
             bitField0_ |= 0x00000001;

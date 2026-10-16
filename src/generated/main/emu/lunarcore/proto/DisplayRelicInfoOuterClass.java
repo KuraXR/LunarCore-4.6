@@ -20,9 +20,9 @@ public final class DisplayRelicInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 level = 2;</code>
+     * <code>optional uint32 tid = 2;</code>
      */
-    private int level;
+    private int tid;
 
     /**
      * <code>optional uint32 exp = 3;</code>
@@ -30,22 +30,22 @@ public final class DisplayRelicInfoOuterClass {
     private int exp;
 
     /**
-     * <code>optional uint32 main_affix_id = 5;</code>
+     * <code>optional uint32 level = 7;</code>
      */
-    private int mainAffixId;
+    private int level;
 
     /**
-     * <code>optional uint32 tid = 7;</code>
-     */
-    private int tid;
-
-    /**
-     * <code>optional uint32 slot = 15;</code>
+     * <code>optional uint32 slot = 8;</code>
      */
     private int slot;
 
     /**
-     * <code>repeated .RelicAffix sub_affix_list = 13;</code>
+     * <code>optional uint32 main_affix_id = 9;</code>
+     */
+    private int mainAffixId;
+
+    /**
+     * <code>repeated .RelicAffix sub_affix_list = 10;</code>
      */
     private final RepeatedMessage<RelicAffixOuterClass.RelicAffix> subAffixList = RepeatedMessage.newEmptyInstance(RelicAffixOuterClass.RelicAffix.getFactory());
 
@@ -60,39 +60,39 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 2;</code>
-     * @return whether the level field is set
+     * <code>optional uint32 tid = 2;</code>
+     * @return whether the tid field is set
      */
-    public boolean hasLevel() {
+    public boolean hasTid() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 level = 2;</code>
+     * <code>optional uint32 tid = 2;</code>
      * @return this
      */
-    public DisplayRelicInfo clearLevel() {
+    public DisplayRelicInfo clearTid() {
       bitField0_ &= ~0x00000001;
-      level = 0;
+      tid = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 level = 2;</code>
-     * @return the level
+     * <code>optional uint32 tid = 2;</code>
+     * @return the tid
      */
-    public int getLevel() {
-      return level;
+    public int getTid() {
+      return tid;
     }
 
     /**
-     * <code>optional uint32 level = 2;</code>
-     * @param value the level to set
+     * <code>optional uint32 tid = 2;</code>
+     * @param value the tid to set
      * @return this
      */
-    public DisplayRelicInfo setLevel(final int value) {
+    public DisplayRelicInfo setTid(final int value) {
       bitField0_ |= 0x00000001;
-      level = value;
+      tid = value;
       return this;
     }
 
@@ -134,99 +134,62 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 main_affix_id = 5;</code>
-     * @return whether the mainAffixId field is set
+     * <code>optional uint32 level = 7;</code>
+     * @return whether the level field is set
      */
-    public boolean hasMainAffixId() {
+    public boolean hasLevel() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 main_affix_id = 5;</code>
+     * <code>optional uint32 level = 7;</code>
      * @return this
      */
-    public DisplayRelicInfo clearMainAffixId() {
+    public DisplayRelicInfo clearLevel() {
       bitField0_ &= ~0x00000004;
-      mainAffixId = 0;
+      level = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 main_affix_id = 5;</code>
-     * @return the mainAffixId
+     * <code>optional uint32 level = 7;</code>
+     * @return the level
      */
-    public int getMainAffixId() {
-      return mainAffixId;
+    public int getLevel() {
+      return level;
     }
 
     /**
-     * <code>optional uint32 main_affix_id = 5;</code>
-     * @param value the mainAffixId to set
+     * <code>optional uint32 level = 7;</code>
+     * @param value the level to set
      * @return this
      */
-    public DisplayRelicInfo setMainAffixId(final int value) {
+    public DisplayRelicInfo setLevel(final int value) {
       bitField0_ |= 0x00000004;
-      mainAffixId = value;
+      level = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 tid = 7;</code>
-     * @return whether the tid field is set
+     * <code>optional uint32 slot = 8;</code>
+     * @return whether the slot field is set
      */
-    public boolean hasTid() {
+    public boolean hasSlot() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>optional uint32 tid = 7;</code>
-     * @return this
-     */
-    public DisplayRelicInfo clearTid() {
-      bitField0_ &= ~0x00000008;
-      tid = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 tid = 7;</code>
-     * @return the tid
-     */
-    public int getTid() {
-      return tid;
-    }
-
-    /**
-     * <code>optional uint32 tid = 7;</code>
-     * @param value the tid to set
-     * @return this
-     */
-    public DisplayRelicInfo setTid(final int value) {
-      bitField0_ |= 0x00000008;
-      tid = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 slot = 15;</code>
-     * @return whether the slot field is set
-     */
-    public boolean hasSlot() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional uint32 slot = 15;</code>
+     * <code>optional uint32 slot = 8;</code>
      * @return this
      */
     public DisplayRelicInfo clearSlot() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000008;
       slot = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 slot = 15;</code>
+     * <code>optional uint32 slot = 8;</code>
      * @return the slot
      */
     public int getSlot() {
@@ -234,18 +197,55 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 slot = 15;</code>
+     * <code>optional uint32 slot = 8;</code>
      * @param value the slot to set
      * @return this
      */
     public DisplayRelicInfo setSlot(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       slot = value;
       return this;
     }
 
     /**
-     * <code>repeated .RelicAffix sub_affix_list = 13;</code>
+     * <code>optional uint32 main_affix_id = 9;</code>
+     * @return whether the mainAffixId field is set
+     */
+    public boolean hasMainAffixId() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional uint32 main_affix_id = 9;</code>
+     * @return this
+     */
+    public DisplayRelicInfo clearMainAffixId() {
+      bitField0_ &= ~0x00000010;
+      mainAffixId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 main_affix_id = 9;</code>
+     * @return the mainAffixId
+     */
+    public int getMainAffixId() {
+      return mainAffixId;
+    }
+
+    /**
+     * <code>optional uint32 main_affix_id = 9;</code>
+     * @param value the mainAffixId to set
+     * @return this
+     */
+    public DisplayRelicInfo setMainAffixId(final int value) {
+      bitField0_ |= 0x00000010;
+      mainAffixId = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated .RelicAffix sub_affix_list = 10;</code>
      * @return whether the subAffixList field is set
      */
     public boolean hasSubAffixList() {
@@ -253,7 +253,7 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RelicAffix sub_affix_list = 13;</code>
+     * <code>repeated .RelicAffix sub_affix_list = 10;</code>
      * @return this
      */
     public DisplayRelicInfo clearSubAffixList() {
@@ -263,7 +263,7 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RelicAffix sub_affix_list = 13;</code>
+     * <code>repeated .RelicAffix sub_affix_list = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -277,7 +277,7 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RelicAffix sub_affix_list = 13;</code>
+     * <code>repeated .RelicAffix sub_affix_list = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -291,7 +291,7 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RelicAffix sub_affix_list = 13;</code>
+     * <code>repeated .RelicAffix sub_affix_list = 10;</code>
      * @param value the subAffixList to add
      * @return this
      */
@@ -302,7 +302,7 @@ public final class DisplayRelicInfoOuterClass {
     }
 
     /**
-     * <code>repeated .RelicAffix sub_affix_list = 13;</code>
+     * <code>repeated .RelicAffix sub_affix_list = 10;</code>
      * @param values the subAffixList to add
      * @return this
      */
@@ -317,11 +317,11 @@ public final class DisplayRelicInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        level = other.level;
-        exp = other.exp;
-        mainAffixId = other.mainAffixId;
         tid = other.tid;
+        exp = other.exp;
+        level = other.level;
         slot = other.slot;
+        mainAffixId = other.mainAffixId;
         subAffixList.copyFrom(other.subAffixList);
       }
       return this;
@@ -333,20 +333,20 @@ public final class DisplayRelicInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasLevel()) {
-        setLevel(other.level);
+      if (other.hasTid()) {
+        setTid(other.tid);
       }
       if (other.hasExp()) {
         setExp(other.exp);
       }
-      if (other.hasMainAffixId()) {
-        setMainAffixId(other.mainAffixId);
-      }
-      if (other.hasTid()) {
-        setTid(other.tid);
+      if (other.hasLevel()) {
+        setLevel(other.level);
       }
       if (other.hasSlot()) {
         setSlot(other.slot);
+      }
+      if (other.hasMainAffixId()) {
+        setMainAffixId(other.mainAffixId);
       }
       if (other.hasSubAffixList()) {
         getMutableSubAffixList().addAll(other.subAffixList);
@@ -361,11 +361,11 @@ public final class DisplayRelicInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      level = 0;
-      exp = 0;
-      mainAffixId = 0;
       tid = 0;
+      exp = 0;
+      level = 0;
       slot = 0;
+      mainAffixId = 0;
       subAffixList.clear();
       return this;
     }
@@ -391,11 +391,11 @@ public final class DisplayRelicInfoOuterClass {
       }
       DisplayRelicInfo other = (DisplayRelicInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasLevel() || level == other.level)
-        && (!hasExp() || exp == other.exp)
-        && (!hasMainAffixId() || mainAffixId == other.mainAffixId)
         && (!hasTid() || tid == other.tid)
+        && (!hasExp() || exp == other.exp)
+        && (!hasLevel() || level == other.level)
         && (!hasSlot() || slot == other.slot)
+        && (!hasMainAffixId() || mainAffixId == other.mainAffixId)
         && (!hasSubAffixList() || subAffixList.equals(other.subAffixList));
     }
 
@@ -403,27 +403,27 @@ public final class DisplayRelicInfoOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(level);
+        output.writeUInt32NoTag(tid);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(exp);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 40);
-        output.writeUInt32NoTag(mainAffixId);
+        output.writeRawByte((byte) 56);
+        output.writeUInt32NoTag(level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(tid);
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(slot);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(slot);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(mainAffixId);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         for (int i = 0; i < subAffixList.length(); i++) {
-          output.writeRawByte((byte) 106);
+          output.writeRawByte((byte) 82);
           output.writeMessageNoTag(subAffixList.get(i));
         }
       }
@@ -433,19 +433,19 @@ public final class DisplayRelicInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(tid);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(exp);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(mainAffixId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(tid);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(slot);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(slot);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(mainAffixId);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         size += (1 * subAffixList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(subAffixList);
@@ -461,8 +461,8 @@ public final class DisplayRelicInfoOuterClass {
       while (true) {
         switch (tag) {
           case 16: {
-            // level
-            level = input.readUInt32();
+            // tid
+            tid = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 24) {
@@ -474,38 +474,38 @@ public final class DisplayRelicInfoOuterClass {
             exp = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 40) {
-              break;
-            }
-          }
-          case 40: {
-            // mainAffixId
-            mainAffixId = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
             if (tag != 56) {
               break;
             }
           }
           case 56: {
-            // tid
-            tid = input.readUInt32();
-            bitField0_ |= 0x00000008;
+            // level
+            level = input.readUInt32();
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 64) {
               break;
             }
           }
-          case 120: {
+          case 64: {
             // slot
             slot = input.readUInt32();
-            bitField0_ |= 0x00000010;
+            bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 106) {
+            if (tag != 72) {
               break;
             }
           }
-          case 106: {
+          case 72: {
+            // mainAffixId
+            mainAffixId = input.readUInt32();
+            bitField0_ |= 0x00000010;
+            tag = input.readTag();
+            if (tag != 82) {
+              break;
+            }
+          }
+          case 82: {
             // subAffixList
             tag = input.readRepeatedMessage(subAffixList, tag);
             bitField0_ |= 0x00000020;
@@ -531,19 +531,19 @@ public final class DisplayRelicInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.level, level);
+        output.writeUInt32(FieldNames.tid, tid);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.exp, exp);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.mainAffixId, mainAffixId);
+        output.writeUInt32(FieldNames.level, level);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeUInt32(FieldNames.tid, tid);
+        output.writeUInt32(FieldNames.slot, slot);
       }
       if ((bitField0_ & 0x00000010) != 0) {
-        output.writeUInt32(FieldNames.slot, slot);
+        output.writeUInt32(FieldNames.mainAffixId, mainAffixId);
       }
       if ((bitField0_ & 0x00000020) != 0) {
         output.writeRepeatedMessage(FieldNames.subAffixList, subAffixList);
@@ -558,10 +558,10 @@ public final class DisplayRelicInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 102865796: {
-            if (input.isAtField(FieldNames.level)) {
+          case 114831: {
+            if (input.isAtField(FieldNames.tid)) {
               if (!input.trySkipNullValue()) {
-                level = input.readUInt32();
+                tid = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -580,23 +580,11 @@ public final class DisplayRelicInfoOuterClass {
             }
             break;
           }
-          case -1973876974:
-          case -1426712144: {
-            if (input.isAtField(FieldNames.mainAffixId)) {
+          case 102865796: {
+            if (input.isAtField(FieldNames.level)) {
               if (!input.trySkipNullValue()) {
-                mainAffixId = input.readUInt32();
+                level = input.readUInt32();
                 bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 114831: {
-            if (input.isAtField(FieldNames.tid)) {
-              if (!input.trySkipNullValue()) {
-                tid = input.readUInt32();
-                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -607,6 +595,18 @@ public final class DisplayRelicInfoOuterClass {
             if (input.isAtField(FieldNames.slot)) {
               if (!input.trySkipNullValue()) {
                 slot = input.readUInt32();
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1973876974:
+          case -1426712144: {
+            if (input.isAtField(FieldNames.mainAffixId)) {
+              if (!input.trySkipNullValue()) {
+                mainAffixId = input.readUInt32();
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -679,15 +679,15 @@ public final class DisplayRelicInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName level = FieldName.forField("level");
+      static final FieldName tid = FieldName.forField("tid");
 
       static final FieldName exp = FieldName.forField("exp");
 
-      static final FieldName mainAffixId = FieldName.forField("mainAffixId", "main_affix_id");
-
-      static final FieldName tid = FieldName.forField("tid");
+      static final FieldName level = FieldName.forField("level");
 
       static final FieldName slot = FieldName.forField("slot");
+
+      static final FieldName mainAffixId = FieldName.forField("mainAffixId", "main_affix_id");
 
       static final FieldName subAffixList = FieldName.forField("subAffixList", "sub_affix_list");
     }

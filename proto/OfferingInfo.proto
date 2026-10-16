@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "OfferingState.proto";
+
+message OfferingInfo {
+  optional uint32 offering_level = 7;
+  optional uint32 offering_id = 5;
+  optional OfferingState offering_state = 2;
+}

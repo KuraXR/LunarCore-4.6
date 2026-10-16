@@ -19,11 +19,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  ItemList get_item_list = 2;
-     * </pre>
-     *
-     * <code>optional .ItemList get_item_list = 5;</code>
+     * <code>optional .ItemList get_item_list = 7;</code>
      */
     private final ItemListOuterClass.ItemList getItemList = ItemListOuterClass.ItemList.newInstance();
 
@@ -38,11 +34,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  ItemList get_item_list = 2;
-     * </pre>
-     *
-     * <code>optional .ItemList get_item_list = 5;</code>
+     * <code>optional .ItemList get_item_list = 7;</code>
      * @return whether the getItemList field is set
      */
     public boolean hasGetItemList() {
@@ -50,11 +42,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  ItemList get_item_list = 2;
-     * </pre>
-     *
-     * <code>optional .ItemList get_item_list = 5;</code>
+     * <code>optional .ItemList get_item_list = 7;</code>
      * @return this
      */
     public ScenePlaneEventScNotify clearGetItemList() {
@@ -64,11 +52,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  ItemList get_item_list = 2;
-     * </pre>
-     *
-     * <code>optional .ItemList get_item_list = 5;</code>
+     * <code>optional .ItemList get_item_list = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -82,11 +66,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  ItemList get_item_list = 2;
-     * </pre>
-     *
-     * <code>optional .ItemList get_item_list = 5;</code>
+     * <code>optional .ItemList get_item_list = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -100,11 +80,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
     }
 
     /**
-     * <pre>
-     *  ItemList get_item_list = 2;
-     * </pre>
-     *
-     * <code>optional .ItemList get_item_list = 5;</code>
+     * <code>optional .ItemList get_item_list = 7;</code>
      * @param value the getItemList to set
      * @return this
      */
@@ -174,7 +150,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 42);
+        output.writeRawByte((byte) 58);
         output.writeMessageNoTag(getItemList);
       }
     }
@@ -195,7 +171,7 @@ public final class ScenePlaneEventScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 42: {
+          case 58: {
             // getItemList
             input.readMessage(getItemList);
             bitField0_ |= 0x00000001;

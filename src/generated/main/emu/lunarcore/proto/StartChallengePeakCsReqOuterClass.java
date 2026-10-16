@@ -20,17 +20,12 @@ public final class StartChallengePeakCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      */
     private int challengePeakId;
 
     /**
-     * <code>optional uint32 challenge_peak_buff_id = 6;</code>
-     */
-    private int challengePeakBuffId;
-
-    /**
-     * <code>repeated uint32 challenge_avatar_id_list = 15;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 5;</code>
      */
     private final RepeatedInt challengeAvatarIdList = RepeatedInt.newEmptyInstance();
 
@@ -45,7 +40,7 @@ public final class StartChallengePeakCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @return whether the challengePeakId field is set
      */
     public boolean hasChallengePeakId() {
@@ -53,7 +48,7 @@ public final class StartChallengePeakCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @return this
      */
     public StartChallengePeakCsReq clearChallengePeakId() {
@@ -63,7 +58,7 @@ public final class StartChallengePeakCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @return the challengePeakId
      */
     public int getChallengePeakId() {
@@ -71,7 +66,7 @@ public final class StartChallengePeakCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @param value the challengePeakId to set
      * @return this
      */
@@ -82,62 +77,25 @@ public final class StartChallengePeakCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_buff_id = 6;</code>
-     * @return whether the challengePeakBuffId field is set
+     * <code>repeated uint32 challenge_avatar_id_list = 5;</code>
+     * @return whether the challengeAvatarIdList field is set
      */
-    public boolean hasChallengePeakBuffId() {
+    public boolean hasChallengeAvatarIdList() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 challenge_peak_buff_id = 6;</code>
-     * @return this
-     */
-    public StartChallengePeakCsReq clearChallengePeakBuffId() {
-      bitField0_ &= ~0x00000002;
-      challengePeakBuffId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 challenge_peak_buff_id = 6;</code>
-     * @return the challengePeakBuffId
-     */
-    public int getChallengePeakBuffId() {
-      return challengePeakBuffId;
-    }
-
-    /**
-     * <code>optional uint32 challenge_peak_buff_id = 6;</code>
-     * @param value the challengePeakBuffId to set
-     * @return this
-     */
-    public StartChallengePeakCsReq setChallengePeakBuffId(final int value) {
-      bitField0_ |= 0x00000002;
-      challengePeakBuffId = value;
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 challenge_avatar_id_list = 15;</code>
-     * @return whether the challengeAvatarIdList field is set
-     */
-    public boolean hasChallengeAvatarIdList() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 challenge_avatar_id_list = 15;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 5;</code>
      * @return this
      */
     public StartChallengePeakCsReq clearChallengeAvatarIdList() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       challengeAvatarIdList.clear();
       return this;
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 15;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -151,7 +109,7 @@ public final class StartChallengePeakCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 15;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -160,28 +118,28 @@ public final class StartChallengePeakCsReqOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedInt getMutableChallengeAvatarIdList() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       return challengeAvatarIdList;
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 15;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 5;</code>
      * @param value the challengeAvatarIdList to add
      * @return this
      */
     public StartChallengePeakCsReq addChallengeAvatarIdList(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       challengeAvatarIdList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 15;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 5;</code>
      * @param values the challengeAvatarIdList to add
      * @return this
      */
     public StartChallengePeakCsReq addAllChallengeAvatarIdList(final int... values) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       challengeAvatarIdList.addAll(values);
       return this;
     }
@@ -192,7 +150,6 @@ public final class StartChallengePeakCsReqOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         challengePeakId = other.challengePeakId;
-        challengePeakBuffId = other.challengePeakBuffId;
         challengeAvatarIdList.copyFrom(other.challengeAvatarIdList);
       }
       return this;
@@ -206,9 +163,6 @@ public final class StartChallengePeakCsReqOuterClass {
       cachedSize = -1;
       if (other.hasChallengePeakId()) {
         setChallengePeakId(other.challengePeakId);
-      }
-      if (other.hasChallengePeakBuffId()) {
-        setChallengePeakBuffId(other.challengePeakBuffId);
       }
       if (other.hasChallengeAvatarIdList()) {
         getMutableChallengeAvatarIdList().addAll(other.challengeAvatarIdList);
@@ -224,7 +178,6 @@ public final class StartChallengePeakCsReqOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       challengePeakId = 0;
-      challengePeakBuffId = 0;
       challengeAvatarIdList.clear();
       return this;
     }
@@ -251,23 +204,18 @@ public final class StartChallengePeakCsReqOuterClass {
       StartChallengePeakCsReq other = (StartChallengePeakCsReq) o;
       return bitField0_ == other.bitField0_
         && (!hasChallengePeakId() || challengePeakId == other.challengePeakId)
-        && (!hasChallengePeakBuffId() || challengePeakBuffId == other.challengePeakBuffId)
         && (!hasChallengeAvatarIdList() || challengeAvatarIdList.equals(other.challengeAvatarIdList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
-        output.writeUInt32NoTag(challengePeakBuffId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < challengeAvatarIdList.length(); i++) {
-          output.writeRawByte((byte) 120);
+          output.writeRawByte((byte) 40);
           output.writeUInt32NoTag(challengeAvatarIdList.array()[i]);
         }
       }
@@ -280,9 +228,6 @@ public final class StartChallengePeakCsReqOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(challengePeakBuffId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
         size += (1 * challengeAvatarIdList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(challengeAvatarIdList);
       }
       return size;
@@ -295,28 +240,19 @@ public final class StartChallengePeakCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 104: {
             // challengePeakId
             challengePeakId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 42) {
               break;
             }
           }
-          case 48: {
-            // challengePeakBuffId
-            challengePeakBuffId = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 122) {
-              break;
-            }
-          }
-          case 122: {
+          case 42: {
             // challengeAvatarIdList [packed=true]
             input.readPackedUInt32(challengeAvatarIdList, tag);
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -332,10 +268,10 @@ public final class StartChallengePeakCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 120: {
+          case 40: {
             // challengeAvatarIdList [packed=false]
             tag = input.readRepeatedUInt32(challengeAvatarIdList, tag);
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000002;
             break;
           }
         }
@@ -349,9 +285,6 @@ public final class StartChallengePeakCsReqOuterClass {
         output.writeUInt32(FieldNames.challengePeakId, challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.challengePeakBuffId, challengePeakBuffId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
         output.writeRepeatedUInt32(FieldNames.challengeAvatarIdList, challengeAvatarIdList);
       }
       output.endObject();
@@ -376,24 +309,12 @@ public final class StartChallengePeakCsReqOuterClass {
             }
             break;
           }
-          case 1004602192:
-          case 1580927875: {
-            if (input.isAtField(FieldNames.challengePeakBuffId)) {
-              if (!input.trySkipNullValue()) {
-                challengePeakBuffId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 836175637:
           case 1831834552: {
             if (input.isAtField(FieldNames.challengeAvatarIdList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedUInt32(challengeAvatarIdList);
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -454,8 +375,6 @@ public final class StartChallengePeakCsReqOuterClass {
      */
     static class FieldNames {
       static final FieldName challengePeakId = FieldName.forField("challengePeakId", "challenge_peak_id");
-
-      static final FieldName challengePeakBuffId = FieldName.forField("challengePeakBuffId", "challenge_peak_buff_id");
 
       static final FieldName challengeAvatarIdList = FieldName.forField("challengeAvatarIdList", "challenge_avatar_id_list");
     }

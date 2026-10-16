@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "DisplayAvatarVec.proto";
+import "HeadIcon.proto";
+
+message GetPlayerBoardDataScRsp {
+  optional uint32 current_head_icon_id = 15;
+  optional uint32 retcode = 1;
+  optional DisplayAvatarVec display_avatar_vec = 4;
+  optional string signature = 5;
+  repeated uint32 display_support_avatar_vec = 12;
+  repeated HeadIcon unlocked_head_icon_list = 13;
+}

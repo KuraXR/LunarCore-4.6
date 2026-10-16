@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "GachaItem.proto";
+
+message DoGachaScRsp {
+  optional uint32 gacha_id = 11;
+  optional uint32 retcode = 2;
+  optional uint32 gacha_num = 15;
+  optional uint32 ceiling_num = 3;
+  repeated GachaItem gacha_item_list = 1;
+}

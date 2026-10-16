@@ -19,7 +19,7 @@ public final class SelectInclinationTextCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 4;</code>
      */
     private int inclinationTextId;
 
@@ -34,7 +34,7 @@ public final class SelectInclinationTextCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 4;</code>
      * @return whether the inclinationTextId field is set
      */
     public boolean hasInclinationTextId() {
@@ -42,7 +42,7 @@ public final class SelectInclinationTextCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 4;</code>
      * @return this
      */
     public SelectInclinationTextCsReq clearInclinationTextId() {
@@ -52,7 +52,7 @@ public final class SelectInclinationTextCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 4;</code>
      * @return the inclinationTextId
      */
     public int getInclinationTextId() {
@@ -60,7 +60,7 @@ public final class SelectInclinationTextCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 inclination_text_id = 9;</code>
+     * <code>optional uint32 inclination_text_id = 4;</code>
      * @param value the inclinationTextId to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class SelectInclinationTextCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(inclinationTextId);
       }
     }
@@ -150,7 +150,7 @@ public final class SelectInclinationTextCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 32: {
             // inclinationTextId
             inclinationTextId = input.readUInt32();
             bitField0_ |= 0x00000001;

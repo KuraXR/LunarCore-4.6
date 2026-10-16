@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "Avatar.proto";
+import "AvatarPathInfo.proto";
+import "PlayerOutfitInfo.proto";
+
+message GetAvatarDataScRsp {
+  optional uint32 retcode = 9;
+  optional bool is_get_all = 14;
+  optional PlayerOutfitInfo player_outfit_data = 4;
+  repeated uint32 owned_skin_list = 10;
+  repeated uint32 basic_type_id_list = 6;
+  repeated AvatarPathInfo avatar_path_info_list = 7;
+  repeated Avatar avatar_list = 2;
+}

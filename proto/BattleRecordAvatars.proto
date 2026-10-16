@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BattleRecordAvatar.proto";
+
+message BattleRecordAvatars {
+  repeated BattleRecordAvatar avatar_list = 7;
+}

@@ -19,7 +19,7 @@ public final class ChallengeExtInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .ChallengeBossInfo boss_info = 11;</code>
+     * <code>optional .ChallengeBossInfo boss_info = 4;</code>
      */
     private final ChallengeBossInfoOuterClass.ChallengeBossInfo bossInfo = ChallengeBossInfoOuterClass.ChallengeBossInfo.newInstance();
 
@@ -34,7 +34,7 @@ public final class ChallengeExtInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChallengeBossInfo boss_info = 11;</code>
+     * <code>optional .ChallengeBossInfo boss_info = 4;</code>
      * @return whether the bossInfo field is set
      */
     public boolean hasBossInfo() {
@@ -42,7 +42,7 @@ public final class ChallengeExtInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChallengeBossInfo boss_info = 11;</code>
+     * <code>optional .ChallengeBossInfo boss_info = 4;</code>
      * @return this
      */
     public ChallengeExtInfo clearBossInfo() {
@@ -52,7 +52,7 @@ public final class ChallengeExtInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChallengeBossInfo boss_info = 11;</code>
+     * <code>optional .ChallengeBossInfo boss_info = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class ChallengeExtInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChallengeBossInfo boss_info = 11;</code>
+     * <code>optional .ChallengeBossInfo boss_info = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class ChallengeExtInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChallengeBossInfo boss_info = 11;</code>
+     * <code>optional .ChallengeBossInfo boss_info = 4;</code>
      * @param value the bossInfo to set
      * @return this
      */
@@ -150,7 +150,7 @@ public final class ChallengeExtInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 90);
+        output.writeRawByte((byte) 34);
         output.writeMessageNoTag(bossInfo);
       }
     }
@@ -171,7 +171,7 @@ public final class ChallengeExtInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 90: {
+          case 34: {
             // bossInfo
             input.readMessage(bossInfo);
             bitField0_ |= 0x00000001;

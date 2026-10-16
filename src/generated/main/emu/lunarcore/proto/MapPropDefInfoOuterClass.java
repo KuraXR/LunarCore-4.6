@@ -19,22 +19,22 @@ public final class MapPropDefInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 config_id = 2;</code>
-     */
-    private int configId;
-
-    /**
-     * <code>optional uint32 plane_id = 4;</code>
-     */
-    private int planeId;
-
-    /**
-     * <code>optional uint32 floor_id = 5;</code>
+     * <code>optional uint32 floor_id = 1;</code>
      */
     private int floorId;
 
     /**
-     * <code>optional uint32 group_id = 8;</code>
+     * <code>optional uint32 config_id = 7;</code>
+     */
+    private int configId;
+
+    /**
+     * <code>optional uint32 plane_id = 8;</code>
+     */
+    private int planeId;
+
+    /**
+     * <code>optional uint32 group_id = 10;</code>
      */
     private int groupId;
 
@@ -49,99 +49,25 @@ public final class MapPropDefInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 config_id = 2;</code>
-     * @return whether the configId field is set
+     * <code>optional uint32 floor_id = 1;</code>
+     * @return whether the floorId field is set
      */
-    public boolean hasConfigId() {
+    public boolean hasFloorId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 config_id = 2;</code>
-     * @return this
-     */
-    public MapPropDefInfo clearConfigId() {
-      bitField0_ &= ~0x00000001;
-      configId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 config_id = 2;</code>
-     * @return the configId
-     */
-    public int getConfigId() {
-      return configId;
-    }
-
-    /**
-     * <code>optional uint32 config_id = 2;</code>
-     * @param value the configId to set
-     * @return this
-     */
-    public MapPropDefInfo setConfigId(final int value) {
-      bitField0_ |= 0x00000001;
-      configId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 plane_id = 4;</code>
-     * @return whether the planeId field is set
-     */
-    public boolean hasPlaneId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 plane_id = 4;</code>
-     * @return this
-     */
-    public MapPropDefInfo clearPlaneId() {
-      bitField0_ &= ~0x00000002;
-      planeId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 plane_id = 4;</code>
-     * @return the planeId
-     */
-    public int getPlaneId() {
-      return planeId;
-    }
-
-    /**
-     * <code>optional uint32 plane_id = 4;</code>
-     * @param value the planeId to set
-     * @return this
-     */
-    public MapPropDefInfo setPlaneId(final int value) {
-      bitField0_ |= 0x00000002;
-      planeId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 floor_id = 5;</code>
-     * @return whether the floorId field is set
-     */
-    public boolean hasFloorId() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 floor_id = 5;</code>
+     * <code>optional uint32 floor_id = 1;</code>
      * @return this
      */
     public MapPropDefInfo clearFloorId() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000001;
       floorId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 floor_id = 5;</code>
+     * <code>optional uint32 floor_id = 1;</code>
      * @return the floorId
      */
     public int getFloorId() {
@@ -149,18 +75,92 @@ public final class MapPropDefInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 5;</code>
+     * <code>optional uint32 floor_id = 1;</code>
      * @param value the floorId to set
      * @return this
      */
     public MapPropDefInfo setFloorId(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       floorId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 group_id = 8;</code>
+     * <code>optional uint32 config_id = 7;</code>
+     * @return whether the configId field is set
+     */
+    public boolean hasConfigId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 config_id = 7;</code>
+     * @return this
+     */
+    public MapPropDefInfo clearConfigId() {
+      bitField0_ &= ~0x00000002;
+      configId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 config_id = 7;</code>
+     * @return the configId
+     */
+    public int getConfigId() {
+      return configId;
+    }
+
+    /**
+     * <code>optional uint32 config_id = 7;</code>
+     * @param value the configId to set
+     * @return this
+     */
+    public MapPropDefInfo setConfigId(final int value) {
+      bitField0_ |= 0x00000002;
+      configId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 plane_id = 8;</code>
+     * @return whether the planeId field is set
+     */
+    public boolean hasPlaneId() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 plane_id = 8;</code>
+     * @return this
+     */
+    public MapPropDefInfo clearPlaneId() {
+      bitField0_ &= ~0x00000004;
+      planeId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 plane_id = 8;</code>
+     * @return the planeId
+     */
+    public int getPlaneId() {
+      return planeId;
+    }
+
+    /**
+     * <code>optional uint32 plane_id = 8;</code>
+     * @param value the planeId to set
+     * @return this
+     */
+    public MapPropDefInfo setPlaneId(final int value) {
+      bitField0_ |= 0x00000004;
+      planeId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 group_id = 10;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -168,7 +168,7 @@ public final class MapPropDefInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 8;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return this
      */
     public MapPropDefInfo clearGroupId() {
@@ -178,7 +178,7 @@ public final class MapPropDefInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 8;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -186,7 +186,7 @@ public final class MapPropDefInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 8;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -201,9 +201,9 @@ public final class MapPropDefInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
+        floorId = other.floorId;
         configId = other.configId;
         planeId = other.planeId;
-        floorId = other.floorId;
         groupId = other.groupId;
       }
       return this;
@@ -215,14 +215,14 @@ public final class MapPropDefInfoOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasFloorId()) {
+        setFloorId(other.floorId);
+      }
       if (other.hasConfigId()) {
         setConfigId(other.configId);
       }
       if (other.hasPlaneId()) {
         setPlaneId(other.planeId);
-      }
-      if (other.hasFloorId()) {
-        setFloorId(other.floorId);
       }
       if (other.hasGroupId()) {
         setGroupId(other.groupId);
@@ -237,9 +237,9 @@ public final class MapPropDefInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      floorId = 0;
       configId = 0;
       planeId = 0;
-      floorId = 0;
       groupId = 0;
       return this;
     }
@@ -264,28 +264,28 @@ public final class MapPropDefInfoOuterClass {
       }
       MapPropDefInfo other = (MapPropDefInfo) o;
       return bitField0_ == other.bitField0_
+        && (!hasFloorId() || floorId == other.floorId)
         && (!hasConfigId() || configId == other.configId)
         && (!hasPlaneId() || planeId == other.planeId)
-        && (!hasFloorId() || floorId == other.floorId)
         && (!hasGroupId() || groupId == other.groupId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(configId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(planeId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(floorId);
       }
-      if ((bitField0_ & 0x00000008) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 56);
+        output.writeUInt32NoTag(configId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
         output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(planeId);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(groupId);
       }
     }
@@ -294,13 +294,13 @@ public final class MapPropDefInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(configId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(floorId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(planeId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(configId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(floorId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(planeId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
@@ -315,34 +315,34 @@ public final class MapPropDefInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // configId
-            configId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 32) {
-              break;
-            }
-          }
-          case 32: {
-            // planeId
-            planeId = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 40) {
-              break;
-            }
-          }
-          case 40: {
+          case 8: {
             // floorId
             floorId = input.readUInt32();
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 56) {
+              break;
+            }
+          }
+          case 56: {
+            // configId
+            configId = input.readUInt32();
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 64) {
               break;
             }
           }
           case 64: {
+            // planeId
+            planeId = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 80) {
+              break;
+            }
+          }
+          case 80: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000008;
@@ -369,13 +369,13 @@ public final class MapPropDefInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.configId, configId);
+        output.writeUInt32(FieldNames.floorId, floorId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.planeId, planeId);
+        output.writeUInt32(FieldNames.configId, configId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.floorId, floorId);
+        output.writeUInt32(FieldNames.planeId, planeId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeUInt32(FieldNames.groupId, groupId);
@@ -390,12 +390,24 @@ public final class MapPropDefInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
+          case -766027193:
+          case 2022982190: {
+            if (input.isAtField(FieldNames.floorId)) {
+              if (!input.trySkipNullValue()) {
+                floorId = input.readUInt32();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case -580140035:
           case -804450504: {
             if (input.isAtField(FieldNames.configId)) {
               if (!input.trySkipNullValue()) {
                 configId = input.readUInt32();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -407,18 +419,6 @@ public final class MapPropDefInfoOuterClass {
             if (input.isAtField(FieldNames.planeId)) {
               if (!input.trySkipNullValue()) {
                 planeId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -766027193:
-          case 2022982190: {
-            if (input.isAtField(FieldNames.floorId)) {
-              if (!input.trySkipNullValue()) {
-                floorId = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -491,11 +491,11 @@ public final class MapPropDefInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName floorId = FieldName.forField("floorId", "floor_id");
+
       static final FieldName configId = FieldName.forField("configId", "config_id");
 
       static final FieldName planeId = FieldName.forField("planeId", "plane_id");
-
-      static final FieldName floorId = FieldName.forField("floorId", "floor_id");
 
       static final FieldName groupId = FieldName.forField("groupId", "group_id");
     }

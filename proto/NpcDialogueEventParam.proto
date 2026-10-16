@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message NpcDialogueEventParam {
+  optional uint32 rogue_dialogue_event_id = 11;
+  optional uint32 arg_id = 14;
+}

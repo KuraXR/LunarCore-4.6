@@ -13,29 +13,17 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class SwitchHandOpDataOuterClass {
   /**
-   * <pre>
-   *  CNIADJCLKKF
-   * </pre>
-   *
    * Protobuf type {@code SwitchHandOpData}
    */
   public static final class SwitchHandOpData extends ProtoMessage<SwitchHandOpData> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  HEDLHGFPCGG
-     * </pre>
-     *
      * <code>optional uint32 group_id = 5;</code>
      */
     private int groupId;
 
     /**
-     * <pre>
-     *  ECFFNHDIMPP
-     * </pre>
-     *
      * <code>optional .SwitchHandOpPropType op_type = 6;</code>
      */
     private int opType;
@@ -44,10 +32,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  CNIADJCLKKF
-     * </pre>
-     *
      * @return a new empty instance of {@code SwitchHandOpData}
      */
     public static SwitchHandOpData newInstance() {
@@ -55,10 +39,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  HEDLHGFPCGG
-     * </pre>
-     *
      * <code>optional uint32 group_id = 5;</code>
      * @return whether the groupId field is set
      */
@@ -67,10 +47,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  HEDLHGFPCGG
-     * </pre>
-     *
      * <code>optional uint32 group_id = 5;</code>
      * @return this
      */
@@ -81,10 +57,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  HEDLHGFPCGG
-     * </pre>
-     *
      * <code>optional uint32 group_id = 5;</code>
      * @return the groupId
      */
@@ -93,10 +65,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  HEDLHGFPCGG
-     * </pre>
-     *
      * <code>optional uint32 group_id = 5;</code>
      * @param value the groupId to set
      * @return this
@@ -108,10 +76,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  ECFFNHDIMPP
-     * </pre>
-     *
      * <code>optional .SwitchHandOpPropType op_type = 6;</code>
      * @return whether the opType field is set
      */
@@ -120,10 +84,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  ECFFNHDIMPP
-     * </pre>
-     *
      * <code>optional .SwitchHandOpPropType op_type = 6;</code>
      * @return this
      */
@@ -134,10 +94,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  ECFFNHDIMPP
-     * </pre>
-     *
      * <code>optional .SwitchHandOpPropType op_type = 6;</code>
      * @return the opType
      */
@@ -171,10 +127,6 @@ public final class SwitchHandOpDataOuterClass {
     }
 
     /**
-     * <pre>
-     *  ECFFNHDIMPP
-     * </pre>
-     *
      * <code>optional .SwitchHandOpPropType op_type = 6;</code>
      * @param value the opType to set
      * @return this

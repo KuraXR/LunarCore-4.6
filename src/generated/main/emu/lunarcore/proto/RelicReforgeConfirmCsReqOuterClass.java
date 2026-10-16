@@ -19,12 +19,12 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 relic_unique_id = 11;</code>
+     * <code>optional uint32 relic_unique_id = 1;</code>
      */
     private int relicUniqueId;
 
     /**
-     * <code>optional bool keep_old_affixes = 9;</code>
+     * <code>optional bool keep_old_affixes = 10;</code>
      */
     private boolean keepOldAffixes;
 
@@ -39,7 +39,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 relic_unique_id = 11;</code>
+     * <code>optional uint32 relic_unique_id = 1;</code>
      * @return whether the relicUniqueId field is set
      */
     public boolean hasRelicUniqueId() {
@@ -47,7 +47,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 relic_unique_id = 11;</code>
+     * <code>optional uint32 relic_unique_id = 1;</code>
      * @return this
      */
     public RelicReforgeConfirmCsReq clearRelicUniqueId() {
@@ -57,7 +57,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 relic_unique_id = 11;</code>
+     * <code>optional uint32 relic_unique_id = 1;</code>
      * @return the relicUniqueId
      */
     public int getRelicUniqueId() {
@@ -65,7 +65,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 relic_unique_id = 11;</code>
+     * <code>optional uint32 relic_unique_id = 1;</code>
      * @param value the relicUniqueId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool keep_old_affixes = 9;</code>
+     * <code>optional bool keep_old_affixes = 10;</code>
      * @return whether the keepOldAffixes field is set
      */
     public boolean hasKeepOldAffixes() {
@@ -84,7 +84,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool keep_old_affixes = 9;</code>
+     * <code>optional bool keep_old_affixes = 10;</code>
      * @return this
      */
     public RelicReforgeConfirmCsReq clearKeepOldAffixes() {
@@ -94,7 +94,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool keep_old_affixes = 9;</code>
+     * <code>optional bool keep_old_affixes = 10;</code>
      * @return the keepOldAffixes
      */
     public boolean getKeepOldAffixes() {
@@ -102,7 +102,7 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool keep_old_affixes = 9;</code>
+     * <code>optional bool keep_old_affixes = 10;</code>
      * @param value the keepOldAffixes to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class RelicReforgeConfirmCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(relicUniqueId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 80);
         output.writeBoolNoTag(keepOldAffixes);
       }
     }
@@ -205,16 +205,16 @@ public final class RelicReforgeConfirmCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 88: {
+          case 8: {
             // relicUniqueId
             relicUniqueId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 80) {
               break;
             }
           }
-          case 72: {
+          case 80: {
             // keepOldAffixes
             keepOldAffixes = input.readBool();
             bitField0_ |= 0x00000002;

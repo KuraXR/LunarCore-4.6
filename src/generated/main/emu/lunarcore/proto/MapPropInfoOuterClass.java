@@ -19,22 +19,22 @@ public final class MapPropInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 config_id = 8;</code>
-     */
-    private int configId;
-
-    /**
-     * <code>optional uint32 state = 11;</code>
+     * <code>optional uint32 state = 3;</code>
      */
     private int state;
 
     /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional .PropExtraInfo extra_info = 9;</code>
+     * <code>optional uint32 config_id = 11;</code>
+     */
+    private int configId;
+
+    /**
+     * <code>optional .PropExtraInfo extra_info = 15;</code>
      */
     private final PropExtraInfoOuterClass.PropExtraInfo extraInfo = PropExtraInfoOuterClass.PropExtraInfo.newInstance();
 
@@ -49,62 +49,25 @@ public final class MapPropInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 config_id = 8;</code>
-     * @return whether the configId field is set
+     * <code>optional uint32 state = 3;</code>
+     * @return whether the state field is set
      */
-    public boolean hasConfigId() {
+    public boolean hasState() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 config_id = 8;</code>
-     * @return this
-     */
-    public MapPropInfo clearConfigId() {
-      bitField0_ &= ~0x00000001;
-      configId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 config_id = 8;</code>
-     * @return the configId
-     */
-    public int getConfigId() {
-      return configId;
-    }
-
-    /**
-     * <code>optional uint32 config_id = 8;</code>
-     * @param value the configId to set
-     * @return this
-     */
-    public MapPropInfo setConfigId(final int value) {
-      bitField0_ |= 0x00000001;
-      configId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 state = 11;</code>
-     * @return whether the state field is set
-     */
-    public boolean hasState() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 state = 11;</code>
+     * <code>optional uint32 state = 3;</code>
      * @return this
      */
     public MapPropInfo clearState() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       state = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 state = 11;</code>
+     * <code>optional uint32 state = 3;</code>
      * @return the state
      */
     public int getState() {
@@ -112,36 +75,36 @@ public final class MapPropInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 state = 11;</code>
+     * <code>optional uint32 state = 3;</code>
      * @param value the state to set
      * @return this
      */
     public MapPropInfo setState(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       state = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
-      return (bitField0_ & 0x00000004) != 0;
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return this
      */
     public MapPropInfo clearGroupId() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000002;
       groupId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -149,18 +112,55 @@ public final class MapPropInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 13;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @param value the groupId to set
      * @return this
      */
     public MapPropInfo setGroupId(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       groupId = value;
       return this;
     }
 
     /**
-     * <code>optional .PropExtraInfo extra_info = 9;</code>
+     * <code>optional uint32 config_id = 11;</code>
+     * @return whether the configId field is set
+     */
+    public boolean hasConfigId() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 config_id = 11;</code>
+     * @return this
+     */
+    public MapPropInfo clearConfigId() {
+      bitField0_ &= ~0x00000004;
+      configId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 config_id = 11;</code>
+     * @return the configId
+     */
+    public int getConfigId() {
+      return configId;
+    }
+
+    /**
+     * <code>optional uint32 config_id = 11;</code>
+     * @param value the configId to set
+     * @return this
+     */
+    public MapPropInfo setConfigId(final int value) {
+      bitField0_ |= 0x00000004;
+      configId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .PropExtraInfo extra_info = 15;</code>
      * @return whether the extraInfo field is set
      */
     public boolean hasExtraInfo() {
@@ -168,7 +168,7 @@ public final class MapPropInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropExtraInfo extra_info = 9;</code>
+     * <code>optional .PropExtraInfo extra_info = 15;</code>
      * @return this
      */
     public MapPropInfo clearExtraInfo() {
@@ -178,7 +178,7 @@ public final class MapPropInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropExtraInfo extra_info = 9;</code>
+     * <code>optional .PropExtraInfo extra_info = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -192,7 +192,7 @@ public final class MapPropInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropExtraInfo extra_info = 9;</code>
+     * <code>optional .PropExtraInfo extra_info = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -206,7 +206,7 @@ public final class MapPropInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropExtraInfo extra_info = 9;</code>
+     * <code>optional .PropExtraInfo extra_info = 15;</code>
      * @param value the extraInfo to set
      * @return this
      */
@@ -221,9 +221,9 @@ public final class MapPropInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        configId = other.configId;
         state = other.state;
         groupId = other.groupId;
+        configId = other.configId;
         extraInfo.copyFrom(other.extraInfo);
       }
       return this;
@@ -235,14 +235,14 @@ public final class MapPropInfoOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasConfigId()) {
-        setConfigId(other.configId);
-      }
       if (other.hasState()) {
         setState(other.state);
       }
       if (other.hasGroupId()) {
         setGroupId(other.groupId);
+      }
+      if (other.hasConfigId()) {
+        setConfigId(other.configId);
       }
       if (other.hasExtraInfo()) {
         getMutableExtraInfo().mergeFrom(other.extraInfo);
@@ -257,9 +257,9 @@ public final class MapPropInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      configId = 0;
       state = 0;
       groupId = 0;
+      configId = 0;
       extraInfo.clear();
       return this;
     }
@@ -285,28 +285,28 @@ public final class MapPropInfoOuterClass {
       }
       MapPropInfo other = (MapPropInfo) o;
       return bitField0_ == other.bitField0_
-        && (!hasConfigId() || configId == other.configId)
         && (!hasState() || state == other.state)
         && (!hasGroupId() || groupId == other.groupId)
+        && (!hasConfigId() || configId == other.configId)
         && (!hasExtraInfo() || extraInfo.equals(other.extraInfo));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(configId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(state);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 104);
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(groupId);
       }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 88);
+        output.writeUInt32NoTag(configId);
+      }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 74);
+        output.writeRawByte((byte) 122);
         output.writeMessageNoTag(extraInfo);
       }
     }
@@ -315,13 +315,13 @@ public final class MapPropInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(configId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(state);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(configId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeMessageSizeNoTag(extraInfo);
@@ -336,34 +336,34 @@ public final class MapPropInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
-            // configId
-            configId = input.readUInt32();
+          case 24: {
+            // state
+            state = input.readUInt32();
             bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 80) {
+              break;
+            }
+          }
+          case 80: {
+            // groupId
+            groupId = input.readUInt32();
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 88) {
               break;
             }
           }
           case 88: {
-            // state
-            state = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 104) {
-              break;
-            }
-          }
-          case 104: {
-            // groupId
-            groupId = input.readUInt32();
+            // configId
+            configId = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 74) {
+            if (tag != 122) {
               break;
             }
           }
-          case 74: {
+          case 122: {
             // extraInfo
             input.readMessage(extraInfo);
             bitField0_ |= 0x00000008;
@@ -390,13 +390,13 @@ public final class MapPropInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.configId, configId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.state, state);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
+      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.groupId, groupId);
+      }
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeUInt32(FieldNames.configId, configId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeMessage(FieldNames.extraInfo, extraInfo);
@@ -411,23 +411,11 @@ public final class MapPropInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -580140035:
-          case -804450504: {
-            if (input.isAtField(FieldNames.configId)) {
-              if (!input.trySkipNullValue()) {
-                configId = input.readUInt32();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 109757585: {
             if (input.isAtField(FieldNames.state)) {
               if (!input.trySkipNullValue()) {
                 state = input.readUInt32();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -439,6 +427,18 @@ public final class MapPropInfoOuterClass {
             if (input.isAtField(FieldNames.groupId)) {
               if (!input.trySkipNullValue()) {
                 groupId = input.readUInt32();
+                bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -580140035:
+          case -804450504: {
+            if (input.isAtField(FieldNames.configId)) {
+              if (!input.trySkipNullValue()) {
+                configId = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -510,11 +510,11 @@ public final class MapPropInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName configId = FieldName.forField("configId", "config_id");
-
       static final FieldName state = FieldName.forField("state");
 
       static final FieldName groupId = FieldName.forField("groupId", "group_id");
+
+      static final FieldName configId = FieldName.forField("configId", "config_id");
 
       static final FieldName extraInfo = FieldName.forField("extraInfo", "extra_info");
     }

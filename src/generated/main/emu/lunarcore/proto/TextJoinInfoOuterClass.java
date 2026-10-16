@@ -13,17 +13,13 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class TextJoinInfoOuterClass {
   /**
-   * <pre>
-   *  TODO: CHECK
-   * </pre>
-   *
    * Protobuf type {@code TextJoinInfo}
    */
   public static final class TextJoinInfo extends ProtoMessage<TextJoinInfo> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 text_item_id = 12;</code>
+     * <code>optional uint32 text_item_id = 10;</code>
      */
     private int textItemId;
 
@@ -36,10 +32,6 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  TODO: CHECK
-     * </pre>
-     *
      * @return a new empty instance of {@code TextJoinInfo}
      */
     public static TextJoinInfo newInstance() {
@@ -47,7 +39,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 12;</code>
+     * <code>optional uint32 text_item_id = 10;</code>
      * @return whether the textItemId field is set
      */
     public boolean hasTextItemId() {
@@ -55,7 +47,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 12;</code>
+     * <code>optional uint32 text_item_id = 10;</code>
      * @return this
      */
     public TextJoinInfo clearTextItemId() {
@@ -65,7 +57,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 12;</code>
+     * <code>optional uint32 text_item_id = 10;</code>
      * @return the textItemId
      */
     public int getTextItemId() {
@@ -73,7 +65,7 @@ public final class TextJoinInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 text_item_id = 12;</code>
+     * <code>optional uint32 text_item_id = 10;</code>
      * @param value the textItemId to set
      * @return this
      */
@@ -185,7 +177,7 @@ public final class TextJoinInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(textItemId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
@@ -213,7 +205,7 @@ public final class TextJoinInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 96: {
+          case 80: {
             // textItemId
             textItemId = input.readUInt32();
             bitField0_ |= 0x00000001;

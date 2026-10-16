@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.ProtoUtil;
 
 public final class RotaterDataOuterClass {
   /**
@@ -20,19 +19,9 @@ public final class RotaterDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional float APDIFCCFAGG = 10;</code>
-     */
-    private float aPDIFCCFAGG;
-
-    /**
-     * <code>optional uint32 group_id = 12;</code>
+     * <code>optional uint32 group_id = 10;</code>
      */
     private int groupId;
-
-    /**
-     * <code>optional uint32 unk_int = 15;</code>
-     */
-    private int unkInt;
 
     private RotaterData() {
     }
@@ -45,62 +34,25 @@ public final class RotaterDataOuterClass {
     }
 
     /**
-     * <code>optional float APDIFCCFAGG = 10;</code>
-     * @return whether the aPDIFCCFAGG field is set
+     * <code>optional uint32 group_id = 10;</code>
+     * @return whether the groupId field is set
      */
-    public boolean hasAPDIFCCFAGG() {
+    public boolean hasGroupId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional float APDIFCCFAGG = 10;</code>
-     * @return this
-     */
-    public RotaterData clearAPDIFCCFAGG() {
-      bitField0_ &= ~0x00000001;
-      aPDIFCCFAGG = 0F;
-      return this;
-    }
-
-    /**
-     * <code>optional float APDIFCCFAGG = 10;</code>
-     * @return the aPDIFCCFAGG
-     */
-    public float getAPDIFCCFAGG() {
-      return aPDIFCCFAGG;
-    }
-
-    /**
-     * <code>optional float APDIFCCFAGG = 10;</code>
-     * @param value the aPDIFCCFAGG to set
-     * @return this
-     */
-    public RotaterData setAPDIFCCFAGG(final float value) {
-      bitField0_ |= 0x00000001;
-      aPDIFCCFAGG = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 12;</code>
-     * @return whether the groupId field is set
-     */
-    public boolean hasGroupId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 group_id = 12;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return this
      */
     public RotaterData clearGroupId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       groupId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 group_id = 12;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -108,50 +60,13 @@ public final class RotaterDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 12;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @param value the groupId to set
      * @return this
      */
     public RotaterData setGroupId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       groupId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 unk_int = 15;</code>
-     * @return whether the unkInt field is set
-     */
-    public boolean hasUnkInt() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 unk_int = 15;</code>
-     * @return this
-     */
-    public RotaterData clearUnkInt() {
-      bitField0_ &= ~0x00000004;
-      unkInt = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 unk_int = 15;</code>
-     * @return the unkInt
-     */
-    public int getUnkInt() {
-      return unkInt;
-    }
-
-    /**
-     * <code>optional uint32 unk_int = 15;</code>
-     * @param value the unkInt to set
-     * @return this
-     */
-    public RotaterData setUnkInt(final int value) {
-      bitField0_ |= 0x00000004;
-      unkInt = value;
       return this;
     }
 
@@ -160,9 +75,7 @@ public final class RotaterDataOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        aPDIFCCFAGG = other.aPDIFCCFAGG;
         groupId = other.groupId;
-        unkInt = other.unkInt;
       }
       return this;
     }
@@ -173,14 +86,8 @@ public final class RotaterDataOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasAPDIFCCFAGG()) {
-        setAPDIFCCFAGG(other.aPDIFCCFAGG);
-      }
       if (other.hasGroupId()) {
         setGroupId(other.groupId);
-      }
-      if (other.hasUnkInt()) {
-        setUnkInt(other.unkInt);
       }
       return this;
     }
@@ -192,9 +99,7 @@ public final class RotaterDataOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      aPDIFCCFAGG = 0F;
       groupId = 0;
-      unkInt = 0;
       return this;
     }
 
@@ -218,24 +123,14 @@ public final class RotaterDataOuterClass {
       }
       RotaterData other = (RotaterData) o;
       return bitField0_ == other.bitField0_
-        && (!hasAPDIFCCFAGG() || ProtoUtil.isEqual(aPDIFCCFAGG, other.aPDIFCCFAGG))
-        && (!hasGroupId() || groupId == other.groupId)
-        && (!hasUnkInt() || unkInt == other.unkInt);
+        && (!hasGroupId() || groupId == other.groupId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 85);
-        output.writeFloatNoTag(aPDIFCCFAGG);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(groupId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(unkInt);
       }
     }
 
@@ -243,13 +138,7 @@ public final class RotaterDataOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 5;
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(unkInt);
       }
       return size;
     }
@@ -261,28 +150,10 @@ public final class RotaterDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 85: {
-            // aPDIFCCFAGG
-            aPDIFCCFAGG = input.readFloat();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 96) {
-              break;
-            }
-          }
-          case 96: {
+          case 80: {
             // groupId
             groupId = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 120) {
-              break;
-            }
-          }
-          case 120: {
-            // unkInt
-            unkInt = input.readUInt32();
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -306,13 +177,7 @@ public final class RotaterDataOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeFloat(FieldNames.aPDIFCCFAGG, aPDIFCCFAGG);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.groupId, groupId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.unkInt, unkInt);
       }
       output.endObject();
     }
@@ -324,35 +189,12 @@ public final class RotaterDataOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 327278477: {
-            if (input.isAtField(FieldNames.aPDIFCCFAGG)) {
-              if (!input.trySkipNullValue()) {
-                aPDIFCCFAGG = input.readFloat();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 293428218:
           case 506361563: {
             if (input.isAtField(FieldNames.groupId)) {
               if (!input.trySkipNullValue()) {
                 groupId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -840508003:
-          case -285293790: {
-            if (input.isAtField(FieldNames.unkInt)) {
-              if (!input.trySkipNullValue()) {
-                unkInt = input.readUInt32();
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -411,11 +253,7 @@ public final class RotaterDataOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName aPDIFCCFAGG = FieldName.forField("APDIFCCFAGG");
-
       static final FieldName groupId = FieldName.forField("groupId", "group_id");
-
-      static final FieldName unkInt = FieldName.forField("unkInt", "unk_int");
     }
   }
 }

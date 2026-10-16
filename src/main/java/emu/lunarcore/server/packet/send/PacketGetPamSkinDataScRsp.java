@@ -11,12 +11,13 @@ public class PacketGetPamSkinDataScRsp extends BasePacket {
     public PacketGetPamSkinDataScRsp(Player player) {
         super(CmdId.GetPamSkinDataScRsp);
 
-        // Hack for existing accounts
-        if (player.getCurrentPamSkinId() == 0) {
+        var pamSkinsList = GameData.getPomSkinExcelMap().getIds();
+
+        // Fix accounts with no skin or the old default (25200, a typo for 252000). An unknown
+        // skin leaves the 4.6 client unable to build Pom-Pom, so the Express never finishes loading
+        if (!pamSkinsList.contains(player.getCurrentPamSkinId())) {
             player.setCurrentPamSkinId(252000);
         }
-
-        var pamSkinsList = GameData.getPomSkinExcelMap().getIds();
 
         var data = GetPamSkinDataScRsp.newInstance()
                 .addAllUnlockedPamSkins(pamSkinsList.intStream().toArray())

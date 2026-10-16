@@ -21,39 +21,39 @@ public final class GetAvatarDataScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 9;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional bool is_get_all = 7;</code>
+     * <code>optional bool is_get_all = 14;</code>
      */
     private boolean isGetAll;
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 4;</code>
      */
     private final PlayerOutfitInfoOuterClass.PlayerOutfitInfo playerOutfitData = PlayerOutfitInfoOuterClass.PlayerOutfitInfo.newInstance();
 
     /**
-     * <code>repeated uint32 owned_skin_list = 6;</code>
-     */
-    private final RepeatedInt ownedSkinList = RepeatedInt.newEmptyInstance();
-
-    /**
-     * <code>repeated uint32 basic_type_id_list = 11;</code>
+     * <code>repeated uint32 basic_type_id_list = 6;</code>
      */
     private final RepeatedInt basicTypeIdList = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated .AvatarPathInfo avatar_path_info_list = 12;</code>
+     * <code>repeated uint32 owned_skin_list = 10;</code>
      */
-    private final RepeatedMessage<AvatarPathInfoOuterClass.AvatarPathInfo> avatarPathInfoList = RepeatedMessage.newEmptyInstance(AvatarPathInfoOuterClass.AvatarPathInfo.getFactory());
+    private final RepeatedInt ownedSkinList = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated .Avatar avatar_list = 14;</code>
+     * <code>repeated .Avatar avatar_list = 2;</code>
      */
     private final RepeatedMessage<AvatarOuterClass.Avatar> avatarList = RepeatedMessage.newEmptyInstance(AvatarOuterClass.Avatar.getFactory());
+
+    /**
+     * <code>repeated .AvatarPathInfo avatar_path_info_list = 7;</code>
+     */
+    private final RepeatedMessage<AvatarPathInfoOuterClass.AvatarPathInfo> avatarPathInfoList = RepeatedMessage.newEmptyInstance(AvatarPathInfoOuterClass.AvatarPathInfo.getFactory());
 
     private GetAvatarDataScRsp() {
     }
@@ -66,7 +66,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 9;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -74,7 +74,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 9;</code>
      * @return this
      */
     public GetAvatarDataScRsp clearRetcode() {
@@ -84,7 +84,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 9;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -92,7 +92,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 9;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -103,7 +103,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_get_all = 7;</code>
+     * <code>optional bool is_get_all = 14;</code>
      * @return whether the isGetAll field is set
      */
     public boolean hasIsGetAll() {
@@ -111,7 +111,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_get_all = 7;</code>
+     * <code>optional bool is_get_all = 14;</code>
      * @return this
      */
     public GetAvatarDataScRsp clearIsGetAll() {
@@ -121,7 +121,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_get_all = 7;</code>
+     * <code>optional bool is_get_all = 14;</code>
      * @return the isGetAll
      */
     public boolean getIsGetAll() {
@@ -129,7 +129,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional bool is_get_all = 7;</code>
+     * <code>optional bool is_get_all = 14;</code>
      * @param value the isGetAll to set
      * @return this
      */
@@ -140,7 +140,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 4;</code>
      * @return whether the playerOutfitData field is set
      */
     public boolean hasPlayerOutfitData() {
@@ -148,7 +148,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 4;</code>
      * @return this
      */
     public GetAvatarDataScRsp clearPlayerOutfitData() {
@@ -158,7 +158,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -172,7 +172,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -186,7 +186,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 4;</code>
      * @param value the playerOutfitData to set
      * @return this
      */
@@ -198,93 +198,25 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 owned_skin_list = 6;</code>
-     * @return whether the ownedSkinList field is set
+     * <code>repeated uint32 basic_type_id_list = 6;</code>
+     * @return whether the basicTypeIdList field is set
      */
-    public boolean hasOwnedSkinList() {
+    public boolean hasBasicTypeIdList() {
       return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
-     * <code>repeated uint32 owned_skin_list = 6;</code>
-     * @return this
-     */
-    public GetAvatarDataScRsp clearOwnedSkinList() {
-      bitField0_ &= ~0x00000008;
-      ownedSkinList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 owned_skin_list = 6;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableOwnedSkinList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getOwnedSkinList() {
-      return ownedSkinList;
-    }
-
-    /**
-     * <code>repeated uint32 owned_skin_list = 6;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableOwnedSkinList() {
-      bitField0_ |= 0x00000008;
-      return ownedSkinList;
-    }
-
-    /**
-     * <code>repeated uint32 owned_skin_list = 6;</code>
-     * @param value the ownedSkinList to add
-     * @return this
-     */
-    public GetAvatarDataScRsp addOwnedSkinList(final int value) {
-      bitField0_ |= 0x00000008;
-      ownedSkinList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 owned_skin_list = 6;</code>
-     * @param values the ownedSkinList to add
-     * @return this
-     */
-    public GetAvatarDataScRsp addAllOwnedSkinList(final int... values) {
-      bitField0_ |= 0x00000008;
-      ownedSkinList.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 basic_type_id_list = 11;</code>
-     * @return whether the basicTypeIdList field is set
-     */
-    public boolean hasBasicTypeIdList() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 basic_type_id_list = 11;</code>
+     * <code>repeated uint32 basic_type_id_list = 6;</code>
      * @return this
      */
     public GetAvatarDataScRsp clearBasicTypeIdList() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000008;
       basicTypeIdList.clear();
       return this;
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 11;</code>
+     * <code>repeated uint32 basic_type_id_list = 6;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -298,7 +230,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 11;</code>
+     * <code>repeated uint32 basic_type_id_list = 6;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -307,66 +239,66 @@ public final class GetAvatarDataScRspOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedInt getMutableBasicTypeIdList() {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       return basicTypeIdList;
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 11;</code>
+     * <code>repeated uint32 basic_type_id_list = 6;</code>
      * @param value the basicTypeIdList to add
      * @return this
      */
     public GetAvatarDataScRsp addBasicTypeIdList(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       basicTypeIdList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated uint32 basic_type_id_list = 11;</code>
+     * <code>repeated uint32 basic_type_id_list = 6;</code>
      * @param values the basicTypeIdList to add
      * @return this
      */
     public GetAvatarDataScRsp addAllBasicTypeIdList(final int... values) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       basicTypeIdList.addAll(values);
       return this;
     }
 
     /**
-     * <code>repeated .AvatarPathInfo avatar_path_info_list = 12;</code>
-     * @return whether the avatarPathInfoList field is set
+     * <code>repeated uint32 owned_skin_list = 10;</code>
+     * @return whether the ownedSkinList field is set
      */
-    public boolean hasAvatarPathInfoList() {
-      return (bitField0_ & 0x00000020) != 0;
+    public boolean hasOwnedSkinList() {
+      return (bitField0_ & 0x00000010) != 0;
     }
 
     /**
-     * <code>repeated .AvatarPathInfo avatar_path_info_list = 12;</code>
+     * <code>repeated uint32 owned_skin_list = 10;</code>
      * @return this
      */
-    public GetAvatarDataScRsp clearAvatarPathInfoList() {
-      bitField0_ &= ~0x00000020;
-      avatarPathInfoList.clear();
+    public GetAvatarDataScRsp clearOwnedSkinList() {
+      bitField0_ &= ~0x00000010;
+      ownedSkinList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .AvatarPathInfo avatar_path_info_list = 12;</code>
+     * <code>repeated uint32 owned_skin_list = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
      *
-     * Use {@link #getMutableAvatarPathInfoList()} if you want to modify it.
+     * Use {@link #getMutableOwnedSkinList()} if you want to modify it.
      *
      * @return internal storage object for reading
      */
-    public RepeatedMessage<AvatarPathInfoOuterClass.AvatarPathInfo> getAvatarPathInfoList() {
-      return avatarPathInfoList;
+    public RepeatedInt getOwnedSkinList() {
+      return ownedSkinList;
     }
 
     /**
-     * <code>repeated .AvatarPathInfo avatar_path_info_list = 12;</code>
+     * <code>repeated uint32 owned_skin_list = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -374,55 +306,53 @@ public final class GetAvatarDataScRspOuterClass {
      *
      * @return internal storage object for modifications
      */
-    public RepeatedMessage<AvatarPathInfoOuterClass.AvatarPathInfo> getMutableAvatarPathInfoList() {
-      bitField0_ |= 0x00000020;
-      return avatarPathInfoList;
+    public RepeatedInt getMutableOwnedSkinList() {
+      bitField0_ |= 0x00000010;
+      return ownedSkinList;
     }
 
     /**
-     * <code>repeated .AvatarPathInfo avatar_path_info_list = 12;</code>
-     * @param value the avatarPathInfoList to add
+     * <code>repeated uint32 owned_skin_list = 10;</code>
+     * @param value the ownedSkinList to add
      * @return this
      */
-    public GetAvatarDataScRsp addAvatarPathInfoList(
-        final AvatarPathInfoOuterClass.AvatarPathInfo value) {
-      bitField0_ |= 0x00000020;
-      avatarPathInfoList.add(value);
+    public GetAvatarDataScRsp addOwnedSkinList(final int value) {
+      bitField0_ |= 0x00000010;
+      ownedSkinList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .AvatarPathInfo avatar_path_info_list = 12;</code>
-     * @param values the avatarPathInfoList to add
+     * <code>repeated uint32 owned_skin_list = 10;</code>
+     * @param values the ownedSkinList to add
      * @return this
      */
-    public GetAvatarDataScRsp addAllAvatarPathInfoList(
-        final AvatarPathInfoOuterClass.AvatarPathInfo... values) {
-      bitField0_ |= 0x00000020;
-      avatarPathInfoList.addAll(values);
+    public GetAvatarDataScRsp addAllOwnedSkinList(final int... values) {
+      bitField0_ |= 0x00000010;
+      ownedSkinList.addAll(values);
       return this;
     }
 
     /**
-     * <code>repeated .Avatar avatar_list = 14;</code>
+     * <code>repeated .Avatar avatar_list = 2;</code>
      * @return whether the avatarList field is set
      */
     public boolean hasAvatarList() {
-      return (bitField0_ & 0x00000040) != 0;
+      return (bitField0_ & 0x00000020) != 0;
     }
 
     /**
-     * <code>repeated .Avatar avatar_list = 14;</code>
+     * <code>repeated .Avatar avatar_list = 2;</code>
      * @return this
      */
     public GetAvatarDataScRsp clearAvatarList() {
-      bitField0_ &= ~0x00000040;
+      bitField0_ &= ~0x00000020;
       avatarList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .Avatar avatar_list = 14;</code>
+     * <code>repeated .Avatar avatar_list = 2;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -436,7 +366,7 @@ public final class GetAvatarDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated .Avatar avatar_list = 14;</code>
+     * <code>repeated .Avatar avatar_list = 2;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -445,29 +375,99 @@ public final class GetAvatarDataScRspOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<AvatarOuterClass.Avatar> getMutableAvatarList() {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       return avatarList;
     }
 
     /**
-     * <code>repeated .Avatar avatar_list = 14;</code>
+     * <code>repeated .Avatar avatar_list = 2;</code>
      * @param value the avatarList to add
      * @return this
      */
     public GetAvatarDataScRsp addAvatarList(final AvatarOuterClass.Avatar value) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       avatarList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .Avatar avatar_list = 14;</code>
+     * <code>repeated .Avatar avatar_list = 2;</code>
      * @param values the avatarList to add
      * @return this
      */
     public GetAvatarDataScRsp addAllAvatarList(final AvatarOuterClass.Avatar... values) {
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000020;
       avatarList.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .AvatarPathInfo avatar_path_info_list = 7;</code>
+     * @return whether the avatarPathInfoList field is set
+     */
+    public boolean hasAvatarPathInfoList() {
+      return (bitField0_ & 0x00000040) != 0;
+    }
+
+    /**
+     * <code>repeated .AvatarPathInfo avatar_path_info_list = 7;</code>
+     * @return this
+     */
+    public GetAvatarDataScRsp clearAvatarPathInfoList() {
+      bitField0_ &= ~0x00000040;
+      avatarPathInfoList.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .AvatarPathInfo avatar_path_info_list = 7;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableAvatarPathInfoList()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<AvatarPathInfoOuterClass.AvatarPathInfo> getAvatarPathInfoList() {
+      return avatarPathInfoList;
+    }
+
+    /**
+     * <code>repeated .AvatarPathInfo avatar_path_info_list = 7;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<AvatarPathInfoOuterClass.AvatarPathInfo> getMutableAvatarPathInfoList() {
+      bitField0_ |= 0x00000040;
+      return avatarPathInfoList;
+    }
+
+    /**
+     * <code>repeated .AvatarPathInfo avatar_path_info_list = 7;</code>
+     * @param value the avatarPathInfoList to add
+     * @return this
+     */
+    public GetAvatarDataScRsp addAvatarPathInfoList(
+        final AvatarPathInfoOuterClass.AvatarPathInfo value) {
+      bitField0_ |= 0x00000040;
+      avatarPathInfoList.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .AvatarPathInfo avatar_path_info_list = 7;</code>
+     * @param values the avatarPathInfoList to add
+     * @return this
+     */
+    public GetAvatarDataScRsp addAllAvatarPathInfoList(
+        final AvatarPathInfoOuterClass.AvatarPathInfo... values) {
+      bitField0_ |= 0x00000040;
+      avatarPathInfoList.addAll(values);
       return this;
     }
 
@@ -479,10 +479,10 @@ public final class GetAvatarDataScRspOuterClass {
         retcode = other.retcode;
         isGetAll = other.isGetAll;
         playerOutfitData.copyFrom(other.playerOutfitData);
-        ownedSkinList.copyFrom(other.ownedSkinList);
         basicTypeIdList.copyFrom(other.basicTypeIdList);
-        avatarPathInfoList.copyFrom(other.avatarPathInfoList);
+        ownedSkinList.copyFrom(other.ownedSkinList);
         avatarList.copyFrom(other.avatarList);
+        avatarPathInfoList.copyFrom(other.avatarPathInfoList);
       }
       return this;
     }
@@ -502,17 +502,17 @@ public final class GetAvatarDataScRspOuterClass {
       if (other.hasPlayerOutfitData()) {
         getMutablePlayerOutfitData().mergeFrom(other.playerOutfitData);
       }
-      if (other.hasOwnedSkinList()) {
-        getMutableOwnedSkinList().addAll(other.ownedSkinList);
-      }
       if (other.hasBasicTypeIdList()) {
         getMutableBasicTypeIdList().addAll(other.basicTypeIdList);
       }
-      if (other.hasAvatarPathInfoList()) {
-        getMutableAvatarPathInfoList().addAll(other.avatarPathInfoList);
+      if (other.hasOwnedSkinList()) {
+        getMutableOwnedSkinList().addAll(other.ownedSkinList);
       }
       if (other.hasAvatarList()) {
         getMutableAvatarList().addAll(other.avatarList);
+      }
+      if (other.hasAvatarPathInfoList()) {
+        getMutableAvatarPathInfoList().addAll(other.avatarPathInfoList);
       }
       return this;
     }
@@ -527,10 +527,10 @@ public final class GetAvatarDataScRspOuterClass {
       retcode = 0;
       isGetAll = false;
       playerOutfitData.clear();
-      ownedSkinList.clear();
       basicTypeIdList.clear();
-      avatarPathInfoList.clear();
+      ownedSkinList.clear();
       avatarList.clear();
+      avatarPathInfoList.clear();
       return this;
     }
 
@@ -542,10 +542,10 @@ public final class GetAvatarDataScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       playerOutfitData.clearQuick();
-      ownedSkinList.clear();
       basicTypeIdList.clear();
-      avatarPathInfoList.clearQuick();
+      ownedSkinList.clear();
       avatarList.clearQuick();
+      avatarPathInfoList.clearQuick();
       return this;
     }
 
@@ -562,48 +562,48 @@ public final class GetAvatarDataScRspOuterClass {
         && (!hasRetcode() || retcode == other.retcode)
         && (!hasIsGetAll() || isGetAll == other.isGetAll)
         && (!hasPlayerOutfitData() || playerOutfitData.equals(other.playerOutfitData))
-        && (!hasOwnedSkinList() || ownedSkinList.equals(other.ownedSkinList))
         && (!hasBasicTypeIdList() || basicTypeIdList.equals(other.basicTypeIdList))
-        && (!hasAvatarPathInfoList() || avatarPathInfoList.equals(other.avatarPathInfoList))
-        && (!hasAvatarList() || avatarList.equals(other.avatarList));
+        && (!hasOwnedSkinList() || ownedSkinList.equals(other.ownedSkinList))
+        && (!hasAvatarList() || avatarList.equals(other.avatarList))
+        && (!hasAvatarPathInfoList() || avatarPathInfoList.equals(other.avatarPathInfoList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 112);
         output.writeBoolNoTag(isGetAll);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 10);
+        output.writeRawByte((byte) 34);
         output.writeMessageNoTag(playerOutfitData);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        for (int i = 0; i < ownedSkinList.length(); i++) {
-          output.writeRawByte((byte) 48);
-          output.writeUInt32NoTag(ownedSkinList.array()[i]);
-        }
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         for (int i = 0; i < basicTypeIdList.length(); i++) {
-          output.writeRawByte((byte) 88);
+          output.writeRawByte((byte) 48);
           output.writeUInt32NoTag(basicTypeIdList.array()[i]);
         }
       }
+      if ((bitField0_ & 0x00000010) != 0) {
+        for (int i = 0; i < ownedSkinList.length(); i++) {
+          output.writeRawByte((byte) 80);
+          output.writeUInt32NoTag(ownedSkinList.array()[i]);
+        }
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        for (int i = 0; i < avatarPathInfoList.length(); i++) {
-          output.writeRawByte((byte) 98);
-          output.writeMessageNoTag(avatarPathInfoList.get(i));
+        for (int i = 0; i < avatarList.length(); i++) {
+          output.writeRawByte((byte) 18);
+          output.writeMessageNoTag(avatarList.get(i));
         }
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        for (int i = 0; i < avatarList.length(); i++) {
-          output.writeRawByte((byte) 114);
-          output.writeMessageNoTag(avatarList.get(i));
+        for (int i = 0; i < avatarPathInfoList.length(); i++) {
+          output.writeRawByte((byte) 58);
+          output.writeMessageNoTag(avatarPathInfoList.get(i));
         }
       }
     }
@@ -621,16 +621,16 @@ public final class GetAvatarDataScRspOuterClass {
         size += 1 + ProtoSink.computeMessageSizeNoTag(playerOutfitData);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += (1 * ownedSkinList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(ownedSkinList);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         size += (1 * basicTypeIdList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(basicTypeIdList);
       }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += (1 * ownedSkinList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(ownedSkinList);
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        size += (1 * avatarPathInfoList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(avatarPathInfoList);
+        size += (1 * avatarList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(avatarList);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        size += (1 * avatarList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(avatarList);
+        size += (1 * avatarPathInfoList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(avatarPathInfoList);
       }
       return size;
     }
@@ -642,25 +642,25 @@ public final class GetAvatarDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 72: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 112) {
               break;
             }
           }
-          case 56: {
+          case 112: {
             // isGetAll
             isGetAll = input.readBool();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 10) {
+            if (tag != 34) {
               break;
             }
           }
-          case 10: {
+          case 34: {
             // playerOutfitData
             input.readMessage(playerOutfitData);
             bitField0_ |= 0x00000004;
@@ -670,34 +670,34 @@ public final class GetAvatarDataScRspOuterClass {
             }
           }
           case 50: {
-            // ownedSkinList [packed=true]
-            input.readPackedUInt32(ownedSkinList, tag);
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 90) {
-              break;
-            }
-          }
-          case 90: {
             // basicTypeIdList [packed=true]
             input.readPackedUInt32(basicTypeIdList, tag);
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
+            if (tag != 82) {
+              break;
+            }
+          }
+          case 82: {
+            // ownedSkinList [packed=true]
+            input.readPackedUInt32(ownedSkinList, tag);
             bitField0_ |= 0x00000010;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 18) {
               break;
             }
           }
-          case 98: {
-            // avatarPathInfoList
-            tag = input.readRepeatedMessage(avatarPathInfoList, tag);
-            bitField0_ |= 0x00000020;
-            if (tag != 114) {
-              break;
-            }
-          }
-          case 114: {
+          case 18: {
             // avatarList
             tag = input.readRepeatedMessage(avatarList, tag);
+            bitField0_ |= 0x00000020;
+            if (tag != 58) {
+              break;
+            }
+          }
+          case 58: {
+            // avatarPathInfoList
+            tag = input.readRepeatedMessage(avatarPathInfoList, tag);
             bitField0_ |= 0x00000040;
             if (tag != 0) {
               break;
@@ -714,14 +714,14 @@ public final class GetAvatarDataScRspOuterClass {
             break;
           }
           case 48: {
-            // ownedSkinList [packed=false]
-            tag = input.readRepeatedUInt32(ownedSkinList, tag);
+            // basicTypeIdList [packed=false]
+            tag = input.readRepeatedUInt32(basicTypeIdList, tag);
             bitField0_ |= 0x00000008;
             break;
           }
-          case 88: {
-            // basicTypeIdList [packed=false]
-            tag = input.readRepeatedUInt32(basicTypeIdList, tag);
+          case 80: {
+            // ownedSkinList [packed=false]
+            tag = input.readRepeatedUInt32(ownedSkinList, tag);
             bitField0_ |= 0x00000010;
             break;
           }
@@ -742,16 +742,16 @@ public final class GetAvatarDataScRspOuterClass {
         output.writeMessage(FieldNames.playerOutfitData, playerOutfitData);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRepeatedUInt32(FieldNames.ownedSkinList, ownedSkinList);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
         output.writeRepeatedUInt32(FieldNames.basicTypeIdList, basicTypeIdList);
       }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRepeatedUInt32(FieldNames.ownedSkinList, ownedSkinList);
+      }
       if ((bitField0_ & 0x00000020) != 0) {
-        output.writeRepeatedMessage(FieldNames.avatarPathInfoList, avatarPathInfoList);
+        output.writeRepeatedMessage(FieldNames.avatarList, avatarList);
       }
       if ((bitField0_ & 0x00000040) != 0) {
-        output.writeRepeatedMessage(FieldNames.avatarList, avatarList);
+        output.writeRepeatedMessage(FieldNames.avatarPathInfoList, avatarPathInfoList);
       }
       output.endObject();
     }
@@ -798,11 +798,11 @@ public final class GetAvatarDataScRspOuterClass {
             }
             break;
           }
-          case -939989632:
-          case -1012790010: {
-            if (input.isAtField(FieldNames.ownedSkinList)) {
+          case -332160255:
+          case 99090862: {
+            if (input.isAtField(FieldNames.basicTypeIdList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(ownedSkinList);
+                input.readRepeatedUInt32(basicTypeIdList);
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -810,24 +810,12 @@ public final class GetAvatarDataScRspOuterClass {
             }
             break;
           }
-          case -332160255:
-          case 99090862: {
-            if (input.isAtField(FieldNames.basicTypeIdList)) {
+          case -939989632:
+          case -1012790010: {
+            if (input.isAtField(FieldNames.ownedSkinList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(basicTypeIdList);
+                input.readRepeatedUInt32(ownedSkinList);
                 bitField0_ |= 0x00000010;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1918381482:
-          case 11642267: {
-            if (input.isAtField(FieldNames.avatarPathInfoList)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(avatarPathInfoList);
-                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -839,6 +827,18 @@ public final class GetAvatarDataScRspOuterClass {
             if (input.isAtField(FieldNames.avatarList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(avatarList);
+                bitField0_ |= 0x00000020;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 1918381482:
+          case 11642267: {
+            if (input.isAtField(FieldNames.avatarPathInfoList)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(avatarPathInfoList);
                 bitField0_ |= 0x00000040;
               }
             } else {
@@ -905,13 +905,13 @@ public final class GetAvatarDataScRspOuterClass {
 
       static final FieldName playerOutfitData = FieldName.forField("playerOutfitData", "player_outfit_data");
 
-      static final FieldName ownedSkinList = FieldName.forField("ownedSkinList", "owned_skin_list");
-
       static final FieldName basicTypeIdList = FieldName.forField("basicTypeIdList", "basic_type_id_list");
 
-      static final FieldName avatarPathInfoList = FieldName.forField("avatarPathInfoList", "avatar_path_info_list");
+      static final FieldName ownedSkinList = FieldName.forField("ownedSkinList", "owned_skin_list");
 
       static final FieldName avatarList = FieldName.forField("avatarList", "avatar_list");
+
+      static final FieldName avatarPathInfoList = FieldName.forField("avatarPathInfoList", "avatar_path_info_list");
     }
   }
 }

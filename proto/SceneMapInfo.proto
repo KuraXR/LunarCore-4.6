@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MapInfoGroup.proto";
+import "MapPropInfo.proto";
+import "MazeChest.proto";
+import "SceneIdentifierInfo.proto";
+
+message SceneMapInfo {
+  optional uint32 entry_id = 15;
+  optional uint32 floor_id = 9;
+  optional uint32 dimension_id = 6;
+  optional uint32 retcode = 11;
+  optional SceneIdentifierInfo scene_identifier = 790;
+  repeated uint32 lighten_section_list = 13;
+  repeated uint32 unlock_teleport_list = 3;
+  map<string, sint32> floor_saved_value_map = 2;
+  repeated MapInfoGroup group_list = 10;
+  repeated MapPropInfo map_info_prop_list = 4;
+  repeated MazeChest chest_list = 7;
+}

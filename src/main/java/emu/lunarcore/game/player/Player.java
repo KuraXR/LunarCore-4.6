@@ -181,7 +181,7 @@ public class Player implements Tickable, Syncable {
         this.signature = "";
         this.phoneTheme = 221000;
         this.chatBubble = 220000;
-        this.currentPamSkinId = 25200;
+        this.currentPamSkinId = 252000;
         this.stamina = GameConstants.MAX_STAMINA;
         this.nextStaminaRecover = System.currentTimeMillis();
 
@@ -679,8 +679,8 @@ public class Player implements Tickable, Syncable {
         PropState oldState = prop.getState();
         PropState newState = interactExcel.getTargetState();
         
-        // Set group and prop state
-        this.sendPacket(new PacketGroupStateChangeScNotify(getEntryId(), prop.getGroupId(), newState));
+        // Set prop state. 4.6 has no GroupStateChangeScNotify; the client gets the change from
+        // SceneGroupRefreshScNotify
         prop.setState(newState);
         
         // Handle any extra interaction actions
@@ -1143,12 +1143,7 @@ public class Player implements Tickable, Syncable {
         proto.getMutableDisplaySettings();
         proto.getMutableHeadIconFrameInfo();
         proto.getMutablePlayerOutfitData();
-        proto.getMutableChallengeDetail()
-            .getMutableUnkInfo()
-            .getMutableUnkInfo()
-            .getMutableUnkInfo();
-        
-        proto.setUnkDetail("");
+        // 4.6 removed the 4.2 challenge_detail chain and unk_detail string
         
         for (int i = 0; i < this.getAssistAvatars().size(); i++) {
             ObjectId objectId = this.getAssistAvatars().get(i);

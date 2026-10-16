@@ -14,8 +14,9 @@ public class PacketGetJukeboxDataScRsp extends BasePacket {
 
         var allmusicids = GameData.getAllMusicIds();
 
-        var data = GetJukeboxDataScRsp.newInstance()
-                .setPlayingId(player.getCurrentBgm());
+        // 4.6 reports the playing music inside a playing state (12.1.1 = music id)
+        var data = GetJukeboxDataScRsp.newInstance();
+        data.getMutablePlayState().getMutableCurrent().setId(player.getCurrentBgm());
 
         for (int musicId : allmusicids) {
             UnlockedMusic musicListEntry = UnlockedMusic.newInstance()

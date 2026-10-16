@@ -73,6 +73,15 @@ public class GameServerPacketHandler {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            return;
+        }
+
+        // The 4.6 client waits on requests that get no reply
+        // (loading icon after spawning), so answer unhandled requests with an empty response
+        int response = DefaultResponses.get(cmdId);
+        if (response > 0 && session.getState() == SessionState.ACTIVE) {
+            session.send(response);
+            return;
         }
 
         // Log unhandled packets

@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message PlayerMocDisplayInfo {
+  optional uint32 int1 = 1;
+  optional uint32 int3 = 3;
+  optional uint32 star_count = 6;
+  optional uint32 floor_num = 14;
+  optional uint32 season_id = 15;
+}

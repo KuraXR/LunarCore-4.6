@@ -19,12 +19,12 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 11;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 enhance_id = 11;</code>
+     * <code>optional uint32 enhance_id = 14;</code>
      */
     private int enhanceId;
 
@@ -39,7 +39,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -47,7 +47,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return this
      */
     public SetAvatarEnhancedIdScRsp clearRetcode() {
@@ -57,7 +57,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -65,7 +65,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 11;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 enhance_id = 11;</code>
+     * <code>optional uint32 enhance_id = 14;</code>
      * @return whether the enhanceId field is set
      */
     public boolean hasEnhanceId() {
@@ -84,7 +84,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 enhance_id = 11;</code>
+     * <code>optional uint32 enhance_id = 14;</code>
      * @return this
      */
     public SetAvatarEnhancedIdScRsp clearEnhanceId() {
@@ -94,7 +94,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 enhance_id = 11;</code>
+     * <code>optional uint32 enhance_id = 14;</code>
      * @return the enhanceId
      */
     public int getEnhanceId() {
@@ -102,7 +102,7 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 enhance_id = 11;</code>
+     * <code>optional uint32 enhance_id = 14;</code>
      * @param value the enhanceId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(enhanceId);
       }
     }
@@ -205,16 +205,16 @@ public final class SetAvatarEnhancedIdScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 88: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 112) {
               break;
             }
           }
-          case 88: {
+          case 112: {
             // enhanceId
             enhanceId = input.readUInt32();
             bitField0_ |= 0x00000002;

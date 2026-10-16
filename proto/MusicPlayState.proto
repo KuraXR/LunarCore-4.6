@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MusicPlayEntry.proto";
+
+message MusicPlayState {
+  optional MusicPlayEntry current = 1;
+}

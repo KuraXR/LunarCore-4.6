@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "AvatarSkillTree.proto";
+import "DisplayEquipmentInfo.proto";
+import "DisplayRelicInfo.proto";
+
+message DisplayAvatarDetailInfo {
+  optional uint32 dressed_skin_id = 11;
+  optional uint32 rank = 14;
+  optional uint32 pos = 7;
+  optional uint32 level = 13;
+  optional uint32 exp = 4;
+  optional uint32 avatar_id = 1;
+  optional uint32 promotion = 10;
+  optional DisplayEquipmentInfo equipment = 2;
+  repeated AvatarSkillTree skilltree_list = 5;
+  repeated DisplayRelicInfo relic_list = 9;
+}

@@ -14,8 +14,13 @@ public class HandlerPlayBackGroundMusicCsReq extends PacketHandler {
     public void handle(GameSession session, byte[] data) throws Exception {
         var req = PlayBackGroundMusicCsReq.parseFrom(data);
 
-        session.getPlayer().setCurrentBgm(req.getPlayMusicId());
-        session.send(new PacketPlayBackGroundMusicScRsp(req.getPlayMusicId()));
+        // 4.6 sends a playing state; its current entry is the selected music
+        int musicId = req.getPlayState().getCurrent().getId();
+        if (musicId != 0) {
+            session.getPlayer().setCurrentBgm(musicId);
+        }
+
+        session.send(new PacketPlayBackGroundMusicScRsp(session.getPlayer().getCurrentBgm()));
     }
 
 }

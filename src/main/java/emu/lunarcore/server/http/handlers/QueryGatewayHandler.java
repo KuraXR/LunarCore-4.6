@@ -19,55 +19,21 @@ public class QueryGatewayHandler implements Handler {
         // Get streaming data from config
         var data = LunarCore.getHotfixData();
         
-        // Build gateserver proto
+        // Build gateserver proto. The 4.6 gateway has 88 obfuscated fields; only these are known:
+        // region, ip, port and the design-data url/flag.
         Gateserver gateserver = Gateserver.newInstance()
                 .setRegionName(LunarCore.getConfig().getGameServer().getId())
                 .setIp(LunarCore.getConfig().getGameServer().getPublicAddress())
-                .setPort(LunarCore.getConfig().getGameServer().getPublicPort())
-                .setLoginWhiteMsg("Access verification failed. Please check if you have logged in to the correct account and server.") // in case there is some error idk
-                
-                .setUnk1(true)
-                .setUnk2(true)
-                .setUnk3(true)
-                .setUnk4(true)
-                .setUnk5(true)
-                .setUnk6(true)
-                .setUnk7(true)
-                .setUnk8(true)
-                .setUnk9(true);
-        
-                /*
-                .setEnableVersionUpdate(true)
-                .setEnableDesignDataVersionUpdate(true)
-                .setEventTrackingOpen(true)
-                .setNetworkDiagnostic(true)
-                */
-        
-        // Set hotfix urls
-        if (data.assetBundleUrl != null && !data.assetBundleUrl.isBlank()) {
-            gateserver.setAssetBundleUrl(data.assetBundleUrl);
-        }
-        if (data.baseAssetBundleUrl != null && !data.baseAssetBundleUrl.isBlank()) {
-            gateserver.setBaseAssetBundleUrl(data.baseAssetBundleUrl);
-        }
+                .setPort(LunarCore.getConfig().getGameServer().getPublicPort());
+
+        // Design data hotfix (asset bundle, lua and ifix urls have no known 4.6 field)
         if (data.exResourceUrl != null && !data.exResourceUrl.isBlank()) {
-            gateserver.setExResourceUrl(data.exResourceUrl);
-        }
-        if (data.luaUrl != null && !data.luaUrl.isBlank()) {
-            gateserver.setLuaUrl(data.luaUrl);
-        }
-        if (data.ifixUrl != null && !data.ifixUrl.isBlank()) {
-            gateserver.setIfixUrl(data.ifixUrl);
-        }
-        
-        // Set hotfix versions
-        String mdkResVersion = data.getMdkResVersion();
-        String ifixVersion = data.getIfixVersion();
-        if (mdkResVersion != null) {
-            gateserver.setMdkResVersion(mdkResVersion);
-        }
-        if (ifixVersion != null) {
-            gateserver.setIfixVersion(ifixVersion);
+            gateserver.setExResourceUrl(data.exResourceUrl)
+                .setEnableDesignDataVersionUpdate(true);
+        } else if (DesignDataHandler.isAvailable()) {
+            // Without a design data url the client never loads its full design data (text maps)
+            gateserver.setExResourceUrl(DesignDataHandler.getUrl())
+                .setEnableDesignDataVersionUpdate(true);
         }
         
         // Log

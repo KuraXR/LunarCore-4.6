@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "SceneBattleInfo.proto";
+
+message SceneEnterStageScRsp {
+  optional uint32 retcode = 13;
+  optional SceneBattleInfo battle_info = 12;
+}

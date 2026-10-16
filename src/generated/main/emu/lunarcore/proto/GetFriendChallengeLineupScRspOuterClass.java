@@ -20,19 +20,11 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 13;</code>
      */
     private int retcode;
 
     /**
-     * <pre>
-     *  always set to true
-     * </pre>
-     *
      * <code>optional bool b11 = 10;</code>
      */
     private boolean b11;
@@ -53,10 +45,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 13;</code>
      * @return whether the retcode field is set
      */
@@ -65,10 +53,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 13;</code>
      * @return this
      */
@@ -79,10 +63,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 13;</code>
      * @return the retcode
      */
@@ -91,10 +71,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
      * <code>optional uint32 retcode = 13;</code>
      * @param value the retcode to set
      * @return this
@@ -106,10 +82,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  always set to true
-     * </pre>
-     *
      * <code>optional bool b11 = 10;</code>
      * @return whether the b11 field is set
      */
@@ -118,10 +90,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  always set to true
-     * </pre>
-     *
      * <code>optional bool b11 = 10;</code>
      * @return this
      */
@@ -132,10 +100,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  always set to true
-     * </pre>
-     *
      * <code>optional bool b11 = 10;</code>
      * @return the b11
      */
@@ -144,10 +108,6 @@ public final class GetFriendChallengeLineupScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  always set to true
-     * </pre>
-     *
      * <code>optional bool b11 = 10;</code>
      * @param value the b11 to set
      * @return this

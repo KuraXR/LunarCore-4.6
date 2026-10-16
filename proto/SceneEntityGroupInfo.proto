@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "SceneEntityInfo.proto";
+
+message SceneEntityGroupInfo {
+  optional uint32 group_id = 3;
+  optional uint32 state = 13;
+  map<string, sint32> group_property_map = 10;
+  repeated SceneEntityInfo entity_list = 8;
+}

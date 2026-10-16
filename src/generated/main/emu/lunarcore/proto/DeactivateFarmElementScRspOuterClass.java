@@ -19,12 +19,12 @@ public final class DeactivateFarmElementScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 2;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 entity_id = 8;</code>
+     * <code>optional uint32 entity_id = 7;</code>
      */
     private int entityId;
 
@@ -39,7 +39,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -47,7 +47,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return this
      */
     public DeactivateFarmElementScRsp clearRetcode() {
@@ -57,7 +57,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -65,7 +65,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 3;</code>
+     * <code>optional uint32 retcode = 2;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 8;</code>
+     * <code>optional uint32 entity_id = 7;</code>
      * @return whether the entityId field is set
      */
     public boolean hasEntityId() {
@@ -84,7 +84,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 8;</code>
+     * <code>optional uint32 entity_id = 7;</code>
      * @return this
      */
     public DeactivateFarmElementScRsp clearEntityId() {
@@ -94,7 +94,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 8;</code>
+     * <code>optional uint32 entity_id = 7;</code>
      * @return the entityId
      */
     public int getEntityId() {
@@ -102,7 +102,7 @@ public final class DeactivateFarmElementScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 entity_id = 8;</code>
+     * <code>optional uint32 entity_id = 7;</code>
      * @param value the entityId to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class DeactivateFarmElementScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(entityId);
       }
     }
@@ -205,16 +205,16 @@ public final class DeactivateFarmElementScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 16: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 64) {
+            if (tag != 56) {
               break;
             }
           }
-          case 64: {
+          case 56: {
             // entityId
             entityId = input.readUInt32();
             bitField0_ |= 0x00000002;

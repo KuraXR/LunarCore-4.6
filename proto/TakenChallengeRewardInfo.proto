@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemList.proto";
+
+message TakenChallengeRewardInfo {
+  optional uint32 star_count = 9;
+  optional ItemList reward_list = 11;
+}

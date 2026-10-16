@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ChatMsgInfo {
+  optional string chat_text = 103;
+  optional uint32 emote_id = 104;
+}

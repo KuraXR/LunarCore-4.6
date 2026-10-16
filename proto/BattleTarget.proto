@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message BattleTarget {
+  optional uint32 id = 1;
+  optional uint32 progress = 2;
+  optional uint32 total_progress = 3;
+}

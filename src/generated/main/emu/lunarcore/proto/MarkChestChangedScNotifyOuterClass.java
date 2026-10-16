@@ -20,7 +20,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 7;</code>
      */
     private final RepeatedMessage<MarkChestInfoOuterClass.MarkChestInfo> chestGroupList = RepeatedMessage.newEmptyInstance(MarkChestInfoOuterClass.MarkChestInfo.getFactory());
 
@@ -35,7 +35,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 7;</code>
      * @return whether the chestGroupList field is set
      */
     public boolean hasChestGroupList() {
@@ -43,7 +43,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 7;</code>
      * @return this
      */
     public MarkChestChangedScNotify clearChestGroupList() {
@@ -53,7 +53,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -67,7 +67,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -81,7 +81,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 7;</code>
      * @param value the chestGroupList to add
      * @return this
      */
@@ -93,7 +93,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 7;</code>
      * @param values the chestGroupList to add
      * @return this
      */
@@ -165,7 +165,7 @@ public final class MarkChestChangedScNotifyOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < chestGroupList.length(); i++) {
-          output.writeRawByte((byte) 50);
+          output.writeRawByte((byte) 58);
           output.writeMessageNoTag(chestGroupList.get(i));
         }
       }
@@ -187,7 +187,7 @@ public final class MarkChestChangedScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 50: {
+          case 58: {
             // chestGroupList
             tag = input.readRepeatedMessage(chestGroupList, tag);
             bitField0_ |= 0x00000001;

@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ChallengeBossSingleNodeInfo {
+  optional uint32 max_score = 13;
+  optional uint32 buff_id = 6;
+  optional bool is_win = 1;
+}

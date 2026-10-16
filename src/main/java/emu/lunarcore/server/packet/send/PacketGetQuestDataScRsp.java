@@ -42,7 +42,7 @@ public class PacketGetQuestDataScRsp extends BasePacket {
             data.addQuestList(quest);
         }
         
-        data.setTotalAchievementExp(achievements);
+        // 4.6 removed total_achievement_exp from this reply
 
         this.setData(data);
     }

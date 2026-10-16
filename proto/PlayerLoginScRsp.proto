@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PlayerBasicInfo.proto";
+
+message PlayerLoginScRsp {
+  optional uint64 login_random = 14;
+  optional uint64 server_timestamp_ms = 11;
+  optional uint32 stamina = 9;
+  optional uint32 retcode = 5;
+  optional int32 cur_timezone = 12;
+  optional PlayerBasicInfo basic_info = 4;
+}

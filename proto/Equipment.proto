@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message Equipment {
+  optional uint32 promotion = 7;
+  optional uint32 equip_avatar_id = 9;
+  optional uint32 exp = 6;
+  optional uint32 level = 1;
+  optional uint32 rank = 14;
+  optional uint32 unique_id = 3;
+  optional uint32 tid = 15;
+  optional bool is_protected = 8;
+}

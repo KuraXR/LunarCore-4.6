@@ -19,19 +19,19 @@ public final class SceneIdentifierInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 floor_id = 2;</code>
+     * <code>optional uint32 content_id = 3;</code>
+     */
+    private int contentId;
+
+    /**
+     * <code>optional uint32 floor_id = 7;</code>
      */
     private int floorId;
 
     /**
-     * <code>optional uint32 game_id = 6;</code>
+     * <code>optional uint32 game_id = 12;</code>
      */
     private int gameId;
-
-    /**
-     * <code>optional uint32 content_id = 14;</code>
-     */
-    private int contentId;
 
     private SceneIdentifierInfo() {
     }
@@ -44,99 +44,25 @@ public final class SceneIdentifierInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 2;</code>
-     * @return whether the floorId field is set
+     * <code>optional uint32 content_id = 3;</code>
+     * @return whether the contentId field is set
      */
-    public boolean hasFloorId() {
+    public boolean hasContentId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 floor_id = 2;</code>
-     * @return this
-     */
-    public SceneIdentifierInfo clearFloorId() {
-      bitField0_ &= ~0x00000001;
-      floorId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 floor_id = 2;</code>
-     * @return the floorId
-     */
-    public int getFloorId() {
-      return floorId;
-    }
-
-    /**
-     * <code>optional uint32 floor_id = 2;</code>
-     * @param value the floorId to set
-     * @return this
-     */
-    public SceneIdentifierInfo setFloorId(final int value) {
-      bitField0_ |= 0x00000001;
-      floorId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 game_id = 6;</code>
-     * @return whether the gameId field is set
-     */
-    public boolean hasGameId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 game_id = 6;</code>
-     * @return this
-     */
-    public SceneIdentifierInfo clearGameId() {
-      bitField0_ &= ~0x00000002;
-      gameId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 game_id = 6;</code>
-     * @return the gameId
-     */
-    public int getGameId() {
-      return gameId;
-    }
-
-    /**
-     * <code>optional uint32 game_id = 6;</code>
-     * @param value the gameId to set
-     * @return this
-     */
-    public SceneIdentifierInfo setGameId(final int value) {
-      bitField0_ |= 0x00000002;
-      gameId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 content_id = 14;</code>
-     * @return whether the contentId field is set
-     */
-    public boolean hasContentId() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 content_id = 14;</code>
+     * <code>optional uint32 content_id = 3;</code>
      * @return this
      */
     public SceneIdentifierInfo clearContentId() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000001;
       contentId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 content_id = 14;</code>
+     * <code>optional uint32 content_id = 3;</code>
      * @return the contentId
      */
     public int getContentId() {
@@ -144,13 +70,87 @@ public final class SceneIdentifierInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 content_id = 14;</code>
+     * <code>optional uint32 content_id = 3;</code>
      * @param value the contentId to set
      * @return this
      */
     public SceneIdentifierInfo setContentId(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       contentId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 floor_id = 7;</code>
+     * @return whether the floorId field is set
+     */
+    public boolean hasFloorId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 floor_id = 7;</code>
+     * @return this
+     */
+    public SceneIdentifierInfo clearFloorId() {
+      bitField0_ &= ~0x00000002;
+      floorId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 floor_id = 7;</code>
+     * @return the floorId
+     */
+    public int getFloorId() {
+      return floorId;
+    }
+
+    /**
+     * <code>optional uint32 floor_id = 7;</code>
+     * @param value the floorId to set
+     * @return this
+     */
+    public SceneIdentifierInfo setFloorId(final int value) {
+      bitField0_ |= 0x00000002;
+      floorId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 game_id = 12;</code>
+     * @return whether the gameId field is set
+     */
+    public boolean hasGameId() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 game_id = 12;</code>
+     * @return this
+     */
+    public SceneIdentifierInfo clearGameId() {
+      bitField0_ &= ~0x00000004;
+      gameId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 game_id = 12;</code>
+     * @return the gameId
+     */
+    public int getGameId() {
+      return gameId;
+    }
+
+    /**
+     * <code>optional uint32 game_id = 12;</code>
+     * @param value the gameId to set
+     * @return this
+     */
+    public SceneIdentifierInfo setGameId(final int value) {
+      bitField0_ |= 0x00000004;
+      gameId = value;
       return this;
     }
 
@@ -159,9 +159,9 @@ public final class SceneIdentifierInfoOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
+        contentId = other.contentId;
         floorId = other.floorId;
         gameId = other.gameId;
-        contentId = other.contentId;
       }
       return this;
     }
@@ -172,14 +172,14 @@ public final class SceneIdentifierInfoOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasContentId()) {
+        setContentId(other.contentId);
+      }
       if (other.hasFloorId()) {
         setFloorId(other.floorId);
       }
       if (other.hasGameId()) {
         setGameId(other.gameId);
-      }
-      if (other.hasContentId()) {
-        setContentId(other.contentId);
       }
       return this;
     }
@@ -191,9 +191,9 @@ public final class SceneIdentifierInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      contentId = 0;
       floorId = 0;
       gameId = 0;
-      contentId = 0;
       return this;
     }
 
@@ -217,24 +217,24 @@ public final class SceneIdentifierInfoOuterClass {
       }
       SceneIdentifierInfo other = (SceneIdentifierInfo) o;
       return bitField0_ == other.bitField0_
+        && (!hasContentId() || contentId == other.contentId)
         && (!hasFloorId() || floorId == other.floorId)
-        && (!hasGameId() || gameId == other.gameId)
-        && (!hasContentId() || contentId == other.contentId);
+        && (!hasGameId() || gameId == other.gameId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(floorId);
+        output.writeRawByte((byte) 24);
+        output.writeUInt32NoTag(contentId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
-        output.writeUInt32NoTag(gameId);
+        output.writeRawByte((byte) 56);
+        output.writeUInt32NoTag(floorId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(contentId);
+        output.writeRawByte((byte) 96);
+        output.writeUInt32NoTag(gameId);
       }
     }
 
@@ -242,13 +242,13 @@ public final class SceneIdentifierInfoOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(floorId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(contentId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(gameId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(floorId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(contentId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(gameId);
       }
       return size;
     }
@@ -260,27 +260,27 @@ public final class SceneIdentifierInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // floorId
-            floorId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
-            // gameId
-            gameId = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
+          case 24: {
             // contentId
             contentId = input.readUInt32();
+            bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 56) {
+              break;
+            }
+          }
+          case 56: {
+            // floorId
+            floorId = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 96) {
+              break;
+            }
+          }
+          case 96: {
+            // gameId
+            gameId = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
@@ -305,13 +305,13 @@ public final class SceneIdentifierInfoOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.floorId, floorId);
+        output.writeUInt32(FieldNames.contentId, contentId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.gameId, gameId);
+        output.writeUInt32(FieldNames.floorId, floorId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.contentId, contentId);
+        output.writeUInt32(FieldNames.gameId, gameId);
       }
       output.endObject();
     }
@@ -323,12 +323,24 @@ public final class SceneIdentifierInfoOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
+          case -407108748:
+          case 264552097: {
+            if (input.isAtField(FieldNames.contentId)) {
+              if (!input.trySkipNullValue()) {
+                contentId = input.readUInt32();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case -766027193:
           case 2022982190: {
             if (input.isAtField(FieldNames.floorId)) {
               if (!input.trySkipNullValue()) {
                 floorId = input.readUInt32();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -340,18 +352,6 @@ public final class SceneIdentifierInfoOuterClass {
             if (input.isAtField(FieldNames.gameId)) {
               if (!input.trySkipNullValue()) {
                 gameId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -407108748:
-          case 264552097: {
-            if (input.isAtField(FieldNames.contentId)) {
-              if (!input.trySkipNullValue()) {
-                contentId = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -412,11 +412,11 @@ public final class SceneIdentifierInfoOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName contentId = FieldName.forField("contentId", "content_id");
+
       static final FieldName floorId = FieldName.forField("floorId", "floor_id");
 
       static final FieldName gameId = FieldName.forField("gameId", "game_id");
-
-      static final FieldName contentId = FieldName.forField("contentId", "content_id");
     }
   }
 }

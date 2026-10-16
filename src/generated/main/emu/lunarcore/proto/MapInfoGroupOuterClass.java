@@ -27,22 +27,22 @@ public final class MapInfoGroupOuterClass {
     private long modifyTime;
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 10;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional bool is_need_refresh = 6;</code>
+     * <code>optional bool is_need_refresh = 8;</code>
      */
     private boolean isNeedRefresh;
 
     /**
-     * <code>repeated uint32 destory_monster_config_id_list = 11;</code>
+     * <code>repeated uint32 destory_monster_config_id_list = 3;</code>
      */
     private final RepeatedInt destoryMonsterConfigIdList = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 12;</code>
+     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 5;</code>
      */
     private final RepeatedMessage<PropertyMapEntry> propertyMap = RepeatedMessage.newEmptyInstance(PropertyMapEntry.getFactory());
 
@@ -94,7 +94,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -102,7 +102,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return this
      */
     public MapInfoGroup clearGroupId() {
@@ -112,7 +112,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -120,7 +120,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 4;</code>
+     * <code>optional uint32 group_id = 10;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -131,7 +131,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional bool is_need_refresh = 6;</code>
+     * <code>optional bool is_need_refresh = 8;</code>
      * @return whether the isNeedRefresh field is set
      */
     public boolean hasIsNeedRefresh() {
@@ -139,7 +139,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional bool is_need_refresh = 6;</code>
+     * <code>optional bool is_need_refresh = 8;</code>
      * @return this
      */
     public MapInfoGroup clearIsNeedRefresh() {
@@ -149,7 +149,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional bool is_need_refresh = 6;</code>
+     * <code>optional bool is_need_refresh = 8;</code>
      * @return the isNeedRefresh
      */
     public boolean getIsNeedRefresh() {
@@ -157,7 +157,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>optional bool is_need_refresh = 6;</code>
+     * <code>optional bool is_need_refresh = 8;</code>
      * @param value the isNeedRefresh to set
      * @return this
      */
@@ -168,7 +168,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated uint32 destory_monster_config_id_list = 11;</code>
+     * <code>repeated uint32 destory_monster_config_id_list = 3;</code>
      * @return whether the destoryMonsterConfigIdList field is set
      */
     public boolean hasDestoryMonsterConfigIdList() {
@@ -176,7 +176,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated uint32 destory_monster_config_id_list = 11;</code>
+     * <code>repeated uint32 destory_monster_config_id_list = 3;</code>
      * @return this
      */
     public MapInfoGroup clearDestoryMonsterConfigIdList() {
@@ -186,7 +186,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated uint32 destory_monster_config_id_list = 11;</code>
+     * <code>repeated uint32 destory_monster_config_id_list = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -200,7 +200,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated uint32 destory_monster_config_id_list = 11;</code>
+     * <code>repeated uint32 destory_monster_config_id_list = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -214,7 +214,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated uint32 destory_monster_config_id_list = 11;</code>
+     * <code>repeated uint32 destory_monster_config_id_list = 3;</code>
      * @param value the destoryMonsterConfigIdList to add
      * @return this
      */
@@ -225,7 +225,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated uint32 destory_monster_config_id_list = 11;</code>
+     * <code>repeated uint32 destory_monster_config_id_list = 3;</code>
      * @param values the destoryMonsterConfigIdList to add
      * @return this
      */
@@ -236,7 +236,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 12;</code>
+     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 5;</code>
      * @return whether the propertyMap field is set
      */
     public boolean hasPropertyMap() {
@@ -244,7 +244,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 12;</code>
+     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 5;</code>
      * @return this
      */
     public MapInfoGroup clearPropertyMap() {
@@ -254,7 +254,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 12;</code>
+     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -268,7 +268,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 12;</code>
+     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -282,7 +282,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 12;</code>
+     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 5;</code>
      * @param value the propertyMap to add
      * @return this
      */
@@ -293,7 +293,7 @@ public final class MapInfoGroupOuterClass {
     }
 
     /**
-     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 12;</code>
+     * <code>repeated .MapInfoGroup.PropertyMapEntry property_map = 5;</code>
      * @param values the propertyMap to add
      * @return this
      */
@@ -392,22 +392,22 @@ public final class MapInfoGroupOuterClass {
         output.writeInt64NoTag(modifyTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 64);
         output.writeBoolNoTag(isNeedRefresh);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < destoryMonsterConfigIdList.length(); i++) {
-          output.writeRawByte((byte) 88);
+          output.writeRawByte((byte) 24);
           output.writeUInt32NoTag(destoryMonsterConfigIdList.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000010) != 0) {
         for (int i = 0; i < propertyMap.length(); i++) {
-          output.writeRawByte((byte) 98);
+          output.writeRawByte((byte) 42);
           output.writeMessageNoTag(propertyMap.get(i));
         }
       }
@@ -446,38 +446,38 @@ public final class MapInfoGroupOuterClass {
             modifyTime = input.readInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 80) {
               break;
             }
           }
-          case 32: {
+          case 80: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 64) {
               break;
             }
           }
-          case 48: {
+          case 64: {
             // isNeedRefresh
             isNeedRefresh = input.readBool();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 90) {
+            if (tag != 26) {
               break;
             }
           }
-          case 90: {
+          case 26: {
             // destoryMonsterConfigIdList [packed=true]
             input.readPackedUInt32(destoryMonsterConfigIdList, tag);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 42) {
               break;
             }
           }
-          case 98: {
+          case 42: {
             // propertyMap
             tag = input.readRepeatedMessage(propertyMap, tag);
             bitField0_ |= 0x00000010;
@@ -495,7 +495,7 @@ public final class MapInfoGroupOuterClass {
             tag = input.readTag();
             break;
           }
-          case 88: {
+          case 24: {
             // destoryMonsterConfigIdList [packed=false]
             tag = input.readRepeatedUInt32(destoryMonsterConfigIdList, tag);
             bitField0_ |= 0x00000008;

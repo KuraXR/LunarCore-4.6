@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PetSummonState.proto";
+
+message GetPetDataScRsp {
+  optional uint32 retcode = 9;
+  repeated uint32 pet_id_list = 10;
+  optional PetSummonState state = 11;
+}

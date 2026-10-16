@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemList.proto";
+
+message SellItemScRsp {
+  optional uint32 retcode = 14;
+  optional ItemList return_item_list = 5;
+}

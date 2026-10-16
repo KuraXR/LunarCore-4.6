@@ -8,6 +8,7 @@ import emu.lunarcore.server.game.GameSession;
 import emu.lunarcore.server.packet.CmdId;
 import emu.lunarcore.server.packet.Opcodes;
 import emu.lunarcore.server.packet.PacketHandler;
+import emu.lunarcore.server.packet.Retcode;
 import emu.lunarcore.server.packet.SessionState;
 import emu.lunarcore.server.packet.send.PacketPlayerGetTokenScRsp;
 
@@ -23,9 +24,11 @@ public class HandlerPlayerGetTokenCsReq extends PacketHandler {
         Account account = LunarCore.getAccountDatabase().getObjectByField(Account.class, "_id", req.getAccountUid());
         if (account == null) {
             LunarCore.getLogger().warn("Account " + req.getAccountUid() + " not found");
+            // Answer so the client shows an error instead of waiting
+            session.send(new PacketPlayerGetTokenScRsp(Retcode.ACCOUNT_VERIFY_ERROR));
             return;
         }
-        
+
         // Set account object for session
         session.setAccount(account);
 

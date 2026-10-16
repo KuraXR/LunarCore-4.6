@@ -10,53 +10,19 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 import us.hebi.quickbuf.RepeatedMessage;
 
 public final class ChallengePeakGroupInfoOuterClass {
   /**
-   * <pre>
-   *  IIDGPEJPBMA
-   * </pre>
-   *
    * Protobuf type {@code ChallengePeakGroupInfo}
    */
   public static final class ChallengePeakGroupInfo extends ProtoMessage<ChallengePeakGroupInfo> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 2;</code>
+     * <code>optional uint32 challenge_peak_group_id = 4;</code>
      */
     private int challengePeakGroupId;
-
-    /**
-     * <pre>
-     * KHBFACGBPEI BEHFPNPALEJ = 5;
-     * FCPEKKEEKFI PLJLPOHJHEE = 11;
-     * </pre>
-     *
-     * <code>optional uint32 KEEKPJHCMFN = 3;</code>
-     */
-    private int kEEKPJHCMFN;
-
-    /**
-     * <code>optional uint32 KKAGEMJCIOC = 14;</code>
-     */
-    private int kKAGEMJCIOC;
-
-    /**
-     * <code>optional bool JPKKFEJLOJN = 10;</code>
-     */
-    private boolean jPKKFEJLOJN;
-
-    /**
-     * <pre>
-     * JIMPKKHFLA KJNMLJJMKGO = 4;
-     * </pre>
-     *
-     * <code>repeated uint32 GCCENBCIINL = 13;</code>
-     */
-    private final RepeatedInt gCCENBCIINL = RepeatedInt.newEmptyInstance();
 
     /**
      * <code>repeated .ChallengePeakLevelInfo challenge_peak_level_list = 6;</code>
@@ -67,10 +33,6 @@ public final class ChallengePeakGroupInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  IIDGPEJPBMA
-     * </pre>
-     *
      * @return a new empty instance of {@code ChallengePeakGroupInfo}
      */
     public static ChallengePeakGroupInfo newInstance() {
@@ -78,7 +40,7 @@ public final class ChallengePeakGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 2;</code>
+     * <code>optional uint32 challenge_peak_group_id = 4;</code>
      * @return whether the challengePeakGroupId field is set
      */
     public boolean hasChallengePeakGroupId() {
@@ -86,7 +48,7 @@ public final class ChallengePeakGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 2;</code>
+     * <code>optional uint32 challenge_peak_group_id = 4;</code>
      * @return this
      */
     public ChallengePeakGroupInfo clearChallengePeakGroupId() {
@@ -96,7 +58,7 @@ public final class ChallengePeakGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 2;</code>
+     * <code>optional uint32 challenge_peak_group_id = 4;</code>
      * @return the challengePeakGroupId
      */
     public int getChallengePeakGroupId() {
@@ -104,7 +66,7 @@ public final class ChallengePeakGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 2;</code>
+     * <code>optional uint32 challenge_peak_group_id = 4;</code>
      * @param value the challengePeakGroupId to set
      * @return this
      */
@@ -115,234 +77,11 @@ public final class ChallengePeakGroupInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * KHBFACGBPEI BEHFPNPALEJ = 5;
-     * FCPEKKEEKFI PLJLPOHJHEE = 11;
-     * </pre>
-     *
-     * <code>optional uint32 KEEKPJHCMFN = 3;</code>
-     * @return whether the kEEKPJHCMFN field is set
-     */
-    public boolean hasKEEKPJHCMFN() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <pre>
-     * KHBFACGBPEI BEHFPNPALEJ = 5;
-     * FCPEKKEEKFI PLJLPOHJHEE = 11;
-     * </pre>
-     *
-     * <code>optional uint32 KEEKPJHCMFN = 3;</code>
-     * @return this
-     */
-    public ChallengePeakGroupInfo clearKEEKPJHCMFN() {
-      bitField0_ &= ~0x00000002;
-      kEEKPJHCMFN = 0;
-      return this;
-    }
-
-    /**
-     * <pre>
-     * KHBFACGBPEI BEHFPNPALEJ = 5;
-     * FCPEKKEEKFI PLJLPOHJHEE = 11;
-     * </pre>
-     *
-     * <code>optional uint32 KEEKPJHCMFN = 3;</code>
-     * @return the kEEKPJHCMFN
-     */
-    public int getKEEKPJHCMFN() {
-      return kEEKPJHCMFN;
-    }
-
-    /**
-     * <pre>
-     * KHBFACGBPEI BEHFPNPALEJ = 5;
-     * FCPEKKEEKFI PLJLPOHJHEE = 11;
-     * </pre>
-     *
-     * <code>optional uint32 KEEKPJHCMFN = 3;</code>
-     * @param value the kEEKPJHCMFN to set
-     * @return this
-     */
-    public ChallengePeakGroupInfo setKEEKPJHCMFN(final int value) {
-      bitField0_ |= 0x00000002;
-      kEEKPJHCMFN = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 KKAGEMJCIOC = 14;</code>
-     * @return whether the kKAGEMJCIOC field is set
-     */
-    public boolean hasKKAGEMJCIOC() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 KKAGEMJCIOC = 14;</code>
-     * @return this
-     */
-    public ChallengePeakGroupInfo clearKKAGEMJCIOC() {
-      bitField0_ &= ~0x00000004;
-      kKAGEMJCIOC = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 KKAGEMJCIOC = 14;</code>
-     * @return the kKAGEMJCIOC
-     */
-    public int getKKAGEMJCIOC() {
-      return kKAGEMJCIOC;
-    }
-
-    /**
-     * <code>optional uint32 KKAGEMJCIOC = 14;</code>
-     * @param value the kKAGEMJCIOC to set
-     * @return this
-     */
-    public ChallengePeakGroupInfo setKKAGEMJCIOC(final int value) {
-      bitField0_ |= 0x00000004;
-      kKAGEMJCIOC = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool JPKKFEJLOJN = 10;</code>
-     * @return whether the jPKKFEJLOJN field is set
-     */
-    public boolean hasJPKKFEJLOJN() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional bool JPKKFEJLOJN = 10;</code>
-     * @return this
-     */
-    public ChallengePeakGroupInfo clearJPKKFEJLOJN() {
-      bitField0_ &= ~0x00000008;
-      jPKKFEJLOJN = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool JPKKFEJLOJN = 10;</code>
-     * @return the jPKKFEJLOJN
-     */
-    public boolean getJPKKFEJLOJN() {
-      return jPKKFEJLOJN;
-    }
-
-    /**
-     * <code>optional bool JPKKFEJLOJN = 10;</code>
-     * @param value the jPKKFEJLOJN to set
-     * @return this
-     */
-    public ChallengePeakGroupInfo setJPKKFEJLOJN(final boolean value) {
-      bitField0_ |= 0x00000008;
-      jPKKFEJLOJN = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     * JIMPKKHFLA KJNMLJJMKGO = 4;
-     * </pre>
-     *
-     * <code>repeated uint32 GCCENBCIINL = 13;</code>
-     * @return whether the gCCENBCIINL field is set
-     */
-    public boolean hasGCCENBCIINL() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <pre>
-     * JIMPKKHFLA KJNMLJJMKGO = 4;
-     * </pre>
-     *
-     * <code>repeated uint32 GCCENBCIINL = 13;</code>
-     * @return this
-     */
-    public ChallengePeakGroupInfo clearGCCENBCIINL() {
-      bitField0_ &= ~0x00000010;
-      gCCENBCIINL.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     * JIMPKKHFLA KJNMLJJMKGO = 4;
-     * </pre>
-     *
-     * <code>repeated uint32 GCCENBCIINL = 13;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableGCCENBCIINL()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getGCCENBCIINL() {
-      return gCCENBCIINL;
-    }
-
-    /**
-     * <pre>
-     * JIMPKKHFLA KJNMLJJMKGO = 4;
-     * </pre>
-     *
-     * <code>repeated uint32 GCCENBCIINL = 13;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableGCCENBCIINL() {
-      bitField0_ |= 0x00000010;
-      return gCCENBCIINL;
-    }
-
-    /**
-     * <pre>
-     * JIMPKKHFLA KJNMLJJMKGO = 4;
-     * </pre>
-     *
-     * <code>repeated uint32 GCCENBCIINL = 13;</code>
-     * @param value the gCCENBCIINL to add
-     * @return this
-     */
-    public ChallengePeakGroupInfo addGCCENBCIINL(final int value) {
-      bitField0_ |= 0x00000010;
-      gCCENBCIINL.add(value);
-      return this;
-    }
-
-    /**
-     * <pre>
-     * JIMPKKHFLA KJNMLJJMKGO = 4;
-     * </pre>
-     *
-     * <code>repeated uint32 GCCENBCIINL = 13;</code>
-     * @param values the gCCENBCIINL to add
-     * @return this
-     */
-    public ChallengePeakGroupInfo addAllGCCENBCIINL(final int... values) {
-      bitField0_ |= 0x00000010;
-      gCCENBCIINL.addAll(values);
-      return this;
-    }
-
-    /**
      * <code>repeated .ChallengePeakLevelInfo challenge_peak_level_list = 6;</code>
      * @return whether the challengePeakLevelList field is set
      */
     public boolean hasChallengePeakLevelList() {
-      return (bitField0_ & 0x00000020) != 0;
+      return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
@@ -350,7 +89,7 @@ public final class ChallengePeakGroupInfoOuterClass {
      * @return this
      */
     public ChallengePeakGroupInfo clearChallengePeakLevelList() {
-      bitField0_ &= ~0x00000020;
+      bitField0_ &= ~0x00000002;
       challengePeakLevelList.clear();
       return this;
     }
@@ -381,7 +120,7 @@ public final class ChallengePeakGroupInfoOuterClass {
      */
     public RepeatedMessage<ChallengePeakLevelInfoOuterClass.ChallengePeakLevelInfo> getMutableChallengePeakLevelList(
         ) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000002;
       return challengePeakLevelList;
     }
 
@@ -392,7 +131,7 @@ public final class ChallengePeakGroupInfoOuterClass {
      */
     public ChallengePeakGroupInfo addChallengePeakLevelList(
         final ChallengePeakLevelInfoOuterClass.ChallengePeakLevelInfo value) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000002;
       challengePeakLevelList.add(value);
       return this;
     }
@@ -404,7 +143,7 @@ public final class ChallengePeakGroupInfoOuterClass {
      */
     public ChallengePeakGroupInfo addAllChallengePeakLevelList(
         final ChallengePeakLevelInfoOuterClass.ChallengePeakLevelInfo... values) {
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000002;
       challengePeakLevelList.addAll(values);
       return this;
     }
@@ -415,10 +154,6 @@ public final class ChallengePeakGroupInfoOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         challengePeakGroupId = other.challengePeakGroupId;
-        kEEKPJHCMFN = other.kEEKPJHCMFN;
-        kKAGEMJCIOC = other.kKAGEMJCIOC;
-        jPKKFEJLOJN = other.jPKKFEJLOJN;
-        gCCENBCIINL.copyFrom(other.gCCENBCIINL);
         challengePeakLevelList.copyFrom(other.challengePeakLevelList);
       }
       return this;
@@ -432,18 +167,6 @@ public final class ChallengePeakGroupInfoOuterClass {
       cachedSize = -1;
       if (other.hasChallengePeakGroupId()) {
         setChallengePeakGroupId(other.challengePeakGroupId);
-      }
-      if (other.hasKEEKPJHCMFN()) {
-        setKEEKPJHCMFN(other.kEEKPJHCMFN);
-      }
-      if (other.hasKKAGEMJCIOC()) {
-        setKKAGEMJCIOC(other.kKAGEMJCIOC);
-      }
-      if (other.hasJPKKFEJLOJN()) {
-        setJPKKFEJLOJN(other.jPKKFEJLOJN);
-      }
-      if (other.hasGCCENBCIINL()) {
-        getMutableGCCENBCIINL().addAll(other.gCCENBCIINL);
       }
       if (other.hasChallengePeakLevelList()) {
         getMutableChallengePeakLevelList().addAll(other.challengePeakLevelList);
@@ -459,10 +182,6 @@ public final class ChallengePeakGroupInfoOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       challengePeakGroupId = 0;
-      kEEKPJHCMFN = 0;
-      kKAGEMJCIOC = 0;
-      jPKKFEJLOJN = false;
-      gCCENBCIINL.clear();
       challengePeakLevelList.clear();
       return this;
     }
@@ -474,7 +193,6 @@ public final class ChallengePeakGroupInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      gCCENBCIINL.clear();
       challengePeakLevelList.clearQuick();
       return this;
     }
@@ -490,38 +208,16 @@ public final class ChallengePeakGroupInfoOuterClass {
       ChallengePeakGroupInfo other = (ChallengePeakGroupInfo) o;
       return bitField0_ == other.bitField0_
         && (!hasChallengePeakGroupId() || challengePeakGroupId == other.challengePeakGroupId)
-        && (!hasKEEKPJHCMFN() || kEEKPJHCMFN == other.kEEKPJHCMFN)
-        && (!hasKKAGEMJCIOC() || kKAGEMJCIOC == other.kKAGEMJCIOC)
-        && (!hasJPKKFEJLOJN() || jPKKFEJLOJN == other.jPKKFEJLOJN)
-        && (!hasGCCENBCIINL() || gCCENBCIINL.equals(other.gCCENBCIINL))
         && (!hasChallengePeakLevelList() || challengePeakLevelList.equals(other.challengePeakLevelList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(challengePeakGroupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeUInt32NoTag(kEEKPJHCMFN);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(kKAGEMJCIOC);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeBoolNoTag(jPKKFEJLOJN);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        for (int i = 0; i < gCCENBCIINL.length(); i++) {
-          output.writeRawByte((byte) 104);
-          output.writeUInt32NoTag(gCCENBCIINL.array()[i]);
-        }
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
         for (int i = 0; i < challengePeakLevelList.length(); i++) {
           output.writeRawByte((byte) 50);
           output.writeMessageNoTag(challengePeakLevelList.get(i));
@@ -536,18 +232,6 @@ public final class ChallengePeakGroupInfoOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(challengePeakGroupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(kEEKPJHCMFN);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(kKAGEMJCIOC);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        size += (1 * gCCENBCIINL.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(gCCENBCIINL);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
         size += (1 * challengePeakLevelList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(challengePeakLevelList);
       }
       return size;
@@ -560,46 +244,10 @@ public final class ChallengePeakGroupInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 32: {
             // challengePeakGroupId
             challengePeakGroupId = input.readUInt32();
             bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 24) {
-              break;
-            }
-          }
-          case 24: {
-            // kEEKPJHCMFN
-            kEEKPJHCMFN = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
-            // kKAGEMJCIOC
-            kKAGEMJCIOC = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 80) {
-              break;
-            }
-          }
-          case 80: {
-            // jPKKFEJLOJN
-            jPKKFEJLOJN = input.readBool();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 106) {
-              break;
-            }
-          }
-          case 106: {
-            // gCCENBCIINL [packed=true]
-            input.readPackedUInt32(gCCENBCIINL, tag);
-            bitField0_ |= 0x00000010;
             tag = input.readTag();
             if (tag != 50) {
               break;
@@ -608,7 +256,7 @@ public final class ChallengePeakGroupInfoOuterClass {
           case 50: {
             // challengePeakLevelList
             tag = input.readRepeatedMessage(challengePeakLevelList, tag);
-            bitField0_ |= 0x00000020;
+            bitField0_ |= 0x00000002;
             if (tag != 0) {
               break;
             }
@@ -623,12 +271,6 @@ public final class ChallengePeakGroupInfoOuterClass {
             tag = input.readTag();
             break;
           }
-          case 104: {
-            // gCCENBCIINL [packed=false]
-            tag = input.readRepeatedUInt32(gCCENBCIINL, tag);
-            bitField0_ |= 0x00000010;
-            break;
-          }
         }
       }
     }
@@ -640,18 +282,6 @@ public final class ChallengePeakGroupInfoOuterClass {
         output.writeUInt32(FieldNames.challengePeakGroupId, challengePeakGroupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.kEEKPJHCMFN, kEEKPJHCMFN);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.kKAGEMJCIOC, kKAGEMJCIOC);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeBool(FieldNames.jPKKFEJLOJN, jPKKFEJLOJN);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRepeatedUInt32(FieldNames.gCCENBCIINL, gCCENBCIINL);
-      }
-      if ((bitField0_ & 0x00000020) != 0) {
         output.writeRepeatedMessage(FieldNames.challengePeakLevelList, challengePeakLevelList);
       }
       output.endObject();
@@ -676,56 +306,12 @@ public final class ChallengePeakGroupInfoOuterClass {
             }
             break;
           }
-          case -427472448: {
-            if (input.isAtField(FieldNames.kEEKPJHCMFN)) {
-              if (!input.trySkipNullValue()) {
-                kEEKPJHCMFN = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 1862115350: {
-            if (input.isAtField(FieldNames.kKAGEMJCIOC)) {
-              if (!input.trySkipNullValue()) {
-                kKAGEMJCIOC = input.readUInt32();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 821874700: {
-            if (input.isAtField(FieldNames.jPKKFEJLOJN)) {
-              if (!input.trySkipNullValue()) {
-                jPKKFEJLOJN = input.readBool();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1697076113: {
-            if (input.isAtField(FieldNames.gCCENBCIINL)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(gCCENBCIINL);
-                bitField0_ |= 0x00000010;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case -919812992:
           case 1586233341: {
             if (input.isAtField(FieldNames.challengePeakLevelList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(challengePeakLevelList);
-                bitField0_ |= 0x00000020;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -786,14 +372,6 @@ public final class ChallengePeakGroupInfoOuterClass {
      */
     static class FieldNames {
       static final FieldName challengePeakGroupId = FieldName.forField("challengePeakGroupId", "challenge_peak_group_id");
-
-      static final FieldName kEEKPJHCMFN = FieldName.forField("KEEKPJHCMFN");
-
-      static final FieldName kKAGEMJCIOC = FieldName.forField("KKAGEMJCIOC");
-
-      static final FieldName jPKKFEJLOJN = FieldName.forField("JPKKFEJLOJN");
-
-      static final FieldName gCCENBCIINL = FieldName.forField("GCCENBCIINL");
 
       static final FieldName challengePeakLevelList = FieldName.forField("challengePeakLevelList", "challenge_peak_level_list");
     }

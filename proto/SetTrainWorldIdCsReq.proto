@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message SetTrainWorldIdCsReq {
+  optional uint32 train_world_id = 9;
+}

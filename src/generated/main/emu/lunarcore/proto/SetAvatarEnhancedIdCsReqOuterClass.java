@@ -19,14 +19,14 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 avatar_enhance_id = 1;</code>
-     */
-    private int avatarEnhanceId;
-
-    /**
-     * <code>optional uint32 avatar_id = 4;</code>
+     * <code>optional uint32 avatar_id = 5;</code>
      */
     private int avatarId;
+
+    /**
+     * <code>optional uint32 avatar_enhance_id = 13;</code>
+     */
+    private int avatarEnhanceId;
 
     private SetAvatarEnhancedIdCsReq() {
     }
@@ -39,62 +39,25 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_enhance_id = 1;</code>
-     * @return whether the avatarEnhanceId field is set
+     * <code>optional uint32 avatar_id = 5;</code>
+     * @return whether the avatarId field is set
      */
-    public boolean hasAvatarEnhanceId() {
+    public boolean hasAvatarId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 avatar_enhance_id = 1;</code>
-     * @return this
-     */
-    public SetAvatarEnhancedIdCsReq clearAvatarEnhanceId() {
-      bitField0_ &= ~0x00000001;
-      avatarEnhanceId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 avatar_enhance_id = 1;</code>
-     * @return the avatarEnhanceId
-     */
-    public int getAvatarEnhanceId() {
-      return avatarEnhanceId;
-    }
-
-    /**
-     * <code>optional uint32 avatar_enhance_id = 1;</code>
-     * @param value the avatarEnhanceId to set
-     * @return this
-     */
-    public SetAvatarEnhancedIdCsReq setAvatarEnhanceId(final int value) {
-      bitField0_ |= 0x00000001;
-      avatarEnhanceId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 avatar_id = 4;</code>
-     * @return whether the avatarId field is set
-     */
-    public boolean hasAvatarId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 avatar_id = 4;</code>
+     * <code>optional uint32 avatar_id = 5;</code>
      * @return this
      */
     public SetAvatarEnhancedIdCsReq clearAvatarId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       avatarId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 avatar_id = 4;</code>
+     * <code>optional uint32 avatar_id = 5;</code>
      * @return the avatarId
      */
     public int getAvatarId() {
@@ -102,13 +65,50 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 4;</code>
+     * <code>optional uint32 avatar_id = 5;</code>
      * @param value the avatarId to set
      * @return this
      */
     public SetAvatarEnhancedIdCsReq setAvatarId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       avatarId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 avatar_enhance_id = 13;</code>
+     * @return whether the avatarEnhanceId field is set
+     */
+    public boolean hasAvatarEnhanceId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 avatar_enhance_id = 13;</code>
+     * @return this
+     */
+    public SetAvatarEnhancedIdCsReq clearAvatarEnhanceId() {
+      bitField0_ &= ~0x00000002;
+      avatarEnhanceId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 avatar_enhance_id = 13;</code>
+     * @return the avatarEnhanceId
+     */
+    public int getAvatarEnhanceId() {
+      return avatarEnhanceId;
+    }
+
+    /**
+     * <code>optional uint32 avatar_enhance_id = 13;</code>
+     * @param value the avatarEnhanceId to set
+     * @return this
+     */
+    public SetAvatarEnhancedIdCsReq setAvatarEnhanceId(final int value) {
+      bitField0_ |= 0x00000002;
+      avatarEnhanceId = value;
       return this;
     }
 
@@ -117,8 +117,8 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        avatarEnhanceId = other.avatarEnhanceId;
         avatarId = other.avatarId;
+        avatarEnhanceId = other.avatarEnhanceId;
       }
       return this;
     }
@@ -129,11 +129,11 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasAvatarEnhanceId()) {
-        setAvatarEnhanceId(other.avatarEnhanceId);
-      }
       if (other.hasAvatarId()) {
         setAvatarId(other.avatarId);
+      }
+      if (other.hasAvatarEnhanceId()) {
+        setAvatarEnhanceId(other.avatarEnhanceId);
       }
       return this;
     }
@@ -145,8 +145,8 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      avatarEnhanceId = 0;
       avatarId = 0;
+      avatarEnhanceId = 0;
       return this;
     }
 
@@ -170,19 +170,19 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
       }
       SetAvatarEnhancedIdCsReq other = (SetAvatarEnhancedIdCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasAvatarEnhanceId() || avatarEnhanceId == other.avatarEnhanceId)
-        && (!hasAvatarId() || avatarId == other.avatarId);
+        && (!hasAvatarId() || avatarId == other.avatarId)
+        && (!hasAvatarEnhanceId() || avatarEnhanceId == other.avatarEnhanceId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
-        output.writeUInt32NoTag(avatarEnhanceId);
+        output.writeRawByte((byte) 40);
+        output.writeUInt32NoTag(avatarId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
-        output.writeUInt32NoTag(avatarId);
+        output.writeRawByte((byte) 104);
+        output.writeUInt32NoTag(avatarEnhanceId);
       }
     }
 
@@ -190,10 +190,10 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarEnhanceId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarEnhanceId);
       }
       return size;
     }
@@ -205,18 +205,18 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
-            // avatarEnhanceId
-            avatarEnhanceId = input.readUInt32();
+          case 40: {
+            // avatarId
+            avatarId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 104) {
               break;
             }
           }
-          case 32: {
-            // avatarId
-            avatarId = input.readUInt32();
+          case 104: {
+            // avatarEnhanceId
+            avatarEnhanceId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +241,10 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.avatarEnhanceId, avatarEnhanceId);
+        output.writeUInt32(FieldNames.avatarId, avatarId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.avatarId, avatarId);
+        output.writeUInt32(FieldNames.avatarEnhanceId, avatarEnhanceId);
       }
       output.endObject();
     }
@@ -256,11 +256,11 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -94590192:
-          case 306903794: {
-            if (input.isAtField(FieldNames.avatarEnhanceId)) {
+          case 1787287636:
+          case -428636735: {
+            if (input.isAtField(FieldNames.avatarId)) {
               if (!input.trySkipNullValue()) {
-                avatarEnhanceId = input.readUInt32();
+                avatarId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -268,11 +268,11 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
             }
             break;
           }
-          case 1787287636:
-          case -428636735: {
-            if (input.isAtField(FieldNames.avatarId)) {
+          case -94590192:
+          case 306903794: {
+            if (input.isAtField(FieldNames.avatarEnhanceId)) {
               if (!input.trySkipNullValue()) {
-                avatarId = input.readUInt32();
+                avatarEnhanceId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -333,9 +333,9 @@ public final class SetAvatarEnhancedIdCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName avatarEnhanceId = FieldName.forField("avatarEnhanceId", "avatar_enhance_id");
-
       static final FieldName avatarId = FieldName.forField("avatarId", "avatar_id");
+
+      static final FieldName avatarEnhanceId = FieldName.forField("avatarEnhanceId", "avatar_enhance_id");
     }
   }
 }

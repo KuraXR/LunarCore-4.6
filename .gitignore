@@ -61,7 +61,8 @@ tmp/
 # Lunar Core generated/resource/log/plugins folders
 /resources
 /logs
-/proto
+# Local porting workspace (not published)
+/porting
 /plugins
 
 # Lunar Core compiled
@@ -77,3 +78,8 @@ hotfix.json
 *.p12
 BuildConfig.java
 Test.java
+/database.mv.bak-*
+
+# Python caches (porting scripts)
+__pycache__/
+*.pyc

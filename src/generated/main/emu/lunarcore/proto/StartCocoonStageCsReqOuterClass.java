@@ -19,29 +19,29 @@ public final class StartCocoonStageCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 3;</code>
      */
     private int worldLevel;
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
-     */
-    private int waveCount;
-
-    /**
-     * <code>optional uint32 prop_entity_id = 12;</code>
-     */
-    private int propEntityId;
-
-    /**
-     * <code>optional uint32 wave = 14;</code>
+     * <code>optional uint32 wave = 4;</code>
      */
     private int wave;
 
     /**
-     * <code>optional uint32 cocoon_id = 15;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      */
     private int cocoonId;
+
+    /**
+     * <code>optional uint32 prop_entity_id = 8;</code>
+     */
+    private int propEntityId;
+
+    /**
+     * <code>optional uint32 wave_count = 10;</code>
+     */
+    private int waveCount;
 
     private StartCocoonStageCsReq() {
     }
@@ -54,7 +54,7 @@ public final class StartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 3;</code>
      * @return whether the worldLevel field is set
      */
     public boolean hasWorldLevel() {
@@ -62,7 +62,7 @@ public final class StartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 3;</code>
      * @return this
      */
     public StartCocoonStageCsReq clearWorldLevel() {
@@ -72,7 +72,7 @@ public final class StartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 3;</code>
      * @return the worldLevel
      */
     public int getWorldLevel() {
@@ -80,7 +80,7 @@ public final class StartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 3;</code>
      * @param value the worldLevel to set
      * @return this
      */
@@ -91,99 +91,25 @@ public final class StartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
-     * @return whether the waveCount field is set
+     * <code>optional uint32 wave = 4;</code>
+     * @return whether the wave field is set
      */
-    public boolean hasWaveCount() {
+    public boolean hasWave() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
-     * @return this
-     */
-    public StartCocoonStageCsReq clearWaveCount() {
-      bitField0_ &= ~0x00000002;
-      waveCount = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 wave_count = 5;</code>
-     * @return the waveCount
-     */
-    public int getWaveCount() {
-      return waveCount;
-    }
-
-    /**
-     * <code>optional uint32 wave_count = 5;</code>
-     * @param value the waveCount to set
-     * @return this
-     */
-    public StartCocoonStageCsReq setWaveCount(final int value) {
-      bitField0_ |= 0x00000002;
-      waveCount = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 prop_entity_id = 12;</code>
-     * @return whether the propEntityId field is set
-     */
-    public boolean hasPropEntityId() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 prop_entity_id = 12;</code>
-     * @return this
-     */
-    public StartCocoonStageCsReq clearPropEntityId() {
-      bitField0_ &= ~0x00000004;
-      propEntityId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 prop_entity_id = 12;</code>
-     * @return the propEntityId
-     */
-    public int getPropEntityId() {
-      return propEntityId;
-    }
-
-    /**
-     * <code>optional uint32 prop_entity_id = 12;</code>
-     * @param value the propEntityId to set
-     * @return this
-     */
-    public StartCocoonStageCsReq setPropEntityId(final int value) {
-      bitField0_ |= 0x00000004;
-      propEntityId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 wave = 14;</code>
-     * @return whether the wave field is set
-     */
-    public boolean hasWave() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional uint32 wave = 14;</code>
+     * <code>optional uint32 wave = 4;</code>
      * @return this
      */
     public StartCocoonStageCsReq clearWave() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000002;
       wave = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 wave = 14;</code>
+     * <code>optional uint32 wave = 4;</code>
      * @return the wave
      */
     public int getWave() {
@@ -191,36 +117,36 @@ public final class StartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave = 14;</code>
+     * <code>optional uint32 wave = 4;</code>
      * @param value the wave to set
      * @return this
      */
     public StartCocoonStageCsReq setWave(final int value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000002;
       wave = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 15;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @return whether the cocoonId field is set
      */
     public boolean hasCocoonId() {
-      return (bitField0_ & 0x00000010) != 0;
+      return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 15;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @return this
      */
     public StartCocoonStageCsReq clearCocoonId() {
-      bitField0_ &= ~0x00000010;
+      bitField0_ &= ~0x00000004;
       cocoonId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 15;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @return the cocoonId
      */
     public int getCocoonId() {
@@ -228,13 +154,87 @@ public final class StartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 15;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @param value the cocoonId to set
      * @return this
      */
     public StartCocoonStageCsReq setCocoonId(final int value) {
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000004;
       cocoonId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 8;</code>
+     * @return whether the propEntityId field is set
+     */
+    public boolean hasPropEntityId() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 8;</code>
+     * @return this
+     */
+    public StartCocoonStageCsReq clearPropEntityId() {
+      bitField0_ &= ~0x00000008;
+      propEntityId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 8;</code>
+     * @return the propEntityId
+     */
+    public int getPropEntityId() {
+      return propEntityId;
+    }
+
+    /**
+     * <code>optional uint32 prop_entity_id = 8;</code>
+     * @param value the propEntityId to set
+     * @return this
+     */
+    public StartCocoonStageCsReq setPropEntityId(final int value) {
+      bitField0_ |= 0x00000008;
+      propEntityId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 wave_count = 10;</code>
+     * @return whether the waveCount field is set
+     */
+    public boolean hasWaveCount() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>optional uint32 wave_count = 10;</code>
+     * @return this
+     */
+    public StartCocoonStageCsReq clearWaveCount() {
+      bitField0_ &= ~0x00000010;
+      waveCount = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 wave_count = 10;</code>
+     * @return the waveCount
+     */
+    public int getWaveCount() {
+      return waveCount;
+    }
+
+    /**
+     * <code>optional uint32 wave_count = 10;</code>
+     * @param value the waveCount to set
+     * @return this
+     */
+    public StartCocoonStageCsReq setWaveCount(final int value) {
+      bitField0_ |= 0x00000010;
+      waveCount = value;
       return this;
     }
 
@@ -244,10 +244,10 @@ public final class StartCocoonStageCsReqOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         worldLevel = other.worldLevel;
-        waveCount = other.waveCount;
-        propEntityId = other.propEntityId;
         wave = other.wave;
         cocoonId = other.cocoonId;
+        propEntityId = other.propEntityId;
+        waveCount = other.waveCount;
       }
       return this;
     }
@@ -261,17 +261,17 @@ public final class StartCocoonStageCsReqOuterClass {
       if (other.hasWorldLevel()) {
         setWorldLevel(other.worldLevel);
       }
-      if (other.hasWaveCount()) {
-        setWaveCount(other.waveCount);
-      }
-      if (other.hasPropEntityId()) {
-        setPropEntityId(other.propEntityId);
-      }
       if (other.hasWave()) {
         setWave(other.wave);
       }
       if (other.hasCocoonId()) {
         setCocoonId(other.cocoonId);
+      }
+      if (other.hasPropEntityId()) {
+        setPropEntityId(other.propEntityId);
+      }
+      if (other.hasWaveCount()) {
+        setWaveCount(other.waveCount);
       }
       return this;
     }
@@ -284,10 +284,10 @@ public final class StartCocoonStageCsReqOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       worldLevel = 0;
-      waveCount = 0;
-      propEntityId = 0;
       wave = 0;
       cocoonId = 0;
+      propEntityId = 0;
+      waveCount = 0;
       return this;
     }
 
@@ -312,33 +312,33 @@ public final class StartCocoonStageCsReqOuterClass {
       StartCocoonStageCsReq other = (StartCocoonStageCsReq) o;
       return bitField0_ == other.bitField0_
         && (!hasWorldLevel() || worldLevel == other.worldLevel)
-        && (!hasWaveCount() || waveCount == other.waveCount)
-        && (!hasPropEntityId() || propEntityId == other.propEntityId)
         && (!hasWave() || wave == other.wave)
-        && (!hasCocoonId() || cocoonId == other.cocoonId);
+        && (!hasCocoonId() || cocoonId == other.cocoonId)
+        && (!hasPropEntityId() || propEntityId == other.propEntityId)
+        && (!hasWaveCount() || waveCount == other.waveCount);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 40);
-        output.writeUInt32NoTag(waveCount);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 96);
-        output.writeUInt32NoTag(propEntityId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 112);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(wave);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 120);
+      if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(cocoonId);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(propEntityId);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRawByte((byte) 80);
+        output.writeUInt32NoTag(waveCount);
       }
     }
 
@@ -349,16 +349,16 @@ public final class StartCocoonStageCsReqOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(waveCount);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(propEntityId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(wave);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(cocoonId);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(propEntityId);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(waveCount);
       }
       return size;
     }
@@ -370,45 +370,45 @@ public final class StartCocoonStageCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 24: {
             // worldLevel
             worldLevel = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 40) {
+            if (tag != 32) {
               break;
             }
           }
-          case 40: {
-            // waveCount
-            waveCount = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 96) {
-              break;
-            }
-          }
-          case 96: {
-            // propEntityId
-            propEntityId = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
+          case 32: {
             // wave
             wave = input.readUInt32();
-            bitField0_ |= 0x00000008;
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 56) {
               break;
             }
           }
-          case 120: {
+          case 56: {
             // cocoonId
             cocoonId = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 64) {
+              break;
+            }
+          }
+          case 64: {
+            // propEntityId
+            propEntityId = input.readUInt32();
+            bitField0_ |= 0x00000008;
+            tag = input.readTag();
+            if (tag != 80) {
+              break;
+            }
+          }
+          case 80: {
+            // waveCount
+            waveCount = input.readUInt32();
             bitField0_ |= 0x00000010;
             tag = input.readTag();
             if (tag != 0) {
@@ -436,16 +436,16 @@ public final class StartCocoonStageCsReqOuterClass {
         output.writeUInt32(FieldNames.worldLevel, worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.waveCount, waveCount);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.propEntityId, propEntityId);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
         output.writeUInt32(FieldNames.wave, wave);
       }
-      if ((bitField0_ & 0x00000010) != 0) {
+      if ((bitField0_ & 0x00000004) != 0) {
         output.writeUInt32(FieldNames.cocoonId, cocoonId);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
+        output.writeUInt32(FieldNames.propEntityId, propEntityId);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeUInt32(FieldNames.waveCount, waveCount);
       }
       output.endObject();
     }
@@ -469,35 +469,11 @@ public final class StartCocoonStageCsReqOuterClass {
             }
             break;
           }
-          case 1518256534:
-          case 611674185: {
-            if (input.isAtField(FieldNames.waveCount)) {
-              if (!input.trySkipNullValue()) {
-                waveCount = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -68717343:
-          case -57484005: {
-            if (input.isAtField(FieldNames.propEntityId)) {
-              if (!input.trySkipNullValue()) {
-                propEntityId = input.readUInt32();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 3642105: {
             if (input.isAtField(FieldNames.wave)) {
               if (!input.trySkipNullValue()) {
                 wave = input.readUInt32();
-                bitField0_ |= 0x00000008;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -509,6 +485,30 @@ public final class StartCocoonStageCsReqOuterClass {
             if (input.isAtField(FieldNames.cocoonId)) {
               if (!input.trySkipNullValue()) {
                 cocoonId = input.readUInt32();
+                bitField0_ |= 0x00000004;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -68717343:
+          case -57484005: {
+            if (input.isAtField(FieldNames.propEntityId)) {
+              if (!input.trySkipNullValue()) {
+                propEntityId = input.readUInt32();
+                bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case 1518256534:
+          case 611674185: {
+            if (input.isAtField(FieldNames.waveCount)) {
+              if (!input.trySkipNullValue()) {
+                waveCount = input.readUInt32();
                 bitField0_ |= 0x00000010;
               }
             } else {
@@ -571,13 +571,13 @@ public final class StartCocoonStageCsReqOuterClass {
     static class FieldNames {
       static final FieldName worldLevel = FieldName.forField("worldLevel", "world_level");
 
-      static final FieldName waveCount = FieldName.forField("waveCount", "wave_count");
-
-      static final FieldName propEntityId = FieldName.forField("propEntityId", "prop_entity_id");
-
       static final FieldName wave = FieldName.forField("wave");
 
       static final FieldName cocoonId = FieldName.forField("cocoonId", "cocoon_id");
+
+      static final FieldName propEntityId = FieldName.forField("propEntityId", "prop_entity_id");
+
+      static final FieldName waveCount = FieldName.forField("waveCount", "wave_count");
     }
   }
 }

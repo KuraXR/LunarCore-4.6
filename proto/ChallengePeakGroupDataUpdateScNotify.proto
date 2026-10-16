@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengePeakGroupInfo.proto";
+
+message ChallengePeakGroupDataUpdateScNotify {
+  optional ChallengePeakGroupInfo challenge_peak_group = 7;
+}

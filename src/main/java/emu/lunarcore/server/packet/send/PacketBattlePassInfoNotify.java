@@ -11,12 +11,7 @@ public class PacketBattlePassInfoNotify extends BasePacket {
         super(CmdId.BattlePassInfoNotify);
 
         var data = BattlePassInfoNotify.newInstance()
-                .setTakenFreeReward(0xFFFFFFFFFFFFFFFFL)
-                .setTakenPremiumReward1(0xFFFFFFFFFFFFFFFFL)
-                .setTakenPremiumReward2(0x7FFFFFFFFFFFEL)
-                .setTakenPremiumOptionalReward(0x7FFFFFFFFFFFEL)
-                .setTakenFreeExtendedReward(127)
-                .setTakenPremiumExtendedReward(127)
+                // 4.6: the taken-reward bitmasks are obfuscated and cannot be told apart
                 .setLevel(70)
                 .setCurWeekAddExpSum(8000)
                 .setExp(800)

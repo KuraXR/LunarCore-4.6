@@ -19,14 +19,14 @@ public final class RelicReforgeCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 reforge_block_sub_affix_id = 6;</code>
-     */
-    private int reforgeBlockSubAffixId;
-
-    /**
-     * <code>optional uint32 relic_unique_id = 15;</code>
+     * <code>optional uint32 relic_unique_id = 6;</code>
      */
     private int relicUniqueId;
+
+    /**
+     * <code>optional uint32 reforge_block_sub_affix_id = 10;</code>
+     */
+    private int reforgeBlockSubAffixId;
 
     private RelicReforgeCsReq() {
     }
@@ -39,62 +39,25 @@ public final class RelicReforgeCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 reforge_block_sub_affix_id = 6;</code>
-     * @return whether the reforgeBlockSubAffixId field is set
+     * <code>optional uint32 relic_unique_id = 6;</code>
+     * @return whether the relicUniqueId field is set
      */
-    public boolean hasReforgeBlockSubAffixId() {
+    public boolean hasRelicUniqueId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 reforge_block_sub_affix_id = 6;</code>
-     * @return this
-     */
-    public RelicReforgeCsReq clearReforgeBlockSubAffixId() {
-      bitField0_ &= ~0x00000001;
-      reforgeBlockSubAffixId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 reforge_block_sub_affix_id = 6;</code>
-     * @return the reforgeBlockSubAffixId
-     */
-    public int getReforgeBlockSubAffixId() {
-      return reforgeBlockSubAffixId;
-    }
-
-    /**
-     * <code>optional uint32 reforge_block_sub_affix_id = 6;</code>
-     * @param value the reforgeBlockSubAffixId to set
-     * @return this
-     */
-    public RelicReforgeCsReq setReforgeBlockSubAffixId(final int value) {
-      bitField0_ |= 0x00000001;
-      reforgeBlockSubAffixId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 relic_unique_id = 15;</code>
-     * @return whether the relicUniqueId field is set
-     */
-    public boolean hasRelicUniqueId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 relic_unique_id = 15;</code>
+     * <code>optional uint32 relic_unique_id = 6;</code>
      * @return this
      */
     public RelicReforgeCsReq clearRelicUniqueId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       relicUniqueId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 relic_unique_id = 15;</code>
+     * <code>optional uint32 relic_unique_id = 6;</code>
      * @return the relicUniqueId
      */
     public int getRelicUniqueId() {
@@ -102,13 +65,50 @@ public final class RelicReforgeCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 relic_unique_id = 15;</code>
+     * <code>optional uint32 relic_unique_id = 6;</code>
      * @param value the relicUniqueId to set
      * @return this
      */
     public RelicReforgeCsReq setRelicUniqueId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       relicUniqueId = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 reforge_block_sub_affix_id = 10;</code>
+     * @return whether the reforgeBlockSubAffixId field is set
+     */
+    public boolean hasReforgeBlockSubAffixId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 reforge_block_sub_affix_id = 10;</code>
+     * @return this
+     */
+    public RelicReforgeCsReq clearReforgeBlockSubAffixId() {
+      bitField0_ &= ~0x00000002;
+      reforgeBlockSubAffixId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 reforge_block_sub_affix_id = 10;</code>
+     * @return the reforgeBlockSubAffixId
+     */
+    public int getReforgeBlockSubAffixId() {
+      return reforgeBlockSubAffixId;
+    }
+
+    /**
+     * <code>optional uint32 reforge_block_sub_affix_id = 10;</code>
+     * @param value the reforgeBlockSubAffixId to set
+     * @return this
+     */
+    public RelicReforgeCsReq setReforgeBlockSubAffixId(final int value) {
+      bitField0_ |= 0x00000002;
+      reforgeBlockSubAffixId = value;
       return this;
     }
 
@@ -117,8 +117,8 @@ public final class RelicReforgeCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        reforgeBlockSubAffixId = other.reforgeBlockSubAffixId;
         relicUniqueId = other.relicUniqueId;
+        reforgeBlockSubAffixId = other.reforgeBlockSubAffixId;
       }
       return this;
     }
@@ -129,11 +129,11 @@ public final class RelicReforgeCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasReforgeBlockSubAffixId()) {
-        setReforgeBlockSubAffixId(other.reforgeBlockSubAffixId);
-      }
       if (other.hasRelicUniqueId()) {
         setRelicUniqueId(other.relicUniqueId);
+      }
+      if (other.hasReforgeBlockSubAffixId()) {
+        setReforgeBlockSubAffixId(other.reforgeBlockSubAffixId);
       }
       return this;
     }
@@ -145,8 +145,8 @@ public final class RelicReforgeCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      reforgeBlockSubAffixId = 0;
       relicUniqueId = 0;
+      reforgeBlockSubAffixId = 0;
       return this;
     }
 
@@ -170,19 +170,19 @@ public final class RelicReforgeCsReqOuterClass {
       }
       RelicReforgeCsReq other = (RelicReforgeCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasReforgeBlockSubAffixId() || reforgeBlockSubAffixId == other.reforgeBlockSubAffixId)
-        && (!hasRelicUniqueId() || relicUniqueId == other.relicUniqueId);
+        && (!hasRelicUniqueId() || relicUniqueId == other.relicUniqueId)
+        && (!hasReforgeBlockSubAffixId() || reforgeBlockSubAffixId == other.reforgeBlockSubAffixId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeRawByte((byte) 48);
-        output.writeUInt32NoTag(reforgeBlockSubAffixId);
+        output.writeUInt32NoTag(relicUniqueId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(relicUniqueId);
+        output.writeRawByte((byte) 80);
+        output.writeUInt32NoTag(reforgeBlockSubAffixId);
       }
     }
 
@@ -190,10 +190,10 @@ public final class RelicReforgeCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(reforgeBlockSubAffixId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(relicUniqueId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(relicUniqueId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(reforgeBlockSubAffixId);
       }
       return size;
     }
@@ -206,17 +206,17 @@ public final class RelicReforgeCsReqOuterClass {
       while (true) {
         switch (tag) {
           case 48: {
-            // reforgeBlockSubAffixId
-            reforgeBlockSubAffixId = input.readUInt32();
+            // relicUniqueId
+            relicUniqueId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 80) {
               break;
             }
           }
-          case 120: {
-            // relicUniqueId
-            relicUniqueId = input.readUInt32();
+          case 80: {
+            // reforgeBlockSubAffixId
+            reforgeBlockSubAffixId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +241,10 @@ public final class RelicReforgeCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.reforgeBlockSubAffixId, reforgeBlockSubAffixId);
+        output.writeUInt32(FieldNames.relicUniqueId, relicUniqueId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.relicUniqueId, relicUniqueId);
+        output.writeUInt32(FieldNames.reforgeBlockSubAffixId, reforgeBlockSubAffixId);
       }
       output.endObject();
     }
@@ -256,11 +256,11 @@ public final class RelicReforgeCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1156912484:
-          case 721468550: {
-            if (input.isAtField(FieldNames.reforgeBlockSubAffixId)) {
+          case -1966200481:
+          case 49648253: {
+            if (input.isAtField(FieldNames.relicUniqueId)) {
               if (!input.trySkipNullValue()) {
-                reforgeBlockSubAffixId = input.readUInt32();
+                relicUniqueId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -268,11 +268,11 @@ public final class RelicReforgeCsReqOuterClass {
             }
             break;
           }
-          case -1966200481:
-          case 49648253: {
-            if (input.isAtField(FieldNames.relicUniqueId)) {
+          case 1156912484:
+          case 721468550: {
+            if (input.isAtField(FieldNames.reforgeBlockSubAffixId)) {
               if (!input.trySkipNullValue()) {
-                relicUniqueId = input.readUInt32();
+                reforgeBlockSubAffixId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -333,9 +333,9 @@ public final class RelicReforgeCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName reforgeBlockSubAffixId = FieldName.forField("reforgeBlockSubAffixId", "reforge_block_sub_affix_id");
-
       static final FieldName relicUniqueId = FieldName.forField("relicUniqueId", "relic_unique_id");
+
+      static final FieldName reforgeBlockSubAffixId = FieldName.forField("reforgeBlockSubAffixId", "reforge_block_sub_affix_id");
     }
   }
 }

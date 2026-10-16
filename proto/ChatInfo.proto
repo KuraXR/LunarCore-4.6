@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChatContentInfo.proto";
+import "ChatParticipant.proto";
+
+message ChatInfo {
+  optional uint64 sent_time = 4;
+  repeated ChatContentInfo chat_content_list = 9;
+  optional ChatParticipant sender = 10;
+  optional ChatParticipant receiver = 11;
+}

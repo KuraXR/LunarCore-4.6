@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message StartCocoonStageCsReq {
+  optional uint32 world_level = 3;
+  optional uint32 wave_count = 10;
+  optional uint32 prop_entity_id = 8;
+  optional uint32 wave = 4;
+  optional uint32 cocoon_id = 7;
+}

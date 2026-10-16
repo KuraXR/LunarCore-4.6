@@ -25,7 +25,7 @@ public final class GetOfferingInfoScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>repeated .OfferingInfo offering_info_list = 3;</code>
+     * <code>repeated .OfferingInfo offering_info_list = 9;</code>
      */
     private final RepeatedMessage<OfferingInfoOuterClass.OfferingInfo> offeringInfoList = RepeatedMessage.newEmptyInstance(OfferingInfoOuterClass.OfferingInfo.getFactory());
 
@@ -77,7 +77,7 @@ public final class GetOfferingInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .OfferingInfo offering_info_list = 3;</code>
+     * <code>repeated .OfferingInfo offering_info_list = 9;</code>
      * @return whether the offeringInfoList field is set
      */
     public boolean hasOfferingInfoList() {
@@ -85,7 +85,7 @@ public final class GetOfferingInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .OfferingInfo offering_info_list = 3;</code>
+     * <code>repeated .OfferingInfo offering_info_list = 9;</code>
      * @return this
      */
     public GetOfferingInfoScRsp clearOfferingInfoList() {
@@ -95,7 +95,7 @@ public final class GetOfferingInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .OfferingInfo offering_info_list = 3;</code>
+     * <code>repeated .OfferingInfo offering_info_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -109,7 +109,7 @@ public final class GetOfferingInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .OfferingInfo offering_info_list = 3;</code>
+     * <code>repeated .OfferingInfo offering_info_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -123,7 +123,7 @@ public final class GetOfferingInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .OfferingInfo offering_info_list = 3;</code>
+     * <code>repeated .OfferingInfo offering_info_list = 9;</code>
      * @param value the offeringInfoList to add
      * @return this
      */
@@ -135,7 +135,7 @@ public final class GetOfferingInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .OfferingInfo offering_info_list = 3;</code>
+     * <code>repeated .OfferingInfo offering_info_list = 9;</code>
      * @param values the offeringInfoList to add
      * @return this
      */
@@ -217,7 +217,7 @@ public final class GetOfferingInfoScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < offeringInfoList.length(); i++) {
-          output.writeRawByte((byte) 26);
+          output.writeRawByte((byte) 74);
           output.writeMessageNoTag(offeringInfoList.get(i));
         }
       }
@@ -247,11 +247,11 @@ public final class GetOfferingInfoScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 26) {
+            if (tag != 74) {
               break;
             }
           }
-          case 26: {
+          case 74: {
             // offeringInfoList
             tag = input.readRepeatedMessage(offeringInfoList, tag);
             bitField0_ |= 0x00000002;

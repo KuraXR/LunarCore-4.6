@@ -14,35 +14,23 @@ import us.hebi.quickbuf.RepeatedMessage;
 
 public final class GetJukeboxDataScRspOuterClass {
   /**
-   * <pre>
-   *  ICBICGCLBGO
-   * </pre>
-   *
    * Protobuf type {@code GetJukeboxDataScRsp}
    */
   public static final class GetJukeboxDataScRsp extends ProtoMessage<GetJukeboxDataScRsp> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 10;</code>
      */
     private int retcode;
 
     /**
-     * <pre>
-     *  BIIDJKEJEND
-     * </pre>
-     *
-     * <code>optional uint32 playing_id = 14;</code>
+     * <code>optional .MusicPlayState play_state = 12;</code>
      */
-    private int playingId;
+    private final MusicPlayStateOuterClass.MusicPlayState playState = MusicPlayStateOuterClass.MusicPlayState.newInstance();
 
     /**
-     * <pre>
-     *  LAHIPOLKDCA
-     * </pre>
-     *
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 4;</code>
      */
     private final RepeatedMessage<UnlockedMusicOuterClass.UnlockedMusic> musicList = RepeatedMessage.newEmptyInstance(UnlockedMusicOuterClass.UnlockedMusic.getFactory());
 
@@ -50,10 +38,6 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  ICBICGCLBGO
-     * </pre>
-     *
      * @return a new empty instance of {@code GetJukeboxDataScRsp}
      */
     public static GetJukeboxDataScRsp newInstance() {
@@ -61,7 +45,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -69,7 +53,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return this
      */
     public GetJukeboxDataScRsp clearRetcode() {
@@ -79,7 +63,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -87,7 +71,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -98,64 +82,64 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  BIIDJKEJEND
-     * </pre>
-     *
-     * <code>optional uint32 playing_id = 14;</code>
-     * @return whether the playingId field is set
+     * <code>optional .MusicPlayState play_state = 12;</code>
+     * @return whether the playState field is set
      */
-    public boolean hasPlayingId() {
+    public boolean hasPlayState() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <pre>
-     *  BIIDJKEJEND
-     * </pre>
-     *
-     * <code>optional uint32 playing_id = 14;</code>
+     * <code>optional .MusicPlayState play_state = 12;</code>
      * @return this
      */
-    public GetJukeboxDataScRsp clearPlayingId() {
+    public GetJukeboxDataScRsp clearPlayState() {
       bitField0_ &= ~0x00000002;
-      playingId = 0;
+      playState.clear();
       return this;
     }
 
     /**
-     * <pre>
-     *  BIIDJKEJEND
-     * </pre>
+     * <code>optional .MusicPlayState play_state = 12;</code>
      *
-     * <code>optional uint32 playing_id = 14;</code>
-     * @return the playingId
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutablePlayState()} if you want to modify it.
+     *
+     * @return internal storage object for reading
      */
-    public int getPlayingId() {
-      return playingId;
+    public MusicPlayStateOuterClass.MusicPlayState getPlayState() {
+      return playState;
     }
 
     /**
-     * <pre>
-     *  BIIDJKEJEND
-     * </pre>
+     * <code>optional .MusicPlayState play_state = 12;</code>
      *
-     * <code>optional uint32 playing_id = 14;</code>
-     * @param value the playingId to set
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public MusicPlayStateOuterClass.MusicPlayState getMutablePlayState() {
+      bitField0_ |= 0x00000002;
+      return playState;
+    }
+
+    /**
+     * <code>optional .MusicPlayState play_state = 12;</code>
+     * @param value the playState to set
      * @return this
      */
-    public GetJukeboxDataScRsp setPlayingId(final int value) {
+    public GetJukeboxDataScRsp setPlayState(final MusicPlayStateOuterClass.MusicPlayState value) {
       bitField0_ |= 0x00000002;
-      playingId = value;
+      playState.copyFrom(value);
       return this;
     }
 
     /**
-     * <pre>
-     *  LAHIPOLKDCA
-     * </pre>
-     *
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 4;</code>
      * @return whether the musicList field is set
      */
     public boolean hasMusicList() {
@@ -163,11 +147,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  LAHIPOLKDCA
-     * </pre>
-     *
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 4;</code>
      * @return this
      */
     public GetJukeboxDataScRsp clearMusicList() {
@@ -177,11 +157,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  LAHIPOLKDCA
-     * </pre>
-     *
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 4;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -195,11 +171,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  LAHIPOLKDCA
-     * </pre>
-     *
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 4;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -213,11 +185,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  LAHIPOLKDCA
-     * </pre>
-     *
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 4;</code>
      * @param value the musicList to add
      * @return this
      */
@@ -228,11 +196,7 @@ public final class GetJukeboxDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  LAHIPOLKDCA
-     * </pre>
-     *
-     * <code>repeated .UnlockedMusic music_list = 8;</code>
+     * <code>repeated .UnlockedMusic music_list = 4;</code>
      * @param values the musicList to add
      * @return this
      */
@@ -249,7 +213,7 @@ public final class GetJukeboxDataScRspOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
-        playingId = other.playingId;
+        playState.copyFrom(other.playState);
         musicList.copyFrom(other.musicList);
       }
       return this;
@@ -264,8 +228,8 @@ public final class GetJukeboxDataScRspOuterClass {
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
-      if (other.hasPlayingId()) {
-        setPlayingId(other.playingId);
+      if (other.hasPlayState()) {
+        getMutablePlayState().mergeFrom(other.playState);
       }
       if (other.hasMusicList()) {
         getMutableMusicList().addAll(other.musicList);
@@ -281,7 +245,7 @@ public final class GetJukeboxDataScRspOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       retcode = 0;
-      playingId = 0;
+      playState.clear();
       musicList.clear();
       return this;
     }
@@ -293,6 +257,7 @@ public final class GetJukeboxDataScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      playState.clearQuick();
       musicList.clearQuick();
       return this;
     }
@@ -308,23 +273,23 @@ public final class GetJukeboxDataScRspOuterClass {
       GetJukeboxDataScRsp other = (GetJukeboxDataScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasPlayingId() || playingId == other.playingId)
+        && (!hasPlayState() || playState.equals(other.playState))
         && (!hasMusicList() || musicList.equals(other.musicList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(playingId);
+        output.writeRawByte((byte) 98);
+        output.writeMessageNoTag(playState);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < musicList.length(); i++) {
-          output.writeRawByte((byte) 66);
+          output.writeRawByte((byte) 34);
           output.writeMessageNoTag(musicList.get(i));
         }
       }
@@ -337,7 +302,7 @@ public final class GetJukeboxDataScRspOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(playingId);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(playState);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += (1 * musicList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(musicList);
@@ -352,25 +317,25 @@ public final class GetJukeboxDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 80: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 112) {
+            if (tag != 98) {
               break;
             }
           }
-          case 112: {
-            // playingId
-            playingId = input.readUInt32();
+          case 98: {
+            // playState
+            input.readMessage(playState);
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 34) {
               break;
             }
           }
-          case 66: {
+          case 34: {
             // musicList
             tag = input.readRepeatedMessage(musicList, tag);
             bitField0_ |= 0x00000004;
@@ -399,7 +364,7 @@ public final class GetJukeboxDataScRspOuterClass {
         output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.playingId, playingId);
+        output.writeMessage(FieldNames.playState, playState);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeRepeatedMessage(FieldNames.musicList, musicList);
@@ -425,11 +390,11 @@ public final class GetJukeboxDataScRspOuterClass {
             }
             break;
           }
-          case -1868462615:
-          case -2087744820: {
-            if (input.isAtField(FieldNames.playingId)) {
+          case -1888605763:
+          case 1925938118: {
+            if (input.isAtField(FieldNames.playState)) {
               if (!input.trySkipNullValue()) {
-                playingId = input.readUInt32();
+                input.readMessage(playState);
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -504,7 +469,7 @@ public final class GetJukeboxDataScRspOuterClass {
     static class FieldNames {
       static final FieldName retcode = FieldName.forField("retcode");
 
-      static final FieldName playingId = FieldName.forField("playingId", "playing_id");
+      static final FieldName playState = FieldName.forField("playState", "play_state");
 
       static final FieldName musicList = FieldName.forField("musicList", "music_list");
     }

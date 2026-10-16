@@ -24,7 +24,7 @@ public final class ReserveStaminaExchangeScRspOuterClass {
     private int num;
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 10;</code>
      */
     private int retcode;
 
@@ -76,7 +76,7 @@ public final class ReserveStaminaExchangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -84,7 +84,7 @@ public final class ReserveStaminaExchangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return this
      */
     public ReserveStaminaExchangeScRsp clearRetcode() {
@@ -94,7 +94,7 @@ public final class ReserveStaminaExchangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -102,7 +102,7 @@ public final class ReserveStaminaExchangeScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 6;</code>
+     * <code>optional uint32 retcode = 10;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -181,7 +181,7 @@ public final class ReserveStaminaExchangeScRspOuterClass {
         output.writeUInt32NoTag(num);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 80);
         output.writeUInt32NoTag(retcode);
       }
     }
@@ -210,11 +210,11 @@ public final class ReserveStaminaExchangeScRspOuterClass {
             num = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 48) {
+            if (tag != 80) {
               break;
             }
           }
-          case 48: {
+          case 80: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000002;

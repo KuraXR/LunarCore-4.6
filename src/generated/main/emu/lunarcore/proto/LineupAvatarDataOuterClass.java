@@ -19,17 +19,17 @@ public final class LineupAvatarDataOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 hp = 2;</code>
-     */
-    private int hp;
-
-    /**
-     * <code>optional uint32 id = 6;</code>
+     * <code>optional uint32 id = 7;</code>
      */
     private int id;
 
     /**
-     * <code>optional .AvatarType avatar_type = 9;</code>
+     * <code>optional uint32 hp = 14;</code>
+     */
+    private int hp;
+
+    /**
+     * <code>optional .AvatarType avatar_type = 3;</code>
      */
     private int avatarType;
 
@@ -44,62 +44,25 @@ public final class LineupAvatarDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 hp = 2;</code>
-     * @return whether the hp field is set
+     * <code>optional uint32 id = 7;</code>
+     * @return whether the id field is set
      */
-    public boolean hasHp() {
+    public boolean hasId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 hp = 2;</code>
-     * @return this
-     */
-    public LineupAvatarData clearHp() {
-      bitField0_ &= ~0x00000001;
-      hp = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 hp = 2;</code>
-     * @return the hp
-     */
-    public int getHp() {
-      return hp;
-    }
-
-    /**
-     * <code>optional uint32 hp = 2;</code>
-     * @param value the hp to set
-     * @return this
-     */
-    public LineupAvatarData setHp(final int value) {
-      bitField0_ |= 0x00000001;
-      hp = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 id = 6;</code>
-     * @return whether the id field is set
-     */
-    public boolean hasId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 id = 6;</code>
+     * <code>optional uint32 id = 7;</code>
      * @return this
      */
     public LineupAvatarData clearId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       id = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 id = 6;</code>
+     * <code>optional uint32 id = 7;</code>
      * @return the id
      */
     public int getId() {
@@ -107,18 +70,55 @@ public final class LineupAvatarDataOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 6;</code>
+     * <code>optional uint32 id = 7;</code>
      * @param value the id to set
      * @return this
      */
     public LineupAvatarData setId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       id = value;
       return this;
     }
 
     /**
-     * <code>optional .AvatarType avatar_type = 9;</code>
+     * <code>optional uint32 hp = 14;</code>
+     * @return whether the hp field is set
+     */
+    public boolean hasHp() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 hp = 14;</code>
+     * @return this
+     */
+    public LineupAvatarData clearHp() {
+      bitField0_ &= ~0x00000002;
+      hp = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 hp = 14;</code>
+     * @return the hp
+     */
+    public int getHp() {
+      return hp;
+    }
+
+    /**
+     * <code>optional uint32 hp = 14;</code>
+     * @param value the hp to set
+     * @return this
+     */
+    public LineupAvatarData setHp(final int value) {
+      bitField0_ |= 0x00000002;
+      hp = value;
+      return this;
+    }
+
+    /**
+     * <code>optional .AvatarType avatar_type = 3;</code>
      * @return whether the avatarType field is set
      */
     public boolean hasAvatarType() {
@@ -126,7 +126,7 @@ public final class LineupAvatarDataOuterClass {
     }
 
     /**
-     * <code>optional .AvatarType avatar_type = 9;</code>
+     * <code>optional .AvatarType avatar_type = 3;</code>
      * @return this
      */
     public LineupAvatarData clearAvatarType() {
@@ -136,7 +136,7 @@ public final class LineupAvatarDataOuterClass {
     }
 
     /**
-     * <code>optional .AvatarType avatar_type = 9;</code>
+     * <code>optional .AvatarType avatar_type = 3;</code>
      * @return the avatarType
      */
     public AvatarTypeOuterClass.AvatarType getAvatarType() {
@@ -169,7 +169,7 @@ public final class LineupAvatarDataOuterClass {
     }
 
     /**
-     * <code>optional .AvatarType avatar_type = 9;</code>
+     * <code>optional .AvatarType avatar_type = 3;</code>
      * @param value the avatarType to set
      * @return this
      */
@@ -184,8 +184,8 @@ public final class LineupAvatarDataOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        hp = other.hp;
         id = other.id;
+        hp = other.hp;
         avatarType = other.avatarType;
       }
       return this;
@@ -197,11 +197,11 @@ public final class LineupAvatarDataOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasHp()) {
-        setHp(other.hp);
-      }
       if (other.hasId()) {
         setId(other.id);
+      }
+      if (other.hasHp()) {
+        setHp(other.hp);
       }
       if (other.hasAvatarType()) {
         setAvatarTypeValue(other.avatarType);
@@ -216,8 +216,8 @@ public final class LineupAvatarDataOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      hp = 0;
       id = 0;
+      hp = 0;
       avatarType = 0;
       return this;
     }
@@ -242,23 +242,23 @@ public final class LineupAvatarDataOuterClass {
       }
       LineupAvatarData other = (LineupAvatarData) o;
       return bitField0_ == other.bitField0_
-        && (!hasHp() || hp == other.hp)
         && (!hasId() || id == other.id)
+        && (!hasHp() || hp == other.hp)
         && (!hasAvatarType() || avatarType == other.avatarType);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(hp);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(id);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(hp);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 24);
         output.writeEnumNoTag(avatarType);
       }
     }
@@ -267,10 +267,10 @@ public final class LineupAvatarDataOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(hp);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(id);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(id);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(hp);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeEnumSizeNoTag(avatarType);
@@ -285,25 +285,25 @@ public final class LineupAvatarDataOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // hp
-            hp = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
+          case 56: {
             // id
             id = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 112) {
               break;
             }
           }
-          case 72: {
+          case 112: {
+            // hp
+            hp = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 24) {
+              break;
+            }
+          }
+          case 24: {
             // avatarType
             final int value = input.readInt32();
             if (AvatarTypeOuterClass.AvatarType.forNumber(value) != null) {
@@ -333,10 +333,10 @@ public final class LineupAvatarDataOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.hp, hp);
+        output.writeUInt32(FieldNames.id, id);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.id, id);
+        output.writeUInt32(FieldNames.hp, hp);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeEnum(FieldNames.avatarType, avatarType, AvatarTypeOuterClass.AvatarType.converter());
@@ -351,10 +351,10 @@ public final class LineupAvatarDataOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 3336: {
-            if (input.isAtField(FieldNames.hp)) {
+          case 3355: {
+            if (input.isAtField(FieldNames.id)) {
               if (!input.trySkipNullValue()) {
-                hp = input.readUInt32();
+                id = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -362,10 +362,10 @@ public final class LineupAvatarDataOuterClass {
             }
             break;
           }
-          case 3355: {
-            if (input.isAtField(FieldNames.id)) {
+          case 3336: {
+            if (input.isAtField(FieldNames.hp)) {
               if (!input.trySkipNullValue()) {
-                id = input.readUInt32();
+                hp = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -443,9 +443,9 @@ public final class LineupAvatarDataOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName hp = FieldName.forField("hp");
-
       static final FieldName id = FieldName.forField("id");
+
+      static final FieldName hp = FieldName.forField("hp");
 
       static final FieldName avatarType = FieldName.forField("avatarType", "avatar_type");
     }

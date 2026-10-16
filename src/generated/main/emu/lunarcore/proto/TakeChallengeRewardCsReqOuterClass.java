@@ -13,21 +13,13 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class TakeChallengeRewardCsReqOuterClass {
   /**
-   * <pre>
-   *  ABJNKBKDEGI
-   * </pre>
-   *
    * Protobuf type {@code TakeChallengeRewardCsReq}
    */
   public static final class TakeChallengeRewardCsReq extends ProtoMessage<TakeChallengeRewardCsReq> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 1;</code>
+     * <code>optional uint32 group_id = 9;</code>
      */
     private int groupId;
 
@@ -35,10 +27,6 @@ public final class TakeChallengeRewardCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  ABJNKBKDEGI
-     * </pre>
-     *
      * @return a new empty instance of {@code TakeChallengeRewardCsReq}
      */
     public static TakeChallengeRewardCsReq newInstance() {
@@ -46,11 +34,7 @@ public final class TakeChallengeRewardCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 1;</code>
+     * <code>optional uint32 group_id = 9;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -58,11 +42,7 @@ public final class TakeChallengeRewardCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 1;</code>
+     * <code>optional uint32 group_id = 9;</code>
      * @return this
      */
     public TakeChallengeRewardCsReq clearGroupId() {
@@ -72,11 +52,7 @@ public final class TakeChallengeRewardCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 1;</code>
+     * <code>optional uint32 group_id = 9;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -84,11 +60,7 @@ public final class TakeChallengeRewardCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 1;</code>
+     * <code>optional uint32 group_id = 9;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -157,7 +129,7 @@ public final class TakeChallengeRewardCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(groupId);
       }
     }
@@ -178,7 +150,7 @@ public final class TakeChallengeRewardCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 72: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000001;

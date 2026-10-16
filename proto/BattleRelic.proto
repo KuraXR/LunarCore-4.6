@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "RelicAffix.proto";
+
+message BattleRelic {
+  optional uint32 id = 1;
+  optional uint32 level = 2;
+  optional uint32 main_affix_id = 3;
+  optional uint32 unique_id = 5;
+  repeated RelicAffix sub_affix_list = 4;
+}

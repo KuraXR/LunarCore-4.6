@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeBossSingleNodeInfo.proto";
+import "ChallengeLineupAvatar.proto";
+
+message ChallengeBossInfo {
+  optional ChallengeBossSingleNodeInfo first_node = 2;
+  optional ChallengeBossSingleNodeInfo second_node = 9;
+  repeated ChallengeLineupAvatar avatar_lineup_first = 11;
+  repeated ChallengeLineupAvatar avatar_lineup_second = 6;
+}

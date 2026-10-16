@@ -19,7 +19,7 @@ public final class SelectPamSkinCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 pam_skin_id = 8;</code>
+     * <code>optional uint32 pam_skin_id = 1;</code>
      */
     private int pamSkinId;
 
@@ -34,7 +34,7 @@ public final class SelectPamSkinCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 pam_skin_id = 8;</code>
+     * <code>optional uint32 pam_skin_id = 1;</code>
      * @return whether the pamSkinId field is set
      */
     public boolean hasPamSkinId() {
@@ -42,7 +42,7 @@ public final class SelectPamSkinCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 pam_skin_id = 8;</code>
+     * <code>optional uint32 pam_skin_id = 1;</code>
      * @return this
      */
     public SelectPamSkinCsReq clearPamSkinId() {
@@ -52,7 +52,7 @@ public final class SelectPamSkinCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 pam_skin_id = 8;</code>
+     * <code>optional uint32 pam_skin_id = 1;</code>
      * @return the pamSkinId
      */
     public int getPamSkinId() {
@@ -60,7 +60,7 @@ public final class SelectPamSkinCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 pam_skin_id = 8;</code>
+     * <code>optional uint32 pam_skin_id = 1;</code>
      * @param value the pamSkinId to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class SelectPamSkinCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(pamSkinId);
       }
     }
@@ -150,7 +150,7 @@ public final class SelectPamSkinCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 8: {
             // pamSkinId
             pamSkinId = input.readUInt32();
             bitField0_ |= 0x00000001;

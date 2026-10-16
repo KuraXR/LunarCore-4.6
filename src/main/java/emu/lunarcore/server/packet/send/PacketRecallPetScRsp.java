@@ -9,8 +9,8 @@ public class PacketRecallPetScRsp extends BasePacket {
     public PacketRecallPetScRsp() {
         super(CmdId.RecallPetScRsp);
 
-        var data = RecallPetScRsp.newInstance()
-                .setCurPetId(0);
+        var data = RecallPetScRsp.newInstance();
+        data.getMutableState();
 
         this.setData(data);
     }

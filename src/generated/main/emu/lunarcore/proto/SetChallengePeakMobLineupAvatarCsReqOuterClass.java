@@ -20,12 +20,12 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 8;</code>
+     * <code>optional uint32 challenge_peak_group_id = 13;</code>
      */
     private int challengePeakGroupId;
 
     /**
-     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 2;</code>
+     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 9;</code>
      */
     private final RepeatedMessage<ChallengePeakMobLineupInfoOuterClass.ChallengePeakMobLineupInfo> lineupList = RepeatedMessage.newEmptyInstance(ChallengePeakMobLineupInfoOuterClass.ChallengePeakMobLineupInfo.getFactory());
 
@@ -40,7 +40,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 8;</code>
+     * <code>optional uint32 challenge_peak_group_id = 13;</code>
      * @return whether the challengePeakGroupId field is set
      */
     public boolean hasChallengePeakGroupId() {
@@ -48,7 +48,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 8;</code>
+     * <code>optional uint32 challenge_peak_group_id = 13;</code>
      * @return this
      */
     public SetChallengePeakMobLineupAvatarCsReq clearChallengePeakGroupId() {
@@ -58,7 +58,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 8;</code>
+     * <code>optional uint32 challenge_peak_group_id = 13;</code>
      * @return the challengePeakGroupId
      */
     public int getChallengePeakGroupId() {
@@ -66,7 +66,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_group_id = 8;</code>
+     * <code>optional uint32 challenge_peak_group_id = 13;</code>
      * @param value the challengePeakGroupId to set
      * @return this
      */
@@ -77,7 +77,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 2;</code>
+     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 9;</code>
      * @return whether the lineupList field is set
      */
     public boolean hasLineupList() {
@@ -85,7 +85,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 2;</code>
+     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 9;</code>
      * @return this
      */
     public SetChallengePeakMobLineupAvatarCsReq clearLineupList() {
@@ -95,7 +95,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 2;</code>
+     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -110,7 +110,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 2;</code>
+     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -125,7 +125,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 2;</code>
+     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 9;</code>
      * @param value the lineupList to add
      * @return this
      */
@@ -137,7 +137,7 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 2;</code>
+     * <code>repeated .ChallengePeakMobLineupInfo lineup_list = 9;</code>
      * @param values the lineupList to add
      * @return this
      */
@@ -216,12 +216,12 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(challengePeakGroupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < lineupList.length(); i++) {
-          output.writeRawByte((byte) 18);
+          output.writeRawByte((byte) 74);
           output.writeMessageNoTag(lineupList.get(i));
         }
       }
@@ -247,16 +247,16 @@ public final class SetChallengePeakMobLineupAvatarCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 104: {
             // challengePeakGroupId
             challengePeakGroupId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 18) {
+            if (tag != 74) {
               break;
             }
           }
-          case 18: {
+          case 74: {
             // lineupList
             tag = input.readRepeatedMessage(lineupList, tag);
             bitField0_ |= 0x00000002;

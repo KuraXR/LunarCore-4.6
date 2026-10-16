@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PlayerMocDisplayInfo.proto";
+
+message PlayerDisplayInfo {
+  optional uint32 lightcone_count = 1;
+  optional uint32 int2 = 2;
+  optional uint32 su_world = 3;
+  optional uint32 int5 = 5;
+  optional uint32 character_count = 7;
+  optional uint32 phonograph_count = 12;
+  optional uint32 book_count = 13;
+  optional uint32 achievement_count = 15;
+  optional PlayerMocDisplayInfo moc_display_info = 4;
+}

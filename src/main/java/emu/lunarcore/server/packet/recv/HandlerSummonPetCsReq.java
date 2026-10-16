@@ -5,7 +5,6 @@ import emu.lunarcore.server.game.GameSession;
 import emu.lunarcore.server.packet.CmdId;
 import emu.lunarcore.server.packet.Opcodes;
 import emu.lunarcore.server.packet.PacketHandler;
-import emu.lunarcore.server.packet.send.PacketCurPetChangedScNotify;
 import emu.lunarcore.server.packet.send.PacketSummonPetScRsp;
 
 @Opcodes(CmdId.SummonPetCsReq)
@@ -15,13 +14,18 @@ public class HandlerSummonPetCsReq extends PacketHandler {
     public void handle(GameSession session, byte[] data) throws Exception {
         var req = SummonPetCsReq.parseFrom(data);
 
-        if (session.getPlayer().getUnlocks().getPets().contains(req.getSummonedPetId())) {
-            session.getPlayer().setPetId(req.getSummonedPetId());
-            session.getPlayer().save();
-            session.send(new PacketCurPetChangedScNotify(session.getPlayer()));
+        // 4.6 summons by a 4-value mode (enum, meaning unverified) instead of a pet id;
+        // remember it and echo it back as the summon state
+        int mode = req.getMode();
+        if (mode < 0 || mode > 3) {
+            session.send(new PacketSummonPetScRsp());
+            return;
         }
 
-        session.send(new PacketSummonPetScRsp(req.getSummonedPetId()));
+        session.getPlayer().setPetId(mode);
+        session.getPlayer().save();
+
+        session.send(new PacketSummonPetScRsp(mode));
     }
 
 }

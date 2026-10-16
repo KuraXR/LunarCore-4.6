@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeInfo.proto";
+import "ItemList.proto";
+
+message ChallengeSettleNotify {
+  optional uint32 challenge_id = 8;
+  optional uint32 stars = 5;
+  optional uint32 challenge_score = 4;
+  optional uint32 score_two = 3;
+  optional bool is_win = 10;
+  optional ItemList reward_list = 2;
+  optional ChallengeInfo challenge_info = 1;
+}

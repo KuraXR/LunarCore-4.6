@@ -20,26 +20,22 @@ public final class UpdateMarkChestScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
-     */
-    private int retcode;
-
-    /**
-     * <code>optional uint32 mark_avatar_id = 8;</code>
-     */
-    private int markAvatarId;
-
-    /**
-     * <code>optional uint32 func_id = 14;</code>
+     * <code>optional uint32 func_id = 6;</code>
      */
     private int funcId;
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>optional uint32 retcode = 14;</code>
+     */
+    private int retcode;
+
+    /**
+     * <code>optional uint32 mark_avatar_id = 15;</code>
+     */
+    private int markAvatarId;
+
+    /**
+     * <code>repeated .MarkChestInfo chest_group_list = 11;</code>
      */
     private final RepeatedMessage<MarkChestInfoOuterClass.MarkChestInfo> chestGroupList = RepeatedMessage.newEmptyInstance(MarkChestInfoOuterClass.MarkChestInfo.getFactory());
 
@@ -54,115 +50,25 @@ public final class UpdateMarkChestScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
-     * @return whether the retcode field is set
+     * <code>optional uint32 func_id = 6;</code>
+     * @return whether the funcId field is set
      */
-    public boolean hasRetcode() {
+    public boolean hasFuncId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
-     * @return this
-     */
-    public UpdateMarkChestScRsp clearRetcode() {
-      bitField0_ &= ~0x00000001;
-      retcode = 0;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
-     * @return the retcode
-     */
-    public int getRetcode() {
-      return retcode;
-    }
-
-    /**
-     * <pre>
-     *  JDLHKMNFDBD
-     * </pre>
-     *
-     * <code>optional uint32 retcode = 1;</code>
-     * @param value the retcode to set
-     * @return this
-     */
-    public UpdateMarkChestScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000001;
-      retcode = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 mark_avatar_id = 8;</code>
-     * @return whether the markAvatarId field is set
-     */
-    public boolean hasMarkAvatarId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 mark_avatar_id = 8;</code>
-     * @return this
-     */
-    public UpdateMarkChestScRsp clearMarkAvatarId() {
-      bitField0_ &= ~0x00000002;
-      markAvatarId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 mark_avatar_id = 8;</code>
-     * @return the markAvatarId
-     */
-    public int getMarkAvatarId() {
-      return markAvatarId;
-    }
-
-    /**
-     * <code>optional uint32 mark_avatar_id = 8;</code>
-     * @param value the markAvatarId to set
-     * @return this
-     */
-    public UpdateMarkChestScRsp setMarkAvatarId(final int value) {
-      bitField0_ |= 0x00000002;
-      markAvatarId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 func_id = 14;</code>
-     * @return whether the funcId field is set
-     */
-    public boolean hasFuncId() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 func_id = 14;</code>
+     * <code>optional uint32 func_id = 6;</code>
      * @return this
      */
     public UpdateMarkChestScRsp clearFuncId() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000001;
       funcId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 func_id = 14;</code>
+     * <code>optional uint32 func_id = 6;</code>
      * @return the funcId
      */
     public int getFuncId() {
@@ -170,18 +76,92 @@ public final class UpdateMarkChestScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 func_id = 14;</code>
+     * <code>optional uint32 func_id = 6;</code>
      * @param value the funcId to set
      * @return this
      */
     public UpdateMarkChestScRsp setFuncId(final int value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000001;
       funcId = value;
       return this;
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>optional uint32 retcode = 14;</code>
+     * @return whether the retcode field is set
+     */
+    public boolean hasRetcode() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 14;</code>
+     * @return this
+     */
+    public UpdateMarkChestScRsp clearRetcode() {
+      bitField0_ &= ~0x00000002;
+      retcode = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 14;</code>
+     * @return the retcode
+     */
+    public int getRetcode() {
+      return retcode;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 14;</code>
+     * @param value the retcode to set
+     * @return this
+     */
+    public UpdateMarkChestScRsp setRetcode(final int value) {
+      bitField0_ |= 0x00000002;
+      retcode = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 mark_avatar_id = 15;</code>
+     * @return whether the markAvatarId field is set
+     */
+    public boolean hasMarkAvatarId() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional uint32 mark_avatar_id = 15;</code>
+     * @return this
+     */
+    public UpdateMarkChestScRsp clearMarkAvatarId() {
+      bitField0_ &= ~0x00000004;
+      markAvatarId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 mark_avatar_id = 15;</code>
+     * @return the markAvatarId
+     */
+    public int getMarkAvatarId() {
+      return markAvatarId;
+    }
+
+    /**
+     * <code>optional uint32 mark_avatar_id = 15;</code>
+     * @param value the markAvatarId to set
+     * @return this
+     */
+    public UpdateMarkChestScRsp setMarkAvatarId(final int value) {
+      bitField0_ |= 0x00000004;
+      markAvatarId = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated .MarkChestInfo chest_group_list = 11;</code>
      * @return whether the chestGroupList field is set
      */
     public boolean hasChestGroupList() {
@@ -189,7 +169,7 @@ public final class UpdateMarkChestScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 11;</code>
      * @return this
      */
     public UpdateMarkChestScRsp clearChestGroupList() {
@@ -199,7 +179,7 @@ public final class UpdateMarkChestScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -213,7 +193,7 @@ public final class UpdateMarkChestScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -227,7 +207,7 @@ public final class UpdateMarkChestScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 11;</code>
      * @param value the chestGroupList to add
      * @return this
      */
@@ -239,7 +219,7 @@ public final class UpdateMarkChestScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MarkChestInfo chest_group_list = 6;</code>
+     * <code>repeated .MarkChestInfo chest_group_list = 11;</code>
      * @param values the chestGroupList to add
      * @return this
      */
@@ -255,9 +235,9 @@ public final class UpdateMarkChestScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
+        funcId = other.funcId;
         retcode = other.retcode;
         markAvatarId = other.markAvatarId;
-        funcId = other.funcId;
         chestGroupList.copyFrom(other.chestGroupList);
       }
       return this;
@@ -269,14 +249,14 @@ public final class UpdateMarkChestScRspOuterClass {
         return this;
       }
       cachedSize = -1;
+      if (other.hasFuncId()) {
+        setFuncId(other.funcId);
+      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
       }
       if (other.hasMarkAvatarId()) {
         setMarkAvatarId(other.markAvatarId);
-      }
-      if (other.hasFuncId()) {
-        setFuncId(other.funcId);
       }
       if (other.hasChestGroupList()) {
         getMutableChestGroupList().addAll(other.chestGroupList);
@@ -291,9 +271,9 @@ public final class UpdateMarkChestScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
+      funcId = 0;
       retcode = 0;
       markAvatarId = 0;
-      funcId = 0;
       chestGroupList.clear();
       return this;
     }
@@ -319,29 +299,29 @@ public final class UpdateMarkChestScRspOuterClass {
       }
       UpdateMarkChestScRsp other = (UpdateMarkChestScRsp) o;
       return bitField0_ == other.bitField0_
+        && (!hasFuncId() || funcId == other.funcId)
         && (!hasRetcode() || retcode == other.retcode)
         && (!hasMarkAvatarId() || markAvatarId == other.markAvatarId)
-        && (!hasFuncId() || funcId == other.funcId)
         && (!hasChestGroupList() || chestGroupList.equals(other.chestGroupList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
-        output.writeUInt32NoTag(retcode);
+        output.writeRawByte((byte) 48);
+        output.writeUInt32NoTag(funcId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 64);
-        output.writeUInt32NoTag(markAvatarId);
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeUInt32NoTag(funcId);
+        output.writeRawByte((byte) 120);
+        output.writeUInt32NoTag(markAvatarId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < chestGroupList.length(); i++) {
-          output.writeRawByte((byte) 50);
+          output.writeRawByte((byte) 90);
           output.writeMessageNoTag(chestGroupList.get(i));
         }
       }
@@ -351,13 +331,13 @@ public final class UpdateMarkChestScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(funcId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(markAvatarId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(funcId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(markAvatarId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         size += (1 * chestGroupList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(chestGroupList);
@@ -372,34 +352,34 @@ public final class UpdateMarkChestScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
-            // retcode
-            retcode = input.readUInt32();
+          case 48: {
+            // funcId
+            funcId = input.readUInt32();
             bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 64) {
-              break;
-            }
-          }
-          case 64: {
-            // markAvatarId
-            markAvatarId = input.readUInt32();
-            bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 112) {
               break;
             }
           }
           case 112: {
-            // funcId
-            funcId = input.readUInt32();
-            bitField0_ |= 0x00000004;
+            // retcode
+            retcode = input.readUInt32();
+            bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 120) {
               break;
             }
           }
-          case 50: {
+          case 120: {
+            // markAvatarId
+            markAvatarId = input.readUInt32();
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 90) {
+              break;
+            }
+          }
+          case 90: {
             // chestGroupList
             tag = input.readRepeatedMessage(chestGroupList, tag);
             bitField0_ |= 0x00000008;
@@ -425,13 +405,13 @@ public final class UpdateMarkChestScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.funcId, funcId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.markAvatarId, markAvatarId);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.funcId, funcId);
+        output.writeUInt32(FieldNames.markAvatarId, markAvatarId);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         output.writeRepeatedMessage(FieldNames.chestGroupList, chestGroupList);
@@ -446,11 +426,23 @@ public final class UpdateMarkChestScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
+          case -1263367425:
+          case -509663114: {
+            if (input.isAtField(FieldNames.funcId)) {
+              if (!input.trySkipNullValue()) {
+                funcId = input.readUInt32();
+                bitField0_ |= 0x00000001;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
           case 1097936398: {
             if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
                 retcode = input.readUInt32();
-                bitField0_ |= 0x00000001;
+                bitField0_ |= 0x00000002;
               }
             } else {
               input.skipUnknownField();
@@ -462,18 +454,6 @@ public final class UpdateMarkChestScRspOuterClass {
             if (input.isAtField(FieldNames.markAvatarId)) {
               if (!input.trySkipNullValue()) {
                 markAvatarId = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1263367425:
-          case -509663114: {
-            if (input.isAtField(FieldNames.funcId)) {
-              if (!input.trySkipNullValue()) {
-                funcId = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -546,11 +526,11 @@ public final class UpdateMarkChestScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
+      static final FieldName funcId = FieldName.forField("funcId", "func_id");
+
       static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName markAvatarId = FieldName.forField("markAvatarId", "mark_avatar_id");
-
-      static final FieldName funcId = FieldName.forField("funcId", "func_id");
 
       static final FieldName chestGroupList = FieldName.forField("chestGroupList", "chest_group_list");
     }

@@ -19,12 +19,12 @@ public final class AvatarPathSkillTreeOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 anchor_point_id = 6;</code>
+     * <code>optional uint32 anchor_point_id = 8;</code>
      */
     private int anchorPointId;
 
     /**
-     * <code>optional uint32 level = 7;</code>
+     * <code>optional uint32 level = 11;</code>
      */
     private int level;
 
@@ -39,7 +39,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 anchor_point_id = 6;</code>
+     * <code>optional uint32 anchor_point_id = 8;</code>
      * @return whether the anchorPointId field is set
      */
     public boolean hasAnchorPointId() {
@@ -47,7 +47,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 anchor_point_id = 6;</code>
+     * <code>optional uint32 anchor_point_id = 8;</code>
      * @return this
      */
     public AvatarPathSkillTree clearAnchorPointId() {
@@ -57,7 +57,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 anchor_point_id = 6;</code>
+     * <code>optional uint32 anchor_point_id = 8;</code>
      * @return the anchorPointId
      */
     public int getAnchorPointId() {
@@ -65,7 +65,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 anchor_point_id = 6;</code>
+     * <code>optional uint32 anchor_point_id = 8;</code>
      * @param value the anchorPointId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
+     * <code>optional uint32 level = 11;</code>
      * @return whether the level field is set
      */
     public boolean hasLevel() {
@@ -84,7 +84,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
+     * <code>optional uint32 level = 11;</code>
      * @return this
      */
     public AvatarPathSkillTree clearLevel() {
@@ -94,7 +94,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
+     * <code>optional uint32 level = 11;</code>
      * @return the level
      */
     public int getLevel() {
@@ -102,7 +102,7 @@ public final class AvatarPathSkillTreeOuterClass {
     }
 
     /**
-     * <code>optional uint32 level = 7;</code>
+     * <code>optional uint32 level = 11;</code>
      * @param value the level to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class AvatarPathSkillTreeOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 64);
         output.writeUInt32NoTag(anchorPointId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(level);
       }
     }
@@ -205,16 +205,16 @@ public final class AvatarPathSkillTreeOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 64: {
             // anchorPointId
             anchorPointId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 88) {
               break;
             }
           }
-          case 56: {
+          case 88: {
             // level
             level = input.readUInt32();
             bitField0_ |= 0x00000002;

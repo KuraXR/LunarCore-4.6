@@ -10,8 +10,11 @@ public class PacketGetPetDataScRsp extends BasePacket {
     public PacketGetPetDataScRsp(Player player) {
         super(CmdId.GetPetDataScRsp);
 
-        var data = GetPetDataScRsp.newInstance()
-                .setCurPetId(player.getPetId());
+        // 4.6 reports the summon state instead of cur_pet_id (petId holds the 4.6 summon mode;
+        // older saves may hold a 4.2 pet id, which is not a mode)
+        var data = GetPetDataScRsp.newInstance();
+        int mode = player.getPetId();
+        data.getMutableState().setMode(mode >= 0 && mode <= 3 ? mode : 0);
 
         for (int id : player.getUnlocks().getPets()) {
             data.addPetIdList(id);

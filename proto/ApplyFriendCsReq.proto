@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "FriendApplySource.proto";
+
+message ApplyFriendCsReq {
+  optional uint32 uid = 5;
+  optional FriendApplySource source = 12;
+}

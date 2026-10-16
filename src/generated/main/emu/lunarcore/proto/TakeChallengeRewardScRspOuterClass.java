@@ -14,35 +14,23 @@ import us.hebi.quickbuf.RepeatedMessage;
 
 public final class TakeChallengeRewardScRspOuterClass {
   /**
-   * <pre>
-   *  EJLKEJJLODJ
-   * </pre>
-   *
    * Protobuf type {@code TakeChallengeRewardScRsp}
    */
   public static final class TakeChallengeRewardScRsp extends ProtoMessage<TakeChallengeRewardScRsp> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
-     */
-    private int retcode;
-
-    /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 2;</code>
      */
     private int groupId;
 
     /**
-     * <pre>
-     *  KNMLGHHDDAK
-     * </pre>
-     *
-     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 7;</code>
+     * <code>optional uint32 retcode = 13;</code>
+     */
+    private int retcode;
+
+    /**
+     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 15;</code>
      */
     private final RepeatedMessage<TakenChallengeRewardInfoOuterClass.TakenChallengeRewardInfo> takenRewardList = RepeatedMessage.newEmptyInstance(TakenChallengeRewardInfoOuterClass.TakenChallengeRewardInfo.getFactory());
 
@@ -50,10 +38,6 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  EJLKEJJLODJ
-     * </pre>
-     *
      * @return a new empty instance of {@code TakeChallengeRewardScRsp}
      */
     public static TakeChallengeRewardScRsp newInstance() {
@@ -61,74 +45,25 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @return whether the retcode field is set
+     * <code>optional uint32 group_id = 2;</code>
+     * @return whether the groupId field is set
      */
-    public boolean hasRetcode() {
+    public boolean hasGroupId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @return this
-     */
-    public TakeChallengeRewardScRsp clearRetcode() {
-      bitField0_ &= ~0x00000001;
-      retcode = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @return the retcode
-     */
-    public int getRetcode() {
-      return retcode;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @param value the retcode to set
-     * @return this
-     */
-    public TakeChallengeRewardScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000001;
-      retcode = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
-     * @return whether the groupId field is set
-     */
-    public boolean hasGroupId() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 2;</code>
      * @return this
      */
     public TakeChallengeRewardScRsp clearGroupId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       groupId = 0;
       return this;
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 2;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -136,26 +71,55 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 2;</code>
      * @param value the groupId to set
      * @return this
      */
     public TakeChallengeRewardScRsp setGroupId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       groupId = value;
       return this;
     }
 
     /**
-     * <pre>
-     *  KNMLGHHDDAK
-     * </pre>
-     *
-     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 7;</code>
+     * <code>optional uint32 retcode = 13;</code>
+     * @return whether the retcode field is set
+     */
+    public boolean hasRetcode() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 13;</code>
+     * @return this
+     */
+    public TakeChallengeRewardScRsp clearRetcode() {
+      bitField0_ &= ~0x00000002;
+      retcode = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 13;</code>
+     * @return the retcode
+     */
+    public int getRetcode() {
+      return retcode;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 13;</code>
+     * @param value the retcode to set
+     * @return this
+     */
+    public TakeChallengeRewardScRsp setRetcode(final int value) {
+      bitField0_ |= 0x00000002;
+      retcode = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 15;</code>
      * @return whether the takenRewardList field is set
      */
     public boolean hasTakenRewardList() {
@@ -163,11 +127,7 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNMLGHHDDAK
-     * </pre>
-     *
-     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 7;</code>
+     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 15;</code>
      * @return this
      */
     public TakeChallengeRewardScRsp clearTakenRewardList() {
@@ -177,11 +137,7 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNMLGHHDDAK
-     * </pre>
-     *
-     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 7;</code>
+     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -196,11 +152,7 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNMLGHHDDAK
-     * </pre>
-     *
-     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 7;</code>
+     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -215,11 +167,7 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNMLGHHDDAK
-     * </pre>
-     *
-     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 7;</code>
+     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 15;</code>
      * @param value the takenRewardList to add
      * @return this
      */
@@ -231,11 +179,7 @@ public final class TakeChallengeRewardScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNMLGHHDDAK
-     * </pre>
-     *
-     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 7;</code>
+     * <code>repeated .TakenChallengeRewardInfo taken_reward_list = 15;</code>
      * @param values the takenRewardList to add
      * @return this
      */
@@ -251,8 +195,8 @@ public final class TakeChallengeRewardScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        retcode = other.retcode;
         groupId = other.groupId;
+        retcode = other.retcode;
         takenRewardList.copyFrom(other.takenRewardList);
       }
       return this;
@@ -264,11 +208,11 @@ public final class TakeChallengeRewardScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasRetcode()) {
-        setRetcode(other.retcode);
-      }
       if (other.hasGroupId()) {
         setGroupId(other.groupId);
+      }
+      if (other.hasRetcode()) {
+        setRetcode(other.retcode);
       }
       if (other.hasTakenRewardList()) {
         getMutableTakenRewardList().addAll(other.takenRewardList);
@@ -283,8 +227,8 @@ public final class TakeChallengeRewardScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      retcode = 0;
       groupId = 0;
+      retcode = 0;
       takenRewardList.clear();
       return this;
     }
@@ -310,24 +254,24 @@ public final class TakeChallengeRewardScRspOuterClass {
       }
       TakeChallengeRewardScRsp other = (TakeChallengeRewardScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasRetcode() || retcode == other.retcode)
         && (!hasGroupId() || groupId == other.groupId)
+        && (!hasRetcode() || retcode == other.retcode)
         && (!hasTakenRewardList() || takenRewardList.equals(other.takenRewardList));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
-        output.writeUInt32NoTag(retcode);
+        output.writeRawByte((byte) 16);
+        output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 48);
-        output.writeUInt32NoTag(groupId);
+        output.writeRawByte((byte) 104);
+        output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < takenRewardList.length(); i++) {
-          output.writeRawByte((byte) 58);
+          output.writeRawByte((byte) 122);
           output.writeMessageNoTag(takenRewardList.get(i));
         }
       }
@@ -337,10 +281,10 @@ public final class TakeChallengeRewardScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(groupId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += (1 * takenRewardList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(takenRewardList);
@@ -355,25 +299,25 @@ public final class TakeChallengeRewardScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
-            // retcode
-            retcode = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
+          case 16: {
             // groupId
             groupId = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 104) {
               break;
             }
           }
-          case 58: {
+          case 104: {
+            // retcode
+            retcode = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 122) {
+              break;
+            }
+          }
+          case 122: {
             // takenRewardList
             tag = input.readRepeatedMessage(takenRewardList, tag);
             bitField0_ |= 0x00000004;
@@ -399,10 +343,10 @@ public final class TakeChallengeRewardScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.groupId, groupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.groupId, groupId);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeRepeatedMessage(FieldNames.takenRewardList, takenRewardList);
@@ -417,10 +361,11 @@ public final class TakeChallengeRewardScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case 293428218:
+          case 506361563: {
+            if (input.isAtField(FieldNames.groupId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                groupId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -428,11 +373,10 @@ public final class TakeChallengeRewardScRspOuterClass {
             }
             break;
           }
-          case 293428218:
-          case 506361563: {
-            if (input.isAtField(FieldNames.groupId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                groupId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -505,9 +449,9 @@ public final class TakeChallengeRewardScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName retcode = FieldName.forField("retcode");
-
       static final FieldName groupId = FieldName.forField("groupId", "group_id");
+
+      static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName takenRewardList = FieldName.forField("takenRewardList", "taken_reward_list");
     }

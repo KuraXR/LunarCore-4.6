@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ServerPrefs {
+  optional uint32 server_prefs_id = 3;
+  optional bytes data = 13;
+}

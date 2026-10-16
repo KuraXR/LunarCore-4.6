@@ -11,6 +11,7 @@ import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
 import us.hebi.quickbuf.RepeatedInt;
+import us.hebi.quickbuf.RepeatedMessage;
 
 public final class StartChallengeCsReqOuterClass {
   /**
@@ -20,24 +21,34 @@ public final class StartChallengeCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 challenge_id = 5;</code>
+     * <code>optional uint32 challenge_id = 3;</code>
      */
     private int challengeId;
 
     /**
-     * <code>optional .StartChallengeStoryInfo ext_info = 8;</code>
+     * <code>optional .StartChallengeStoryInfo ext_info = 14;</code>
      */
     private final StartChallengeStoryInfoOuterClass.StartChallengeStoryInfo extInfo = StartChallengeStoryInfoOuterClass.StartChallengeStoryInfo.newInstance();
 
     /**
-     * <code>repeated uint32 second_half_lineup = 10;</code>
+     * <code>repeated uint32 first_half_lineup = 5;</code>
+     */
+    private final RepeatedInt firstHalfLineup = RepeatedInt.newEmptyInstance();
+
+    /**
+     * <code>repeated uint32 second_half_lineup = 12;</code>
      */
     private final RepeatedInt secondHalfLineup = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated uint32 first_half_lineup = 11;</code>
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_second = 8;</code>
      */
-    private final RepeatedInt firstHalfLineup = RepeatedInt.newEmptyInstance();
+    private final RepeatedMessage<ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar> avatarLineupSecond = RepeatedMessage.newEmptyInstance(ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar.getFactory());
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_first = 11;</code>
+     */
+    private final RepeatedMessage<ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar> avatarLineupFirst = RepeatedMessage.newEmptyInstance(ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar.getFactory());
 
     private StartChallengeCsReq() {
     }
@@ -50,7 +61,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_id = 5;</code>
+     * <code>optional uint32 challenge_id = 3;</code>
      * @return whether the challengeId field is set
      */
     public boolean hasChallengeId() {
@@ -58,7 +69,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_id = 5;</code>
+     * <code>optional uint32 challenge_id = 3;</code>
      * @return this
      */
     public StartChallengeCsReq clearChallengeId() {
@@ -68,7 +79,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_id = 5;</code>
+     * <code>optional uint32 challenge_id = 3;</code>
      * @return the challengeId
      */
     public int getChallengeId() {
@@ -76,7 +87,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_id = 5;</code>
+     * <code>optional uint32 challenge_id = 3;</code>
      * @param value the challengeId to set
      * @return this
      */
@@ -87,7 +98,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional .StartChallengeStoryInfo ext_info = 8;</code>
+     * <code>optional .StartChallengeStoryInfo ext_info = 14;</code>
      * @return whether the extInfo field is set
      */
     public boolean hasExtInfo() {
@@ -95,7 +106,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional .StartChallengeStoryInfo ext_info = 8;</code>
+     * <code>optional .StartChallengeStoryInfo ext_info = 14;</code>
      * @return this
      */
     public StartChallengeCsReq clearExtInfo() {
@@ -105,7 +116,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional .StartChallengeStoryInfo ext_info = 8;</code>
+     * <code>optional .StartChallengeStoryInfo ext_info = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -119,7 +130,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional .StartChallengeStoryInfo ext_info = 8;</code>
+     * <code>optional .StartChallengeStoryInfo ext_info = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -133,7 +144,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>optional .StartChallengeStoryInfo ext_info = 8;</code>
+     * <code>optional .StartChallengeStoryInfo ext_info = 14;</code>
      * @param value the extInfo to set
      * @return this
      */
@@ -145,93 +156,25 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 second_half_lineup = 10;</code>
-     * @return whether the secondHalfLineup field is set
+     * <code>repeated uint32 first_half_lineup = 5;</code>
+     * @return whether the firstHalfLineup field is set
      */
-    public boolean hasSecondHalfLineup() {
+    public boolean hasFirstHalfLineup() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>repeated uint32 second_half_lineup = 10;</code>
-     * @return this
-     */
-    public StartChallengeCsReq clearSecondHalfLineup() {
-      bitField0_ &= ~0x00000004;
-      secondHalfLineup.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 second_half_lineup = 10;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableSecondHalfLineup()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getSecondHalfLineup() {
-      return secondHalfLineup;
-    }
-
-    /**
-     * <code>repeated uint32 second_half_lineup = 10;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableSecondHalfLineup() {
-      bitField0_ |= 0x00000004;
-      return secondHalfLineup;
-    }
-
-    /**
-     * <code>repeated uint32 second_half_lineup = 10;</code>
-     * @param value the secondHalfLineup to add
-     * @return this
-     */
-    public StartChallengeCsReq addSecondHalfLineup(final int value) {
-      bitField0_ |= 0x00000004;
-      secondHalfLineup.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 second_half_lineup = 10;</code>
-     * @param values the secondHalfLineup to add
-     * @return this
-     */
-    public StartChallengeCsReq addAllSecondHalfLineup(final int... values) {
-      bitField0_ |= 0x00000004;
-      secondHalfLineup.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 first_half_lineup = 11;</code>
-     * @return whether the firstHalfLineup field is set
-     */
-    public boolean hasFirstHalfLineup() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 first_half_lineup = 11;</code>
+     * <code>repeated uint32 first_half_lineup = 5;</code>
      * @return this
      */
     public StartChallengeCsReq clearFirstHalfLineup() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000004;
       firstHalfLineup.clear();
       return this;
     }
 
     /**
-     * <code>repeated uint32 first_half_lineup = 11;</code>
+     * <code>repeated uint32 first_half_lineup = 5;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -245,7 +188,7 @@ public final class StartChallengeCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 first_half_lineup = 11;</code>
+     * <code>repeated uint32 first_half_lineup = 5;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -254,29 +197,241 @@ public final class StartChallengeCsReqOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedInt getMutableFirstHalfLineup() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       return firstHalfLineup;
     }
 
     /**
-     * <code>repeated uint32 first_half_lineup = 11;</code>
+     * <code>repeated uint32 first_half_lineup = 5;</code>
      * @param value the firstHalfLineup to add
      * @return this
      */
     public StartChallengeCsReq addFirstHalfLineup(final int value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       firstHalfLineup.add(value);
       return this;
     }
 
     /**
-     * <code>repeated uint32 first_half_lineup = 11;</code>
+     * <code>repeated uint32 first_half_lineup = 5;</code>
      * @param values the firstHalfLineup to add
      * @return this
      */
     public StartChallengeCsReq addAllFirstHalfLineup(final int... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       firstHalfLineup.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 second_half_lineup = 12;</code>
+     * @return whether the secondHalfLineup field is set
+     */
+    public boolean hasSecondHalfLineup() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>repeated uint32 second_half_lineup = 12;</code>
+     * @return this
+     */
+    public StartChallengeCsReq clearSecondHalfLineup() {
+      bitField0_ &= ~0x00000008;
+      secondHalfLineup.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 second_half_lineup = 12;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableSecondHalfLineup()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedInt getSecondHalfLineup() {
+      return secondHalfLineup;
+    }
+
+    /**
+     * <code>repeated uint32 second_half_lineup = 12;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedInt getMutableSecondHalfLineup() {
+      bitField0_ |= 0x00000008;
+      return secondHalfLineup;
+    }
+
+    /**
+     * <code>repeated uint32 second_half_lineup = 12;</code>
+     * @param value the secondHalfLineup to add
+     * @return this
+     */
+    public StartChallengeCsReq addSecondHalfLineup(final int value) {
+      bitField0_ |= 0x00000008;
+      secondHalfLineup.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 second_half_lineup = 12;</code>
+     * @param values the secondHalfLineup to add
+     * @return this
+     */
+    public StartChallengeCsReq addAllSecondHalfLineup(final int... values) {
+      bitField0_ |= 0x00000008;
+      secondHalfLineup.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_second = 8;</code>
+     * @return whether the avatarLineupSecond field is set
+     */
+    public boolean hasAvatarLineupSecond() {
+      return (bitField0_ & 0x00000010) != 0;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_second = 8;</code>
+     * @return this
+     */
+    public StartChallengeCsReq clearAvatarLineupSecond() {
+      bitField0_ &= ~0x00000010;
+      avatarLineupSecond.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_second = 8;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableAvatarLineupSecond()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar> getAvatarLineupSecond(
+        ) {
+      return avatarLineupSecond;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_second = 8;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar> getMutableAvatarLineupSecond(
+        ) {
+      bitField0_ |= 0x00000010;
+      return avatarLineupSecond;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_second = 8;</code>
+     * @param value the avatarLineupSecond to add
+     * @return this
+     */
+    public StartChallengeCsReq addAvatarLineupSecond(
+        final ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar value) {
+      bitField0_ |= 0x00000010;
+      avatarLineupSecond.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_second = 8;</code>
+     * @param values the avatarLineupSecond to add
+     * @return this
+     */
+    public StartChallengeCsReq addAllAvatarLineupSecond(
+        final ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar... values) {
+      bitField0_ |= 0x00000010;
+      avatarLineupSecond.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_first = 11;</code>
+     * @return whether the avatarLineupFirst field is set
+     */
+    public boolean hasAvatarLineupFirst() {
+      return (bitField0_ & 0x00000020) != 0;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_first = 11;</code>
+     * @return this
+     */
+    public StartChallengeCsReq clearAvatarLineupFirst() {
+      bitField0_ &= ~0x00000020;
+      avatarLineupFirst.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_first = 11;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableAvatarLineupFirst()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar> getAvatarLineupFirst(
+        ) {
+      return avatarLineupFirst;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_first = 11;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar> getMutableAvatarLineupFirst(
+        ) {
+      bitField0_ |= 0x00000020;
+      return avatarLineupFirst;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_first = 11;</code>
+     * @param value the avatarLineupFirst to add
+     * @return this
+     */
+    public StartChallengeCsReq addAvatarLineupFirst(
+        final ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar value) {
+      bitField0_ |= 0x00000020;
+      avatarLineupFirst.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .ChallengeLineupAvatar avatar_lineup_first = 11;</code>
+     * @param values the avatarLineupFirst to add
+     * @return this
+     */
+    public StartChallengeCsReq addAllAvatarLineupFirst(
+        final ChallengeLineupAvatarOuterClass.ChallengeLineupAvatar... values) {
+      bitField0_ |= 0x00000020;
+      avatarLineupFirst.addAll(values);
       return this;
     }
 
@@ -287,8 +442,10 @@ public final class StartChallengeCsReqOuterClass {
         bitField0_ = other.bitField0_;
         challengeId = other.challengeId;
         extInfo.copyFrom(other.extInfo);
-        secondHalfLineup.copyFrom(other.secondHalfLineup);
         firstHalfLineup.copyFrom(other.firstHalfLineup);
+        secondHalfLineup.copyFrom(other.secondHalfLineup);
+        avatarLineupSecond.copyFrom(other.avatarLineupSecond);
+        avatarLineupFirst.copyFrom(other.avatarLineupFirst);
       }
       return this;
     }
@@ -305,11 +462,17 @@ public final class StartChallengeCsReqOuterClass {
       if (other.hasExtInfo()) {
         getMutableExtInfo().mergeFrom(other.extInfo);
       }
+      if (other.hasFirstHalfLineup()) {
+        getMutableFirstHalfLineup().addAll(other.firstHalfLineup);
+      }
       if (other.hasSecondHalfLineup()) {
         getMutableSecondHalfLineup().addAll(other.secondHalfLineup);
       }
-      if (other.hasFirstHalfLineup()) {
-        getMutableFirstHalfLineup().addAll(other.firstHalfLineup);
+      if (other.hasAvatarLineupSecond()) {
+        getMutableAvatarLineupSecond().addAll(other.avatarLineupSecond);
+      }
+      if (other.hasAvatarLineupFirst()) {
+        getMutableAvatarLineupFirst().addAll(other.avatarLineupFirst);
       }
       return this;
     }
@@ -323,8 +486,10 @@ public final class StartChallengeCsReqOuterClass {
       bitField0_ = 0;
       challengeId = 0;
       extInfo.clear();
-      secondHalfLineup.clear();
       firstHalfLineup.clear();
+      secondHalfLineup.clear();
+      avatarLineupSecond.clear();
+      avatarLineupFirst.clear();
       return this;
     }
 
@@ -336,8 +501,10 @@ public final class StartChallengeCsReqOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       extInfo.clearQuick();
-      secondHalfLineup.clear();
       firstHalfLineup.clear();
+      secondHalfLineup.clear();
+      avatarLineupSecond.clearQuick();
+      avatarLineupFirst.clearQuick();
       return this;
     }
 
@@ -353,30 +520,44 @@ public final class StartChallengeCsReqOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasChallengeId() || challengeId == other.challengeId)
         && (!hasExtInfo() || extInfo.equals(other.extInfo))
+        && (!hasFirstHalfLineup() || firstHalfLineup.equals(other.firstHalfLineup))
         && (!hasSecondHalfLineup() || secondHalfLineup.equals(other.secondHalfLineup))
-        && (!hasFirstHalfLineup() || firstHalfLineup.equals(other.firstHalfLineup));
+        && (!hasAvatarLineupSecond() || avatarLineupSecond.equals(other.avatarLineupSecond))
+        && (!hasAvatarLineupFirst() || avatarLineupFirst.equals(other.avatarLineupFirst));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(challengeId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 66);
+        output.writeRawByte((byte) 114);
         output.writeMessageNoTag(extInfo);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < secondHalfLineup.length(); i++) {
-          output.writeRawByte((byte) 80);
-          output.writeUInt32NoTag(secondHalfLineup.array()[i]);
+        for (int i = 0; i < firstHalfLineup.length(); i++) {
+          output.writeRawByte((byte) 40);
+          output.writeUInt32NoTag(firstHalfLineup.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        for (int i = 0; i < firstHalfLineup.length(); i++) {
-          output.writeRawByte((byte) 88);
-          output.writeUInt32NoTag(firstHalfLineup.array()[i]);
+        for (int i = 0; i < secondHalfLineup.length(); i++) {
+          output.writeRawByte((byte) 96);
+          output.writeUInt32NoTag(secondHalfLineup.array()[i]);
+        }
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        for (int i = 0; i < avatarLineupSecond.length(); i++) {
+          output.writeRawByte((byte) 66);
+          output.writeMessageNoTag(avatarLineupSecond.get(i));
+        }
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
+        for (int i = 0; i < avatarLineupFirst.length(); i++) {
+          output.writeRawByte((byte) 90);
+          output.writeMessageNoTag(avatarLineupFirst.get(i));
         }
       }
     }
@@ -391,10 +572,16 @@ public final class StartChallengeCsReqOuterClass {
         size += 1 + ProtoSink.computeMessageSizeNoTag(extInfo);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * secondHalfLineup.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(secondHalfLineup);
+        size += (1 * firstHalfLineup.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(firstHalfLineup);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += (1 * firstHalfLineup.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(firstHalfLineup);
+        size += (1 * secondHalfLineup.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(secondHalfLineup);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        size += (1 * avatarLineupSecond.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(avatarLineupSecond);
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
+        size += (1 * avatarLineupFirst.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(avatarLineupFirst);
       }
       return size;
     }
@@ -406,38 +593,54 @@ public final class StartChallengeCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
+          case 24: {
             // challengeId
             challengeId = input.readUInt32();
             bitField0_ |= 0x00000001;
+            tag = input.readTag();
+            if (tag != 114) {
+              break;
+            }
+          }
+          case 114: {
+            // extInfo
+            input.readMessage(extInfo);
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 42) {
+              break;
+            }
+          }
+          case 42: {
+            // firstHalfLineup [packed=true]
+            input.readPackedUInt32(firstHalfLineup, tag);
+            bitField0_ |= 0x00000004;
+            tag = input.readTag();
+            if (tag != 98) {
+              break;
+            }
+          }
+          case 98: {
+            // secondHalfLineup [packed=true]
+            input.readPackedUInt32(secondHalfLineup, tag);
+            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 66) {
               break;
             }
           }
           case 66: {
-            // extInfo
-            input.readMessage(extInfo);
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 82) {
-              break;
-            }
-          }
-          case 82: {
-            // secondHalfLineup [packed=true]
-            input.readPackedUInt32(secondHalfLineup, tag);
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
+            // avatarLineupSecond
+            tag = input.readRepeatedMessage(avatarLineupSecond, tag);
+            bitField0_ |= 0x00000010;
             if (tag != 90) {
               break;
             }
           }
           case 90: {
-            // firstHalfLineup [packed=true]
-            input.readPackedUInt32(firstHalfLineup, tag);
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
+            // avatarLineupFirst
+            tag = input.readRepeatedMessage(avatarLineupFirst, tag);
+            bitField0_ |= 0x00000020;
             if (tag != 0) {
               break;
             }
@@ -452,15 +655,15 @@ public final class StartChallengeCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 80: {
-            // secondHalfLineup [packed=false]
-            tag = input.readRepeatedUInt32(secondHalfLineup, tag);
+          case 40: {
+            // firstHalfLineup [packed=false]
+            tag = input.readRepeatedUInt32(firstHalfLineup, tag);
             bitField0_ |= 0x00000004;
             break;
           }
-          case 88: {
-            // firstHalfLineup [packed=false]
-            tag = input.readRepeatedUInt32(firstHalfLineup, tag);
+          case 96: {
+            // secondHalfLineup [packed=false]
+            tag = input.readRepeatedUInt32(secondHalfLineup, tag);
             bitField0_ |= 0x00000008;
             break;
           }
@@ -478,10 +681,16 @@ public final class StartChallengeCsReqOuterClass {
         output.writeMessage(FieldNames.extInfo, extInfo);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedUInt32(FieldNames.secondHalfLineup, secondHalfLineup);
+        output.writeRepeatedUInt32(FieldNames.firstHalfLineup, firstHalfLineup);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRepeatedUInt32(FieldNames.firstHalfLineup, firstHalfLineup);
+        output.writeRepeatedUInt32(FieldNames.secondHalfLineup, secondHalfLineup);
+      }
+      if ((bitField0_ & 0x00000010) != 0) {
+        output.writeRepeatedMessage(FieldNames.avatarLineupSecond, avatarLineupSecond);
+      }
+      if ((bitField0_ & 0x00000020) != 0) {
+        output.writeRepeatedMessage(FieldNames.avatarLineupFirst, avatarLineupFirst);
       }
       output.endObject();
     }
@@ -517,11 +726,11 @@ public final class StartChallengeCsReqOuterClass {
             }
             break;
           }
-          case 1414736694:
-          case -1031121968: {
-            if (input.isAtField(FieldNames.secondHalfLineup)) {
+          case -450421134:
+          case 1848535052: {
+            if (input.isAtField(FieldNames.firstHalfLineup)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(secondHalfLineup);
+                input.readRepeatedUInt32(firstHalfLineup);
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -529,12 +738,36 @@ public final class StartChallengeCsReqOuterClass {
             }
             break;
           }
-          case -450421134:
-          case 1848535052: {
-            if (input.isAtField(FieldNames.firstHalfLineup)) {
+          case 1414736694:
+          case -1031121968: {
+            if (input.isAtField(FieldNames.secondHalfLineup)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(firstHalfLineup);
+                input.readRepeatedUInt32(secondHalfLineup);
                 bitField0_ |= 0x00000008;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1480396068:
+          case -1443208002: {
+            if (input.isAtField(FieldNames.avatarLineupSecond)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(avatarLineupSecond);
+                bitField0_ |= 0x00000010;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -1029458104:
+          case -2136637146: {
+            if (input.isAtField(FieldNames.avatarLineupFirst)) {
+              if (!input.trySkipNullValue()) {
+                input.readRepeatedMessage(avatarLineupFirst);
+                bitField0_ |= 0x00000020;
               }
             } else {
               input.skipUnknownField();
@@ -598,9 +831,13 @@ public final class StartChallengeCsReqOuterClass {
 
       static final FieldName extInfo = FieldName.forField("extInfo", "ext_info");
 
+      static final FieldName firstHalfLineup = FieldName.forField("firstHalfLineup", "first_half_lineup");
+
       static final FieldName secondHalfLineup = FieldName.forField("secondHalfLineup", "second_half_lineup");
 
-      static final FieldName firstHalfLineup = FieldName.forField("firstHalfLineup", "first_half_lineup");
+      static final FieldName avatarLineupSecond = FieldName.forField("avatarLineupSecond", "avatar_lineup_second");
+
+      static final FieldName avatarLineupFirst = FieldName.forField("avatarLineupFirst", "avatar_lineup_first");
     }
   }
 }

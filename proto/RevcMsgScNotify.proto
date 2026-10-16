@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChatInfo.proto";
+import "ChatType.proto";
+
+message RevcMsgScNotify {
+  optional uint32 to_uid = 15;
+  optional ChatType chat_type = 9;
+  optional ChatInfo msg = 8;
+}

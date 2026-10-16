@@ -118,7 +118,10 @@ public class GachaService extends BaseGameService {
 
     public synchronized void doPulls(Player player, int gachaId, int times) {
         // Sanity checks
-        if (times != 10 && times != 1) return;
+        if (times != 10 && times != 1) {
+            player.sendPacket(new PacketDoGachaScRsp(Retcode.GACHA_NUM_INVALID));
+            return;
+        }
         
         // Prevent player from using gacha if they are at max light cones
         if (player.getInventory().getTabByItemType(ItemMainType.Equipment).getSize() >= player.getInventory().getTabByItemType(ItemMainType.Equipment).getMaxCapacity()) {

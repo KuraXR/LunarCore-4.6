@@ -19,12 +19,12 @@ public final class MarkAvatarCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 avatar_id = 9;</code>
+     * <code>optional uint32 avatar_id = 4;</code>
      */
     private int avatarId;
 
     /**
-     * <code>optional bool is_marked = 1;</code>
+     * <code>optional bool is_marked = 13;</code>
      */
     private boolean isMarked;
 
@@ -39,7 +39,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 9;</code>
+     * <code>optional uint32 avatar_id = 4;</code>
      * @return whether the avatarId field is set
      */
     public boolean hasAvatarId() {
@@ -47,7 +47,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 9;</code>
+     * <code>optional uint32 avatar_id = 4;</code>
      * @return this
      */
     public MarkAvatarCsReq clearAvatarId() {
@@ -57,7 +57,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 9;</code>
+     * <code>optional uint32 avatar_id = 4;</code>
      * @return the avatarId
      */
     public int getAvatarId() {
@@ -65,7 +65,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 9;</code>
+     * <code>optional uint32 avatar_id = 4;</code>
      * @param value the avatarId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 1;</code>
+     * <code>optional bool is_marked = 13;</code>
      * @return whether the isMarked field is set
      */
     public boolean hasIsMarked() {
@@ -84,7 +84,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 1;</code>
+     * <code>optional bool is_marked = 13;</code>
      * @return this
      */
     public MarkAvatarCsReq clearIsMarked() {
@@ -94,7 +94,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 1;</code>
+     * <code>optional bool is_marked = 13;</code>
      * @return the isMarked
      */
     public boolean getIsMarked() {
@@ -102,7 +102,7 @@ public final class MarkAvatarCsReqOuterClass {
     }
 
     /**
-     * <code>optional bool is_marked = 1;</code>
+     * <code>optional bool is_marked = 13;</code>
      * @param value the isMarked to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class MarkAvatarCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(avatarId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 104);
         output.writeBoolNoTag(isMarked);
       }
     }
@@ -205,16 +205,16 @@ public final class MarkAvatarCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 72: {
+          case 32: {
             // avatarId
             avatarId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 8) {
+            if (tag != 104) {
               break;
             }
           }
-          case 8: {
+          case 104: {
             // isMarked
             isMarked = input.readBool();
             bitField0_ |= 0x00000002;

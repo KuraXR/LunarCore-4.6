@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "AvatarSkillTree.proto";
+import "EquipRelic.proto";
+import "MultiPathAvatarType.proto";
+
+message MultiPathAvatarInfo {
+  optional uint32 rank = 1;
+  optional uint32 enhance_id = 10;
+  optional uint32 path_equipment_id = 15;
+  optional MultiPathAvatarType avatar_id = 4;
+  repeated EquipRelic equip_relic_list = 13;
+  repeated AvatarSkillTree multi_path_skill_tree = 14;
+}

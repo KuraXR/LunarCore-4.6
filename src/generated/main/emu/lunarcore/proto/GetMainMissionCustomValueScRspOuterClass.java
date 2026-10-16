@@ -20,12 +20,12 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 12;</code>
      */
     private int retcode;
 
     /**
-     * <code>repeated .MainMissionData main_mission_list = 6;</code>
+     * <code>repeated .MainMissionData main_mission_list = 1;</code>
      */
     private final RepeatedMessage<MainMissionDataOuterClass.MainMissionData> mainMissionList = RepeatedMessage.newEmptyInstance(MainMissionDataOuterClass.MainMissionData.getFactory());
 
@@ -40,7 +40,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -48,7 +48,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @return this
      */
     public GetMainMissionCustomValueScRsp clearRetcode() {
@@ -58,7 +58,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -66,7 +66,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -77,7 +77,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MainMissionData main_mission_list = 6;</code>
+     * <code>repeated .MainMissionData main_mission_list = 1;</code>
      * @return whether the mainMissionList field is set
      */
     public boolean hasMainMissionList() {
@@ -85,7 +85,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MainMissionData main_mission_list = 6;</code>
+     * <code>repeated .MainMissionData main_mission_list = 1;</code>
      * @return this
      */
     public GetMainMissionCustomValueScRsp clearMainMissionList() {
@@ -95,7 +95,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MainMissionData main_mission_list = 6;</code>
+     * <code>repeated .MainMissionData main_mission_list = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -109,7 +109,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MainMissionData main_mission_list = 6;</code>
+     * <code>repeated .MainMissionData main_mission_list = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -123,7 +123,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MainMissionData main_mission_list = 6;</code>
+     * <code>repeated .MainMissionData main_mission_list = 1;</code>
      * @param value the mainMissionList to add
      * @return this
      */
@@ -135,7 +135,7 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     }
 
     /**
-     * <code>repeated .MainMissionData main_mission_list = 6;</code>
+     * <code>repeated .MainMissionData main_mission_list = 1;</code>
      * @param values the mainMissionList to add
      * @return this
      */
@@ -212,12 +212,12 @@ public final class GetMainMissionCustomValueScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 96);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < mainMissionList.length(); i++) {
-          output.writeRawByte((byte) 50);
+          output.writeRawByte((byte) 10);
           output.writeMessageNoTag(mainMissionList.get(i));
         }
       }
@@ -242,16 +242,16 @@ public final class GetMainMissionCustomValueScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 96: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 10) {
               break;
             }
           }
-          case 50: {
+          case 10: {
             // mainMissionList
             tag = input.readRepeatedMessage(mainMissionList, tag);
             bitField0_ |= 0x00000002;

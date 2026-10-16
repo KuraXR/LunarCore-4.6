@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ChangePropTimelineInfoScRsp {
+  optional uint32 prop_entity_id = 9;
+  optional uint32 retcode = 4;
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+enum SwitchHandOpPropType {
+  SWITCH_HAND_OP_PROP_TYPE_NONE = 0;
+  SWITCH_HAND_OP_PROP_TYPE_CATCH = 1;
+  SWITCH_HAND_OP_PROP_TYPE_LIFT = 2;
+}

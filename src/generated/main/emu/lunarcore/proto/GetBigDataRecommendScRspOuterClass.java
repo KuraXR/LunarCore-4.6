@@ -19,24 +19,19 @@ public final class GetBigDataRecommendScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 4;</code>
+     * <code>optional uint32 trailblazer_path_id = 9;</code>
      */
     private int trailblazerPathId;
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 14;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 15;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      */
     private int recommendType;
-
-    /**
-     * <code>optional bool do_enable = 6;</code>
-     */
-    private boolean doEnable;
 
     private GetBigDataRecommendScRsp() {
     }
@@ -49,7 +44,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 4;</code>
+     * <code>optional uint32 trailblazer_path_id = 9;</code>
      * @return whether the trailblazerPathId field is set
      */
     public boolean hasTrailblazerPathId() {
@@ -57,7 +52,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 4;</code>
+     * <code>optional uint32 trailblazer_path_id = 9;</code>
      * @return this
      */
     public GetBigDataRecommendScRsp clearTrailblazerPathId() {
@@ -67,7 +62,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 4;</code>
+     * <code>optional uint32 trailblazer_path_id = 9;</code>
      * @return the trailblazerPathId
      */
     public int getTrailblazerPathId() {
@@ -75,7 +70,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 trailblazer_path_id = 4;</code>
+     * <code>optional uint32 trailblazer_path_id = 9;</code>
      * @param value the trailblazerPathId to set
      * @return this
      */
@@ -86,7 +81,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -94,7 +89,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @return this
      */
     public GetBigDataRecommendScRsp clearRetcode() {
@@ -104,7 +99,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -112,7 +107,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 7;</code>
+     * <code>optional uint32 retcode = 14;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -123,7 +118,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 15;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @return whether the recommendType field is set
      */
     public boolean hasRecommendType() {
@@ -131,7 +126,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 15;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @return this
      */
     public GetBigDataRecommendScRsp clearRecommendType() {
@@ -141,7 +136,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 15;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @return the recommendType
      */
     public BigDataRecommendTypeOuterClass.BigDataRecommendType getRecommendType() {
@@ -174,7 +169,7 @@ public final class GetBigDataRecommendScRspOuterClass {
     }
 
     /**
-     * <code>optional .BigDataRecommendType recommend_type = 15;</code>
+     * <code>optional .BigDataRecommendType recommend_type = 12;</code>
      * @param value the recommendType to set
      * @return this
      */
@@ -182,43 +177,6 @@ public final class GetBigDataRecommendScRspOuterClass {
         final BigDataRecommendTypeOuterClass.BigDataRecommendType value) {
       bitField0_ |= 0x00000004;
       recommendType = value.getNumber();
-      return this;
-    }
-
-    /**
-     * <code>optional bool do_enable = 6;</code>
-     * @return whether the doEnable field is set
-     */
-    public boolean hasDoEnable() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional bool do_enable = 6;</code>
-     * @return this
-     */
-    public GetBigDataRecommendScRsp clearDoEnable() {
-      bitField0_ &= ~0x00000008;
-      doEnable = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool do_enable = 6;</code>
-     * @return the doEnable
-     */
-    public boolean getDoEnable() {
-      return doEnable;
-    }
-
-    /**
-     * <code>optional bool do_enable = 6;</code>
-     * @param value the doEnable to set
-     * @return this
-     */
-    public GetBigDataRecommendScRsp setDoEnable(final boolean value) {
-      bitField0_ |= 0x00000008;
-      doEnable = value;
       return this;
     }
 
@@ -230,7 +188,6 @@ public final class GetBigDataRecommendScRspOuterClass {
         trailblazerPathId = other.trailblazerPathId;
         retcode = other.retcode;
         recommendType = other.recommendType;
-        doEnable = other.doEnable;
       }
       return this;
     }
@@ -250,9 +207,6 @@ public final class GetBigDataRecommendScRspOuterClass {
       if (other.hasRecommendType()) {
         setRecommendTypeValue(other.recommendType);
       }
-      if (other.hasDoEnable()) {
-        setDoEnable(other.doEnable);
-      }
       return this;
     }
 
@@ -266,7 +220,6 @@ public final class GetBigDataRecommendScRspOuterClass {
       trailblazerPathId = 0;
       retcode = 0;
       recommendType = 0;
-      doEnable = false;
       return this;
     }
 
@@ -292,27 +245,22 @@ public final class GetBigDataRecommendScRspOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasTrailblazerPathId() || trailblazerPathId == other.trailblazerPathId)
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasRecommendType() || recommendType == other.recommendType)
-        && (!hasDoEnable() || doEnable == other.doEnable);
+        && (!hasRecommendType() || recommendType == other.recommendType);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(trailblazerPathId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 96);
         output.writeEnumNoTag(recommendType);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 48);
-        output.writeBoolNoTag(doEnable);
       }
     }
 
@@ -328,9 +276,6 @@ public final class GetBigDataRecommendScRspOuterClass {
       if ((bitField0_ & 0x00000004) != 0) {
         size += 1 + ProtoSink.computeEnumSizeNoTag(recommendType);
       }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += 2;
-      }
       return size;
     }
 
@@ -341,40 +286,31 @@ public final class GetBigDataRecommendScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 32: {
+          case 72: {
             // trailblazerPathId
             trailblazerPathId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 112) {
               break;
             }
           }
-          case 56: {
+          case 112: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 96) {
               break;
             }
           }
-          case 120: {
+          case 96: {
             // recommendType
             final int value = input.readInt32();
             if (BigDataRecommendTypeOuterClass.BigDataRecommendType.forNumber(value) != null) {
               recommendType = value;
               bitField0_ |= 0x00000004;
             }
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
-            // doEnable
-            doEnable = input.readBool();
-            bitField0_ |= 0x00000008;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -405,9 +341,6 @@ public final class GetBigDataRecommendScRspOuterClass {
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeEnum(FieldNames.recommendType, recommendType, BigDataRecommendTypeOuterClass.BigDataRecommendType.converter());
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeBool(FieldNames.doEnable, doEnable);
       }
       output.endObject();
     }
@@ -453,18 +386,6 @@ public final class GetBigDataRecommendScRspOuterClass {
                 } else {
                   input.skipUnknownEnumValue();
                 }
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -3978770:
-          case 1231221687: {
-            if (input.isAtField(FieldNames.doEnable)) {
-              if (!input.trySkipNullValue()) {
-                doEnable = input.readBool();
-                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -529,8 +450,6 @@ public final class GetBigDataRecommendScRspOuterClass {
       static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName recommendType = FieldName.forField("recommendType", "recommend_type");
-
-      static final FieldName doEnable = FieldName.forField("doEnable", "do_enable");
     }
   }
 }

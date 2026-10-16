@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 
 public final class RelicSmartWearGetPinRelicScRspOuterClass {
   /**
@@ -20,23 +19,14 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 7;</code>
      */
     private int retcode;
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      */
     private int avatarId;
-
-    /**
-     * <pre>
-     *  ???
-     * </pre>
-     *
-     * <code>repeated uint32 plan_ids = 12;</code>
-     */
-    private final RepeatedInt planIds = RepeatedInt.newEmptyInstance();
 
     private RelicSmartWearGetPinRelicScRsp() {
     }
@@ -49,7 +39,7 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -57,7 +47,7 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return this
      */
     public RelicSmartWearGetPinRelicScRsp clearRetcode() {
@@ -67,7 +57,7 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -75,7 +65,7 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 8;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -86,7 +76,7 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @return whether the avatarId field is set
      */
     public boolean hasAvatarId() {
@@ -94,7 +84,7 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @return this
      */
     public RelicSmartWearGetPinRelicScRsp clearAvatarId() {
@@ -104,7 +94,7 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @return the avatarId
      */
     public int getAvatarId() {
@@ -112,105 +102,13 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 avatar_id = 15;</code>
+     * <code>optional uint32 avatar_id = 14;</code>
      * @param value the avatarId to set
      * @return this
      */
     public RelicSmartWearGetPinRelicScRsp setAvatarId(final int value) {
       bitField0_ |= 0x00000002;
       avatarId = value;
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  ???
-     * </pre>
-     *
-     * <code>repeated uint32 plan_ids = 12;</code>
-     * @return whether the planIds field is set
-     */
-    public boolean hasPlanIds() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <pre>
-     *  ???
-     * </pre>
-     *
-     * <code>repeated uint32 plan_ids = 12;</code>
-     * @return this
-     */
-    public RelicSmartWearGetPinRelicScRsp clearPlanIds() {
-      bitField0_ &= ~0x00000004;
-      planIds.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  ???
-     * </pre>
-     *
-     * <code>repeated uint32 plan_ids = 12;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutablePlanIds()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getPlanIds() {
-      return planIds;
-    }
-
-    /**
-     * <pre>
-     *  ???
-     * </pre>
-     *
-     * <code>repeated uint32 plan_ids = 12;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutablePlanIds() {
-      bitField0_ |= 0x00000004;
-      return planIds;
-    }
-
-    /**
-     * <pre>
-     *  ???
-     * </pre>
-     *
-     * <code>repeated uint32 plan_ids = 12;</code>
-     * @param value the planIds to add
-     * @return this
-     */
-    public RelicSmartWearGetPinRelicScRsp addPlanIds(final int value) {
-      bitField0_ |= 0x00000004;
-      planIds.add(value);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  ???
-     * </pre>
-     *
-     * <code>repeated uint32 plan_ids = 12;</code>
-     * @param values the planIds to add
-     * @return this
-     */
-    public RelicSmartWearGetPinRelicScRsp addAllPlanIds(final int... values) {
-      bitField0_ |= 0x00000004;
-      planIds.addAll(values);
       return this;
     }
 
@@ -221,7 +119,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
         bitField0_ = other.bitField0_;
         retcode = other.retcode;
         avatarId = other.avatarId;
-        planIds.copyFrom(other.planIds);
       }
       return this;
     }
@@ -238,9 +135,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       if (other.hasAvatarId()) {
         setAvatarId(other.avatarId);
       }
-      if (other.hasPlanIds()) {
-        getMutablePlanIds().addAll(other.planIds);
-      }
       return this;
     }
 
@@ -253,7 +147,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       bitField0_ = 0;
       retcode = 0;
       avatarId = 0;
-      planIds.clear();
       return this;
     }
 
@@ -264,7 +157,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      planIds.clear();
       return this;
     }
 
@@ -279,25 +171,18 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       RelicSmartWearGetPinRelicScRsp other = (RelicSmartWearGetPinRelicScRsp) o;
       return bitField0_ == other.bitField0_
         && (!hasRetcode() || retcode == other.retcode)
-        && (!hasAvatarId() || avatarId == other.avatarId)
-        && (!hasPlanIds() || planIds.equals(other.planIds));
+        && (!hasAvatarId() || avatarId == other.avatarId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 112);
         output.writeUInt32NoTag(avatarId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < planIds.length(); i++) {
-          output.writeRawByte((byte) 96);
-          output.writeUInt32NoTag(planIds.array()[i]);
-        }
       }
     }
 
@@ -310,9 +195,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(avatarId);
       }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * planIds.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(planIds);
-      }
       return size;
     }
 
@@ -323,28 +205,19 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 56: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 112) {
               break;
             }
           }
-          case 120: {
+          case 112: {
             // avatarId
             avatarId = input.readUInt32();
             bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 98) {
-              break;
-            }
-          }
-          case 98: {
-            // planIds [packed=true]
-            input.readPackedUInt32(planIds, tag);
-            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -360,12 +233,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
             tag = input.readTag();
             break;
           }
-          case 96: {
-            // planIds [packed=false]
-            tag = input.readRepeatedUInt32(planIds, tag);
-            bitField0_ |= 0x00000004;
-            break;
-          }
         }
       }
     }
@@ -378,9 +245,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.avatarId, avatarId);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedUInt32(FieldNames.planIds, planIds);
       }
       output.endObject();
     }
@@ -409,18 +273,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
               if (!input.trySkipNullValue()) {
                 avatarId = input.readUInt32();
                 bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -493922609:
-          case 1868928162: {
-            if (input.isAtField(FieldNames.planIds)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(planIds);
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -485,8 +337,6 @@ public final class RelicSmartWearGetPinRelicScRspOuterClass {
       static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName avatarId = FieldName.forField("avatarId", "avatar_id");
-
-      static final FieldName planIds = FieldName.forField("planIds", "plan_ids");
     }
   }
 }

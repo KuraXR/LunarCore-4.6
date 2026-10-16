@@ -19,24 +19,14 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 5;</code>
-     */
-    private int retcode;
-
-    /**
-     * <code>optional uint32 uid = 14;</code>
+     * <code>optional uint32 uid = 11;</code>
      */
     private int uid;
 
     /**
-     * <code>optional .FriendBattleRecordType1 with_group = 9991;</code>
+     * <code>optional uint32 retcode = 12;</code>
      */
-    private final FriendBattleRecordType1OuterClass.FriendBattleRecordType1 withGroup = FriendBattleRecordType1OuterClass.FriendBattleRecordType1.newInstance();
-
-    /**
-     * <code>optional .FriendBattleRecordType2 no_group = 9992;</code>
-     */
-    private final FriendBattleRecordType2OuterClass.FriendBattleRecordType2 noGroup = FriendBattleRecordType2OuterClass.FriendBattleRecordType2.newInstance();
+    private int retcode;
 
     private GetFriendBattleRecordDetailScRsp() {
     }
@@ -48,87 +38,26 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
       return new GetFriendBattleRecordDetailScRsp();
     }
 
-    public boolean hasFriendBattleRecord() {
-      return (((bitField0_ & 0x00000003)) != 0);
-    }
-
-    public GetFriendBattleRecordDetailScRsp clearFriendBattleRecord() {
-      if (hasFriendBattleRecord()) {
-        clearWithGroup();
-        clearNoGroup();
-      }
-      return this;
-    }
-
-    private void clearFriendBattleRecordOtherWithGroup() {
-      if ((((bitField0_ & 0x00000002)) != 0)) {
-        clearNoGroup();
-      }
-    }
-
-    private void clearFriendBattleRecordOtherNoGroup() {
-      if ((((bitField0_ & 0x00000001)) != 0)) {
-        clearWithGroup();
-      }
-    }
-
     /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @return this
-     */
-    public GetFriendBattleRecordDetailScRsp clearRetcode() {
-      bitField0_ &= ~0x00000004;
-      retcode = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @return the retcode
-     */
-    public int getRetcode() {
-      return retcode;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 5;</code>
-     * @param value the retcode to set
-     * @return this
-     */
-    public GetFriendBattleRecordDetailScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000004;
-      retcode = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 uid = 14;</code>
+     * <code>optional uint32 uid = 11;</code>
      * @return whether the uid field is set
      */
     public boolean hasUid() {
-      return (bitField0_ & 0x00000008) != 0;
+      return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 uid = 14;</code>
+     * <code>optional uint32 uid = 11;</code>
      * @return this
      */
     public GetFriendBattleRecordDetailScRsp clearUid() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000001;
       uid = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 uid = 14;</code>
+     * <code>optional uint32 uid = 11;</code>
      * @return the uid
      */
     public int getUid() {
@@ -136,133 +65,50 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 uid = 14;</code>
+     * <code>optional uint32 uid = 11;</code>
      * @param value the uid to set
      * @return this
      */
     public GetFriendBattleRecordDetailScRsp setUid(final int value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000001;
       uid = value;
       return this;
     }
 
     /**
-     * <code>optional .FriendBattleRecordType1 with_group = 9991;</code>
-     * @return whether the withGroup field is set
+     * <code>optional uint32 retcode = 12;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasWithGroup() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <code>optional .FriendBattleRecordType1 with_group = 9991;</code>
-     * @return this
-     */
-    public GetFriendBattleRecordDetailScRsp clearWithGroup() {
-      bitField0_ &= ~0x00000001;
-      withGroup.clear();
-      return this;
-    }
-
-    /**
-     * <code>optional .FriendBattleRecordType1 with_group = 9991;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableWithGroup()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public FriendBattleRecordType1OuterClass.FriendBattleRecordType1 getWithGroup() {
-      return withGroup;
-    }
-
-    /**
-     * <code>optional .FriendBattleRecordType1 with_group = 9991;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public FriendBattleRecordType1OuterClass.FriendBattleRecordType1 getMutableWithGroup() {
-      clearFriendBattleRecordOtherWithGroup();
-      bitField0_ |= 0x00000001;
-      return withGroup;
-    }
-
-    /**
-     * <code>optional .FriendBattleRecordType1 with_group = 9991;</code>
-     * @param value the withGroup to set
-     * @return this
-     */
-    public GetFriendBattleRecordDetailScRsp setWithGroup(
-        final FriendBattleRecordType1OuterClass.FriendBattleRecordType1 value) {
-      clearFriendBattleRecordOtherWithGroup();
-      bitField0_ |= 0x00000001;
-      withGroup.copyFrom(value);
-      return this;
-    }
-
-    /**
-     * <code>optional .FriendBattleRecordType2 no_group = 9992;</code>
-     * @return whether the noGroup field is set
-     */
-    public boolean hasNoGroup() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional .FriendBattleRecordType2 no_group = 9992;</code>
+     * <code>optional uint32 retcode = 12;</code>
      * @return this
      */
-    public GetFriendBattleRecordDetailScRsp clearNoGroup() {
+    public GetFriendBattleRecordDetailScRsp clearRetcode() {
       bitField0_ &= ~0x00000002;
-      noGroup.clear();
+      retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional .FriendBattleRecordType2 no_group = 9992;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableNoGroup()} if you want to modify it.
-     *
-     * @return internal storage object for reading
+     * <code>optional uint32 retcode = 12;</code>
+     * @return the retcode
      */
-    public FriendBattleRecordType2OuterClass.FriendBattleRecordType2 getNoGroup() {
-      return noGroup;
+    public int getRetcode() {
+      return retcode;
     }
 
     /**
-     * <code>optional .FriendBattleRecordType2 no_group = 9992;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public FriendBattleRecordType2OuterClass.FriendBattleRecordType2 getMutableNoGroup() {
-      clearFriendBattleRecordOtherNoGroup();
-      bitField0_ |= 0x00000002;
-      return noGroup;
-    }
-
-    /**
-     * <code>optional .FriendBattleRecordType2 no_group = 9992;</code>
-     * @param value the noGroup to set
+     * <code>optional uint32 retcode = 12;</code>
+     * @param value the retcode to set
      * @return this
      */
-    public GetFriendBattleRecordDetailScRsp setNoGroup(
-        final FriendBattleRecordType2OuterClass.FriendBattleRecordType2 value) {
-      clearFriendBattleRecordOtherNoGroup();
+    public GetFriendBattleRecordDetailScRsp setRetcode(final int value) {
       bitField0_ |= 0x00000002;
-      noGroup.copyFrom(value);
+      retcode = value;
       return this;
     }
 
@@ -271,10 +117,8 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        retcode = other.retcode;
         uid = other.uid;
-        withGroup.copyFrom(other.withGroup);
-        noGroup.copyFrom(other.noGroup);
+        retcode = other.retcode;
       }
       return this;
     }
@@ -286,17 +130,11 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasRetcode()) {
-        setRetcode(other.retcode);
-      }
       if (other.hasUid()) {
         setUid(other.uid);
       }
-      if (other.hasWithGroup()) {
-        getMutableWithGroup().mergeFrom(other.withGroup);
-      }
-      if (other.hasNoGroup()) {
-        getMutableNoGroup().mergeFrom(other.noGroup);
+      if (other.hasRetcode()) {
+        setRetcode(other.retcode);
       }
       return this;
     }
@@ -308,10 +146,8 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      retcode = 0;
       uid = 0;
-      withGroup.clear();
-      noGroup.clear();
+      retcode = 0;
       return this;
     }
 
@@ -322,8 +158,6 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      withGroup.clearQuick();
-      noGroup.clearQuick();
       return this;
     }
 
@@ -337,48 +171,30 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
       }
       GetFriendBattleRecordDetailScRsp other = (GetFriendBattleRecordDetailScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasRetcode() || retcode == other.retcode)
         && (!hasUid() || uid == other.uid)
-        && (!hasWithGroup() || withGroup.equals(other.withGroup))
-        && (!hasNoGroup() || noGroup.equals(other.noGroup));
+        && (!hasRetcode() || retcode == other.retcode);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 40);
-        output.writeUInt32NoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 112);
+      if ((bitField0_ & 0x00000001) != 0) {
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(uid);
       }
-      if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawLittleEndian16((short) 61626);
-        output.writeRawByte((byte) 4);
-        output.writeMessageNoTag(withGroup);
-      }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawLittleEndian16((short) 61634);
-        output.writeRawByte((byte) 4);
-        output.writeMessageNoTag(noGroup);
+        output.writeRawByte((byte) 96);
+        output.writeUInt32NoTag(retcode);
       }
     }
 
     @Override
     protected int computeSerializedSize() {
       int size = 0;
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
+      if ((bitField0_ & 0x00000001) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(uid);
       }
-      if ((bitField0_ & 0x00000001) != 0) {
-        size += 3 + ProtoSink.computeMessageSizeNoTag(withGroup);
-      }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 3 + ProtoSink.computeMessageSizeNoTag(noGroup);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       return size;
     }
@@ -390,38 +206,18 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
-            // retcode
-            retcode = input.readUInt32();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
+          case 88: {
             // uid
             uid = input.readUInt32();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 79930) {
-              break;
-            }
-          }
-          case 79930: {
-            // withGroup
-            clearFriendBattleRecordOtherWithGroup();
-            input.readMessage(withGroup);
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 79938) {
+            if (tag != 96) {
               break;
             }
           }
-          case 79938: {
-            // noGroup
-            clearFriendBattleRecordOtherNoGroup();
-            input.readMessage(noGroup);
+          case 96: {
+            // retcode
+            retcode = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -445,17 +241,11 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
     @Override
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
+      if ((bitField0_ & 0x00000001) != 0) {
         output.writeUInt32(FieldNames.uid, uid);
       }
-      if ((bitField0_ & 0x00000001) != 0) {
-        output.writeMessage(FieldNames.withGroup, withGroup);
-      }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeMessage(FieldNames.noGroup, noGroup);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       output.endObject();
     }
@@ -467,34 +257,10 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
-              if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 115792: {
             if (input.isAtField(FieldNames.uid)) {
               if (!input.trySkipNullValue()) {
                 uid = input.readUInt32();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 890495321:
-          case -1782391354: {
-            if (input.isAtField(FieldNames.withGroup)) {
-              if (!input.trySkipNullValue()) {
-                clearFriendBattleRecordOtherWithGroup();
-                input.readMessage(withGroup);
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -502,12 +268,10 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
             }
             break;
           }
-          case 2088069438:
-          case 982667905: {
-            if (input.isAtField(FieldNames.noGroup)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                clearFriendBattleRecordOtherNoGroup();
-                input.readMessage(noGroup);
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -570,13 +334,9 @@ public final class GetFriendBattleRecordDetailScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName retcode = FieldName.forField("retcode");
-
       static final FieldName uid = FieldName.forField("uid");
 
-      static final FieldName withGroup = FieldName.forField("withGroup", "with_group");
-
-      static final FieldName noGroup = FieldName.forField("noGroup", "no_group");
+      static final FieldName retcode = FieldName.forField("retcode");
     }
   }
 }

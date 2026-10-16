@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "SwitchHandData.proto";
+import "SwitchHandOpData.proto";
+
+message SwitchHandUpdateCsReq {
+  optional SwitchHandData hand_data = 10;
+  optional SwitchHandOpData op_data = 14;
+}

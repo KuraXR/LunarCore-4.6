@@ -48,10 +48,6 @@ public final class BattleStatisticsOuterClass {
     private int ultraCnt;
 
     /**
-     * <pre>
-     * repeated MonsterBattleInfo monster_list = 8;
-     * </pre>
-     *
      * <code>optional uint32 round_cnt = 9;</code>
      */
     private int roundCnt;
@@ -297,10 +293,6 @@ public final class BattleStatisticsOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated MonsterBattleInfo monster_list = 8;
-     * </pre>
-     *
      * <code>optional uint32 round_cnt = 9;</code>
      * @return whether the roundCnt field is set
      */
@@ -309,10 +301,6 @@ public final class BattleStatisticsOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated MonsterBattleInfo monster_list = 8;
-     * </pre>
-     *
      * <code>optional uint32 round_cnt = 9;</code>
      * @return this
      */
@@ -323,10 +311,6 @@ public final class BattleStatisticsOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated MonsterBattleInfo monster_list = 8;
-     * </pre>
-     *
      * <code>optional uint32 round_cnt = 9;</code>
      * @return the roundCnt
      */
@@ -335,10 +319,6 @@ public final class BattleStatisticsOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated MonsterBattleInfo monster_list = 8;
-     * </pre>
-     *
      * <code>optional uint32 round_cnt = 9;</code>
      * @param value the roundCnt to set
      * @return this

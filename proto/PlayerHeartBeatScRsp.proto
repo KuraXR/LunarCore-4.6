@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message PlayerHeartBeatScRsp {
+  optional uint64 client_time_ms = 3;
+  optional uint64 server_time_ms = 14;
+  optional uint32 retcode = 15;
+}

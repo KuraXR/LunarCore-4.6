@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message StageMergedInfo {
+  optional uint32 stage_merged_id = 11;
+  optional bool bool7 = 2;
+  optional bool bool10 = 6;
+  repeated uint32 stage_periods = 15;
+}

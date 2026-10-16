@@ -25,9 +25,14 @@ public final class ChatInfoOuterClass {
     private long sentTime;
 
     /**
-     * <code>optional .ChatHeaderInfo chat_header = 8;</code>
+     * <code>optional .ChatParticipant sender = 10;</code>
      */
-    private final ChatHeaderInfoOuterClass.ChatHeaderInfo chatHeader = ChatHeaderInfoOuterClass.ChatHeaderInfo.newInstance();
+    private final ChatParticipantOuterClass.ChatParticipant sender = ChatParticipantOuterClass.ChatParticipant.newInstance();
+
+    /**
+     * <code>optional .ChatParticipant receiver = 11;</code>
+     */
+    private final ChatParticipantOuterClass.ChatParticipant receiver = ChatParticipantOuterClass.ChatParticipant.newInstance();
 
     /**
      * <code>repeated .ChatContentInfo chat_content_list = 9;</code>
@@ -82,39 +87,39 @@ public final class ChatInfoOuterClass {
     }
 
     /**
-     * <code>optional .ChatHeaderInfo chat_header = 8;</code>
-     * @return whether the chatHeader field is set
+     * <code>optional .ChatParticipant sender = 10;</code>
+     * @return whether the sender field is set
      */
-    public boolean hasChatHeader() {
+    public boolean hasSender() {
       return (bitField0_ & 0x00000002) != 0;
     }
 
     /**
-     * <code>optional .ChatHeaderInfo chat_header = 8;</code>
+     * <code>optional .ChatParticipant sender = 10;</code>
      * @return this
      */
-    public ChatInfo clearChatHeader() {
+    public ChatInfo clearSender() {
       bitField0_ &= ~0x00000002;
-      chatHeader.clear();
+      sender.clear();
       return this;
     }
 
     /**
-     * <code>optional .ChatHeaderInfo chat_header = 8;</code>
+     * <code>optional .ChatParticipant sender = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
      *
-     * Use {@link #getMutableChatHeader()} if you want to modify it.
+     * Use {@link #getMutableSender()} if you want to modify it.
      *
      * @return internal storage object for reading
      */
-    public ChatHeaderInfoOuterClass.ChatHeaderInfo getChatHeader() {
-      return chatHeader;
+    public ChatParticipantOuterClass.ChatParticipant getSender() {
+      return sender;
     }
 
     /**
-     * <code>optional .ChatHeaderInfo chat_header = 8;</code>
+     * <code>optional .ChatParticipant sender = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -122,19 +127,76 @@ public final class ChatInfoOuterClass {
      *
      * @return internal storage object for modifications
      */
-    public ChatHeaderInfoOuterClass.ChatHeaderInfo getMutableChatHeader() {
+    public ChatParticipantOuterClass.ChatParticipant getMutableSender() {
       bitField0_ |= 0x00000002;
-      return chatHeader;
+      return sender;
     }
 
     /**
-     * <code>optional .ChatHeaderInfo chat_header = 8;</code>
-     * @param value the chatHeader to set
+     * <code>optional .ChatParticipant sender = 10;</code>
+     * @param value the sender to set
      * @return this
      */
-    public ChatInfo setChatHeader(final ChatHeaderInfoOuterClass.ChatHeaderInfo value) {
+    public ChatInfo setSender(final ChatParticipantOuterClass.ChatParticipant value) {
       bitField0_ |= 0x00000002;
-      chatHeader.copyFrom(value);
+      sender.copyFrom(value);
+      return this;
+    }
+
+    /**
+     * <code>optional .ChatParticipant receiver = 11;</code>
+     * @return whether the receiver field is set
+     */
+    public boolean hasReceiver() {
+      return (bitField0_ & 0x00000004) != 0;
+    }
+
+    /**
+     * <code>optional .ChatParticipant receiver = 11;</code>
+     * @return this
+     */
+    public ChatInfo clearReceiver() {
+      bitField0_ &= ~0x00000004;
+      receiver.clear();
+      return this;
+    }
+
+    /**
+     * <code>optional .ChatParticipant receiver = 11;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableReceiver()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public ChatParticipantOuterClass.ChatParticipant getReceiver() {
+      return receiver;
+    }
+
+    /**
+     * <code>optional .ChatParticipant receiver = 11;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public ChatParticipantOuterClass.ChatParticipant getMutableReceiver() {
+      bitField0_ |= 0x00000004;
+      return receiver;
+    }
+
+    /**
+     * <code>optional .ChatParticipant receiver = 11;</code>
+     * @param value the receiver to set
+     * @return this
+     */
+    public ChatInfo setReceiver(final ChatParticipantOuterClass.ChatParticipant value) {
+      bitField0_ |= 0x00000004;
+      receiver.copyFrom(value);
       return this;
     }
 
@@ -143,7 +205,7 @@ public final class ChatInfoOuterClass {
      * @return whether the chatContentList field is set
      */
     public boolean hasChatContentList() {
-      return (bitField0_ & 0x00000004) != 0;
+      return (bitField0_ & 0x00000008) != 0;
     }
 
     /**
@@ -151,7 +213,7 @@ public final class ChatInfoOuterClass {
      * @return this
      */
     public ChatInfo clearChatContentList() {
-      bitField0_ &= ~0x00000004;
+      bitField0_ &= ~0x00000008;
       chatContentList.clear();
       return this;
     }
@@ -180,7 +242,7 @@ public final class ChatInfoOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<ChatContentInfoOuterClass.ChatContentInfo> getMutableChatContentList() {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       return chatContentList;
     }
 
@@ -190,7 +252,7 @@ public final class ChatInfoOuterClass {
      * @return this
      */
     public ChatInfo addChatContentList(final ChatContentInfoOuterClass.ChatContentInfo value) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       chatContentList.add(value);
       return this;
     }
@@ -202,7 +264,7 @@ public final class ChatInfoOuterClass {
      */
     public ChatInfo addAllChatContentList(
         final ChatContentInfoOuterClass.ChatContentInfo... values) {
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       chatContentList.addAll(values);
       return this;
     }
@@ -213,7 +275,8 @@ public final class ChatInfoOuterClass {
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         sentTime = other.sentTime;
-        chatHeader.copyFrom(other.chatHeader);
+        sender.copyFrom(other.sender);
+        receiver.copyFrom(other.receiver);
         chatContentList.copyFrom(other.chatContentList);
       }
       return this;
@@ -228,8 +291,11 @@ public final class ChatInfoOuterClass {
       if (other.hasSentTime()) {
         setSentTime(other.sentTime);
       }
-      if (other.hasChatHeader()) {
-        getMutableChatHeader().mergeFrom(other.chatHeader);
+      if (other.hasSender()) {
+        getMutableSender().mergeFrom(other.sender);
+      }
+      if (other.hasReceiver()) {
+        getMutableReceiver().mergeFrom(other.receiver);
       }
       if (other.hasChatContentList()) {
         getMutableChatContentList().addAll(other.chatContentList);
@@ -245,7 +311,8 @@ public final class ChatInfoOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       sentTime = 0L;
-      chatHeader.clear();
+      sender.clear();
+      receiver.clear();
       chatContentList.clear();
       return this;
     }
@@ -257,7 +324,8 @@ public final class ChatInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      chatHeader.clearQuick();
+      sender.clearQuick();
+      receiver.clearQuick();
       chatContentList.clearQuick();
       return this;
     }
@@ -273,7 +341,8 @@ public final class ChatInfoOuterClass {
       ChatInfo other = (ChatInfo) o;
       return bitField0_ == other.bitField0_
         && (!hasSentTime() || sentTime == other.sentTime)
-        && (!hasChatHeader() || chatHeader.equals(other.chatHeader))
+        && (!hasSender() || sender.equals(other.sender))
+        && (!hasReceiver() || receiver.equals(other.receiver))
         && (!hasChatContentList() || chatContentList.equals(other.chatContentList));
     }
 
@@ -284,10 +353,14 @@ public final class ChatInfoOuterClass {
         output.writeUInt64NoTag(sentTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 66);
-        output.writeMessageNoTag(chatHeader);
+        output.writeRawByte((byte) 82);
+        output.writeMessageNoTag(sender);
       }
       if ((bitField0_ & 0x00000004) != 0) {
+        output.writeRawByte((byte) 90);
+        output.writeMessageNoTag(receiver);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < chatContentList.length(); i++) {
           output.writeRawByte((byte) 74);
           output.writeMessageNoTag(chatContentList.get(i));
@@ -302,9 +375,12 @@ public final class ChatInfoOuterClass {
         size += 1 + ProtoSink.computeUInt64SizeNoTag(sentTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeMessageSizeNoTag(chatHeader);
+        size += 1 + ProtoSink.computeMessageSizeNoTag(sender);
       }
       if ((bitField0_ & 0x00000004) != 0) {
+        size += 1 + ProtoSink.computeMessageSizeNoTag(receiver);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
         size += (1 * chatContentList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(chatContentList);
       }
       return size;
@@ -322,14 +398,23 @@ public final class ChatInfoOuterClass {
             sentTime = input.readUInt64();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 82) {
               break;
             }
           }
-          case 66: {
-            // chatHeader
-            input.readMessage(chatHeader);
+          case 82: {
+            // sender
+            input.readMessage(sender);
             bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 90) {
+              break;
+            }
+          }
+          case 90: {
+            // receiver
+            input.readMessage(receiver);
+            bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 74) {
               break;
@@ -338,7 +423,7 @@ public final class ChatInfoOuterClass {
           case 74: {
             // chatContentList
             tag = input.readRepeatedMessage(chatContentList, tag);
-            bitField0_ |= 0x00000004;
+            bitField0_ |= 0x00000008;
             if (tag != 0) {
               break;
             }
@@ -364,9 +449,12 @@ public final class ChatInfoOuterClass {
         output.writeUInt64(FieldNames.sentTime, sentTime);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeMessage(FieldNames.chatHeader, chatHeader);
+        output.writeMessage(FieldNames.sender, sender);
       }
       if ((bitField0_ & 0x00000004) != 0) {
+        output.writeMessage(FieldNames.receiver, receiver);
+      }
+      if ((bitField0_ & 0x00000008) != 0) {
         output.writeRepeatedMessage(FieldNames.chatContentList, chatContentList);
       }
       output.endObject();
@@ -391,12 +479,22 @@ public final class ChatInfoOuterClass {
             }
             break;
           }
-          case -1988984827:
-          case 1793218900: {
-            if (input.isAtField(FieldNames.chatHeader)) {
+          case -905962955: {
+            if (input.isAtField(FieldNames.sender)) {
               if (!input.trySkipNullValue()) {
-                input.readMessage(chatHeader);
+                input.readMessage(sender);
                 bitField0_ |= 0x00000002;
+              }
+            } else {
+              input.skipUnknownField();
+            }
+            break;
+          }
+          case -808719889: {
+            if (input.isAtField(FieldNames.receiver)) {
+              if (!input.trySkipNullValue()) {
+                input.readMessage(receiver);
+                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -408,7 +506,7 @@ public final class ChatInfoOuterClass {
             if (input.isAtField(FieldNames.chatContentList)) {
               if (!input.trySkipNullValue()) {
                 input.readRepeatedMessage(chatContentList);
-                bitField0_ |= 0x00000004;
+                bitField0_ |= 0x00000008;
               }
             } else {
               input.skipUnknownField();
@@ -469,7 +567,9 @@ public final class ChatInfoOuterClass {
     static class FieldNames {
       static final FieldName sentTime = FieldName.forField("sentTime", "sent_time");
 
-      static final FieldName chatHeader = FieldName.forField("chatHeader", "chat_header");
+      static final FieldName sender = FieldName.forField("sender");
+
+      static final FieldName receiver = FieldName.forField("receiver");
 
       static final FieldName chatContentList = FieldName.forField("chatContentList", "chat_content_list");
     }

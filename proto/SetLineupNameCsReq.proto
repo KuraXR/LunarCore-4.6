@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message SetLineupNameCsReq {
+  optional uint32 index = 9;
+  optional string name = 8;
+}

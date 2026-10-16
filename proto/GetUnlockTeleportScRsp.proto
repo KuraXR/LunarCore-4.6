@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message GetUnlockTeleportScRsp {
+  optional uint32 retcode = 6;
+  repeated uint32 unlocked_teleport_list = 12;
+}

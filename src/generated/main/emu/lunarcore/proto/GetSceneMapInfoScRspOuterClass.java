@@ -25,7 +25,7 @@ public final class GetSceneMapInfoScRspOuterClass {
     private int retcode;
 
     /**
-     * <code>repeated .SceneMapInfo scene_map_info_list = 7;</code>
+     * <code>repeated .SceneMapInfo scene_map_info_list = 9;</code>
      */
     private final RepeatedMessage<SceneMapInfoOuterClass.SceneMapInfo> sceneMapInfoList = RepeatedMessage.newEmptyInstance(SceneMapInfoOuterClass.SceneMapInfo.getFactory());
 
@@ -77,7 +77,7 @@ public final class GetSceneMapInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .SceneMapInfo scene_map_info_list = 7;</code>
+     * <code>repeated .SceneMapInfo scene_map_info_list = 9;</code>
      * @return whether the sceneMapInfoList field is set
      */
     public boolean hasSceneMapInfoList() {
@@ -85,7 +85,7 @@ public final class GetSceneMapInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .SceneMapInfo scene_map_info_list = 7;</code>
+     * <code>repeated .SceneMapInfo scene_map_info_list = 9;</code>
      * @return this
      */
     public GetSceneMapInfoScRsp clearSceneMapInfoList() {
@@ -95,7 +95,7 @@ public final class GetSceneMapInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .SceneMapInfo scene_map_info_list = 7;</code>
+     * <code>repeated .SceneMapInfo scene_map_info_list = 9;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -109,7 +109,7 @@ public final class GetSceneMapInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .SceneMapInfo scene_map_info_list = 7;</code>
+     * <code>repeated .SceneMapInfo scene_map_info_list = 9;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -123,7 +123,7 @@ public final class GetSceneMapInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .SceneMapInfo scene_map_info_list = 7;</code>
+     * <code>repeated .SceneMapInfo scene_map_info_list = 9;</code>
      * @param value the sceneMapInfoList to add
      * @return this
      */
@@ -135,7 +135,7 @@ public final class GetSceneMapInfoScRspOuterClass {
     }
 
     /**
-     * <code>repeated .SceneMapInfo scene_map_info_list = 7;</code>
+     * <code>repeated .SceneMapInfo scene_map_info_list = 9;</code>
      * @param values the sceneMapInfoList to add
      * @return this
      */
@@ -217,7 +217,7 @@ public final class GetSceneMapInfoScRspOuterClass {
       }
       if ((bitField0_ & 0x00000002) != 0) {
         for (int i = 0; i < sceneMapInfoList.length(); i++) {
-          output.writeRawByte((byte) 58);
+          output.writeRawByte((byte) 74);
           output.writeMessageNoTag(sceneMapInfoList.get(i));
         }
       }
@@ -247,11 +247,11 @@ public final class GetSceneMapInfoScRspOuterClass {
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 74) {
               break;
             }
           }
-          case 58: {
+          case 74: {
             // sceneMapInfoList
             tag = input.readRepeatedMessage(sceneMapInfoList, tag);
             bitField0_ |= 0x00000002;

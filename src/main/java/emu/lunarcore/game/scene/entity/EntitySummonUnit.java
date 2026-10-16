@@ -7,6 +7,7 @@ import emu.lunarcore.game.scene.Scene;
 import emu.lunarcore.proto.MotionInfoOuterClass.MotionInfo;
 import emu.lunarcore.proto.SceneEntityInfoOuterClass.SceneEntityInfo;
 import emu.lunarcore.proto.SceneSummonUnitInfoOuterClass.SceneSummonUnitInfo;
+import emu.lunarcore.command.commands.PortTestCommand;
 import emu.lunarcore.util.Position;
 import lombok.Getter;
 import lombok.Setter;
@@ -55,9 +56,14 @@ public class EntitySummonUnit implements GameEntity {
         var summon = SceneSummonUnitInfo.newInstance()
                 .setLifeTimeMs(this.getDuration())
                 .setCreateTimeMs(LunarCore.convertToServerTime(this.getCreateTime()))
-                .setCasterEntityId(this.getCaster().getEntityId())
-                .setAttachEntityId(this.getAttachedEntityId())
-                .setSummonUnitId(this.getExcel().getId());
+                .setAttachEntityId(this.getAttachedEntityId());
+
+        // 4.6: which of the two unnamed fields is the caster is UNVERIFIED (see /porttest summonswap)
+        if (PortTestCommand.summonSwap) {
+            summon.setCasterEntityId(this.getExcel().getId()).setSummonUnitId(this.getCaster().getEntityId());
+        } else {
+            summon.setCasterEntityId(this.getCaster().getEntityId()).setSummonUnitId(this.getExcel().getId());
+        }
         
         for (var trigger : this.getExcel().getInfo().getCustomTriggers()) {
             summon.addTriggerNameList(trigger.getTriggerName());

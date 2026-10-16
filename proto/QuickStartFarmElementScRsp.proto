@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "SceneBattleInfo.proto";
+
+message QuickStartFarmElementScRsp {
+  optional uint32 world_level = 6;
+  optional uint32 farm_element_id = 12;
+  optional uint32 retcode = 5;
+  optional SceneBattleInfo battle_info = 3;
+}

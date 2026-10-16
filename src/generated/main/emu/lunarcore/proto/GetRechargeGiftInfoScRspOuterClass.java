@@ -19,7 +19,7 @@ public final class GetRechargeGiftInfoScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 6;</code>
      */
     private int retcode;
 
@@ -34,7 +34,7 @@ public final class GetRechargeGiftInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -42,7 +42,7 @@ public final class GetRechargeGiftInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return this
      */
     public GetRechargeGiftInfoScRsp clearRetcode() {
@@ -52,7 +52,7 @@ public final class GetRechargeGiftInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -60,7 +60,7 @@ public final class GetRechargeGiftInfoScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 1;</code>
+     * <code>optional uint32 retcode = 6;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class GetRechargeGiftInfoScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 8);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(retcode);
       }
     }
@@ -150,7 +150,7 @@ public final class GetRechargeGiftInfoScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 8: {
+          case 48: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000001;

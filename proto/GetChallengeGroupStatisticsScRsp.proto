@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeBossStatistics.proto";
+import "ChallengeMemoryStatistics.proto";
+import "ChallengeStoryStatistics.proto";
+
+message GetChallengeGroupStatisticsScRsp {
+  optional uint32 retcode = 11;
+  optional uint32 group_id = 9;
+  oneof statistics {
+    ChallengeMemoryStatistics challenge_memory = 13;
+    ChallengeStoryStatistics challenge_story = 1;
+    ChallengeBossStatistics challenge_boss = 8;
+  }
+}

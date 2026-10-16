@@ -868,10 +868,6 @@ public final class BattleRecordType2OuterClass {
       private static final long serialVersionUID = 0L;
 
       /**
-       * <pre>
-       * repeated RogueBuff buff_list = 14;
-       * </pre>
-       *
        * <code>repeated uint32 unk_repeated = 8;</code>
        */
       private final RepeatedInt unkRepeated = RepeatedInt.newEmptyInstance();
@@ -892,10 +888,6 @@ public final class BattleRecordType2OuterClass {
       }
 
       /**
-       * <pre>
-       * repeated RogueBuff buff_list = 14;
-       * </pre>
-       *
        * <code>repeated uint32 unk_repeated = 8;</code>
        * @return whether the unkRepeated field is set
        */
@@ -904,10 +896,6 @@ public final class BattleRecordType2OuterClass {
       }
 
       /**
-       * <pre>
-       * repeated RogueBuff buff_list = 14;
-       * </pre>
-       *
        * <code>repeated uint32 unk_repeated = 8;</code>
        * @return this
        */
@@ -918,10 +906,6 @@ public final class BattleRecordType2OuterClass {
       }
 
       /**
-       * <pre>
-       * repeated RogueBuff buff_list = 14;
-       * </pre>
-       *
        * <code>repeated uint32 unk_repeated = 8;</code>
        *
        * This method returns the internal storage object without modifying any has state.
@@ -936,10 +920,6 @@ public final class BattleRecordType2OuterClass {
       }
 
       /**
-       * <pre>
-       * repeated RogueBuff buff_list = 14;
-       * </pre>
-       *
        * <code>repeated uint32 unk_repeated = 8;</code>
        *
        * This method returns the internal storage object and sets the corresponding
@@ -954,10 +934,6 @@ public final class BattleRecordType2OuterClass {
       }
 
       /**
-       * <pre>
-       * repeated RogueBuff buff_list = 14;
-       * </pre>
-       *
        * <code>repeated uint32 unk_repeated = 8;</code>
        * @param value the unkRepeated to add
        * @return this
@@ -969,10 +945,6 @@ public final class BattleRecordType2OuterClass {
       }
 
       /**
-       * <pre>
-       * repeated RogueBuff buff_list = 14;
-       * </pre>
-       *
        * <code>repeated uint32 unk_repeated = 8;</code>
        * @param values the unkRepeated to add
        * @return this

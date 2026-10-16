@@ -20,7 +20,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>repeated uint32 main_mission_id_list = 4;</code>
+     * <code>repeated uint32 main_mission_id_list = 8;</code>
      */
     private final RepeatedInt mainMissionIdList = RepeatedInt.newEmptyInstance();
 
@@ -35,7 +35,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id_list = 4;</code>
+     * <code>repeated uint32 main_mission_id_list = 8;</code>
      * @return whether the mainMissionIdList field is set
      */
     public boolean hasMainMissionIdList() {
@@ -43,7 +43,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id_list = 4;</code>
+     * <code>repeated uint32 main_mission_id_list = 8;</code>
      * @return this
      */
     public GetMainMissionCustomValueCsReq clearMainMissionIdList() {
@@ -53,7 +53,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id_list = 4;</code>
+     * <code>repeated uint32 main_mission_id_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -67,7 +67,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id_list = 4;</code>
+     * <code>repeated uint32 main_mission_id_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -81,7 +81,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id_list = 4;</code>
+     * <code>repeated uint32 main_mission_id_list = 8;</code>
      * @param value the mainMissionIdList to add
      * @return this
      */
@@ -92,7 +92,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     }
 
     /**
-     * <code>repeated uint32 main_mission_id_list = 4;</code>
+     * <code>repeated uint32 main_mission_id_list = 8;</code>
      * @param values the mainMissionIdList to add
      * @return this
      */
@@ -163,7 +163,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         for (int i = 0; i < mainMissionIdList.length(); i++) {
-          output.writeRawByte((byte) 32);
+          output.writeRawByte((byte) 64);
           output.writeUInt32NoTag(mainMissionIdList.array()[i]);
         }
       }
@@ -185,7 +185,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 34: {
+          case 66: {
             // mainMissionIdList [packed=true]
             input.readPackedUInt32(mainMissionIdList, tag);
             bitField0_ |= 0x00000001;
@@ -204,7 +204,7 @@ public final class GetMainMissionCustomValueCsReqOuterClass {
             tag = input.readTag();
             break;
           }
-          case 32: {
+          case 64: {
             // mainMissionIdList [packed=false]
             tag = input.readRepeatedUInt32(mainMissionIdList, tag);
             bitField0_ |= 0x00000001;

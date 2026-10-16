@@ -13,21 +13,13 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class FriendRecommendInfoOuterClass {
   /**
-   * <pre>
-   *  ENNAEMFJNEP
-   * </pre>
-   *
    * Protobuf type {@code FriendRecommendInfo}
    */
   public static final class FriendRecommendInfo extends ProtoMessage<FriendRecommendInfo> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  FPKKLDGIJIG
-     * </pre>
-     *
-     * <code>optional .PlayerSimpleInfo simple_info = 7;</code>
+     * <code>optional .PlayerSimpleInfo simple_info = 13;</code>
      */
     private final PlayerSimpleInfoOuterClass.PlayerSimpleInfo simpleInfo = PlayerSimpleInfoOuterClass.PlayerSimpleInfo.newInstance();
 
@@ -35,10 +27,6 @@ public final class FriendRecommendInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ENNAEMFJNEP
-     * </pre>
-     *
      * @return a new empty instance of {@code FriendRecommendInfo}
      */
     public static FriendRecommendInfo newInstance() {
@@ -46,11 +34,7 @@ public final class FriendRecommendInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  FPKKLDGIJIG
-     * </pre>
-     *
-     * <code>optional .PlayerSimpleInfo simple_info = 7;</code>
+     * <code>optional .PlayerSimpleInfo simple_info = 13;</code>
      * @return whether the simpleInfo field is set
      */
     public boolean hasSimpleInfo() {
@@ -58,11 +42,7 @@ public final class FriendRecommendInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  FPKKLDGIJIG
-     * </pre>
-     *
-     * <code>optional .PlayerSimpleInfo simple_info = 7;</code>
+     * <code>optional .PlayerSimpleInfo simple_info = 13;</code>
      * @return this
      */
     public FriendRecommendInfo clearSimpleInfo() {
@@ -72,11 +52,7 @@ public final class FriendRecommendInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  FPKKLDGIJIG
-     * </pre>
-     *
-     * <code>optional .PlayerSimpleInfo simple_info = 7;</code>
+     * <code>optional .PlayerSimpleInfo simple_info = 13;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -90,11 +66,7 @@ public final class FriendRecommendInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  FPKKLDGIJIG
-     * </pre>
-     *
-     * <code>optional .PlayerSimpleInfo simple_info = 7;</code>
+     * <code>optional .PlayerSimpleInfo simple_info = 13;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -108,11 +80,7 @@ public final class FriendRecommendInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  FPKKLDGIJIG
-     * </pre>
-     *
-     * <code>optional .PlayerSimpleInfo simple_info = 7;</code>
+     * <code>optional .PlayerSimpleInfo simple_info = 13;</code>
      * @param value the simpleInfo to set
      * @return this
      */
@@ -183,7 +151,7 @@ public final class FriendRecommendInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 58);
+        output.writeRawByte((byte) 106);
         output.writeMessageNoTag(simpleInfo);
       }
     }
@@ -204,7 +172,7 @@ public final class FriendRecommendInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 58: {
+          case 106: {
             // simpleInfo
             input.readMessage(simpleInfo);
             bitField0_ |= 0x00000001;

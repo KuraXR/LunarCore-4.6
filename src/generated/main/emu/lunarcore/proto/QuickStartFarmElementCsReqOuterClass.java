@@ -19,19 +19,19 @@ public final class QuickStartFarmElementCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 wave_count = 2;</code>
+     * <code>optional uint32 farm_element_id = 2;</code>
      */
-    private int waveCount;
+    private int farmElementId;
 
     /**
-     * <code>optional uint32 world_level = 9;</code>
+     * <code>optional uint32 world_level = 11;</code>
      */
     private int worldLevel;
 
     /**
-     * <code>optional uint32 farm_element_id = 15;</code>
+     * <code>optional uint32 wave_count = 14;</code>
      */
-    private int farmElementId;
+    private int waveCount;
 
     private QuickStartFarmElementCsReq() {
     }
@@ -44,44 +44,44 @@ public final class QuickStartFarmElementCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave_count = 2;</code>
-     * @return whether the waveCount field is set
+     * <code>optional uint32 farm_element_id = 2;</code>
+     * @return whether the farmElementId field is set
      */
-    public boolean hasWaveCount() {
+    public boolean hasFarmElementId() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 wave_count = 2;</code>
+     * <code>optional uint32 farm_element_id = 2;</code>
      * @return this
      */
-    public QuickStartFarmElementCsReq clearWaveCount() {
+    public QuickStartFarmElementCsReq clearFarmElementId() {
       bitField0_ &= ~0x00000001;
-      waveCount = 0;
+      farmElementId = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 wave_count = 2;</code>
-     * @return the waveCount
+     * <code>optional uint32 farm_element_id = 2;</code>
+     * @return the farmElementId
      */
-    public int getWaveCount() {
-      return waveCount;
+    public int getFarmElementId() {
+      return farmElementId;
     }
 
     /**
-     * <code>optional uint32 wave_count = 2;</code>
-     * @param value the waveCount to set
+     * <code>optional uint32 farm_element_id = 2;</code>
+     * @param value the farmElementId to set
      * @return this
      */
-    public QuickStartFarmElementCsReq setWaveCount(final int value) {
+    public QuickStartFarmElementCsReq setFarmElementId(final int value) {
       bitField0_ |= 0x00000001;
-      waveCount = value;
+      farmElementId = value;
       return this;
     }
 
     /**
-     * <code>optional uint32 world_level = 9;</code>
+     * <code>optional uint32 world_level = 11;</code>
      * @return whether the worldLevel field is set
      */
     public boolean hasWorldLevel() {
@@ -89,7 +89,7 @@ public final class QuickStartFarmElementCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 9;</code>
+     * <code>optional uint32 world_level = 11;</code>
      * @return this
      */
     public QuickStartFarmElementCsReq clearWorldLevel() {
@@ -99,7 +99,7 @@ public final class QuickStartFarmElementCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 9;</code>
+     * <code>optional uint32 world_level = 11;</code>
      * @return the worldLevel
      */
     public int getWorldLevel() {
@@ -107,7 +107,7 @@ public final class QuickStartFarmElementCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 9;</code>
+     * <code>optional uint32 world_level = 11;</code>
      * @param value the worldLevel to set
      * @return this
      */
@@ -118,39 +118,39 @@ public final class QuickStartFarmElementCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 15;</code>
-     * @return whether the farmElementId field is set
+     * <code>optional uint32 wave_count = 14;</code>
+     * @return whether the waveCount field is set
      */
-    public boolean hasFarmElementId() {
+    public boolean hasWaveCount() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 15;</code>
+     * <code>optional uint32 wave_count = 14;</code>
      * @return this
      */
-    public QuickStartFarmElementCsReq clearFarmElementId() {
+    public QuickStartFarmElementCsReq clearWaveCount() {
       bitField0_ &= ~0x00000004;
-      farmElementId = 0;
+      waveCount = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 15;</code>
-     * @return the farmElementId
+     * <code>optional uint32 wave_count = 14;</code>
+     * @return the waveCount
      */
-    public int getFarmElementId() {
-      return farmElementId;
+    public int getWaveCount() {
+      return waveCount;
     }
 
     /**
-     * <code>optional uint32 farm_element_id = 15;</code>
-     * @param value the farmElementId to set
+     * <code>optional uint32 wave_count = 14;</code>
+     * @param value the waveCount to set
      * @return this
      */
-    public QuickStartFarmElementCsReq setFarmElementId(final int value) {
+    public QuickStartFarmElementCsReq setWaveCount(final int value) {
       bitField0_ |= 0x00000004;
-      farmElementId = value;
+      waveCount = value;
       return this;
     }
 
@@ -159,9 +159,9 @@ public final class QuickStartFarmElementCsReqOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        waveCount = other.waveCount;
-        worldLevel = other.worldLevel;
         farmElementId = other.farmElementId;
+        worldLevel = other.worldLevel;
+        waveCount = other.waveCount;
       }
       return this;
     }
@@ -172,14 +172,14 @@ public final class QuickStartFarmElementCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasWaveCount()) {
-        setWaveCount(other.waveCount);
+      if (other.hasFarmElementId()) {
+        setFarmElementId(other.farmElementId);
       }
       if (other.hasWorldLevel()) {
         setWorldLevel(other.worldLevel);
       }
-      if (other.hasFarmElementId()) {
-        setFarmElementId(other.farmElementId);
+      if (other.hasWaveCount()) {
+        setWaveCount(other.waveCount);
       }
       return this;
     }
@@ -191,9 +191,9 @@ public final class QuickStartFarmElementCsReqOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      waveCount = 0;
-      worldLevel = 0;
       farmElementId = 0;
+      worldLevel = 0;
+      waveCount = 0;
       return this;
     }
 
@@ -217,24 +217,24 @@ public final class QuickStartFarmElementCsReqOuterClass {
       }
       QuickStartFarmElementCsReq other = (QuickStartFarmElementCsReq) o;
       return bitField0_ == other.bitField0_
-        && (!hasWaveCount() || waveCount == other.waveCount)
+        && (!hasFarmElementId() || farmElementId == other.farmElementId)
         && (!hasWorldLevel() || worldLevel == other.worldLevel)
-        && (!hasFarmElementId() || farmElementId == other.farmElementId);
+        && (!hasWaveCount() || waveCount == other.waveCount);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(waveCount);
+        output.writeUInt32NoTag(farmElementId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 120);
-        output.writeUInt32NoTag(farmElementId);
+        output.writeRawByte((byte) 112);
+        output.writeUInt32NoTag(waveCount);
       }
     }
 
@@ -242,13 +242,13 @@ public final class QuickStartFarmElementCsReqOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(waveCount);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(farmElementId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(farmElementId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(waveCount);
       }
       return size;
     }
@@ -261,26 +261,26 @@ public final class QuickStartFarmElementCsReqOuterClass {
       while (true) {
         switch (tag) {
           case 16: {
-            // waveCount
-            waveCount = input.readUInt32();
+            // farmElementId
+            farmElementId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 88) {
               break;
             }
           }
-          case 72: {
+          case 88: {
             // worldLevel
             worldLevel = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 112) {
               break;
             }
           }
-          case 120: {
-            // farmElementId
-            farmElementId = input.readUInt32();
+          case 112: {
+            // waveCount
+            waveCount = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
             if (tag != 0) {
@@ -305,13 +305,13 @@ public final class QuickStartFarmElementCsReqOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.waveCount, waveCount);
+        output.writeUInt32(FieldNames.farmElementId, farmElementId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.worldLevel, worldLevel);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeUInt32(FieldNames.farmElementId, farmElementId);
+        output.writeUInt32(FieldNames.waveCount, waveCount);
       }
       output.endObject();
     }
@@ -323,11 +323,11 @@ public final class QuickStartFarmElementCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1518256534:
-          case 611674185: {
-            if (input.isAtField(FieldNames.waveCount)) {
+          case -1414890079:
+          case 1118077159: {
+            if (input.isAtField(FieldNames.farmElementId)) {
               if (!input.trySkipNullValue()) {
-                waveCount = input.readUInt32();
+                farmElementId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -347,11 +347,11 @@ public final class QuickStartFarmElementCsReqOuterClass {
             }
             break;
           }
-          case -1414890079:
-          case 1118077159: {
-            if (input.isAtField(FieldNames.farmElementId)) {
+          case 1518256534:
+          case 611674185: {
+            if (input.isAtField(FieldNames.waveCount)) {
               if (!input.trySkipNullValue()) {
-                farmElementId = input.readUInt32();
+                waveCount = input.readUInt32();
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -412,11 +412,11 @@ public final class QuickStartFarmElementCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName waveCount = FieldName.forField("waveCount", "wave_count");
+      static final FieldName farmElementId = FieldName.forField("farmElementId", "farm_element_id");
 
       static final FieldName worldLevel = FieldName.forField("worldLevel", "world_level");
 
-      static final FieldName farmElementId = FieldName.forField("farmElementId", "farm_element_id");
+      static final FieldName waveCount = FieldName.forField("waveCount", "wave_count");
     }
   }
 }

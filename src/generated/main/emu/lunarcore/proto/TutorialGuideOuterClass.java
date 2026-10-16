@@ -19,12 +19,12 @@ public final class TutorialGuideOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 id = 13;</code>
+     * <code>optional uint32 id = 15;</code>
      */
     private int id;
 
     /**
-     * <code>optional .TutorialStatus status = 9;</code>
+     * <code>optional .TutorialStatus status = 1;</code>
      */
     private int status;
 
@@ -39,7 +39,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 13;</code>
+     * <code>optional uint32 id = 15;</code>
      * @return whether the id field is set
      */
     public boolean hasId() {
@@ -47,7 +47,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 13;</code>
+     * <code>optional uint32 id = 15;</code>
      * @return this
      */
     public TutorialGuide clearId() {
@@ -57,7 +57,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 13;</code>
+     * <code>optional uint32 id = 15;</code>
      * @return the id
      */
     public int getId() {
@@ -65,7 +65,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional uint32 id = 13;</code>
+     * <code>optional uint32 id = 15;</code>
      * @param value the id to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional .TutorialStatus status = 9;</code>
+     * <code>optional .TutorialStatus status = 1;</code>
      * @return whether the status field is set
      */
     public boolean hasStatus() {
@@ -84,7 +84,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional .TutorialStatus status = 9;</code>
+     * <code>optional .TutorialStatus status = 1;</code>
      * @return this
      */
     public TutorialGuide clearStatus() {
@@ -94,7 +94,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional .TutorialStatus status = 9;</code>
+     * <code>optional .TutorialStatus status = 1;</code>
      * @return the status
      */
     public TutorialStatusOuterClass.TutorialStatus getStatus() {
@@ -127,7 +127,7 @@ public final class TutorialGuideOuterClass {
     }
 
     /**
-     * <code>optional .TutorialStatus status = 9;</code>
+     * <code>optional .TutorialStatus status = 1;</code>
      * @param value the status to set
      * @return this
      */
@@ -202,11 +202,11 @@ public final class TutorialGuideOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(id);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 8);
         output.writeEnumNoTag(status);
       }
     }
@@ -230,16 +230,16 @@ public final class TutorialGuideOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 104: {
+          case 120: {
             // id
             id = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 8) {
               break;
             }
           }
-          case 72: {
+          case 8: {
             // status
             final int value = input.readInt32();
             if (TutorialStatusOuterClass.TutorialStatus.forNumber(value) != null) {

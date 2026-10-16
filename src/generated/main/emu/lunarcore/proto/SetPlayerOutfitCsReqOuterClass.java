@@ -19,7 +19,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 2;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
      */
     private final PlayerOutfitInfoOuterClass.PlayerOutfitInfo playerOutfitData = PlayerOutfitInfoOuterClass.PlayerOutfitInfo.newInstance();
 
@@ -34,7 +34,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 2;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
      * @return whether the playerOutfitData field is set
      */
     public boolean hasPlayerOutfitData() {
@@ -42,7 +42,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 2;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
      * @return this
      */
     public SetPlayerOutfitCsReq clearPlayerOutfitData() {
@@ -52,7 +52,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 2;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 2;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
     }
 
     /**
-     * <code>optional .PlayerOutfitInfo player_outfit_data = 2;</code>
+     * <code>optional .PlayerOutfitInfo player_outfit_data = 1;</code>
      * @param value the playerOutfitData to set
      * @return this
      */
@@ -151,7 +151,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 18);
+        output.writeRawByte((byte) 10);
         output.writeMessageNoTag(playerOutfitData);
       }
     }
@@ -172,7 +172,7 @@ public final class SetPlayerOutfitCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 18: {
+          case 10: {
             // playerOutfitData
             input.readMessage(playerOutfitData);
             bitField0_ |= 0x00000001;

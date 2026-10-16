@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemList.proto";
+import "SceneMonster.proto";
+import "SceneMonsterWaveParam.proto";
+
+message SceneMonsterWave {
+  optional uint32 stage_id = 12;
+  optional uint32 wave_id = 14;
+  optional SceneMonsterWaveParam wave_param = 2;
+  repeated SceneMonster monster_list = 6;
+  repeated ItemList drop_list = 5;
+}

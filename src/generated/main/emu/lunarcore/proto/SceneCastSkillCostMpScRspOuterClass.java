@@ -19,12 +19,12 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 attacked_group_id = 8;</code>
+     * <code>optional uint32 attacked_group_id = 7;</code>
      */
     private int attackedGroupId;
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 15;</code>
      */
     private int retcode;
 
@@ -39,7 +39,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 8;</code>
+     * <code>optional uint32 attacked_group_id = 7;</code>
      * @return whether the attackedGroupId field is set
      */
     public boolean hasAttackedGroupId() {
@@ -47,7 +47,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 8;</code>
+     * <code>optional uint32 attacked_group_id = 7;</code>
      * @return this
      */
     public SceneCastSkillCostMpScRsp clearAttackedGroupId() {
@@ -57,7 +57,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 8;</code>
+     * <code>optional uint32 attacked_group_id = 7;</code>
      * @return the attackedGroupId
      */
     public int getAttackedGroupId() {
@@ -65,7 +65,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 8;</code>
+     * <code>optional uint32 attacked_group_id = 7;</code>
      * @param value the attackedGroupId to set
      * @return this
      */
@@ -76,7 +76,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return whether the retcode field is set
      */
     public boolean hasRetcode() {
@@ -84,7 +84,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return this
      */
     public SceneCastSkillCostMpScRsp clearRetcode() {
@@ -94,7 +94,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -102,7 +102,7 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 15;</code>
      * @param value the retcode to set
      * @return this
      */
@@ -177,11 +177,11 @@ public final class SceneCastSkillCostMpScRspOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(attackedGroupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(retcode);
       }
     }
@@ -205,16 +205,16 @@ public final class SceneCastSkillCostMpScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 56: {
             // attackedGroupId
             attackedGroupId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 120) {
               break;
             }
           }
-          case 80: {
+          case 120: {
             // retcode
             retcode = input.readUInt32();
             bitField0_ |= 0x00000002;

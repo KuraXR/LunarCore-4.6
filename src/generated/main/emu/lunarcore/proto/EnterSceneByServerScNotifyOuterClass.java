@@ -19,12 +19,12 @@ public final class EnterSceneByServerScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .EnterSceneReason reason = 12;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      */
     private int reason;
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 6;</code>
      */
     private final LineupInfoOuterClass.LineupInfo lineup = LineupInfoOuterClass.LineupInfo.newInstance();
 
@@ -44,7 +44,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 12;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @return whether the reason field is set
      */
     public boolean hasReason() {
@@ -52,7 +52,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 12;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @return this
      */
     public EnterSceneByServerScNotify clearReason() {
@@ -62,7 +62,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 12;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @return the reason
      */
     public EnterSceneReasonOuterClass.EnterSceneReason getReason() {
@@ -95,7 +95,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .EnterSceneReason reason = 12;</code>
+     * <code>optional .EnterSceneReason reason = 1;</code>
      * @param value the reason to set
      * @return this
      */
@@ -107,7 +107,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 6;</code>
      * @return whether the lineup field is set
      */
     public boolean hasLineup() {
@@ -115,7 +115,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 6;</code>
      * @return this
      */
     public EnterSceneByServerScNotify clearLineup() {
@@ -125,7 +125,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 6;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -139,7 +139,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 6;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -153,7 +153,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .LineupInfo lineup = 3;</code>
+     * <code>optional .LineupInfo lineup = 6;</code>
      * @param value the lineup to set
      * @return this
      */
@@ -293,11 +293,11 @@ public final class EnterSceneByServerScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 8);
         output.writeEnumNoTag(reason);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 26);
+        output.writeRawByte((byte) 50);
         output.writeMessageNoTag(lineup);
       }
       if ((bitField0_ & 0x00000004) != 0) {
@@ -328,7 +328,7 @@ public final class EnterSceneByServerScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 96: {
+          case 8: {
             // reason
             final int value = input.readInt32();
             if (EnterSceneReasonOuterClass.EnterSceneReason.forNumber(value) != null) {
@@ -336,11 +336,11 @@ public final class EnterSceneByServerScNotifyOuterClass {
               bitField0_ |= 0x00000001;
             }
             tag = input.readTag();
-            if (tag != 26) {
+            if (tag != 50) {
               break;
             }
           }
-          case 26: {
+          case 50: {
             // lineup
             input.readMessage(lineup);
             bitField0_ |= 0x00000002;

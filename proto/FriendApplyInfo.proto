@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PlayerSimpleInfo.proto";
+
+message FriendApplyInfo {
+  optional PlayerSimpleInfo simple_info = 6;
+}

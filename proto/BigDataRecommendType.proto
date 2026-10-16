@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+enum BigDataRecommendType {
+  BIG_DATA_RECOMMEND_TYPE_NONE = 0;
+  BIG_DATA_RECOMMEND_TYPE_EQUIPMENT = 1;
+  BIG_DATA_RECOMMEND_TYPE_RELIC_SUIT = 2;
+  BIG_DATA_RECOMMEND_TYPE_RELIC_AVATAR = 3;
+  BIG_DATA_RECOMMEND_TYPE_AVATAR_RELIC = 4;
+}

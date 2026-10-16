@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ClientMail.proto";
+
+message GetMailScRsp {
+  optional uint32 start = 10;
+  optional uint32 total_num = 6;
+  optional uint32 retcode = 9;
+  optional bool is_end = 13;
+  repeated ClientMail mail_list = 12;
+  repeated ClientMail notice_mail_list = 8;
+}

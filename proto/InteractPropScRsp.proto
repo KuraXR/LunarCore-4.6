@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message InteractPropScRsp {
+  optional uint32 prop_state = 7;
+  optional uint32 prop_entity_id = 10;
+  optional uint32 retcode = 4;
+}

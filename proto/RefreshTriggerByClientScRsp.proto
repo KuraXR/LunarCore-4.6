@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message RefreshTriggerByClientScRsp {
+  optional uint32 retcode = 13;
+  optional uint32 trigger_entity_id = 9;
+  optional bool refresh_trigger = 4;
+  optional string trigger_name = 12;
+}

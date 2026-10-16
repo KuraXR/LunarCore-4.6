@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemList.proto";
+
+message UseItemScRsp {
+  optional uint32 retcode = 10;
+  optional uint32 use_item_count = 5;
+  optional uint32 use_item_id = 8;
+  optional ItemList return_data = 11;
+}

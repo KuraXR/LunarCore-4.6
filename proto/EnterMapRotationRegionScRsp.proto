@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MotionInfo.proto";
+
+message EnterMapRotationRegionScRsp {
+  optional uint32 client_pos_version = 14;
+  optional uint32 retcode = 7;
+  optional MotionInfo motion = 6;
+}

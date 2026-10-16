@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedInt;
 
 public final class GetExpeditionDataScRspOuterClass {
   /**
@@ -20,37 +19,9 @@ public final class GetExpeditionDataScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 team_count = 7;</code>
-     */
-    private int teamCount;
-
-    /**
-     * <code>optional uint32 retcode = 9;</code>
+     * <code>optional uint32 retcode = 3;</code>
      */
     private int retcode;
-
-    /**
-     * <code>repeated uint32 rint2 = 11;</code>
-     */
-    private final RepeatedInt rint2 = RepeatedInt.newEmptyInstance();
-
-    /**
-     * <pre>
-     *  could be 15, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_expedition_id_list = 13;</code>
-     */
-    private final RepeatedInt unlockedExpeditionIdList = RepeatedInt.newEmptyInstance();
-
-    /**
-     * <pre>
-     *  could be 13, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_activity_expedition_id_list = 15;</code>
-     */
-    private final RepeatedInt unlockedActivityExpeditionIdList = RepeatedInt.newEmptyInstance();
 
     private GetExpeditionDataScRsp() {
     }
@@ -63,62 +34,25 @@ public final class GetExpeditionDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 team_count = 7;</code>
-     * @return whether the teamCount field is set
+     * <code>optional uint32 retcode = 3;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasTeamCount() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 team_count = 7;</code>
-     * @return this
-     */
-    public GetExpeditionDataScRsp clearTeamCount() {
-      bitField0_ &= ~0x00000001;
-      teamCount = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 team_count = 7;</code>
-     * @return the teamCount
-     */
-    public int getTeamCount() {
-      return teamCount;
-    }
-
-    /**
-     * <code>optional uint32 team_count = 7;</code>
-     * @param value the teamCount to set
-     * @return this
-     */
-    public GetExpeditionDataScRsp setTeamCount(final int value) {
-      bitField0_ |= 0x00000001;
-      teamCount = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 9;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 9;</code>
+     * <code>optional uint32 retcode = 3;</code>
      * @return this
      */
     public GetExpeditionDataScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 9;</code>
+     * <code>optional uint32 retcode = 3;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -126,265 +60,13 @@ public final class GetExpeditionDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 9;</code>
+     * <code>optional uint32 retcode = 3;</code>
      * @param value the retcode to set
      * @return this
      */
     public GetExpeditionDataScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 rint2 = 11;</code>
-     * @return whether the rint2 field is set
-     */
-    public boolean hasRint2() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>repeated uint32 rint2 = 11;</code>
-     * @return this
-     */
-    public GetExpeditionDataScRsp clearRint2() {
-      bitField0_ &= ~0x00000004;
-      rint2.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 rint2 = 11;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableRint2()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getRint2() {
-      return rint2;
-    }
-
-    /**
-     * <code>repeated uint32 rint2 = 11;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableRint2() {
-      bitField0_ |= 0x00000004;
-      return rint2;
-    }
-
-    /**
-     * <code>repeated uint32 rint2 = 11;</code>
-     * @param value the rint2 to add
-     * @return this
-     */
-    public GetExpeditionDataScRsp addRint2(final int value) {
-      bitField0_ |= 0x00000004;
-      rint2.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated uint32 rint2 = 11;</code>
-     * @param values the rint2 to add
-     * @return this
-     */
-    public GetExpeditionDataScRsp addAllRint2(final int... values) {
-      bitField0_ |= 0x00000004;
-      rint2.addAll(values);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  could be 15, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_expedition_id_list = 13;</code>
-     * @return whether the unlockedExpeditionIdList field is set
-     */
-    public boolean hasUnlockedExpeditionIdList() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <pre>
-     *  could be 15, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_expedition_id_list = 13;</code>
-     * @return this
-     */
-    public GetExpeditionDataScRsp clearUnlockedExpeditionIdList() {
-      bitField0_ &= ~0x00000008;
-      unlockedExpeditionIdList.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  could be 15, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_expedition_id_list = 13;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableUnlockedExpeditionIdList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getUnlockedExpeditionIdList() {
-      return unlockedExpeditionIdList;
-    }
-
-    /**
-     * <pre>
-     *  could be 15, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_expedition_id_list = 13;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableUnlockedExpeditionIdList() {
-      bitField0_ |= 0x00000008;
-      return unlockedExpeditionIdList;
-    }
-
-    /**
-     * <pre>
-     *  could be 15, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_expedition_id_list = 13;</code>
-     * @param value the unlockedExpeditionIdList to add
-     * @return this
-     */
-    public GetExpeditionDataScRsp addUnlockedExpeditionIdList(final int value) {
-      bitField0_ |= 0x00000008;
-      unlockedExpeditionIdList.add(value);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  could be 15, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_expedition_id_list = 13;</code>
-     * @param values the unlockedExpeditionIdList to add
-     * @return this
-     */
-    public GetExpeditionDataScRsp addAllUnlockedExpeditionIdList(final int... values) {
-      bitField0_ |= 0x00000008;
-      unlockedExpeditionIdList.addAll(values);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  could be 13, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_activity_expedition_id_list = 15;</code>
-     * @return whether the unlockedActivityExpeditionIdList field is set
-     */
-    public boolean hasUnlockedActivityExpeditionIdList() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <pre>
-     *  could be 13, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_activity_expedition_id_list = 15;</code>
-     * @return this
-     */
-    public GetExpeditionDataScRsp clearUnlockedActivityExpeditionIdList() {
-      bitField0_ &= ~0x00000010;
-      unlockedActivityExpeditionIdList.clear();
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  could be 13, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_activity_expedition_id_list = 15;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableUnlockedActivityExpeditionIdList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedInt getUnlockedActivityExpeditionIdList() {
-      return unlockedActivityExpeditionIdList;
-    }
-
-    /**
-     * <pre>
-     *  could be 13, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_activity_expedition_id_list = 15;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedInt getMutableUnlockedActivityExpeditionIdList() {
-      bitField0_ |= 0x00000010;
-      return unlockedActivityExpeditionIdList;
-    }
-
-    /**
-     * <pre>
-     *  could be 13, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_activity_expedition_id_list = 15;</code>
-     * @param value the unlockedActivityExpeditionIdList to add
-     * @return this
-     */
-    public GetExpeditionDataScRsp addUnlockedActivityExpeditionIdList(final int value) {
-      bitField0_ |= 0x00000010;
-      unlockedActivityExpeditionIdList.add(value);
-      return this;
-    }
-
-    /**
-     * <pre>
-     *  could be 13, TODO: check
-     * </pre>
-     *
-     * <code>repeated uint32 unlocked_activity_expedition_id_list = 15;</code>
-     * @param values the unlockedActivityExpeditionIdList to add
-     * @return this
-     */
-    public GetExpeditionDataScRsp addAllUnlockedActivityExpeditionIdList(final int... values) {
-      bitField0_ |= 0x00000010;
-      unlockedActivityExpeditionIdList.addAll(values);
       return this;
     }
 
@@ -393,11 +75,7 @@ public final class GetExpeditionDataScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        teamCount = other.teamCount;
         retcode = other.retcode;
-        rint2.copyFrom(other.rint2);
-        unlockedExpeditionIdList.copyFrom(other.unlockedExpeditionIdList);
-        unlockedActivityExpeditionIdList.copyFrom(other.unlockedActivityExpeditionIdList);
       }
       return this;
     }
@@ -408,20 +86,8 @@ public final class GetExpeditionDataScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasTeamCount()) {
-        setTeamCount(other.teamCount);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
-      }
-      if (other.hasRint2()) {
-        getMutableRint2().addAll(other.rint2);
-      }
-      if (other.hasUnlockedExpeditionIdList()) {
-        getMutableUnlockedExpeditionIdList().addAll(other.unlockedExpeditionIdList);
-      }
-      if (other.hasUnlockedActivityExpeditionIdList()) {
-        getMutableUnlockedActivityExpeditionIdList().addAll(other.unlockedActivityExpeditionIdList);
       }
       return this;
     }
@@ -433,11 +99,7 @@ public final class GetExpeditionDataScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      teamCount = 0;
       retcode = 0;
-      rint2.clear();
-      unlockedExpeditionIdList.clear();
-      unlockedActivityExpeditionIdList.clear();
       return this;
     }
 
@@ -448,9 +110,6 @@ public final class GetExpeditionDataScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      rint2.clear();
-      unlockedExpeditionIdList.clear();
-      unlockedActivityExpeditionIdList.clear();
       return this;
     }
 
@@ -464,40 +123,14 @@ public final class GetExpeditionDataScRspOuterClass {
       }
       GetExpeditionDataScRsp other = (GetExpeditionDataScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasTeamCount() || teamCount == other.teamCount)
-        && (!hasRetcode() || retcode == other.retcode)
-        && (!hasRint2() || rint2.equals(other.rint2))
-        && (!hasUnlockedExpeditionIdList() || unlockedExpeditionIdList.equals(other.unlockedExpeditionIdList))
-        && (!hasUnlockedActivityExpeditionIdList() || unlockedActivityExpeditionIdList.equals(other.unlockedActivityExpeditionIdList));
+        && (!hasRetcode() || retcode == other.retcode);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(teamCount);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < rint2.length(); i++) {
-          output.writeRawByte((byte) 88);
-          output.writeUInt32NoTag(rint2.array()[i]);
-        }
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        for (int i = 0; i < unlockedExpeditionIdList.length(); i++) {
-          output.writeRawByte((byte) 104);
-          output.writeUInt32NoTag(unlockedExpeditionIdList.array()[i]);
-        }
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        for (int i = 0; i < unlockedActivityExpeditionIdList.length(); i++) {
-          output.writeRawByte((byte) 120);
-          output.writeUInt32NoTag(unlockedActivityExpeditionIdList.array()[i]);
-        }
       }
     }
 
@@ -505,19 +138,7 @@ public final class GetExpeditionDataScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(teamCount);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * rint2.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(rint2);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += (1 * unlockedExpeditionIdList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(unlockedExpeditionIdList);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        size += (1 * unlockedActivityExpeditionIdList.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(unlockedActivityExpeditionIdList);
       }
       return size;
     }
@@ -529,46 +150,10 @@ public final class GetExpeditionDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 56: {
-            // teamCount
-            teamCount = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 72) {
-              break;
-            }
-          }
-          case 72: {
+          case 24: {
             // retcode
             retcode = input.readUInt32();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 90) {
-              break;
-            }
-          }
-          case 90: {
-            // rint2 [packed=true]
-            input.readPackedUInt32(rint2, tag);
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 106) {
-              break;
-            }
-          }
-          case 106: {
-            // unlockedExpeditionIdList [packed=true]
-            input.readPackedUInt32(unlockedExpeditionIdList, tag);
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 122) {
-              break;
-            }
-          }
-          case 122: {
-            // unlockedActivityExpeditionIdList [packed=true]
-            input.readPackedUInt32(unlockedActivityExpeditionIdList, tag);
-            bitField0_ |= 0x00000010;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
             if (tag != 0) {
               break;
@@ -584,24 +169,6 @@ public final class GetExpeditionDataScRspOuterClass {
             tag = input.readTag();
             break;
           }
-          case 88: {
-            // rint2 [packed=false]
-            tag = input.readRepeatedUInt32(rint2, tag);
-            bitField0_ |= 0x00000004;
-            break;
-          }
-          case 104: {
-            // unlockedExpeditionIdList [packed=false]
-            tag = input.readRepeatedUInt32(unlockedExpeditionIdList, tag);
-            bitField0_ |= 0x00000008;
-            break;
-          }
-          case 120: {
-            // unlockedActivityExpeditionIdList [packed=false]
-            tag = input.readRepeatedUInt32(unlockedActivityExpeditionIdList, tag);
-            bitField0_ |= 0x00000010;
-            break;
-          }
         }
       }
     }
@@ -610,19 +177,7 @@ public final class GetExpeditionDataScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.teamCount, teamCount);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeUInt32(FieldNames.retcode, retcode);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedUInt32(FieldNames.rint2, rint2);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRepeatedUInt32(FieldNames.unlockedExpeditionIdList, unlockedExpeditionIdList);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRepeatedUInt32(FieldNames.unlockedActivityExpeditionIdList, unlockedActivityExpeditionIdList);
       }
       output.endObject();
     }
@@ -634,58 +189,11 @@ public final class GetExpeditionDataScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -201715534:
-          case -1167852371: {
-            if (input.isAtField(FieldNames.teamCount)) {
-              if (!input.trySkipNullValue()) {
-                teamCount = input.readUInt32();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           case 1097936398: {
             if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
                 retcode = input.readUInt32();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 108518805: {
-            if (input.isAtField(FieldNames.rint2)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(rint2);
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1867571779:
-          case 1692835552: {
-            if (input.isAtField(FieldNames.unlockedExpeditionIdList)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(unlockedExpeditionIdList);
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -1327389716:
-          case 442971096: {
-            if (input.isAtField(FieldNames.unlockedActivityExpeditionIdList)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedUInt32(unlockedActivityExpeditionIdList);
-                bitField0_ |= 0x00000010;
+                bitField0_ |= 0x00000001;
               }
             } else {
               input.skipUnknownField();
@@ -745,15 +253,7 @@ public final class GetExpeditionDataScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName teamCount = FieldName.forField("teamCount", "team_count");
-
       static final FieldName retcode = FieldName.forField("retcode");
-
-      static final FieldName rint2 = FieldName.forField("rint2");
-
-      static final FieldName unlockedExpeditionIdList = FieldName.forField("unlockedExpeditionIdList", "unlocked_expedition_id_list");
-
-      static final FieldName unlockedActivityExpeditionIdList = FieldName.forField("unlockedActivityExpeditionIdList", "unlocked_activity_expedition_id_list");
     }
   }
 }

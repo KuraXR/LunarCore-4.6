@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemList.proto";
+
+message ClientMail {
+  optional int64 time = 10;
+  optional int64 expire_time = 5;
+  optional uint32 id = 3;
+  optional uint32 template_id = 2;
+  optional bool is_read = 11;
+  optional ItemList attachment = 13;
+  optional string content = 8;
+  optional string sender = 1;
+  optional string title = 7;
+  repeated string para_list = 9;
+}

@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeInfo.proto";
+import "LineupInfo.proto";
+import "SceneInfo.proto";
+
+message StartPartialChallengeScRsp {
+  optional uint32 retcode = 13;
+  optional LineupInfo lineup = 10;
+  optional ChallengeInfo challenge_info = 12;
+  optional SceneInfo scene = 7;
+}

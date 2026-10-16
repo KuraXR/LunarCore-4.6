@@ -19,19 +19,11 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_two = 7;</code>
      */
     private int storyBuffTwo;
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_one = 12;</code>
      */
     private int storyBuffOne;
@@ -47,10 +39,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_two = 7;</code>
      * @return whether the storyBuffTwo field is set
      */
@@ -59,10 +47,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_two = 7;</code>
      * @return this
      */
@@ -73,10 +57,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_two = 7;</code>
      * @return the storyBuffTwo
      */
@@ -85,10 +65,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_two = 7;</code>
      * @param value the storyBuffTwo to set
      * @return this
@@ -100,10 +76,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_one = 12;</code>
      * @return whether the storyBuffOne field is set
      */
@@ -112,10 +84,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_one = 12;</code>
      * @return this
      */
@@ -126,10 +94,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_one = 12;</code>
      * @return the storyBuffOne
      */
@@ -138,10 +102,6 @@ public final class StartChallengeStoryBuffInfoOuterClass {
     }
 
     /**
-     * <pre>
-     *  ?
-     * </pre>
-     *
      * <code>optional uint32 story_buff_one = 12;</code>
      * @param value the storyBuffOne to set
      * @return this

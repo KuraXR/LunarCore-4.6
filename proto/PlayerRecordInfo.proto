@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "PlayerCollectionInfo.proto";
+
+message PlayerRecordInfo {
+  optional PlayerCollectionInfo collection_info = 10;
+}

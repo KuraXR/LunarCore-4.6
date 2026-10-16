@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message HeadIconFrameInfo {
+  optional uint32 head_icon_frame_id = 1;
+}

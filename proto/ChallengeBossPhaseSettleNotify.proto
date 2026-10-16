@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message ChallengeBossPhaseSettleNotify {
+  optional uint32 challenge_score = 8;
+  optional uint32 challenge_id = 1;
+  optional uint32 stars = 7;
+  optional uint32 phase = 9;
+  optional uint32 score_two = 10;
+  optional bool is_win = 12;
+}

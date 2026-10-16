@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message StaminaInfoScNotify {
+  optional int64 next_recover_time = 4;
+  optional uint32 stamina = 3;
+  optional uint32 reserve_stamina = 7;
+}

@@ -10,7 +10,6 @@ import us.hebi.quickbuf.MessageFactory;
 import us.hebi.quickbuf.ProtoMessage;
 import us.hebi.quickbuf.ProtoSink;
 import us.hebi.quickbuf.ProtoSource;
-import us.hebi.quickbuf.RepeatedMessage;
 
 public final class MainMissionCustomValueOuterClass {
   /**
@@ -20,19 +19,9 @@ public final class MainMissionCustomValueOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 main_mission_id = 3;</code>
+     * <code>optional uint32 main_mission_id = 4;</code>
      */
     private int mainMissionId;
-
-    /**
-     * <code>optional .MissionStatus status = 10;</code>
-     */
-    private int status;
-
-    /**
-     * <code>repeated .MissionCustomValueData custom_value_list = 2;</code>
-     */
-    private final RepeatedMessage<MissionCustomValueDataOuterClass.MissionCustomValueData> customValueList = RepeatedMessage.newEmptyInstance(MissionCustomValueDataOuterClass.MissionCustomValueData.getFactory());
 
     private MainMissionCustomValue() {
     }
@@ -45,7 +34,7 @@ public final class MainMissionCustomValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 main_mission_id = 3;</code>
+     * <code>optional uint32 main_mission_id = 4;</code>
      * @return whether the mainMissionId field is set
      */
     public boolean hasMainMissionId() {
@@ -53,7 +42,7 @@ public final class MainMissionCustomValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 main_mission_id = 3;</code>
+     * <code>optional uint32 main_mission_id = 4;</code>
      * @return this
      */
     public MainMissionCustomValue clearMainMissionId() {
@@ -63,7 +52,7 @@ public final class MainMissionCustomValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 main_mission_id = 3;</code>
+     * <code>optional uint32 main_mission_id = 4;</code>
      * @return the mainMissionId
      */
     public int getMainMissionId() {
@@ -71,7 +60,7 @@ public final class MainMissionCustomValueOuterClass {
     }
 
     /**
-     * <code>optional uint32 main_mission_id = 3;</code>
+     * <code>optional uint32 main_mission_id = 4;</code>
      * @param value the mainMissionId to set
      * @return this
      */
@@ -81,148 +70,12 @@ public final class MainMissionCustomValueOuterClass {
       return this;
     }
 
-    /**
-     * <code>optional .MissionStatus status = 10;</code>
-     * @return whether the status field is set
-     */
-    public boolean hasStatus() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional .MissionStatus status = 10;</code>
-     * @return this
-     */
-    public MainMissionCustomValue clearStatus() {
-      bitField0_ &= ~0x00000002;
-      status = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional .MissionStatus status = 10;</code>
-     * @return the status
-     */
-    public MissionStatusOuterClass.MissionStatus getStatus() {
-      return MissionStatusOuterClass.MissionStatus.forNumber(status);
-    }
-
-    /**
-     * Gets the value of the internal enum store. The result is
-     * equivalent to {@link MainMissionCustomValue#getStatus()}.getNumber().
-     *
-     * @return numeric wire representation
-     */
-    public int getStatusValue() {
-      return status;
-    }
-
-    /**
-     * Sets the value of the internal enum store. This does not
-     * do any validity checks, so be sure to use appropriate value
-     * constants from {@link MissionStatusOuterClass.MissionStatus}. Setting an invalid value
-     * can cause {@link MainMissionCustomValue#getStatus()} to return null
-     *
-     * @param value the numeric wire value to set
-     * @return this
-     */
-    public MainMissionCustomValue setStatusValue(final int value) {
-      bitField0_ |= 0x00000002;
-      status = value;
-      return this;
-    }
-
-    /**
-     * <code>optional .MissionStatus status = 10;</code>
-     * @param value the status to set
-     * @return this
-     */
-    public MainMissionCustomValue setStatus(final MissionStatusOuterClass.MissionStatus value) {
-      bitField0_ |= 0x00000002;
-      status = value.getNumber();
-      return this;
-    }
-
-    /**
-     * <code>repeated .MissionCustomValueData custom_value_list = 2;</code>
-     * @return whether the customValueList field is set
-     */
-    public boolean hasCustomValueList() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>repeated .MissionCustomValueData custom_value_list = 2;</code>
-     * @return this
-     */
-    public MainMissionCustomValue clearCustomValueList() {
-      bitField0_ &= ~0x00000004;
-      customValueList.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated .MissionCustomValueData custom_value_list = 2;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableCustomValueList()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedMessage<MissionCustomValueDataOuterClass.MissionCustomValueData> getCustomValueList(
-        ) {
-      return customValueList;
-    }
-
-    /**
-     * <code>repeated .MissionCustomValueData custom_value_list = 2;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<MissionCustomValueDataOuterClass.MissionCustomValueData> getMutableCustomValueList(
-        ) {
-      bitField0_ |= 0x00000004;
-      return customValueList;
-    }
-
-    /**
-     * <code>repeated .MissionCustomValueData custom_value_list = 2;</code>
-     * @param value the customValueList to add
-     * @return this
-     */
-    public MainMissionCustomValue addCustomValueList(
-        final MissionCustomValueDataOuterClass.MissionCustomValueData value) {
-      bitField0_ |= 0x00000004;
-      customValueList.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .MissionCustomValueData custom_value_list = 2;</code>
-     * @param values the customValueList to add
-     * @return this
-     */
-    public MainMissionCustomValue addAllCustomValueList(
-        final MissionCustomValueDataOuterClass.MissionCustomValueData... values) {
-      bitField0_ |= 0x00000004;
-      customValueList.addAll(values);
-      return this;
-    }
-
     @Override
     public MainMissionCustomValue copyFrom(final MainMissionCustomValue other) {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
         mainMissionId = other.mainMissionId;
-        status = other.status;
-        customValueList.copyFrom(other.customValueList);
       }
       return this;
     }
@@ -236,12 +89,6 @@ public final class MainMissionCustomValueOuterClass {
       if (other.hasMainMissionId()) {
         setMainMissionId(other.mainMissionId);
       }
-      if (other.hasStatus()) {
-        setStatusValue(other.status);
-      }
-      if (other.hasCustomValueList()) {
-        getMutableCustomValueList().addAll(other.customValueList);
-      }
       return this;
     }
 
@@ -253,8 +100,6 @@ public final class MainMissionCustomValueOuterClass {
       cachedSize = -1;
       bitField0_ = 0;
       mainMissionId = 0;
-      status = 0;
-      customValueList.clear();
       return this;
     }
 
@@ -265,7 +110,6 @@ public final class MainMissionCustomValueOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      customValueList.clearQuick();
       return this;
     }
 
@@ -279,26 +123,14 @@ public final class MainMissionCustomValueOuterClass {
       }
       MainMissionCustomValue other = (MainMissionCustomValue) o;
       return bitField0_ == other.bitField0_
-        && (!hasMainMissionId() || mainMissionId == other.mainMissionId)
-        && (!hasStatus() || status == other.status)
-        && (!hasCustomValueList() || customValueList.equals(other.customValueList));
+        && (!hasMainMissionId() || mainMissionId == other.mainMissionId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 32);
         output.writeUInt32NoTag(mainMissionId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeEnumNoTag(status);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < customValueList.length(); i++) {
-          output.writeRawByte((byte) 18);
-          output.writeMessageNoTag(customValueList.get(i));
-        }
       }
     }
 
@@ -307,12 +139,6 @@ public final class MainMissionCustomValueOuterClass {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(mainMissionId);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeEnumSizeNoTag(status);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * customValueList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(customValueList);
       }
       return size;
     }
@@ -324,31 +150,11 @@ public final class MainMissionCustomValueOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 32: {
             // mainMissionId
             mainMissionId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 80) {
-              break;
-            }
-          }
-          case 80: {
-            // status
-            final int value = input.readInt32();
-            if (MissionStatusOuterClass.MissionStatus.forNumber(value) != null) {
-              status = value;
-              bitField0_ |= 0x00000002;
-            }
-            tag = input.readTag();
-            if (tag != 18) {
-              break;
-            }
-          }
-          case 18: {
-            // customValueList
-            tag = input.readRepeatedMessage(customValueList, tag);
-            bitField0_ |= 0x00000004;
             if (tag != 0) {
               break;
             }
@@ -373,12 +179,6 @@ public final class MainMissionCustomValueOuterClass {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeUInt32(FieldNames.mainMissionId, mainMissionId);
       }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeEnum(FieldNames.status, status, MissionStatusOuterClass.MissionStatus.converter());
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedMessage(FieldNames.customValueList, customValueList);
-      }
       output.endObject();
     }
 
@@ -395,34 +195,6 @@ public final class MainMissionCustomValueOuterClass {
               if (!input.trySkipNullValue()) {
                 mainMissionId = input.readUInt32();
                 bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case -892481550: {
-            if (input.isAtField(FieldNames.status)) {
-              if (!input.trySkipNullValue()) {
-                final MissionStatusOuterClass.MissionStatus value = input.readEnum(MissionStatusOuterClass.MissionStatus.converter());
-                if (value != null) {
-                  status = value.getNumber();
-                  bitField0_ |= 0x00000002;
-                } else {
-                  input.skipUnknownEnumValue();
-                }
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 2009823550:
-          case 1803812922: {
-            if (input.isAtField(FieldNames.customValueList)) {
-              if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(customValueList);
-                bitField0_ |= 0x00000004;
               }
             } else {
               input.skipUnknownField();
@@ -483,10 +255,6 @@ public final class MainMissionCustomValueOuterClass {
      */
     static class FieldNames {
       static final FieldName mainMissionId = FieldName.forField("mainMissionId", "main_mission_id");
-
-      static final FieldName status = FieldName.forField("status");
-
-      static final FieldName customValueList = FieldName.forField("customValueList", "custom_value_list");
     }
   }
 }

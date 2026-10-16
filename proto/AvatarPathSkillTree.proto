@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message AvatarPathSkillTree {
+  optional uint32 anchor_point_id = 8;
+  optional uint32 level = 11;
+}

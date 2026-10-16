@@ -20,17 +20,17 @@ public final class UpdateMarkChestCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 mark_avatar_id = 10;</code>
+     * <code>optional uint32 mark_avatar_id = 9;</code>
      */
     private int markAvatarId;
 
     /**
-     * <code>optional uint32 func_id = 15;</code>
+     * <code>optional uint32 func_id = 13;</code>
      */
     private int funcId;
 
     /**
-     * <code>repeated .MapPropDefInfo chest_prop_def_list = 8;</code>
+     * <code>repeated .MapPropDefInfo chest_prop_def_list = 11;</code>
      */
     private final RepeatedMessage<MapPropDefInfoOuterClass.MapPropDefInfo> chestPropDefList = RepeatedMessage.newEmptyInstance(MapPropDefInfoOuterClass.MapPropDefInfo.getFactory());
 
@@ -45,7 +45,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 mark_avatar_id = 10;</code>
+     * <code>optional uint32 mark_avatar_id = 9;</code>
      * @return whether the markAvatarId field is set
      */
     public boolean hasMarkAvatarId() {
@@ -53,7 +53,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 mark_avatar_id = 10;</code>
+     * <code>optional uint32 mark_avatar_id = 9;</code>
      * @return this
      */
     public UpdateMarkChestCsReq clearMarkAvatarId() {
@@ -63,7 +63,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 mark_avatar_id = 10;</code>
+     * <code>optional uint32 mark_avatar_id = 9;</code>
      * @return the markAvatarId
      */
     public int getMarkAvatarId() {
@@ -71,7 +71,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 mark_avatar_id = 10;</code>
+     * <code>optional uint32 mark_avatar_id = 9;</code>
      * @param value the markAvatarId to set
      * @return this
      */
@@ -82,7 +82,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 func_id = 15;</code>
+     * <code>optional uint32 func_id = 13;</code>
      * @return whether the funcId field is set
      */
     public boolean hasFuncId() {
@@ -90,7 +90,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 func_id = 15;</code>
+     * <code>optional uint32 func_id = 13;</code>
      * @return this
      */
     public UpdateMarkChestCsReq clearFuncId() {
@@ -100,7 +100,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 func_id = 15;</code>
+     * <code>optional uint32 func_id = 13;</code>
      * @return the funcId
      */
     public int getFuncId() {
@@ -108,7 +108,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 func_id = 15;</code>
+     * <code>optional uint32 func_id = 13;</code>
      * @param value the funcId to set
      * @return this
      */
@@ -119,7 +119,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .MapPropDefInfo chest_prop_def_list = 8;</code>
+     * <code>repeated .MapPropDefInfo chest_prop_def_list = 11;</code>
      * @return whether the chestPropDefList field is set
      */
     public boolean hasChestPropDefList() {
@@ -127,7 +127,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .MapPropDefInfo chest_prop_def_list = 8;</code>
+     * <code>repeated .MapPropDefInfo chest_prop_def_list = 11;</code>
      * @return this
      */
     public UpdateMarkChestCsReq clearChestPropDefList() {
@@ -137,7 +137,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .MapPropDefInfo chest_prop_def_list = 8;</code>
+     * <code>repeated .MapPropDefInfo chest_prop_def_list = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -151,7 +151,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .MapPropDefInfo chest_prop_def_list = 8;</code>
+     * <code>repeated .MapPropDefInfo chest_prop_def_list = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -165,7 +165,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .MapPropDefInfo chest_prop_def_list = 8;</code>
+     * <code>repeated .MapPropDefInfo chest_prop_def_list = 11;</code>
      * @param value the chestPropDefList to add
      * @return this
      */
@@ -177,7 +177,7 @@ public final class UpdateMarkChestCsReqOuterClass {
     }
 
     /**
-     * <code>repeated .MapPropDefInfo chest_prop_def_list = 8;</code>
+     * <code>repeated .MapPropDefInfo chest_prop_def_list = 11;</code>
      * @param values the chestPropDefList to add
      * @return this
      */
@@ -260,16 +260,16 @@ public final class UpdateMarkChestCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 80);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(markAvatarId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(funcId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < chestPropDefList.length(); i++) {
-          output.writeRawByte((byte) 66);
+          output.writeRawByte((byte) 90);
           output.writeMessageNoTag(chestPropDefList.get(i));
         }
       }
@@ -297,25 +297,25 @@ public final class UpdateMarkChestCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 80: {
+          case 72: {
             // markAvatarId
             markAvatarId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 104) {
               break;
             }
           }
-          case 120: {
+          case 104: {
             // funcId
             funcId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 66) {
+            if (tag != 90) {
               break;
             }
           }
-          case 66: {
+          case 90: {
             // chestPropDefList
             tag = input.readRepeatedMessage(chestPropDefList, tag);
             bitField0_ |= 0x00000004;

@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MotionInfo.proto";
+
+message EntityMotion {
+  optional uint32 map_layer = 13;
+  optional uint32 entity_id = 2;
+  optional MotionInfo motion = 11;
+}

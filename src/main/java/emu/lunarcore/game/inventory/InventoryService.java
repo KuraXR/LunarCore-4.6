@@ -109,6 +109,100 @@ public class InventoryService extends BaseGameService {
         return returnItems;
     }
 
+    public List<GameItem> quickLevelUpAvatar(Player player, int avatarId, int targetLevel, int targetPromotion, Collection<ItemParam> expItems) {
+        // Get avatar
+        GameAvatar avatar = player.getAvatarById(avatarId);
+        if (avatar == null) return null;
+
+        // The client leaves the promotion out when it does not change
+        targetPromotion = Math.max(targetPromotion, avatar.getPromotion());
+        if (targetPromotion > avatar.getExcel().getMaxPromotion()) return null;
+
+        // Ascension costs for every promotion on the way
+        var cost = new ItemParamMap();
+
+        for (int promotion = avatar.getPromotion(); promotion < targetPromotion; promotion++) {
+            AvatarPromotionExcel promoteData = GameData.getAvatarPromotionExcelMap().get(avatarId, promotion);
+            if (promoteData == null || player.getLevel() < promoteData.getPlayerLevelRequire() || player.getWorldLevel() < promoteData.getWorldLevelRequire()) {
+                return null;
+            }
+
+            cost.add(promoteData.getPromotionCostList());
+        }
+
+        // The target level must fit the target promotion
+        AvatarPromotionExcel targetData = GameData.getAvatarPromotionExcelMap().get(avatarId, targetPromotion);
+        if (targetData == null || targetLevel < avatar.getLevel() || targetLevel > targetData.getMaxLevel()) return null;
+
+        // Exp needed to reach the target level
+        int needed = 0;
+
+        if (targetLevel > avatar.getLevel()) {
+            needed = -avatar.getExp();
+
+            for (int level = avatar.getLevel(); level < targetLevel; level++) {
+                needed += GameData.getAvatarExpRequired(avatar.getExcel().getExpGroup(), level);
+            }
+        }
+
+        // Exp from the items the client picked
+        int amount = 0;
+
+        for (ItemParam param : expItems) {
+            GameItem item = player.getInventory().getItemByParam(param);
+            if (item == null || item.getExcel().getAvatarExp() == 0 || item.getCount() < param.getCount()) {
+                return null;
+            }
+
+            amount += item.getExcel().getAvatarExp() * param.getCount();
+        }
+
+        if (amount < needed) return null;
+
+        // Leveling costs credits like a normal level up
+        cost.add(GameConstants.MATERIAL_COIN_ID, amount / 10);
+
+        var costList = cost.toItemParamList();
+        if (!player.getInventory().hasItems(costList)) return null;
+
+        // Pay items
+        player.getInventory().removeItemsByParams(expItems);
+        player.getInventory().removeItemsByParams(costList);
+
+        // Promote and level up
+        avatar.setPromotion(targetPromotion);
+
+        if (targetLevel > avatar.getLevel()) {
+            avatar.setLevel(targetLevel);
+            avatar.setExp(0);
+        }
+
+        avatar.save();
+        player.save();
+
+        // Return leftover exp as exp items
+        int leftover = amount - needed;
+        var leftoverItems = new ItemParamMap();
+
+        while (GameDepot.getAvatarExpExcels().size() > 0) {
+            int oldAmount = leftover;
+            for (var expExcel : GameDepot.getAvatarExpExcels()) {
+                if (leftover >= expExcel.getExp()) {
+                    leftoverItems.put(expExcel.getItemID(), leftoverItems.get(expExcel.getItemID()) + 1);
+                    leftover -= expExcel.getExp();
+                    break;
+                }
+            }
+            if (oldAmount == leftover) break;
+        }
+
+        List<GameItem> returnItems = player.getInventory().addItems(leftoverItems);
+
+        // Send packets
+        player.sendPacket(new PacketPlayerSyncScNotify(avatar));
+        return returnItems;
+    }
+
     public boolean promoteAvatar(Player player, int avatarId) {
         // Get avatar
         GameAvatar avatar = player.getAvatarById(avatarId);
@@ -355,6 +449,105 @@ public class InventoryService extends BaseGameService {
         }
         
         // Create leftover exp items
+        List<GameItem> returnItems = player.getInventory().addItems(leftoverItems);
+
+        // Send packets
+        player.sendPacket(new PacketPlayerSyncScNotify(equip));
+        return returnItems;
+    }
+
+    public List<GameItem> quickLevelUpEquipment(Player player, int equipId, int targetLevel, int targetPromotion, Collection<ItemParam> expItems) {
+        // Get equipment
+        GameItem equip = player.getInventory().getItemByUid(equipId);
+
+        if (equip == null || !equip.getExcel().isEquipment()) {
+            return null;
+        }
+
+        // The client leaves the promotion out when it does not change
+        targetPromotion = Math.max(targetPromotion, equip.getPromotion());
+        if (targetPromotion > equip.getExcel().getEquipmentExcel().getMaxPromotion()) return null;
+
+        // Ascension costs for every promotion on the way
+        var cost = new ItemParamMap();
+
+        for (int promotion = equip.getPromotion(); promotion < targetPromotion; promotion++) {
+            EquipmentPromotionExcel promoteData = GameData.getEquipmentPromotionExcelMap().get(equip.getItemId(), promotion);
+            if (promoteData == null || player.getLevel() < promoteData.getPlayerLevelRequire() || player.getWorldLevel() < promoteData.getWorldLevelRequire()) {
+                return null;
+            }
+
+            cost.add(promoteData.getPromotionCostList());
+            cost.add(GameConstants.MATERIAL_COIN_ID, promoteData.getPromotionCostCoin());
+        }
+
+        // The target level must fit the target promotion
+        EquipmentPromotionExcel targetData = GameData.getEquipmentPromotionExcelMap().get(equip.getItemId(), targetPromotion);
+        if (targetData == null || targetLevel < equip.getLevel() || targetLevel > targetData.getMaxLevel()) return null;
+
+        // Exp needed to reach the target level
+        int expType = equip.getExcel().getEquipmentExcel().getExpType();
+        int needed = 0;
+
+        if (targetLevel > equip.getLevel()) {
+            needed = -equip.getExp();
+
+            for (int level = equip.getLevel(); level < targetLevel; level++) {
+                needed += GameData.getEquipmentExpRequired(expType, level);
+            }
+        }
+
+        // Exp from the items the client picked
+        int amount = 0;
+
+        for (ItemParam param : expItems) {
+            GameItem item = player.getInventory().getItemByParam(param);
+            if (item == null || item.isLocked() || item.getCount() < param.getCount()) {
+                return null;
+            }
+
+            if (item.getExcel().getEquipmentExp() > 0) {
+                amount += item.getExcel().getEquipmentExp() * param.getCount();
+                cost.add(GameConstants.MATERIAL_COIN_ID, item.getExcel().getEquipmentExpCost() * param.getCount());
+            }
+        }
+
+        if (amount < needed) return null;
+
+        var costList = cost.toItemParamList();
+        if (!player.getInventory().hasItems(costList)) return null;
+
+        // Pay items
+        player.getInventory().removeItemsByParams(expItems);
+        player.getInventory().removeItemsByParams(costList);
+
+        // Promote and level up
+        equip.setPromotion(targetPromotion);
+
+        if (targetLevel > equip.getLevel()) {
+            equip.setLevel(targetLevel);
+            equip.setExp(0);
+        }
+
+        equip.save();
+        player.save();
+
+        // Return leftover exp as exp items
+        int leftover = amount - needed;
+        var leftoverItems = new ItemParamMap();
+
+        while (GameDepot.getEquipmentExpExcels().size() > 0) {
+            int oldAmount = leftover;
+            for (var expExcel : GameDepot.getEquipmentExpExcels()) {
+                if (leftover >= expExcel.getExpProvide()) {
+                    leftoverItems.put(expExcel.getItemID(), leftoverItems.get(expExcel.getItemID()) + 1);
+                    leftover -= expExcel.getExpProvide();
+                    break;
+                }
+            }
+            if (oldAmount == leftover) break;
+        }
+
         List<GameItem> returnItems = player.getInventory().addItems(leftoverItems);
 
         // Send packets

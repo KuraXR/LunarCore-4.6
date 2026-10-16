@@ -20,35 +20,27 @@ public final class ChallengePeakLevelInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      */
     private int challengePeakId;
 
     /**
-     * <code>optional uint32 GGICFFIOOGP = 11;</code>
+     * <code>optional uint32 GGICFFIOOGP = 15;</code>
      */
     private int gGICFFIOOGP;
 
     /**
-     * <pre>
-     * repeated EEBPHJCNBFO FMFGOJHCCNL = 1;
-     * </pre>
-     *
-     * <code>optional bool FGEGDFGKDNB = 7;</code>
+     * <code>optional bool FGEGDFGKDNB = 4;</code>
      */
     private boolean fGEGDFGKDNB;
 
     /**
-     * <pre>
-     * repeated JJJNDMMGGKI FBLKPDNIJDD = 5;
-     * </pre>
-     *
-     * <code>repeated uint32 NKGLPNJHEON = 6;</code>
+     * <code>repeated uint32 NKGLPNJHEON = 3;</code>
      */
     private final RepeatedInt nKGLPNJHEON = RepeatedInt.newEmptyInstance();
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 11;</code>
      */
     private final RepeatedInt challengeAvatarIdList = RepeatedInt.newEmptyInstance();
 
@@ -63,7 +55,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @return whether the challengePeakId field is set
      */
     public boolean hasChallengePeakId() {
@@ -71,7 +63,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @return this
      */
     public ChallengePeakLevelInfo clearChallengePeakId() {
@@ -81,7 +73,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @return the challengePeakId
      */
     public int getChallengePeakId() {
@@ -89,7 +81,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 challenge_peak_id = 3;</code>
+     * <code>optional uint32 challenge_peak_id = 13;</code>
      * @param value the challengePeakId to set
      * @return this
      */
@@ -100,7 +92,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 GGICFFIOOGP = 11;</code>
+     * <code>optional uint32 GGICFFIOOGP = 15;</code>
      * @return whether the gGICFFIOOGP field is set
      */
     public boolean hasGGICFFIOOGP() {
@@ -108,7 +100,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 GGICFFIOOGP = 11;</code>
+     * <code>optional uint32 GGICFFIOOGP = 15;</code>
      * @return this
      */
     public ChallengePeakLevelInfo clearGGICFFIOOGP() {
@@ -118,7 +110,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 GGICFFIOOGP = 11;</code>
+     * <code>optional uint32 GGICFFIOOGP = 15;</code>
      * @return the gGICFFIOOGP
      */
     public int getGGICFFIOOGP() {
@@ -126,7 +118,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 GGICFFIOOGP = 11;</code>
+     * <code>optional uint32 GGICFFIOOGP = 15;</code>
      * @param value the gGICFFIOOGP to set
      * @return this
      */
@@ -137,11 +129,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated EEBPHJCNBFO FMFGOJHCCNL = 1;
-     * </pre>
-     *
-     * <code>optional bool FGEGDFGKDNB = 7;</code>
+     * <code>optional bool FGEGDFGKDNB = 4;</code>
      * @return whether the fGEGDFGKDNB field is set
      */
     public boolean hasFGEGDFGKDNB() {
@@ -149,11 +137,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated EEBPHJCNBFO FMFGOJHCCNL = 1;
-     * </pre>
-     *
-     * <code>optional bool FGEGDFGKDNB = 7;</code>
+     * <code>optional bool FGEGDFGKDNB = 4;</code>
      * @return this
      */
     public ChallengePeakLevelInfo clearFGEGDFGKDNB() {
@@ -163,11 +147,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated EEBPHJCNBFO FMFGOJHCCNL = 1;
-     * </pre>
-     *
-     * <code>optional bool FGEGDFGKDNB = 7;</code>
+     * <code>optional bool FGEGDFGKDNB = 4;</code>
      * @return the fGEGDFGKDNB
      */
     public boolean getFGEGDFGKDNB() {
@@ -175,11 +155,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated EEBPHJCNBFO FMFGOJHCCNL = 1;
-     * </pre>
-     *
-     * <code>optional bool FGEGDFGKDNB = 7;</code>
+     * <code>optional bool FGEGDFGKDNB = 4;</code>
      * @param value the fGEGDFGKDNB to set
      * @return this
      */
@@ -190,11 +166,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated JJJNDMMGGKI FBLKPDNIJDD = 5;
-     * </pre>
-     *
-     * <code>repeated uint32 NKGLPNJHEON = 6;</code>
+     * <code>repeated uint32 NKGLPNJHEON = 3;</code>
      * @return whether the nKGLPNJHEON field is set
      */
     public boolean hasNKGLPNJHEON() {
@@ -202,11 +174,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated JJJNDMMGGKI FBLKPDNIJDD = 5;
-     * </pre>
-     *
-     * <code>repeated uint32 NKGLPNJHEON = 6;</code>
+     * <code>repeated uint32 NKGLPNJHEON = 3;</code>
      * @return this
      */
     public ChallengePeakLevelInfo clearNKGLPNJHEON() {
@@ -216,11 +184,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated JJJNDMMGGKI FBLKPDNIJDD = 5;
-     * </pre>
-     *
-     * <code>repeated uint32 NKGLPNJHEON = 6;</code>
+     * <code>repeated uint32 NKGLPNJHEON = 3;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -234,11 +198,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated JJJNDMMGGKI FBLKPDNIJDD = 5;
-     * </pre>
-     *
-     * <code>repeated uint32 NKGLPNJHEON = 6;</code>
+     * <code>repeated uint32 NKGLPNJHEON = 3;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -252,11 +212,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated JJJNDMMGGKI FBLKPDNIJDD = 5;
-     * </pre>
-     *
-     * <code>repeated uint32 NKGLPNJHEON = 6;</code>
+     * <code>repeated uint32 NKGLPNJHEON = 3;</code>
      * @param value the nKGLPNJHEON to add
      * @return this
      */
@@ -267,11 +223,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated JJJNDMMGGKI FBLKPDNIJDD = 5;
-     * </pre>
-     *
-     * <code>repeated uint32 NKGLPNJHEON = 6;</code>
+     * <code>repeated uint32 NKGLPNJHEON = 3;</code>
      * @param values the nKGLPNJHEON to add
      * @return this
      */
@@ -282,7 +234,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 11;</code>
      * @return whether the challengeAvatarIdList field is set
      */
     public boolean hasChallengeAvatarIdList() {
@@ -290,7 +242,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 11;</code>
      * @return this
      */
     public ChallengePeakLevelInfo clearChallengeAvatarIdList() {
@@ -300,7 +252,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 11;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -314,7 +266,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 11;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -328,7 +280,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 11;</code>
      * @param value the challengeAvatarIdList to add
      * @return this
      */
@@ -339,7 +291,7 @@ public final class ChallengePeakLevelInfoOuterClass {
     }
 
     /**
-     * <code>repeated uint32 challenge_avatar_id_list = 12;</code>
+     * <code>repeated uint32 challenge_avatar_id_list = 11;</code>
      * @param values the challengeAvatarIdList to add
      * @return this
      */
@@ -434,26 +386,26 @@ public final class ChallengePeakLevelInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 24);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(challengePeakId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 88);
+        output.writeRawByte((byte) 120);
         output.writeUInt32NoTag(gGICFFIOOGP);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 56);
+        output.writeRawByte((byte) 32);
         output.writeBoolNoTag(fGEGDFGKDNB);
       }
       if ((bitField0_ & 0x00000008) != 0) {
         for (int i = 0; i < nKGLPNJHEON.length(); i++) {
-          output.writeRawByte((byte) 48);
+          output.writeRawByte((byte) 24);
           output.writeUInt32NoTag(nKGLPNJHEON.array()[i]);
         }
       }
       if ((bitField0_ & 0x00000010) != 0) {
         for (int i = 0; i < challengeAvatarIdList.length(); i++) {
-          output.writeRawByte((byte) 96);
+          output.writeRawByte((byte) 88);
           output.writeUInt32NoTag(challengeAvatarIdList.array()[i]);
         }
       }
@@ -487,43 +439,43 @@ public final class ChallengePeakLevelInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 24: {
+          case 104: {
             // challengePeakId
             challengePeakId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 88) {
+            if (tag != 120) {
               break;
             }
           }
-          case 88: {
+          case 120: {
             // gGICFFIOOGP
             gGICFFIOOGP = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 56) {
+            if (tag != 32) {
               break;
             }
           }
-          case 56: {
+          case 32: {
             // fGEGDFGKDNB
             fGEGDFGKDNB = input.readBool();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 50) {
+            if (tag != 26) {
               break;
             }
           }
-          case 50: {
+          case 26: {
             // nKGLPNJHEON [packed=true]
             input.readPackedUInt32(nKGLPNJHEON, tag);
             bitField0_ |= 0x00000008;
             tag = input.readTag();
-            if (tag != 98) {
+            if (tag != 90) {
               break;
             }
           }
-          case 98: {
+          case 90: {
             // challengeAvatarIdList [packed=true]
             input.readPackedUInt32(challengeAvatarIdList, tag);
             bitField0_ |= 0x00000010;
@@ -542,13 +494,13 @@ public final class ChallengePeakLevelInfoOuterClass {
             tag = input.readTag();
             break;
           }
-          case 48: {
+          case 24: {
             // nKGLPNJHEON [packed=false]
             tag = input.readRepeatedUInt32(nKGLPNJHEON, tag);
             bitField0_ |= 0x00000008;
             break;
           }
-          case 96: {
+          case 88: {
             // challengeAvatarIdList [packed=false]
             tag = input.readRepeatedUInt32(challengeAvatarIdList, tag);
             bitField0_ |= 0x00000010;

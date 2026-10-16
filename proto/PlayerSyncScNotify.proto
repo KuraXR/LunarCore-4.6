@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "AvatarSync.proto";
+import "BoardDataSync.proto";
+import "Equipment.proto";
+import "Material.proto";
+import "MissionSync.proto";
+import "PlayerBasicInfo.proto";
+import "PlayerOutfitInfo.proto";
+import "Relic.proto";
+
+message PlayerSyncScNotify {
+  optional AvatarSync avatar_sync = 11;
+  optional PlayerBasicInfo basic_info = 12;
+  optional MissionSync mission_sync = 2;
+  optional PlayerOutfitInfo player_outfit_data = 267;
+  optional BoardDataSync board_data_sync = 781;
+  repeated uint32 del_equipment_list = 4;
+  repeated uint32 del_relic_list = 15;
+  repeated Relic relic_list = 5;
+  repeated Equipment equipment_list = 7;
+  repeated Material material_list = 1;
+}

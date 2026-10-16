@@ -16,8 +16,8 @@ public class PacketGetSocialEventServerCacheScRsp extends BasePacket {
                 .setAddCoin(10000)
                 .setId(100);
 
-        var data = GetSocialEventServerCacheScRsp.newInstance()
-                .addSocialEvent(socialevent);
+        // 4.6 restructured the social event cache; send it empty
+        var data = GetSocialEventServerCacheScRsp.newInstance();
 
         this.setData(data);
     }

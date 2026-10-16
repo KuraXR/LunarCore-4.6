@@ -12,10 +12,6 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class RelicReccomendDataOuterClass {
   /**
-   * <pre>
-   * repeated OFNGPLJKLOJ BFDMGINBOIB = 14;
-   * </pre>
-   *
    * Protobuf type {@code RelicReccomendData}
    */
   public static final class RelicReccomendData extends ProtoMessage<RelicReccomendData> implements Cloneable {
@@ -25,10 +21,6 @@ public final class RelicReccomendDataOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated OFNGPLJKLOJ BFDMGINBOIB = 14;
-     * </pre>
-     *
      * @return a new empty instance of {@code RelicReccomendData}
      */
     public static RelicReccomendData newInstance() {

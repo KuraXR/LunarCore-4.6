@@ -13,29 +13,17 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class SwitchHandUpdateCsReqOuterClass {
   /**
-   * <pre>
-   *  DDPACOEBGOC
-   * </pre>
-   *
    * Protobuf type {@code SwitchHandUpdateCsReq}
    */
   public static final class SwitchHandUpdateCsReq extends ProtoMessage<SwitchHandUpdateCsReq> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  LJJNGIINDIB
-     * </pre>
-     *
      * <code>optional .SwitchHandData hand_data = 10;</code>
      */
     private final SwitchHandDataOuterClass.SwitchHandData handData = SwitchHandDataOuterClass.SwitchHandData.newInstance();
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 14;</code>
      */
     private final SwitchHandOpDataOuterClass.SwitchHandOpData opData = SwitchHandOpDataOuterClass.SwitchHandOpData.newInstance();
@@ -44,10 +32,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  DDPACOEBGOC
-     * </pre>
-     *
      * @return a new empty instance of {@code SwitchHandUpdateCsReq}
      */
     public static SwitchHandUpdateCsReq newInstance() {
@@ -55,10 +39,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  LJJNGIINDIB
-     * </pre>
-     *
      * <code>optional .SwitchHandData hand_data = 10;</code>
      * @return whether the handData field is set
      */
@@ -67,10 +47,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  LJJNGIINDIB
-     * </pre>
-     *
      * <code>optional .SwitchHandData hand_data = 10;</code>
      * @return this
      */
@@ -81,10 +57,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  LJJNGIINDIB
-     * </pre>
-     *
      * <code>optional .SwitchHandData hand_data = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -99,10 +71,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  LJJNGIINDIB
-     * </pre>
-     *
      * <code>optional .SwitchHandData hand_data = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -117,10 +85,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  LJJNGIINDIB
-     * </pre>
-     *
      * <code>optional .SwitchHandData hand_data = 10;</code>
      * @param value the handData to set
      * @return this
@@ -132,10 +96,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 14;</code>
      * @return whether the opData field is set
      */
@@ -144,10 +104,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 14;</code>
      * @return this
      */
@@ -158,10 +114,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 14;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -176,10 +128,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 14;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -194,10 +142,6 @@ public final class SwitchHandUpdateCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  ALOHEJACLLN
-     * </pre>
-     *
      * <code>optional .SwitchHandOpData op_data = 14;</code>
      * @param value the opData to set
      * @return this

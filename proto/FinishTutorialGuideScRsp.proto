@@ -1,0 +1,12 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ItemList.proto";
+import "TutorialGuide.proto";
+
+message FinishTutorialGuideScRsp {
+  optional uint32 retcode = 4;
+  optional ItemList reward = 3;
+  optional TutorialGuide tutorial_guide = 8;
+}

@@ -19,17 +19,17 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 caster_id = 8;</code>
+     * <code>optional uint32 caster_id = 2;</code>
      */
     private int casterId;
 
     /**
-     * <code>optional uint32 skill_index = 9;</code>
+     * <code>optional uint32 skill_index = 7;</code>
      */
     private int skillIndex;
 
     /**
-     * <code>optional uint32 attacked_group_id = 15;</code>
+     * <code>optional uint32 attacked_group_id = 13;</code>
      */
     private int attackedGroupId;
 
@@ -44,7 +44,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 caster_id = 8;</code>
+     * <code>optional uint32 caster_id = 2;</code>
      * @return whether the casterId field is set
      */
     public boolean hasCasterId() {
@@ -52,7 +52,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 caster_id = 8;</code>
+     * <code>optional uint32 caster_id = 2;</code>
      * @return this
      */
     public SceneCastSkillCostMpCsReq clearCasterId() {
@@ -62,7 +62,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 caster_id = 8;</code>
+     * <code>optional uint32 caster_id = 2;</code>
      * @return the casterId
      */
     public int getCasterId() {
@@ -70,7 +70,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 caster_id = 8;</code>
+     * <code>optional uint32 caster_id = 2;</code>
      * @param value the casterId to set
      * @return this
      */
@@ -81,7 +81,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 skill_index = 9;</code>
+     * <code>optional uint32 skill_index = 7;</code>
      * @return whether the skillIndex field is set
      */
     public boolean hasSkillIndex() {
@@ -89,7 +89,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 skill_index = 9;</code>
+     * <code>optional uint32 skill_index = 7;</code>
      * @return this
      */
     public SceneCastSkillCostMpCsReq clearSkillIndex() {
@@ -99,7 +99,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 skill_index = 9;</code>
+     * <code>optional uint32 skill_index = 7;</code>
      * @return the skillIndex
      */
     public int getSkillIndex() {
@@ -107,7 +107,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 skill_index = 9;</code>
+     * <code>optional uint32 skill_index = 7;</code>
      * @param value the skillIndex to set
      * @return this
      */
@@ -118,7 +118,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 15;</code>
+     * <code>optional uint32 attacked_group_id = 13;</code>
      * @return whether the attackedGroupId field is set
      */
     public boolean hasAttackedGroupId() {
@@ -126,7 +126,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 15;</code>
+     * <code>optional uint32 attacked_group_id = 13;</code>
      * @return this
      */
     public SceneCastSkillCostMpCsReq clearAttackedGroupId() {
@@ -136,7 +136,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 15;</code>
+     * <code>optional uint32 attacked_group_id = 13;</code>
      * @return the attackedGroupId
      */
     public int getAttackedGroupId() {
@@ -144,7 +144,7 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 attacked_group_id = 15;</code>
+     * <code>optional uint32 attacked_group_id = 13;</code>
      * @param value the attackedGroupId to set
      * @return this
      */
@@ -225,15 +225,15 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 64);
+        output.writeRawByte((byte) 16);
         output.writeUInt32NoTag(casterId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 72);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(skillIndex);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(attackedGroupId);
       }
     }
@@ -260,25 +260,25 @@ public final class SceneCastSkillCostMpCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 64: {
+          case 16: {
             // casterId
             casterId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 72) {
+            if (tag != 56) {
               break;
             }
           }
-          case 72: {
+          case 56: {
             // skillIndex
             skillIndex = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 104) {
               break;
             }
           }
-          case 120: {
+          case 104: {
             // attackedGroupId
             attackedGroupId = input.readUInt32();
             bitField0_ |= 0x00000004;

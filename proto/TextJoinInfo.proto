@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message TextJoinInfo {
+  optional uint32 text_item_id = 10;
+  optional uint32 text_item_config_id = 15;
+}

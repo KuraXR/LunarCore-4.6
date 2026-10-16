@@ -2,7 +2,6 @@
 package emu.lunarcore.proto;
 
 import java.io.IOException;
-import us.hebi.quickbuf.FieldName;
 import us.hebi.quickbuf.InvalidProtocolBufferException;
 import us.hebi.quickbuf.JsonSink;
 import us.hebi.quickbuf.JsonSource;
@@ -18,11 +17,6 @@ public final class RecallPetCsReqOuterClass {
   public static final class RecallPetCsReq extends ProtoMessage<RecallPetCsReq> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
-    /**
-     * <code>optional uint32 summoned_pet_id = 5;</code>
-     */
-    private int summonedPetId;
-
     private RecallPetCsReq() {
     }
 
@@ -33,50 +27,9 @@ public final class RecallPetCsReqOuterClass {
       return new RecallPetCsReq();
     }
 
-    /**
-     * <code>optional uint32 summoned_pet_id = 5;</code>
-     * @return whether the summonedPetId field is set
-     */
-    public boolean hasSummonedPetId() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <code>optional uint32 summoned_pet_id = 5;</code>
-     * @return this
-     */
-    public RecallPetCsReq clearSummonedPetId() {
-      bitField0_ &= ~0x00000001;
-      summonedPetId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 summoned_pet_id = 5;</code>
-     * @return the summonedPetId
-     */
-    public int getSummonedPetId() {
-      return summonedPetId;
-    }
-
-    /**
-     * <code>optional uint32 summoned_pet_id = 5;</code>
-     * @param value the summonedPetId to set
-     * @return this
-     */
-    public RecallPetCsReq setSummonedPetId(final int value) {
-      bitField0_ |= 0x00000001;
-      summonedPetId = value;
-      return this;
-    }
-
     @Override
     public RecallPetCsReq copyFrom(final RecallPetCsReq other) {
       cachedSize = other.cachedSize;
-      if ((bitField0_ | other.bitField0_) != 0) {
-        bitField0_ = other.bitField0_;
-        summonedPetId = other.summonedPetId;
-      }
       return this;
     }
 
@@ -86,9 +39,6 @@ public final class RecallPetCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasSummonedPetId()) {
-        setSummonedPetId(other.summonedPetId);
-      }
       return this;
     }
 
@@ -98,8 +48,6 @@ public final class RecallPetCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      bitField0_ = 0;
-      summonedPetId = 0;
       return this;
     }
 
@@ -109,7 +57,6 @@ public final class RecallPetCsReqOuterClass {
         return this;
       }
       cachedSize = -1;
-      bitField0_ = 0;
       return this;
     }
 
@@ -122,24 +69,16 @@ public final class RecallPetCsReqOuterClass {
         return false;
       }
       RecallPetCsReq other = (RecallPetCsReq) o;
-      return bitField0_ == other.bitField0_
-        && (!hasSummonedPetId() || summonedPetId == other.summonedPetId);
+      return true;
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
-      if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 40);
-        output.writeUInt32NoTag(summonedPetId);
-      }
     }
 
     @Override
     protected int computeSerializedSize() {
       int size = 0;
-      if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(summonedPetId);
-      }
       return size;
     }
 
@@ -150,15 +89,6 @@ public final class RecallPetCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 40: {
-            // summonedPetId
-            summonedPetId = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 0) {
-              break;
-            }
-          }
           case 0: {
             return this;
           }
@@ -176,9 +106,6 @@ public final class RecallPetCsReqOuterClass {
     @Override
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
-      if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.summonedPetId, summonedPetId);
-      }
       output.endObject();
     }
 
@@ -189,18 +116,6 @@ public final class RecallPetCsReqOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1942999750:
-          case 1818014746: {
-            if (input.isAtField(FieldNames.summonedPetId)) {
-              if (!input.trySkipNullValue()) {
-                summonedPetId = input.readUInt32();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           default: {
             input.skipUnknownField();
             break;
@@ -254,7 +169,6 @@ public final class RecallPetCsReqOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName summonedPetId = FieldName.forField("summonedPetId", "summoned_pet_id");
     }
   }
 }

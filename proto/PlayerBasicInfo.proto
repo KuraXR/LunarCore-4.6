@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message PlayerBasicInfo {
+  optional uint32 level = 2;
+  optional uint32 exp = 3;
+  optional uint32 stamina = 4;
+  optional uint32 mcoin = 5;
+  optional uint32 hcoin = 6;
+  optional uint32 scoin = 7;
+  optional uint32 world_level = 8;
+  optional string nickname = 1;
+}

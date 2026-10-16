@@ -20,17 +20,17 @@ public final class GetPamSkinDataScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
-     */
-    private int retcode;
-
-    /**
      * <code>optional uint32 current_pam_skin_id = 6;</code>
      */
     private int currentPamSkinId;
 
     /**
-     * <code>repeated uint32 unlocked_pam_skins = 10;</code>
+     * <code>optional uint32 retcode = 8;</code>
+     */
+    private int retcode;
+
+    /**
+     * <code>repeated uint32 unlocked_pam_skins = 15;</code>
      */
     private final RepeatedInt unlockedPamSkins = RepeatedInt.newEmptyInstance();
 
@@ -45,48 +45,11 @@ public final class GetPamSkinDataScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 2;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 2;</code>
-     * @return this
-     */
-    public GetPamSkinDataScRsp clearRetcode() {
-      bitField0_ &= ~0x00000001;
-      retcode = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 2;</code>
-     * @return the retcode
-     */
-    public int getRetcode() {
-      return retcode;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 2;</code>
-     * @param value the retcode to set
-     * @return this
-     */
-    public GetPamSkinDataScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000001;
-      retcode = value;
-      return this;
-    }
-
-    /**
      * <code>optional uint32 current_pam_skin_id = 6;</code>
      * @return whether the currentPamSkinId field is set
      */
     public boolean hasCurrentPamSkinId() {
-      return (bitField0_ & 0x00000002) != 0;
+      return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
@@ -94,7 +57,7 @@ public final class GetPamSkinDataScRspOuterClass {
      * @return this
      */
     public GetPamSkinDataScRsp clearCurrentPamSkinId() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       currentPamSkinId = 0;
       return this;
     }
@@ -113,13 +76,50 @@ public final class GetPamSkinDataScRspOuterClass {
      * @return this
      */
     public GetPamSkinDataScRsp setCurrentPamSkinId(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       currentPamSkinId = value;
       return this;
     }
 
     /**
-     * <code>repeated uint32 unlocked_pam_skins = 10;</code>
+     * <code>optional uint32 retcode = 8;</code>
+     * @return whether the retcode field is set
+     */
+    public boolean hasRetcode() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 8;</code>
+     * @return this
+     */
+    public GetPamSkinDataScRsp clearRetcode() {
+      bitField0_ &= ~0x00000002;
+      retcode = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 8;</code>
+     * @return the retcode
+     */
+    public int getRetcode() {
+      return retcode;
+    }
+
+    /**
+     * <code>optional uint32 retcode = 8;</code>
+     * @param value the retcode to set
+     * @return this
+     */
+    public GetPamSkinDataScRsp setRetcode(final int value) {
+      bitField0_ |= 0x00000002;
+      retcode = value;
+      return this;
+    }
+
+    /**
+     * <code>repeated uint32 unlocked_pam_skins = 15;</code>
      * @return whether the unlockedPamSkins field is set
      */
     public boolean hasUnlockedPamSkins() {
@@ -127,7 +127,7 @@ public final class GetPamSkinDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_pam_skins = 10;</code>
+     * <code>repeated uint32 unlocked_pam_skins = 15;</code>
      * @return this
      */
     public GetPamSkinDataScRsp clearUnlockedPamSkins() {
@@ -137,7 +137,7 @@ public final class GetPamSkinDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_pam_skins = 10;</code>
+     * <code>repeated uint32 unlocked_pam_skins = 15;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -151,7 +151,7 @@ public final class GetPamSkinDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_pam_skins = 10;</code>
+     * <code>repeated uint32 unlocked_pam_skins = 15;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -165,7 +165,7 @@ public final class GetPamSkinDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_pam_skins = 10;</code>
+     * <code>repeated uint32 unlocked_pam_skins = 15;</code>
      * @param value the unlockedPamSkins to add
      * @return this
      */
@@ -176,7 +176,7 @@ public final class GetPamSkinDataScRspOuterClass {
     }
 
     /**
-     * <code>repeated uint32 unlocked_pam_skins = 10;</code>
+     * <code>repeated uint32 unlocked_pam_skins = 15;</code>
      * @param values the unlockedPamSkins to add
      * @return this
      */
@@ -191,8 +191,8 @@ public final class GetPamSkinDataScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        retcode = other.retcode;
         currentPamSkinId = other.currentPamSkinId;
+        retcode = other.retcode;
         unlockedPamSkins.copyFrom(other.unlockedPamSkins);
       }
       return this;
@@ -204,11 +204,11 @@ public final class GetPamSkinDataScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasRetcode()) {
-        setRetcode(other.retcode);
-      }
       if (other.hasCurrentPamSkinId()) {
         setCurrentPamSkinId(other.currentPamSkinId);
+      }
+      if (other.hasRetcode()) {
+        setRetcode(other.retcode);
       }
       if (other.hasUnlockedPamSkins()) {
         getMutableUnlockedPamSkins().addAll(other.unlockedPamSkins);
@@ -223,8 +223,8 @@ public final class GetPamSkinDataScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      retcode = 0;
       currentPamSkinId = 0;
+      retcode = 0;
       unlockedPamSkins.clear();
       return this;
     }
@@ -250,24 +250,24 @@ public final class GetPamSkinDataScRspOuterClass {
       }
       GetPamSkinDataScRsp other = (GetPamSkinDataScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasRetcode() || retcode == other.retcode)
         && (!hasCurrentPamSkinId() || currentPamSkinId == other.currentPamSkinId)
+        && (!hasRetcode() || retcode == other.retcode)
         && (!hasUnlockedPamSkins() || unlockedPamSkins.equals(other.unlockedPamSkins));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeUInt32NoTag(retcode);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
         output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(currentPamSkinId);
       }
+      if ((bitField0_ & 0x00000002) != 0) {
+        output.writeRawByte((byte) 64);
+        output.writeUInt32NoTag(retcode);
+      }
       if ((bitField0_ & 0x00000004) != 0) {
         for (int i = 0; i < unlockedPamSkins.length(); i++) {
-          output.writeRawByte((byte) 80);
+          output.writeRawByte((byte) 120);
           output.writeUInt32NoTag(unlockedPamSkins.array()[i]);
         }
       }
@@ -277,10 +277,10 @@ public final class GetPamSkinDataScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(currentPamSkinId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(currentPamSkinId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         size += (1 * unlockedPamSkins.length()) + ProtoSink.computeRepeatedUInt32SizeNoTag(unlockedPamSkins);
@@ -295,25 +295,25 @@ public final class GetPamSkinDataScRspOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // retcode
-            retcode = input.readUInt32();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
           case 48: {
             // currentPamSkinId
             currentPamSkinId = input.readUInt32();
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 82) {
+            if (tag != 64) {
               break;
             }
           }
-          case 82: {
+          case 64: {
+            // retcode
+            retcode = input.readUInt32();
+            bitField0_ |= 0x00000002;
+            tag = input.readTag();
+            if (tag != 122) {
+              break;
+            }
+          }
+          case 122: {
             // unlockedPamSkins [packed=true]
             input.readPackedUInt32(unlockedPamSkins, tag);
             bitField0_ |= 0x00000004;
@@ -332,7 +332,7 @@ public final class GetPamSkinDataScRspOuterClass {
             tag = input.readTag();
             break;
           }
-          case 80: {
+          case 120: {
             // unlockedPamSkins [packed=false]
             tag = input.readRepeatedUInt32(unlockedPamSkins, tag);
             bitField0_ |= 0x00000004;
@@ -346,10 +346,10 @@ public final class GetPamSkinDataScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.currentPamSkinId, currentPamSkinId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.currentPamSkinId, currentPamSkinId);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000004) != 0) {
         output.writeRepeatedUInt32(FieldNames.unlockedPamSkins, unlockedPamSkins);
@@ -364,10 +364,11 @@ public final class GetPamSkinDataScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case -1746750021:
+          case 249948340: {
+            if (input.isAtField(FieldNames.currentPamSkinId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                currentPamSkinId = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -375,11 +376,10 @@ public final class GetPamSkinDataScRspOuterClass {
             }
             break;
           }
-          case -1746750021:
-          case 249948340: {
-            if (input.isAtField(FieldNames.currentPamSkinId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                currentPamSkinId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -452,9 +452,9 @@ public final class GetPamSkinDataScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName retcode = FieldName.forField("retcode");
-
       static final FieldName currentPamSkinId = FieldName.forField("currentPamSkinId", "current_pam_skin_id");
+
+      static final FieldName retcode = FieldName.forField("retcode");
 
       static final FieldName unlockedPamSkins = FieldName.forField("unlockedPamSkins", "unlocked_pam_skins");
     }

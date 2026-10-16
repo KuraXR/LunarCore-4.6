@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message Gateserver {
+  optional uint32 port = 13;
+  optional string ip = 14;
+  optional string region_name = 12;
+  optional string ex_resource_url = 5;
+  optional bool enable_design_data_version_update = 3;
+}

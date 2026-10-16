@@ -19,7 +19,7 @@ public final class PropExtraInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .PropTimelineInfo prop_timeline_info = 12;</code>
+     * <code>optional .PropTimelineInfo prop_timeline_info = 10;</code>
      */
     private final PropTimelineInfoOuterClass.PropTimelineInfo propTimelineInfo = PropTimelineInfoOuterClass.PropTimelineInfo.newInstance();
 
@@ -34,7 +34,7 @@ public final class PropExtraInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropTimelineInfo prop_timeline_info = 12;</code>
+     * <code>optional .PropTimelineInfo prop_timeline_info = 10;</code>
      * @return whether the propTimelineInfo field is set
      */
     public boolean hasPropTimelineInfo() {
@@ -42,7 +42,7 @@ public final class PropExtraInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropTimelineInfo prop_timeline_info = 12;</code>
+     * <code>optional .PropTimelineInfo prop_timeline_info = 10;</code>
      * @return this
      */
     public PropExtraInfo clearPropTimelineInfo() {
@@ -52,7 +52,7 @@ public final class PropExtraInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropTimelineInfo prop_timeline_info = 12;</code>
+     * <code>optional .PropTimelineInfo prop_timeline_info = 10;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class PropExtraInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropTimelineInfo prop_timeline_info = 12;</code>
+     * <code>optional .PropTimelineInfo prop_timeline_info = 10;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class PropExtraInfoOuterClass {
     }
 
     /**
-     * <code>optional .PropTimelineInfo prop_timeline_info = 12;</code>
+     * <code>optional .PropTimelineInfo prop_timeline_info = 10;</code>
      * @param value the propTimelineInfo to set
      * @return this
      */
@@ -151,7 +151,7 @@ public final class PropExtraInfoOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 98);
+        output.writeRawByte((byte) 82);
         output.writeMessageNoTag(propTimelineInfo);
       }
     }
@@ -172,7 +172,7 @@ public final class PropExtraInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 98: {
+          case 82: {
             // propTimelineInfo
             input.readMessage(propTimelineInfo);
             bitField0_ |= 0x00000001;

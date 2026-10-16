@@ -19,7 +19,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 2;</code>
+     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 7;</code>
      */
     private final ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo challengePeakGroup = ChallengePeakGroupInfoOuterClass.ChallengePeakGroupInfo.newInstance();
 
@@ -34,7 +34,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 2;</code>
+     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 7;</code>
      * @return whether the challengePeakGroup field is set
      */
     public boolean hasChallengePeakGroup() {
@@ -42,7 +42,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 2;</code>
+     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 7;</code>
      * @return this
      */
     public ChallengePeakGroupDataUpdateScNotify clearChallengePeakGroup() {
@@ -52,7 +52,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 2;</code>
+     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 7;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -66,7 +66,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 2;</code>
+     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 7;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -80,7 +80,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
     }
 
     /**
-     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 2;</code>
+     * <code>optional .ChallengePeakGroupInfo challenge_peak_group = 7;</code>
      * @param value the challengePeakGroup to set
      * @return this
      */
@@ -153,7 +153,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 18);
+        output.writeRawByte((byte) 58);
         output.writeMessageNoTag(challengePeakGroup);
       }
     }
@@ -175,7 +175,7 @@ public final class ChallengePeakGroupDataUpdateScNotifyOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 18: {
+          case 58: {
             // challengePeakGroup
             input.readMessage(challengePeakGroup);
             bitField0_ |= 0x00000001;

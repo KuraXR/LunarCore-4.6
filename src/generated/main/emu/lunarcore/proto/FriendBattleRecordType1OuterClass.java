@@ -29,10 +29,6 @@ public final class FriendBattleRecordType1OuterClass {
     private int groupId;
 
     /**
-     * <pre>
-     *  BattleRecord2 record2 = 1644;
-     * </pre>
-     *
      * <code>optional .BattleRecord1 record1 = 2026;</code>
      */
     private final BattleRecord1OuterClass.BattleRecord1 record1 = BattleRecord1OuterClass.BattleRecord1.newInstance();
@@ -133,10 +129,6 @@ public final class FriendBattleRecordType1OuterClass {
     }
 
     /**
-     * <pre>
-     *  BattleRecord2 record2 = 1644;
-     * </pre>
-     *
      * <code>optional .BattleRecord1 record1 = 2026;</code>
      * @return whether the record1 field is set
      */
@@ -145,10 +137,6 @@ public final class FriendBattleRecordType1OuterClass {
     }
 
     /**
-     * <pre>
-     *  BattleRecord2 record2 = 1644;
-     * </pre>
-     *
      * <code>optional .BattleRecord1 record1 = 2026;</code>
      * @return this
      */
@@ -159,10 +147,6 @@ public final class FriendBattleRecordType1OuterClass {
     }
 
     /**
-     * <pre>
-     *  BattleRecord2 record2 = 1644;
-     * </pre>
-     *
      * <code>optional .BattleRecord1 record1 = 2026;</code>
      *
      * This method returns the internal storage object without modifying any has state.
@@ -177,10 +161,6 @@ public final class FriendBattleRecordType1OuterClass {
     }
 
     /**
-     * <pre>
-     *  BattleRecord2 record2 = 1644;
-     * </pre>
-     *
      * <code>optional .BattleRecord1 record1 = 2026;</code>
      *
      * This method returns the internal storage object and sets the corresponding
@@ -195,10 +175,6 @@ public final class FriendBattleRecordType1OuterClass {
     }
 
     /**
-     * <pre>
-     *  BattleRecord2 record2 = 1644;
-     * </pre>
-     *
      * <code>optional .BattleRecord1 record1 = 2026;</code>
      * @param value the record1 to set
      * @return this

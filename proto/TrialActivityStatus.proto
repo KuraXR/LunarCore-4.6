@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+enum TrialActivityStatus {
+  TRIAL_ACTIVITY_STATUS_NONE = 0;
+  TRIAL_ACTIVITY_STATUS_FINISH = 1;
+}

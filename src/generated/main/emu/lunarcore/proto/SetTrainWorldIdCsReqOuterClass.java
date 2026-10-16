@@ -19,7 +19,7 @@ public final class SetTrainWorldIdCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 train_world_id = 13;</code>
+     * <code>optional uint32 train_world_id = 9;</code>
      */
     private int trainWorldId;
 
@@ -34,7 +34,7 @@ public final class SetTrainWorldIdCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 train_world_id = 13;</code>
+     * <code>optional uint32 train_world_id = 9;</code>
      * @return whether the trainWorldId field is set
      */
     public boolean hasTrainWorldId() {
@@ -42,7 +42,7 @@ public final class SetTrainWorldIdCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 train_world_id = 13;</code>
+     * <code>optional uint32 train_world_id = 9;</code>
      * @return this
      */
     public SetTrainWorldIdCsReq clearTrainWorldId() {
@@ -52,7 +52,7 @@ public final class SetTrainWorldIdCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 train_world_id = 13;</code>
+     * <code>optional uint32 train_world_id = 9;</code>
      * @return the trainWorldId
      */
     public int getTrainWorldId() {
@@ -60,7 +60,7 @@ public final class SetTrainWorldIdCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 train_world_id = 13;</code>
+     * <code>optional uint32 train_world_id = 9;</code>
      * @param value the trainWorldId to set
      * @return this
      */
@@ -129,7 +129,7 @@ public final class SetTrainWorldIdCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 104);
+        output.writeRawByte((byte) 72);
         output.writeUInt32NoTag(trainWorldId);
       }
     }
@@ -150,7 +150,7 @@ public final class SetTrainWorldIdCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 104: {
+          case 72: {
             // trainWorldId
             trainWorldId = input.readUInt32();
             bitField0_ |= 0x00000001;

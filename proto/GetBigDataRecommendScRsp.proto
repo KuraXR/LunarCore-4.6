@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BigDataRecommendType.proto";
+
+message GetBigDataRecommendScRsp {
+  optional uint32 trailblazer_path_id = 9;
+  optional uint32 retcode = 14;
+  optional BigDataRecommendType recommend_type = 12;
+}

@@ -20,26 +20,22 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 5;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional uint32 floor_id = 15;</code>
+     * <code>optional uint32 floor_id = 11;</code>
      */
     private int floorId;
 
     /**
-     * <code>optional sint32 property_value = 5;</code>
+     * <code>optional sint32 property_value = 10;</code>
      */
     private int propertyValue;
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      */
     private final Utf8String propertyName = Utf8String.newEmptyInstance();
 
@@ -54,11 +50,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -66,11 +58,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @return this
      */
     public UpdateGroupPropertyCsReq clearGroupId() {
@@ -80,11 +68,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -92,11 +76,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <pre>
-     *  KNAHNGAACPJ
-     * </pre>
-     *
-     * <code>optional uint32 group_id = 6;</code>
+     * <code>optional uint32 group_id = 5;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -107,7 +87,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 15;</code>
+     * <code>optional uint32 floor_id = 11;</code>
      * @return whether the floorId field is set
      */
     public boolean hasFloorId() {
@@ -115,7 +95,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 15;</code>
+     * <code>optional uint32 floor_id = 11;</code>
      * @return this
      */
     public UpdateGroupPropertyCsReq clearFloorId() {
@@ -125,7 +105,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 15;</code>
+     * <code>optional uint32 floor_id = 11;</code>
      * @return the floorId
      */
     public int getFloorId() {
@@ -133,7 +113,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 floor_id = 15;</code>
+     * <code>optional uint32 floor_id = 11;</code>
      * @param value the floorId to set
      * @return this
      */
@@ -144,7 +124,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional sint32 property_value = 5;</code>
+     * <code>optional sint32 property_value = 10;</code>
      * @return whether the propertyValue field is set
      */
     public boolean hasPropertyValue() {
@@ -152,7 +132,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional sint32 property_value = 5;</code>
+     * <code>optional sint32 property_value = 10;</code>
      * @return this
      */
     public UpdateGroupPropertyCsReq clearPropertyValue() {
@@ -162,7 +142,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional sint32 property_value = 5;</code>
+     * <code>optional sint32 property_value = 10;</code>
      * @return the propertyValue
      */
     public int getPropertyValue() {
@@ -170,7 +150,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional sint32 property_value = 5;</code>
+     * <code>optional sint32 property_value = 10;</code>
      * @param value the propertyValue to set
      * @return this
      */
@@ -181,7 +161,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      * @return whether the propertyName field is set
      */
     public boolean hasPropertyName() {
@@ -189,7 +169,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      * @return this
      */
     public UpdateGroupPropertyCsReq clearPropertyName() {
@@ -199,7 +179,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      * @return the propertyName
      */
     public String getPropertyName() {
@@ -207,7 +187,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      * @return internal {@code Utf8String} representation of propertyName for reading
      */
     public Utf8String getPropertyNameBytes() {
@@ -215,7 +195,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      * @return internal {@code Utf8String} representation of propertyName for modifications
      */
     public Utf8String getMutablePropertyNameBytes() {
@@ -224,7 +204,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      * @param value the propertyName to set
      * @return this
      */
@@ -235,7 +215,7 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     }
 
     /**
-     * <code>optional string property_name = 7;</code>
+     * <code>optional string property_name = 12;</code>
      * @param value the propertyName to set
      * @return this
      */
@@ -323,19 +303,19 @@ public final class UpdateGroupPropertyCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 48);
+        output.writeRawByte((byte) 40);
         output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 88);
         output.writeUInt32NoTag(floorId);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 80);
         output.writeSInt32NoTag(propertyValue);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 58);
+        output.writeRawByte((byte) 98);
         output.writeStringNoTag(propertyName);
       }
     }
@@ -365,34 +345,34 @@ public final class UpdateGroupPropertyCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 48: {
+          case 40: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 88) {
               break;
             }
           }
-          case 120: {
+          case 88: {
             // floorId
             floorId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 40) {
+            if (tag != 80) {
               break;
             }
           }
-          case 40: {
+          case 80: {
             // propertyValue
             propertyValue = input.readSInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 58) {
+            if (tag != 98) {
               break;
             }
           }
-          case 58: {
+          case 98: {
             // propertyName
             input.readString(propertyName);
             bitField0_ |= 0x00000008;

@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "BattleEndStatus.proto";
+import "BattleOp.proto";
+import "BattleStatistics.proto";
+
+message PVEBattleResultCsReq {
+  optional uint32 cost_time = 6;
+  optional uint32 stage_id = 12;
+  optional uint32 battle_id = 4;
+  optional BattleEndStatus end_status = 9;
+  optional BattleStatistics stt = 8;
+  optional bytes turn_snapshot_hash = 10;
+  repeated BattleOp op_list = 1;
+}

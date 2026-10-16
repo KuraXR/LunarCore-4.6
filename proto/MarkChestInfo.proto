@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MapPropDefInfo.proto";
+
+message MarkChestInfo {
+  optional uint32 func_id = 2;
+  repeated MapPropDefInfo chest_prop_def_list = 5;
+}

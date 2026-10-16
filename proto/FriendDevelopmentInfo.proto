@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "ChallengeDevelopmentInfo.proto";
+import "DevelopmentType.proto";
+
+message FriendDevelopmentInfo {
+  optional int64 time = 4;
+  optional uint32 MEOJDPFCEOI = 149;
+  optional uint32 avatar_id = 710;
+  optional uint32 EMIDNFOLJDJ = 1496;
+  optional DevelopmentType development_type = 12;
+  optional ChallengeDevelopmentInfo challenge_development_info = 120;
+}

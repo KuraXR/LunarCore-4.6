@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "GachaCeiling.proto";
+import "ItemList.proto";
+
+message ExchangeGachaCeilingScRsp {
+  optional uint32 retcode = 1;
+  optional uint32 gacha_type = 2;
+  optional uint32 avatar_id = 8;
+  optional ItemList transfer_item_list = 15;
+  optional GachaCeiling gacha_ceiling = 14;
+}

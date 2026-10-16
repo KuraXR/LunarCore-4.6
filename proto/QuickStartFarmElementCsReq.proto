@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message QuickStartFarmElementCsReq {
+  optional uint32 wave_count = 14;
+  optional uint32 world_level = 11;
+  optional uint32 farm_element_id = 2;
+}

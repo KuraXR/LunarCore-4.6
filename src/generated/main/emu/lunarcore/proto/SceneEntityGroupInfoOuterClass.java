@@ -21,24 +21,24 @@ public final class SceneEntityGroupInfoOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 group_id = 2;</code>
+     * <code>optional uint32 group_id = 3;</code>
      */
     private int groupId;
 
     /**
-     * <code>optional uint32 state = 15;</code>
+     * <code>optional uint32 state = 13;</code>
      */
     private int state;
 
     /**
-     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 8;</code>
-     */
-    private final RepeatedMessage<GroupPropertyMapEntry> groupPropertyMap = RepeatedMessage.newEmptyInstance(GroupPropertyMapEntry.getFactory());
-
-    /**
-     * <code>repeated .SceneEntityInfo entity_list = 12;</code>
+     * <code>repeated .SceneEntityInfo entity_list = 8;</code>
      */
     private final RepeatedMessage<SceneEntityInfoOuterClass.SceneEntityInfo> entityList = RepeatedMessage.newEmptyInstance(SceneEntityInfoOuterClass.SceneEntityInfo.getFactory());
+
+    /**
+     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 10;</code>
+     */
+    private final RepeatedMessage<GroupPropertyMapEntry> groupPropertyMap = RepeatedMessage.newEmptyInstance(GroupPropertyMapEntry.getFactory());
 
     private SceneEntityGroupInfo() {
     }
@@ -51,7 +51,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 2;</code>
+     * <code>optional uint32 group_id = 3;</code>
      * @return whether the groupId field is set
      */
     public boolean hasGroupId() {
@@ -59,7 +59,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 2;</code>
+     * <code>optional uint32 group_id = 3;</code>
      * @return this
      */
     public SceneEntityGroupInfo clearGroupId() {
@@ -69,7 +69,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 2;</code>
+     * <code>optional uint32 group_id = 3;</code>
      * @return the groupId
      */
     public int getGroupId() {
@@ -77,7 +77,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 group_id = 2;</code>
+     * <code>optional uint32 group_id = 3;</code>
      * @param value the groupId to set
      * @return this
      */
@@ -88,7 +88,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 state = 15;</code>
+     * <code>optional uint32 state = 13;</code>
      * @return whether the state field is set
      */
     public boolean hasState() {
@@ -96,7 +96,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 state = 15;</code>
+     * <code>optional uint32 state = 13;</code>
      * @return this
      */
     public SceneEntityGroupInfo clearState() {
@@ -106,7 +106,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 state = 15;</code>
+     * <code>optional uint32 state = 13;</code>
      * @return the state
      */
     public int getState() {
@@ -114,7 +114,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>optional uint32 state = 15;</code>
+     * <code>optional uint32 state = 13;</code>
      * @param value the state to set
      * @return this
      */
@@ -125,93 +125,25 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 8;</code>
-     * @return whether the groupPropertyMap field is set
+     * <code>repeated .SceneEntityInfo entity_list = 8;</code>
+     * @return whether the entityList field is set
      */
-    public boolean hasGroupPropertyMap() {
+    public boolean hasEntityList() {
       return (bitField0_ & 0x00000004) != 0;
     }
 
     /**
-     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 8;</code>
-     * @return this
-     */
-    public SceneEntityGroupInfo clearGroupPropertyMap() {
-      bitField0_ &= ~0x00000004;
-      groupPropertyMap.clear();
-      return this;
-    }
-
-    /**
-     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 8;</code>
-     *
-     * This method returns the internal storage object without modifying any has state.
-     * The returned object should not be modified and be treated as read-only.
-     *
-     * Use {@link #getMutableGroupPropertyMap()} if you want to modify it.
-     *
-     * @return internal storage object for reading
-     */
-    public RepeatedMessage<GroupPropertyMapEntry> getGroupPropertyMap() {
-      return groupPropertyMap;
-    }
-
-    /**
-     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 8;</code>
-     *
-     * This method returns the internal storage object and sets the corresponding
-     * has state. The returned object will become part of this message and its
-     * contents may be modified as long as the has state is not cleared.
-     *
-     * @return internal storage object for modifications
-     */
-    public RepeatedMessage<GroupPropertyMapEntry> getMutableGroupPropertyMap() {
-      bitField0_ |= 0x00000004;
-      return groupPropertyMap;
-    }
-
-    /**
-     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 8;</code>
-     * @param value the groupPropertyMap to add
-     * @return this
-     */
-    public SceneEntityGroupInfo addGroupPropertyMap(final GroupPropertyMapEntry value) {
-      bitField0_ |= 0x00000004;
-      groupPropertyMap.add(value);
-      return this;
-    }
-
-    /**
-     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 8;</code>
-     * @param values the groupPropertyMap to add
-     * @return this
-     */
-    public SceneEntityGroupInfo addAllGroupPropertyMap(final GroupPropertyMapEntry... values) {
-      bitField0_ |= 0x00000004;
-      groupPropertyMap.addAll(values);
-      return this;
-    }
-
-    /**
-     * <code>repeated .SceneEntityInfo entity_list = 12;</code>
-     * @return whether the entityList field is set
-     */
-    public boolean hasEntityList() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>repeated .SceneEntityInfo entity_list = 12;</code>
+     * <code>repeated .SceneEntityInfo entity_list = 8;</code>
      * @return this
      */
     public SceneEntityGroupInfo clearEntityList() {
-      bitField0_ &= ~0x00000008;
+      bitField0_ &= ~0x00000004;
       entityList.clear();
       return this;
     }
 
     /**
-     * <code>repeated .SceneEntityInfo entity_list = 12;</code>
+     * <code>repeated .SceneEntityInfo entity_list = 8;</code>
      *
      * This method returns the internal storage object without modifying any has state.
      * The returned object should not be modified and be treated as read-only.
@@ -225,7 +157,7 @@ public final class SceneEntityGroupInfoOuterClass {
     }
 
     /**
-     * <code>repeated .SceneEntityInfo entity_list = 12;</code>
+     * <code>repeated .SceneEntityInfo entity_list = 8;</code>
      *
      * This method returns the internal storage object and sets the corresponding
      * has state. The returned object will become part of this message and its
@@ -234,31 +166,99 @@ public final class SceneEntityGroupInfoOuterClass {
      * @return internal storage object for modifications
      */
     public RepeatedMessage<SceneEntityInfoOuterClass.SceneEntityInfo> getMutableEntityList() {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       return entityList;
     }
 
     /**
-     * <code>repeated .SceneEntityInfo entity_list = 12;</code>
+     * <code>repeated .SceneEntityInfo entity_list = 8;</code>
      * @param value the entityList to add
      * @return this
      */
     public SceneEntityGroupInfo addEntityList(
         final SceneEntityInfoOuterClass.SceneEntityInfo value) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       entityList.add(value);
       return this;
     }
 
     /**
-     * <code>repeated .SceneEntityInfo entity_list = 12;</code>
+     * <code>repeated .SceneEntityInfo entity_list = 8;</code>
      * @param values the entityList to add
      * @return this
      */
     public SceneEntityGroupInfo addAllEntityList(
         final SceneEntityInfoOuterClass.SceneEntityInfo... values) {
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       entityList.addAll(values);
+      return this;
+    }
+
+    /**
+     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 10;</code>
+     * @return whether the groupPropertyMap field is set
+     */
+    public boolean hasGroupPropertyMap() {
+      return (bitField0_ & 0x00000008) != 0;
+    }
+
+    /**
+     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 10;</code>
+     * @return this
+     */
+    public SceneEntityGroupInfo clearGroupPropertyMap() {
+      bitField0_ &= ~0x00000008;
+      groupPropertyMap.clear();
+      return this;
+    }
+
+    /**
+     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 10;</code>
+     *
+     * This method returns the internal storage object without modifying any has state.
+     * The returned object should not be modified and be treated as read-only.
+     *
+     * Use {@link #getMutableGroupPropertyMap()} if you want to modify it.
+     *
+     * @return internal storage object for reading
+     */
+    public RepeatedMessage<GroupPropertyMapEntry> getGroupPropertyMap() {
+      return groupPropertyMap;
+    }
+
+    /**
+     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 10;</code>
+     *
+     * This method returns the internal storage object and sets the corresponding
+     * has state. The returned object will become part of this message and its
+     * contents may be modified as long as the has state is not cleared.
+     *
+     * @return internal storage object for modifications
+     */
+    public RepeatedMessage<GroupPropertyMapEntry> getMutableGroupPropertyMap() {
+      bitField0_ |= 0x00000008;
+      return groupPropertyMap;
+    }
+
+    /**
+     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 10;</code>
+     * @param value the groupPropertyMap to add
+     * @return this
+     */
+    public SceneEntityGroupInfo addGroupPropertyMap(final GroupPropertyMapEntry value) {
+      bitField0_ |= 0x00000008;
+      groupPropertyMap.add(value);
+      return this;
+    }
+
+    /**
+     * <code>repeated .SceneEntityGroupInfo.GroupPropertyMapEntry group_property_map = 10;</code>
+     * @param values the groupPropertyMap to add
+     * @return this
+     */
+    public SceneEntityGroupInfo addAllGroupPropertyMap(final GroupPropertyMapEntry... values) {
+      bitField0_ |= 0x00000008;
+      groupPropertyMap.addAll(values);
       return this;
     }
 
@@ -269,8 +269,8 @@ public final class SceneEntityGroupInfoOuterClass {
         bitField0_ = other.bitField0_;
         groupId = other.groupId;
         state = other.state;
-        groupPropertyMap.copyFrom(other.groupPropertyMap);
         entityList.copyFrom(other.entityList);
+        groupPropertyMap.copyFrom(other.groupPropertyMap);
       }
       return this;
     }
@@ -287,11 +287,11 @@ public final class SceneEntityGroupInfoOuterClass {
       if (other.hasState()) {
         setState(other.state);
       }
-      if (other.hasGroupPropertyMap()) {
-        getMutableGroupPropertyMap().addAll(other.groupPropertyMap);
-      }
       if (other.hasEntityList()) {
         getMutableEntityList().addAll(other.entityList);
+      }
+      if (other.hasGroupPropertyMap()) {
+        getMutableGroupPropertyMap().addAll(other.groupPropertyMap);
       }
       return this;
     }
@@ -305,8 +305,8 @@ public final class SceneEntityGroupInfoOuterClass {
       bitField0_ = 0;
       groupId = 0;
       state = 0;
-      groupPropertyMap.clear();
       entityList.clear();
+      groupPropertyMap.clear();
       return this;
     }
 
@@ -317,8 +317,8 @@ public final class SceneEntityGroupInfoOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      groupPropertyMap.clearQuick();
       entityList.clearQuick();
+      groupPropertyMap.clearQuick();
       return this;
     }
 
@@ -334,30 +334,30 @@ public final class SceneEntityGroupInfoOuterClass {
       return bitField0_ == other.bitField0_
         && (!hasGroupId() || groupId == other.groupId)
         && (!hasState() || state == other.state)
-        && (!hasGroupPropertyMap() || groupPropertyMap.equals(other.groupPropertyMap))
-        && (!hasEntityList() || entityList.equals(other.entityList));
+        && (!hasEntityList() || entityList.equals(other.entityList))
+        && (!hasGroupPropertyMap() || groupPropertyMap.equals(other.groupPropertyMap));
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(groupId);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 120);
+        output.writeRawByte((byte) 104);
         output.writeUInt32NoTag(state);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        for (int i = 0; i < groupPropertyMap.length(); i++) {
+        for (int i = 0; i < entityList.length(); i++) {
           output.writeRawByte((byte) 66);
-          output.writeMessageNoTag(groupPropertyMap.get(i));
+          output.writeMessageNoTag(entityList.get(i));
         }
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        for (int i = 0; i < entityList.length(); i++) {
-          output.writeRawByte((byte) 98);
-          output.writeMessageNoTag(entityList.get(i));
+        for (int i = 0; i < groupPropertyMap.length(); i++) {
+          output.writeRawByte((byte) 82);
+          output.writeMessageNoTag(groupPropertyMap.get(i));
         }
       }
     }
@@ -372,10 +372,10 @@ public final class SceneEntityGroupInfoOuterClass {
         size += 1 + ProtoSink.computeUInt32SizeNoTag(state);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        size += (1 * groupPropertyMap.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(groupPropertyMap);
+        size += (1 * entityList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(entityList);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        size += (1 * entityList.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(entityList);
+        size += (1 * groupPropertyMap.length()) + ProtoSink.computeRepeatedMessageSizeNoTag(groupPropertyMap);
       }
       return size;
     }
@@ -387,16 +387,16 @@ public final class SceneEntityGroupInfoOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 24: {
             // groupId
             groupId = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 120) {
+            if (tag != 104) {
               break;
             }
           }
-          case 120: {
+          case 104: {
             // state
             state = input.readUInt32();
             bitField0_ |= 0x00000002;
@@ -406,16 +406,16 @@ public final class SceneEntityGroupInfoOuterClass {
             }
           }
           case 66: {
-            // groupPropertyMap
-            tag = input.readRepeatedMessage(groupPropertyMap, tag);
+            // entityList
+            tag = input.readRepeatedMessage(entityList, tag);
             bitField0_ |= 0x00000004;
-            if (tag != 98) {
+            if (tag != 82) {
               break;
             }
           }
-          case 98: {
-            // entityList
-            tag = input.readRepeatedMessage(entityList, tag);
+          case 82: {
+            // groupPropertyMap
+            tag = input.readRepeatedMessage(groupPropertyMap, tag);
             bitField0_ |= 0x00000008;
             if (tag != 0) {
               break;
@@ -445,10 +445,10 @@ public final class SceneEntityGroupInfoOuterClass {
         output.writeUInt32(FieldNames.state, state);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRepeatedMessage(FieldNames.groupPropertyMap, groupPropertyMap);
+        output.writeRepeatedMessage(FieldNames.entityList, entityList);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRepeatedMessage(FieldNames.entityList, entityList);
+        output.writeRepeatedMessage(FieldNames.groupPropertyMap, groupPropertyMap);
       }
       output.endObject();
     }
@@ -483,11 +483,11 @@ public final class SceneEntityGroupInfoOuterClass {
             }
             break;
           }
-          case -931201208:
-          case 33749426: {
-            if (input.isAtField(FieldNames.groupPropertyMap)) {
+          case -1483251935:
+          case 1281457018: {
+            if (input.isAtField(FieldNames.entityList)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(groupPropertyMap);
+                input.readRepeatedMessage(entityList);
                 bitField0_ |= 0x00000004;
               }
             } else {
@@ -495,11 +495,11 @@ public final class SceneEntityGroupInfoOuterClass {
             }
             break;
           }
-          case -1483251935:
-          case 1281457018: {
-            if (input.isAtField(FieldNames.entityList)) {
+          case -931201208:
+          case 33749426: {
+            if (input.isAtField(FieldNames.groupPropertyMap)) {
               if (!input.trySkipNullValue()) {
-                input.readRepeatedMessage(entityList);
+                input.readRepeatedMessage(groupPropertyMap);
                 bitField0_ |= 0x00000008;
               }
             } else {
@@ -918,9 +918,9 @@ public final class SceneEntityGroupInfoOuterClass {
 
       static final FieldName state = FieldName.forField("state");
 
-      static final FieldName groupPropertyMap = FieldName.forField("groupPropertyMap", "group_property_map");
-
       static final FieldName entityList = FieldName.forField("entityList", "entity_list");
+
+      static final FieldName groupPropertyMap = FieldName.forField("groupPropertyMap", "group_property_map");
     }
   }
 }

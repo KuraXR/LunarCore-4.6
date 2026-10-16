@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+enum OfferingState {
+  OFFERING_STATE_NONE = 0;
+  OFFERING_STATE_LOCK = 1;
+  OFFERING_STATE_OPEN = 2;
+}

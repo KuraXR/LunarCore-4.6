@@ -19,14 +19,14 @@ public final class SetTrainWorldIdScRspOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 train_world_id = 7;</code>
-     */
-    private int trainWorldId;
-
-    /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      */
     private int retcode;
+
+    /**
+     * <code>optional uint32 train_world_id = 9;</code>
+     */
+    private int trainWorldId;
 
     private SetTrainWorldIdScRsp() {
     }
@@ -39,62 +39,25 @@ public final class SetTrainWorldIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 train_world_id = 7;</code>
-     * @return whether the trainWorldId field is set
+     * <code>optional uint32 retcode = 7;</code>
+     * @return whether the retcode field is set
      */
-    public boolean hasTrainWorldId() {
+    public boolean hasRetcode() {
       return (bitField0_ & 0x00000001) != 0;
     }
 
     /**
-     * <code>optional uint32 train_world_id = 7;</code>
-     * @return this
-     */
-    public SetTrainWorldIdScRsp clearTrainWorldId() {
-      bitField0_ &= ~0x00000001;
-      trainWorldId = 0;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 train_world_id = 7;</code>
-     * @return the trainWorldId
-     */
-    public int getTrainWorldId() {
-      return trainWorldId;
-    }
-
-    /**
-     * <code>optional uint32 train_world_id = 7;</code>
-     * @param value the trainWorldId to set
-     * @return this
-     */
-    public SetTrainWorldIdScRsp setTrainWorldId(final int value) {
-      bitField0_ |= 0x00000001;
-      trainWorldId = value;
-      return this;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 10;</code>
-     * @return whether the retcode field is set
-     */
-    public boolean hasRetcode() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return this
      */
     public SetTrainWorldIdScRsp clearRetcode() {
-      bitField0_ &= ~0x00000002;
+      bitField0_ &= ~0x00000001;
       retcode = 0;
       return this;
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @return the retcode
      */
     public int getRetcode() {
@@ -102,13 +65,50 @@ public final class SetTrainWorldIdScRspOuterClass {
     }
 
     /**
-     * <code>optional uint32 retcode = 10;</code>
+     * <code>optional uint32 retcode = 7;</code>
      * @param value the retcode to set
      * @return this
      */
     public SetTrainWorldIdScRsp setRetcode(final int value) {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       retcode = value;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 train_world_id = 9;</code>
+     * @return whether the trainWorldId field is set
+     */
+    public boolean hasTrainWorldId() {
+      return (bitField0_ & 0x00000002) != 0;
+    }
+
+    /**
+     * <code>optional uint32 train_world_id = 9;</code>
+     * @return this
+     */
+    public SetTrainWorldIdScRsp clearTrainWorldId() {
+      bitField0_ &= ~0x00000002;
+      trainWorldId = 0;
+      return this;
+    }
+
+    /**
+     * <code>optional uint32 train_world_id = 9;</code>
+     * @return the trainWorldId
+     */
+    public int getTrainWorldId() {
+      return trainWorldId;
+    }
+
+    /**
+     * <code>optional uint32 train_world_id = 9;</code>
+     * @param value the trainWorldId to set
+     * @return this
+     */
+    public SetTrainWorldIdScRsp setTrainWorldId(final int value) {
+      bitField0_ |= 0x00000002;
+      trainWorldId = value;
       return this;
     }
 
@@ -117,8 +117,8 @@ public final class SetTrainWorldIdScRspOuterClass {
       cachedSize = other.cachedSize;
       if ((bitField0_ | other.bitField0_) != 0) {
         bitField0_ = other.bitField0_;
-        trainWorldId = other.trainWorldId;
         retcode = other.retcode;
+        trainWorldId = other.trainWorldId;
       }
       return this;
     }
@@ -129,11 +129,11 @@ public final class SetTrainWorldIdScRspOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasTrainWorldId()) {
-        setTrainWorldId(other.trainWorldId);
-      }
       if (other.hasRetcode()) {
         setRetcode(other.retcode);
+      }
+      if (other.hasTrainWorldId()) {
+        setTrainWorldId(other.trainWorldId);
       }
       return this;
     }
@@ -145,8 +145,8 @@ public final class SetTrainWorldIdScRspOuterClass {
       }
       cachedSize = -1;
       bitField0_ = 0;
-      trainWorldId = 0;
       retcode = 0;
+      trainWorldId = 0;
       return this;
     }
 
@@ -170,19 +170,19 @@ public final class SetTrainWorldIdScRspOuterClass {
       }
       SetTrainWorldIdScRsp other = (SetTrainWorldIdScRsp) o;
       return bitField0_ == other.bitField0_
-        && (!hasTrainWorldId() || trainWorldId == other.trainWorldId)
-        && (!hasRetcode() || retcode == other.retcode);
+        && (!hasRetcode() || retcode == other.retcode)
+        && (!hasTrainWorldId() || trainWorldId == other.trainWorldId);
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
         output.writeRawByte((byte) 56);
-        output.writeUInt32NoTag(trainWorldId);
+        output.writeUInt32NoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 80);
-        output.writeUInt32NoTag(retcode);
+        output.writeRawByte((byte) 72);
+        output.writeUInt32NoTag(trainWorldId);
       }
     }
 
@@ -190,10 +190,10 @@ public final class SetTrainWorldIdScRspOuterClass {
     protected int computeSerializedSize() {
       int size = 0;
       if ((bitField0_ & 0x00000001) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(trainWorldId);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        size += 1 + ProtoSink.computeUInt32SizeNoTag(retcode);
+        size += 1 + ProtoSink.computeUInt32SizeNoTag(trainWorldId);
       }
       return size;
     }
@@ -206,17 +206,17 @@ public final class SetTrainWorldIdScRspOuterClass {
       while (true) {
         switch (tag) {
           case 56: {
-            // trainWorldId
-            trainWorldId = input.readUInt32();
+            // retcode
+            retcode = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 80) {
+            if (tag != 72) {
               break;
             }
           }
-          case 80: {
-            // retcode
-            retcode = input.readUInt32();
+          case 72: {
+            // trainWorldId
+            trainWorldId = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
             if (tag != 0) {
@@ -241,10 +241,10 @@ public final class SetTrainWorldIdScRspOuterClass {
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeUInt32(FieldNames.trainWorldId, trainWorldId);
+        output.writeUInt32(FieldNames.retcode, retcode);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeUInt32(FieldNames.retcode, retcode);
+        output.writeUInt32(FieldNames.trainWorldId, trainWorldId);
       }
       output.endObject();
     }
@@ -256,11 +256,10 @@ public final class SetTrainWorldIdScRspOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case -1960946395:
-          case -1978540737: {
-            if (input.isAtField(FieldNames.trainWorldId)) {
+          case 1097936398: {
+            if (input.isAtField(FieldNames.retcode)) {
               if (!input.trySkipNullValue()) {
-                trainWorldId = input.readUInt32();
+                retcode = input.readUInt32();
                 bitField0_ |= 0x00000001;
               }
             } else {
@@ -268,10 +267,11 @@ public final class SetTrainWorldIdScRspOuterClass {
             }
             break;
           }
-          case 1097936398: {
-            if (input.isAtField(FieldNames.retcode)) {
+          case -1960946395:
+          case -1978540737: {
+            if (input.isAtField(FieldNames.trainWorldId)) {
               if (!input.trySkipNullValue()) {
-                retcode = input.readUInt32();
+                trainWorldId = input.readUInt32();
                 bitField0_ |= 0x00000002;
               }
             } else {
@@ -332,9 +332,9 @@ public final class SetTrainWorldIdScRspOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName trainWorldId = FieldName.forField("trainWorldId", "train_world_id");
-
       static final FieldName retcode = FieldName.forField("retcode");
+
+      static final FieldName trainWorldId = FieldName.forField("trainWorldId", "train_world_id");
     }
   }
 }

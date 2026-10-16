@@ -14,10 +14,6 @@ import us.hebi.quickbuf.RepeatedMessage;
 
 public final class GetMissionEventDataScRspOuterClass {
   /**
-   * <pre>
-   *  REMOVED FROM GAME
-   * </pre>
-   *
    * Protobuf type {@code GetMissionEventDataScRsp}
    */
   public static final class GetMissionEventDataScRsp extends ProtoMessage<GetMissionEventDataScRsp> implements Cloneable {
@@ -42,10 +38,6 @@ public final class GetMissionEventDataScRspOuterClass {
     }
 
     /**
-     * <pre>
-     *  REMOVED FROM GAME
-     * </pre>
-     *
      * @return a new empty instance of {@code GetMissionEventDataScRsp}
      */
     public static GetMissionEventDataScRsp newInstance() {

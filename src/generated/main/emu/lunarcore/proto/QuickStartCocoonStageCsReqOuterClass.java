@@ -19,22 +19,22 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     private static final long serialVersionUID = 0L;
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      */
     private int worldLevel;
 
     /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      */
     private int wave;
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
+     * <code>optional uint32 wave_count = 6;</code>
      */
     private int waveCount;
 
     /**
-     * <code>optional uint32 cocoon_id = 12;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      */
     private int cocoonId;
 
@@ -49,7 +49,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      * @return whether the worldLevel field is set
      */
     public boolean hasWorldLevel() {
@@ -57,7 +57,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      * @return this
      */
     public QuickStartCocoonStageCsReq clearWorldLevel() {
@@ -67,7 +67,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      * @return the worldLevel
      */
     public int getWorldLevel() {
@@ -75,7 +75,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 world_level = 2;</code>
+     * <code>optional uint32 world_level = 1;</code>
      * @param value the worldLevel to set
      * @return this
      */
@@ -86,7 +86,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      * @return whether the wave field is set
      */
     public boolean hasWave() {
@@ -94,7 +94,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      * @return this
      */
     public QuickStartCocoonStageCsReq clearWave() {
@@ -104,7 +104,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      * @return the wave
      */
     public int getWave() {
@@ -112,7 +112,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave = 4;</code>
+     * <code>optional uint32 wave = 3;</code>
      * @param value the wave to set
      * @return this
      */
@@ -123,7 +123,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
+     * <code>optional uint32 wave_count = 6;</code>
      * @return whether the waveCount field is set
      */
     public boolean hasWaveCount() {
@@ -131,7 +131,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
+     * <code>optional uint32 wave_count = 6;</code>
      * @return this
      */
     public QuickStartCocoonStageCsReq clearWaveCount() {
@@ -141,7 +141,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
+     * <code>optional uint32 wave_count = 6;</code>
      * @return the waveCount
      */
     public int getWaveCount() {
@@ -149,7 +149,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 wave_count = 5;</code>
+     * <code>optional uint32 wave_count = 6;</code>
      * @param value the waveCount to set
      * @return this
      */
@@ -160,7 +160,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 12;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @return whether the cocoonId field is set
      */
     public boolean hasCocoonId() {
@@ -168,7 +168,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 12;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @return this
      */
     public QuickStartCocoonStageCsReq clearCocoonId() {
@@ -178,7 +178,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 12;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @return the cocoonId
      */
     public int getCocoonId() {
@@ -186,7 +186,7 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     }
 
     /**
-     * <code>optional uint32 cocoon_id = 12;</code>
+     * <code>optional uint32 cocoon_id = 7;</code>
      * @param value the cocoonId to set
      * @return this
      */
@@ -273,19 +273,19 @@ public final class QuickStartCocoonStageCsReqOuterClass {
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
       if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
+        output.writeRawByte((byte) 8);
         output.writeUInt32NoTag(worldLevel);
       }
       if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 32);
+        output.writeRawByte((byte) 24);
         output.writeUInt32NoTag(wave);
       }
       if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 40);
+        output.writeRawByte((byte) 48);
         output.writeUInt32NoTag(waveCount);
       }
       if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 96);
+        output.writeRawByte((byte) 56);
         output.writeUInt32NoTag(cocoonId);
       }
     }
@@ -315,34 +315,34 @@ public final class QuickStartCocoonStageCsReqOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
+          case 8: {
             // worldLevel
             worldLevel = input.readUInt32();
             bitField0_ |= 0x00000001;
             tag = input.readTag();
-            if (tag != 32) {
+            if (tag != 24) {
               break;
             }
           }
-          case 32: {
+          case 24: {
             // wave
             wave = input.readUInt32();
             bitField0_ |= 0x00000002;
             tag = input.readTag();
-            if (tag != 40) {
+            if (tag != 48) {
               break;
             }
           }
-          case 40: {
+          case 48: {
             // waveCount
             waveCount = input.readUInt32();
             bitField0_ |= 0x00000004;
             tag = input.readTag();
-            if (tag != 96) {
+            if (tag != 56) {
               break;
             }
           }
-          case 96: {
+          case 56: {
             // cocoonId
             cocoonId = input.readUInt32();
             bitField0_ |= 0x00000008;

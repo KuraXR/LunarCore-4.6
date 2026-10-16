@@ -12,10 +12,6 @@ import us.hebi.quickbuf.ProtoSource;
 
 public final class AvatarReccomendDataOuterClass {
   /**
-   * <pre>
-   * repeated KNNFPFKCABE APFECOOPNKN = 7;
-   * </pre>
-   *
    * Protobuf type {@code AvatarReccomendData}
    */
   public static final class AvatarReccomendData extends ProtoMessage<AvatarReccomendData> implements Cloneable {
@@ -25,10 +21,6 @@ public final class AvatarReccomendDataOuterClass {
     }
 
     /**
-     * <pre>
-     * repeated KNNFPFKCABE APFECOOPNKN = 7;
-     * </pre>
-     *
      * @return a new empty instance of {@code AvatarReccomendData}
      */
     public static AvatarReccomendData newInstance() {

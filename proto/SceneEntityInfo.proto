@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "MotionInfo.proto";
+import "SceneActorInfo.proto";
+import "SceneNpcInfo.proto";
+import "SceneNpcMonsterInfo.proto";
+import "ScenePropInfo.proto";
+import "SceneSummonUnitInfo.proto";
+
+message SceneEntityInfo {
+  optional uint32 inst_id = 6;
+  optional uint32 group_id = 11;
+  optional uint32 entity_id = 14;
+  oneof EntityCase {
+    SceneActorInfo actor = 12;
+    ScenePropInfo prop = 2;
+    SceneNpcInfo npc = 13;
+    SceneNpcMonsterInfo npc_monster = 9;
+    SceneSummonUnitInfo summon_unit = 4;
+  }
+  optional MotionInfo motion = 15;
+}

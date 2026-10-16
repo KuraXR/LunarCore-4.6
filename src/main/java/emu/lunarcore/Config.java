@@ -29,6 +29,9 @@ public class Config {
 
     public String resourceDir = "./resources";
     public String dataDir = "./data";
+    // 4.6 client's StarRail_Data folder. When set, the gateway hands the client its own cached
+    // design data (read only), which the client needs before it loads text maps.
+    public String clientDataDir = "";
 
     @Getter
     public static class DatabaseInfo {

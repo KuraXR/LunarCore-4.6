@@ -1,0 +1,8 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+message DressAvatarSkinCsReq {
+  optional uint32 avatar_id = 11;
+  optional uint32 avatar_skin_id = 3;
+}

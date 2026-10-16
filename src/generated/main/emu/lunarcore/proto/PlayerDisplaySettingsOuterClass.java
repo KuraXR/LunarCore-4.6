@@ -2,7 +2,6 @@
 package emu.lunarcore.proto;
 
 import java.io.IOException;
-import us.hebi.quickbuf.FieldName;
 import us.hebi.quickbuf.InvalidProtocolBufferException;
 import us.hebi.quickbuf.JsonSink;
 import us.hebi.quickbuf.JsonSource;
@@ -18,31 +17,6 @@ public final class PlayerDisplaySettingsOuterClass {
   public static final class PlayerDisplaySettings extends ProtoMessage<PlayerDisplaySettings> implements Cloneable {
     private static final long serialVersionUID = 0L;
 
-    /**
-     * <code>optional bool unk5 = 2;</code>
-     */
-    private boolean unk5;
-
-    /**
-     * <code>optional bool unk3 = 3;</code>
-     */
-    private boolean unk3;
-
-    /**
-     * <code>optional bool unk1 = 6;</code>
-     */
-    private boolean unk1;
-
-    /**
-     * <code>optional bool unk2 = 13;</code>
-     */
-    private boolean unk2;
-
-    /**
-     * <code>optional bool unk4 = 14;</code>
-     */
-    private boolean unk4;
-
     private PlayerDisplaySettings() {
     }
 
@@ -53,202 +27,9 @@ public final class PlayerDisplaySettingsOuterClass {
       return new PlayerDisplaySettings();
     }
 
-    /**
-     * <code>optional bool unk5 = 2;</code>
-     * @return whether the unk5 field is set
-     */
-    public boolean hasUnk5() {
-      return (bitField0_ & 0x00000001) != 0;
-    }
-
-    /**
-     * <code>optional bool unk5 = 2;</code>
-     * @return this
-     */
-    public PlayerDisplaySettings clearUnk5() {
-      bitField0_ &= ~0x00000001;
-      unk5 = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk5 = 2;</code>
-     * @return the unk5
-     */
-    public boolean getUnk5() {
-      return unk5;
-    }
-
-    /**
-     * <code>optional bool unk5 = 2;</code>
-     * @param value the unk5 to set
-     * @return this
-     */
-    public PlayerDisplaySettings setUnk5(final boolean value) {
-      bitField0_ |= 0x00000001;
-      unk5 = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk3 = 3;</code>
-     * @return whether the unk3 field is set
-     */
-    public boolean hasUnk3() {
-      return (bitField0_ & 0x00000002) != 0;
-    }
-
-    /**
-     * <code>optional bool unk3 = 3;</code>
-     * @return this
-     */
-    public PlayerDisplaySettings clearUnk3() {
-      bitField0_ &= ~0x00000002;
-      unk3 = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk3 = 3;</code>
-     * @return the unk3
-     */
-    public boolean getUnk3() {
-      return unk3;
-    }
-
-    /**
-     * <code>optional bool unk3 = 3;</code>
-     * @param value the unk3 to set
-     * @return this
-     */
-    public PlayerDisplaySettings setUnk3(final boolean value) {
-      bitField0_ |= 0x00000002;
-      unk3 = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk1 = 6;</code>
-     * @return whether the unk1 field is set
-     */
-    public boolean hasUnk1() {
-      return (bitField0_ & 0x00000004) != 0;
-    }
-
-    /**
-     * <code>optional bool unk1 = 6;</code>
-     * @return this
-     */
-    public PlayerDisplaySettings clearUnk1() {
-      bitField0_ &= ~0x00000004;
-      unk1 = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk1 = 6;</code>
-     * @return the unk1
-     */
-    public boolean getUnk1() {
-      return unk1;
-    }
-
-    /**
-     * <code>optional bool unk1 = 6;</code>
-     * @param value the unk1 to set
-     * @return this
-     */
-    public PlayerDisplaySettings setUnk1(final boolean value) {
-      bitField0_ |= 0x00000004;
-      unk1 = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk2 = 13;</code>
-     * @return whether the unk2 field is set
-     */
-    public boolean hasUnk2() {
-      return (bitField0_ & 0x00000008) != 0;
-    }
-
-    /**
-     * <code>optional bool unk2 = 13;</code>
-     * @return this
-     */
-    public PlayerDisplaySettings clearUnk2() {
-      bitField0_ &= ~0x00000008;
-      unk2 = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk2 = 13;</code>
-     * @return the unk2
-     */
-    public boolean getUnk2() {
-      return unk2;
-    }
-
-    /**
-     * <code>optional bool unk2 = 13;</code>
-     * @param value the unk2 to set
-     * @return this
-     */
-    public PlayerDisplaySettings setUnk2(final boolean value) {
-      bitField0_ |= 0x00000008;
-      unk2 = value;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk4 = 14;</code>
-     * @return whether the unk4 field is set
-     */
-    public boolean hasUnk4() {
-      return (bitField0_ & 0x00000010) != 0;
-    }
-
-    /**
-     * <code>optional bool unk4 = 14;</code>
-     * @return this
-     */
-    public PlayerDisplaySettings clearUnk4() {
-      bitField0_ &= ~0x00000010;
-      unk4 = false;
-      return this;
-    }
-
-    /**
-     * <code>optional bool unk4 = 14;</code>
-     * @return the unk4
-     */
-    public boolean getUnk4() {
-      return unk4;
-    }
-
-    /**
-     * <code>optional bool unk4 = 14;</code>
-     * @param value the unk4 to set
-     * @return this
-     */
-    public PlayerDisplaySettings setUnk4(final boolean value) {
-      bitField0_ |= 0x00000010;
-      unk4 = value;
-      return this;
-    }
-
     @Override
     public PlayerDisplaySettings copyFrom(final PlayerDisplaySettings other) {
       cachedSize = other.cachedSize;
-      if ((bitField0_ | other.bitField0_) != 0) {
-        bitField0_ = other.bitField0_;
-        unk5 = other.unk5;
-        unk3 = other.unk3;
-        unk1 = other.unk1;
-        unk2 = other.unk2;
-        unk4 = other.unk4;
-      }
       return this;
     }
 
@@ -258,21 +39,6 @@ public final class PlayerDisplaySettingsOuterClass {
         return this;
       }
       cachedSize = -1;
-      if (other.hasUnk5()) {
-        setUnk5(other.unk5);
-      }
-      if (other.hasUnk3()) {
-        setUnk3(other.unk3);
-      }
-      if (other.hasUnk1()) {
-        setUnk1(other.unk1);
-      }
-      if (other.hasUnk2()) {
-        setUnk2(other.unk2);
-      }
-      if (other.hasUnk4()) {
-        setUnk4(other.unk4);
-      }
       return this;
     }
 
@@ -282,12 +48,6 @@ public final class PlayerDisplaySettingsOuterClass {
         return this;
       }
       cachedSize = -1;
-      bitField0_ = 0;
-      unk5 = false;
-      unk3 = false;
-      unk1 = false;
-      unk2 = false;
-      unk4 = false;
       return this;
     }
 
@@ -297,7 +57,6 @@ public final class PlayerDisplaySettingsOuterClass {
         return this;
       }
       cachedSize = -1;
-      bitField0_ = 0;
       return this;
     }
 
@@ -310,56 +69,16 @@ public final class PlayerDisplaySettingsOuterClass {
         return false;
       }
       PlayerDisplaySettings other = (PlayerDisplaySettings) o;
-      return bitField0_ == other.bitField0_
-        && (!hasUnk5() || unk5 == other.unk5)
-        && (!hasUnk3() || unk3 == other.unk3)
-        && (!hasUnk1() || unk1 == other.unk1)
-        && (!hasUnk2() || unk2 == other.unk2)
-        && (!hasUnk4() || unk4 == other.unk4);
+      return true;
     }
 
     @Override
     public void writeTo(final ProtoSink output) throws IOException {
-      if ((bitField0_ & 0x00000001) != 0) {
-        output.writeRawByte((byte) 16);
-        output.writeBoolNoTag(unk5);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeRawByte((byte) 24);
-        output.writeBoolNoTag(unk3);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeRawByte((byte) 48);
-        output.writeBoolNoTag(unk1);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeRawByte((byte) 104);
-        output.writeBoolNoTag(unk2);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeRawByte((byte) 112);
-        output.writeBoolNoTag(unk4);
-      }
     }
 
     @Override
     protected int computeSerializedSize() {
       int size = 0;
-      if ((bitField0_ & 0x00000001) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        size += 2;
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        size += 2;
-      }
       return size;
     }
 
@@ -370,51 +89,6 @@ public final class PlayerDisplaySettingsOuterClass {
       int tag = input.readTag();
       while (true) {
         switch (tag) {
-          case 16: {
-            // unk5
-            unk5 = input.readBool();
-            bitField0_ |= 0x00000001;
-            tag = input.readTag();
-            if (tag != 24) {
-              break;
-            }
-          }
-          case 24: {
-            // unk3
-            unk3 = input.readBool();
-            bitField0_ |= 0x00000002;
-            tag = input.readTag();
-            if (tag != 48) {
-              break;
-            }
-          }
-          case 48: {
-            // unk1
-            unk1 = input.readBool();
-            bitField0_ |= 0x00000004;
-            tag = input.readTag();
-            if (tag != 104) {
-              break;
-            }
-          }
-          case 104: {
-            // unk2
-            unk2 = input.readBool();
-            bitField0_ |= 0x00000008;
-            tag = input.readTag();
-            if (tag != 112) {
-              break;
-            }
-          }
-          case 112: {
-            // unk4
-            unk4 = input.readBool();
-            bitField0_ |= 0x00000010;
-            tag = input.readTag();
-            if (tag != 0) {
-              break;
-            }
-          }
           case 0: {
             return this;
           }
@@ -432,21 +106,6 @@ public final class PlayerDisplaySettingsOuterClass {
     @Override
     public void writeTo(final JsonSink output) throws IOException {
       output.beginObject();
-      if ((bitField0_ & 0x00000001) != 0) {
-        output.writeBool(FieldNames.unk5, unk5);
-      }
-      if ((bitField0_ & 0x00000002) != 0) {
-        output.writeBool(FieldNames.unk3, unk3);
-      }
-      if ((bitField0_ & 0x00000004) != 0) {
-        output.writeBool(FieldNames.unk1, unk1);
-      }
-      if ((bitField0_ & 0x00000008) != 0) {
-        output.writeBool(FieldNames.unk2, unk2);
-      }
-      if ((bitField0_ & 0x00000010) != 0) {
-        output.writeBool(FieldNames.unk4, unk4);
-      }
       output.endObject();
     }
 
@@ -457,61 +116,6 @@ public final class PlayerDisplaySettingsOuterClass {
       }
       while (!input.isAtEnd()) {
         switch (input.readFieldHash()) {
-          case 3594627: {
-            if (input.isAtField(FieldNames.unk5)) {
-              if (!input.trySkipNullValue()) {
-                unk5 = input.readBool();
-                bitField0_ |= 0x00000001;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 3594625: {
-            if (input.isAtField(FieldNames.unk3)) {
-              if (!input.trySkipNullValue()) {
-                unk3 = input.readBool();
-                bitField0_ |= 0x00000002;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 3594623: {
-            if (input.isAtField(FieldNames.unk1)) {
-              if (!input.trySkipNullValue()) {
-                unk1 = input.readBool();
-                bitField0_ |= 0x00000004;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 3594624: {
-            if (input.isAtField(FieldNames.unk2)) {
-              if (!input.trySkipNullValue()) {
-                unk2 = input.readBool();
-                bitField0_ |= 0x00000008;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
-          case 3594626: {
-            if (input.isAtField(FieldNames.unk4)) {
-              if (!input.trySkipNullValue()) {
-                unk4 = input.readBool();
-                bitField0_ |= 0x00000010;
-              }
-            } else {
-              input.skipUnknownField();
-            }
-            break;
-          }
           default: {
             input.skipUnknownField();
             break;
@@ -565,15 +169,6 @@ public final class PlayerDisplaySettingsOuterClass {
      * Contains name constants used for serializing JSON
      */
     static class FieldNames {
-      static final FieldName unk5 = FieldName.forField("unk5");
-
-      static final FieldName unk3 = FieldName.forField("unk3");
-
-      static final FieldName unk1 = FieldName.forField("unk1");
-
-      static final FieldName unk2 = FieldName.forField("unk2");
-
-      static final FieldName unk4 = FieldName.forField("unk4");
     }
   }
 }

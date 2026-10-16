@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option java_package = "emu.lunarcore.proto";
+
+import "Product.proto";
+
+message QueryProductInfoScRsp {
+  optional uint64 month_card_outdate_time = 2;
+  optional uint32 retcode = 8;
+  repeated Product product_list = 11;
+}
