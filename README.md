@@ -42,7 +42,7 @@ This is a port of [Melledy/LunarCore](https://github.com/Melledy/LunarCore) (4.2
 ### Compiling the server
 1. Open your system terminal, and compile the server with `./gradlew jar`
 2. Create a folder named `resources` in your server directory
-3. Download the `Config`, `TextMap`, and `ExcelOutput` folders for **4.6** from [https://gitlab.com/Dimbreath/turnbasedgamedata](https://gitlab.com/Dimbreath/turnbasedgamedata) (tag `v4.6-D16728363`) and place them into your resources folder.
+3. Download the `Config`, `TextMap`, and `ExcelOutput` folders for **4.6** (tag `v4.6-D16728363`) and place them into your resources folder.
 4. Run the server once with `java -jar LunarCore.jar` to create `config.json`, then stop it.
 5. **4.6 only:** set `clientDataDir` in `config.json` to your client's `StarRail_Data` folder, for example:
    ```json
